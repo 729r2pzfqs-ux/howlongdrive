@@ -35,7 +35,7 @@ template = '''<!DOCTYPE html>
         header {{ background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }}
         .header-inner {{ display: flex; justify-content: space-between; align-items: center; }}
         .logo {{ font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }}
-        .logo img {{ height: 70px; width: auto; }}
+        .logo img {{ height: 100px; width: auto; }}
         nav a {{ color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.875rem; }}
         nav a:hover {{ color: var(--primary); }}
         .breadcrumb {{ font-size: 0.875rem; color: var(--muted); padding: 1rem 0; }}
