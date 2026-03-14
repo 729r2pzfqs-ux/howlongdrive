@@ -3,88 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cities - Driving Times From Major US Cities | HowLongDrive</title>
-    <meta name="description" content="Find driving times from major US cities. Browse routes from New York, Los Angeles, Chicago, Houston, and more.">
+    <title>Cities - Find Driving Routes From Any City | HowLongDrive</title>
+    <meta name="description" content="Browse 263 US cities. Find all driving routes from any city.">
     <link rel="canonical" href="https://howlongdrive.com/cities/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="theme-color" content="#4B6E93">
     <style>
-        :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --green: #10B981; }
+        :root { --primary: #4B6E93; --accent: #EFA24F; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
         header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
-        .logo img { height: 100px; width: auto; }
+        .logo img { height: 100px; }
         nav { display: flex; align-items: center; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        .close-btn { display: none; }
-        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { display: none; } }
         h1 { font-size: 2rem; margin: 2rem 0 0.5rem; display: flex; align-items: center; gap: 0.75rem; }
         h1 svg { width: 32px; height: 32px; color: var(--primary); }
         .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
-        .cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; padding: 1rem 0; }
-        .city-card { background: var(--card); border-radius: 0.75rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid var(--border); text-align: center; }
+        .search-box { background: var(--card); padding: 1rem; border-radius: 0.75rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .search-input { width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .tab { padding: 0.5rem 1rem; border-radius: 2rem; background: var(--card); border: 1px solid var(--border); cursor: pointer; font-size: 0.875rem; }
+        .tab:hover { border-color: var(--primary); }
+        .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .section { margin-bottom: 2rem; }
+        .section h2 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
+        .city-card { background: var(--card); border-radius: 0.5rem; padding: 1rem; text-decoration: none; color: inherit; border: 1px solid var(--border); text-align: center; }
         .city-card:hover { border-color: var(--primary); background: #f0f9ff; }
-        .city-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem; }
-        .city-meta { color: var(--muted); font-size: 0.8rem; }
-        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+        .city-name { font-weight: 600; font-size: 0.95rem; }
+        .city-meta { color: var(--muted); font-size: 0.75rem; margin-top: 0.25rem; }
+        .stats { display: flex; gap: 2rem; margin: 1rem 0 2rem; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 1.75rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.8rem; color: var(--muted); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .hidden { display: none !important; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-            <div class="overlay" onclick="toggleMenu()"></div>
-            <nav id="nav">
-                <button class="close-btn" style="display:none" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-                <a href="/">Home</a>
-                <a href="/routes/">Routes</a>
-                <a href="/cities/">Cities</a>
-                <a href="/ev/" class="ev-badge">EV Trips</a>
-            </nav>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
         </div>
     </header>
     <div class="container">
         <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg> Browse by City</h1>
-        <p class="subtitle">Select a city to see all driving routes</p>
+        <p class="subtitle">Select a city to see all driving routes from there</p>
         
-        <div class="cities-grid">
-            <a href="/city/new-york/" class="city-card"><div class="city-name">New York</div><div class="city-meta">21 routes</div></a>
-            <a href="/city/los-angeles/" class="city-card"><div class="city-name">Los Angeles</div><div class="city-meta">17 routes</div></a>
-            <a href="/city/chicago/" class="city-card"><div class="city-name">Chicago</div><div class="city-meta">20 routes</div></a>
-            <a href="/city/houston/" class="city-card"><div class="city-name">Houston</div><div class="city-meta">13 routes</div></a>
-            <a href="/city/phoenix/" class="city-card"><div class="city-name">Phoenix</div><div class="city-meta">14 routes</div></a>
-            <a href="/city/dallas/" class="city-card"><div class="city-name">Dallas</div><div class="city-meta">16 routes</div></a>
-            <a href="/city/atlanta/" class="city-card"><div class="city-name">Atlanta</div><div class="city-meta">16 routes</div></a>
-            <a href="/city/denver/" class="city-card"><div class="city-name">Denver</div><div class="city-meta">16 routes</div></a>
-            <a href="/city/seattle/" class="city-card"><div class="city-name">Seattle</div><div class="city-meta">14 routes</div></a>
-            <a href="/city/san-francisco/" class="city-card"><div class="city-name">San Francisco</div><div class="city-meta">12 routes</div></a>
-            <a href="/city/miami/" class="city-card"><div class="city-name">Miami</div><div class="city-meta">11 routes</div></a>
-            <a href="/city/boston/" class="city-card"><div class="city-name">Boston</div><div class="city-meta">9 routes</div></a>
-            <a href="/city/las-vegas/" class="city-card"><div class="city-name">Las Vegas</div><div class="city-meta">9 routes</div></a>
-            <a href="/city/new-orleans/" class="city-card"><div class="city-name">New Orleans</div><div class="city-meta">9 routes</div></a>
-            <a href="/city/washington-dc/" class="city-card"><div class="city-name">Washington DC</div><div class="city-meta">8 routes</div></a>
-            <a href="/city/minneapolis/" class="city-card"><div class="city-name">Minneapolis</div><div class="city-meta">7 routes</div></a>
-            <a href="/city/salt-lake-city/" class="city-card"><div class="city-name">Salt Lake City</div><div class="city-meta">7 routes</div></a>
-            <a href="/city/detroit/" class="city-card"><div class="city-name">Detroit</div><div class="city-meta">7 routes</div></a>
-            <a href="/city/san-antonio/" class="city-card"><div class="city-name">San Antonio</div><div class="city-meta">7 routes</div></a>
-            <a href="/city/kansas-city/" class="city-card"><div class="city-name">Kansas City</div><div class="city-meta">6 routes</div></a>
-            <a href="/city/orlando/" class="city-card"><div class="city-name">Orlando</div><div class="city-meta">6 routes</div></a>
-            <a href="/city/memphis/" class="city-card"><div class="city-name">Memphis</div><div class="city-meta">6 routes</div></a>
-            <a href="/city/portland/" class="city-card"><div class="city-name">Portland</div><div class="city-meta">5 routes</div></a>
-            <a href="/city/tampa/" class="city-card"><div class="city-name">Tampa</div><div class="city-meta">5 routes</div></a>
-            <a href="/city/philadelphia/" class="city-card"><div class="city-name">Philadelphia</div><div class="city-meta">5 routes</div></a>
-            <a href="/city/cleveland/" class="city-card"><div class="city-name">Cleveland</div><div class="city-meta">5 routes</div></a>
-            <a href="/city/nashville/" class="city-card"><div class="city-name">Nashville</div><div class="city-meta">3 routes</div></a>
-            <a href="/city/austin/" class="city-card"><div class="city-name">Austin</div><div class="city-meta">3 routes</div></a>
+        <div class="stats">
+            <div class="stat"><div class="stat-value">263</div><div class="stat-label">Cities</div></div>
+            <div class="stat"><div class="stat-value">886</div><div class="stat-label">Total Routes</div></div>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="🔍 Search cities..." id="search" oninput="filterCities()">
+        </div>
+        
+        <div id="all-sections">
+            <div class="section">
+                <h2>🌴 West Coast & Southwest</h2>
+                <div class="cities-grid"><a href="/city/albuquerque/" class="city-card"><div class="city-name">Albuquerque</div><div class="city-meta">4 routes</div></a>
+<a href="/city/anaheim/" class="city-card"><div class="city-name">Anaheim</div><div class="city-meta">2 routes</div></a>
+<a href="/city/anchorage/" class="city-card"><div class="city-name">Anchorage</div><div class="city-meta">1 routes</div></a>
+<a href="/city/boise/" class="city-card"><div class="city-name">Boise</div><div class="city-meta">6 routes</div></a>
+<a href="/city/burbank/" class="city-card"><div class="city-name">Burbank</div><div class="city-meta">1 routes</div></a>
+<a href="/city/fresno/" class="city-card"><div class="city-name">Fresno</div><div class="city-meta">1 routes</div></a>
+<a href="/city/glendale/" class="city-card"><div class="city-name">Glendale</div><div class="city-meta">2 routes</div></a>
+<a href="/city/honolulu/" class="city-card"><div class="city-name">Honolulu</div><div class="city-meta">2 routes</div></a>
+<a href="/city/irvine/" class="city-card"><div class="city-name">Irvine</div><div class="city-meta">1 routes</div></a>
+<a href="/city/las-vegas/" class="city-card"><div class="city-name">Las Vegas</div><div class="city-meta">15 routes</div></a>
+<a href="/city/long-beach/" class="city-card"><div class="city-name">Long Beach</div><div class="city-meta">2 routes</div></a>
+<a href="/city/los-angeles/" class="city-card"><div class="city-name">Los Angeles</div><div class="city-meta">33 routes</div></a>
+<a href="/city/malibu/" class="city-card"><div class="city-name">Malibu</div><div class="city-meta">1 routes</div></a>
+<a href="/city/oakland/" class="city-card"><div class="city-name">Oakland</div><div class="city-meta">2 routes</div></a>
+<a href="/city/palm-springs/" class="city-card"><div class="city-name">Palm Springs</div><div class="city-meta">1 routes</div></a>
+<a href="/city/pasadena/" class="city-card"><div class="city-name">Pasadena</div><div class="city-meta">2 routes</div></a>
+<a href="/city/phoenix/" class="city-card"><div class="city-name">Phoenix</div><div class="city-meta">24 routes</div></a>
+<a href="/city/portland/" class="city-card"><div class="city-name">Portland</div><div class="city-meta">7 routes</div></a>
+<a href="/city/reno/" class="city-card"><div class="city-name">Reno</div><div class="city-meta">4 routes</div></a>
+<a href="/city/sacramento/" class="city-card"><div class="city-name">Sacramento</div><div class="city-meta">4 routes</div></a>
+<a href="/city/san-diego/" class="city-card"><div class="city-name">San Diego</div><div class="city-meta">7 routes</div></a>
+<a href="/city/san-francisco/" class="city-card"><div class="city-name">San Francisco</div><div class="city-meta">27 routes</div></a>
+<a href="/city/san-jose/" class="city-card"><div class="city-name">San Jose</div><div class="city-meta">4 routes</div></a>
+<a href="/city/santa-barbara/" class="city-card"><div class="city-name">Santa Barbara</div><div class="city-meta">1 routes</div></a>
+<a href="/city/santa-monica/" class="city-card"><div class="city-name">Santa Monica</div><div class="city-meta">2 routes</div></a>
+<a href="/city/seattle/" class="city-card"><div class="city-name">Seattle</div><div class="city-meta">27 routes</div></a>
+<a href="/city/tucson/" class="city-card"><div class="city-name">Tucson</div><div class="city-meta">3 routes</div></a>
+</div>
+            </div>
+            
+            <div class="section">
+                <h2>🏔️ Mountain States</h2>
+                <div class="cities-grid"><a href="/city/aspen/" class="city-card"><div class="city-name">Aspen</div><div class="city-meta">1 routes</div></a>
+<a href="/city/billings/" class="city-card"><div class="city-name">Billings</div><div class="city-meta">2 routes</div></a>
+<a href="/city/boulder/" class="city-card"><div class="city-name">Boulder</div><div class="city-meta">2 routes</div></a>
+<a href="/city/breckenridge/" class="city-card"><div class="city-name">Breckenridge</div><div class="city-meta">1 routes</div></a>
+<a href="/city/colorado-springs/" class="city-card"><div class="city-name">Colorado Springs</div><div class="city-meta">1 routes</div></a>
+<a href="/city/denver/" class="city-card"><div class="city-name">Denver</div><div class="city-meta">34 routes</div></a>
+<a href="/city/missoula/" class="city-card"><div class="city-name">Missoula</div><div class="city-meta">2 routes</div></a>
+<a href="/city/park-city/" class="city-card"><div class="city-name">Park City</div><div class="city-meta">1 routes</div></a>
+<a href="/city/rapid-city/" class="city-card"><div class="city-name">Rapid City</div><div class="city-meta">2 routes</div></a>
+<a href="/city/salt-lake-city/" class="city-card"><div class="city-name">Salt Lake City</div><div class="city-meta">11 routes</div></a>
+<a href="/city/santa-fe/" class="city-card"><div class="city-name">Santa Fe</div><div class="city-meta">3 routes</div></a>
+<a href="/city/taos/" class="city-card"><div class="city-name">Taos</div><div class="city-meta">1 routes</div></a>
+<a href="/city/vail/" class="city-card"><div class="city-name">Vail</div><div class="city-meta">1 routes</div></a>
+</div>
+            </div>
+            
+            <div class="section">
+                <h2>🌾 Midwest</h2>
+                <div class="cities-grid"><a href="/city/chicago/" class="city-card"><div class="city-name">Chicago</div><div class="city-meta">35 routes</div></a>
+<a href="/city/cincinnati/" class="city-card"><div class="city-name">Cincinnati</div><div class="city-meta">3 routes</div></a>
+<a href="/city/cleveland/" class="city-card"><div class="city-name">Cleveland</div><div class="city-meta">5 routes</div></a>
+<a href="/city/columbus/" class="city-card"><div class="city-name">Columbus</div><div class="city-meta">2 routes</div></a>
+<a href="/city/des-moines/" class="city-card"><div class="city-name">Des Moines</div><div class="city-meta">4 routes</div></a>
+<a href="/city/detroit/" class="city-card"><div class="city-name">Detroit</div><div class="city-meta">8 routes</div></a>
+<a href="/city/duluth/" class="city-card"><div class="city-name">Duluth</div><div class="city-meta">1 routes</div></a>
+<a href="/city/fargo/" class="city-card"><div class="city-name">Fargo</div><div class="city-meta">1 routes</div></a>
+<a href="/city/grand-rapids/" class="city-card"><div class="city-name">Grand Rapids</div><div class="city-meta">2 routes</div></a>
+<a href="/city/green-bay/" class="city-card"><div class="city-name">Green Bay</div><div class="city-meta">3 routes</div></a>
+<a href="/city/indianapolis/" class="city-card"><div class="city-name">Indianapolis</div><div class="city-meta">2 routes</div></a>
+<a href="/city/kansas-city/" class="city-card"><div class="city-name">Kansas City</div><div class="city-meta">10 routes</div></a>
+<a href="/city/madison/" class="city-card"><div class="city-name">Madison</div><div class="city-meta">4 routes</div></a>
+<a href="/city/milwaukee/" class="city-card"><div class="city-name">Milwaukee</div><div class="city-meta">3 routes</div></a>
+<a href="/city/minneapolis/" class="city-card"><div class="city-name">Minneapolis</div><div class="city-meta">13 routes</div></a>
+<a href="/city/oklahoma-city/" class="city-card"><div class="city-name">Oklahoma City</div><div class="city-meta">5 routes</div></a>
+<a href="/city/omaha/" class="city-card"><div class="city-name">Omaha</div><div class="city-meta">5 routes</div></a>
+<a href="/city/sioux-falls/" class="city-card"><div class="city-name">Sioux Falls</div><div class="city-meta">2 routes</div></a>
+<a href="/city/st-louis/" class="city-card"><div class="city-name">St Louis</div><div class="city-meta">3 routes</div></a>
+<a href="/city/tulsa/" class="city-card"><div class="city-name">Tulsa</div><div class="city-meta">3 routes</div></a>
+<a href="/city/wichita/" class="city-card"><div class="city-name">Wichita</div><div class="city-meta">3 routes</div></a>
+</div>
+            </div>
+            
+            <div class="section">
+                <h2>🍑 South</h2>
+                <div class="cities-grid"><a href="/city/atlanta/" class="city-card"><div class="city-name">Atlanta</div><div class="city-meta">28 routes</div></a>
+<a href="/city/austin/" class="city-card"><div class="city-name">Austin</div><div class="city-meta">3 routes</div></a>
+<a href="/city/birmingham/" class="city-card"><div class="city-name">Birmingham</div><div class="city-meta">5 routes</div></a>
+<a href="/city/charleston/" class="city-card"><div class="city-name">Charleston</div><div class="city-meta">3 routes</div></a>
+<a href="/city/charlotte/" class="city-card"><div class="city-name">Charlotte</div><div class="city-meta">4 routes</div></a>
+<a href="/city/chattanooga/" class="city-card"><div class="city-name">Chattanooga</div><div class="city-meta">3 routes</div></a>
+<a href="/city/dallas/" class="city-card"><div class="city-name">Dallas</div><div class="city-meta">26 routes</div></a>
+<a href="/city/houston/" class="city-card"><div class="city-name">Houston</div><div class="city-meta">22 routes</div></a>
+<a href="/city/jacksonville/" class="city-card"><div class="city-name">Jacksonville</div><div class="city-meta">4 routes</div></a>
+<a href="/city/knoxville/" class="city-card"><div class="city-name">Knoxville</div><div class="city-meta">4 routes</div></a>
+<a href="/city/little-rock/" class="city-card"><div class="city-name">Little Rock</div><div class="city-meta">3 routes</div></a>
+<a href="/city/louisville/" class="city-card"><div class="city-name">Louisville</div><div class="city-meta">4 routes</div></a>
+<a href="/city/memphis/" class="city-card"><div class="city-name">Memphis</div><div class="city-meta">7 routes</div></a>
+<a href="/city/miami/" class="city-card"><div class="city-name">Miami</div><div class="city-meta">23 routes</div></a>
+<a href="/city/mobile/" class="city-card"><div class="city-name">Mobile</div><div class="city-meta">3 routes</div></a>
+<a href="/city/myrtle-beach/" class="city-card"><div class="city-name">Myrtle Beach</div><div class="city-meta">3 routes</div></a>
+<a href="/city/nashville/" class="city-card"><div class="city-name">Nashville</div><div class="city-meta">10 routes</div></a>
+<a href="/city/new-orleans/" class="city-card"><div class="city-name">New Orleans</div><div class="city-meta">14 routes</div></a>
+<a href="/city/orlando/" class="city-card"><div class="city-name">Orlando</div><div class="city-meta">12 routes</div></a>
+<a href="/city/pensacola/" class="city-card"><div class="city-name">Pensacola</div><div class="city-meta">3 routes</div></a>
+<a href="/city/raleigh/" class="city-card"><div class="city-name">Raleigh</div><div class="city-meta">2 routes</div></a>
+<a href="/city/san-antonio/" class="city-card"><div class="city-name">San Antonio</div><div class="city-meta">6 routes</div></a>
+<a href="/city/savannah/" class="city-card"><div class="city-name">Savannah</div><div class="city-meta">3 routes</div></a>
+<a href="/city/tallahassee/" class="city-card"><div class="city-name">Tallahassee</div><div class="city-meta">3 routes</div></a>
+<a href="/city/tampa/" class="city-card"><div class="city-name">Tampa</div><div class="city-meta">5 routes</div></a>
+</div>
+            </div>
+            
+            <div class="section">
+                <h2>🗽 East Coast</h2>
+                <div class="cities-grid"><a href="/city/albany/" class="city-card"><div class="city-name">Albany</div><div class="city-meta">1 routes</div></a>
+<a href="/city/baltimore/" class="city-card"><div class="city-name">Baltimore</div><div class="city-meta">3 routes</div></a>
+<a href="/city/boston/" class="city-card"><div class="city-name">Boston</div><div class="city-meta">17 routes</div></a>
+<a href="/city/hartford/" class="city-card"><div class="city-name">Hartford</div><div class="city-meta">2 routes</div></a>
+<a href="/city/jersey-city/" class="city-card"><div class="city-name">Jersey City</div><div class="city-meta">1 routes</div></a>
+<a href="/city/new-york/" class="city-card"><div class="city-name">New York</div><div class="city-meta">33 routes</div></a>
+<a href="/city/newark/" class="city-card"><div class="city-name">Newark</div><div class="city-meta">1 routes</div></a>
+<a href="/city/norfolk/" class="city-card"><div class="city-name">Norfolk</div><div class="city-meta">3 routes</div></a>
+<a href="/city/philadelphia/" class="city-card"><div class="city-name">Philadelphia</div><div class="city-meta">10 routes</div></a>
+<a href="/city/pittsburgh/" class="city-card"><div class="city-name">Pittsburgh</div><div class="city-meta">1 routes</div></a>
+<a href="/city/providence/" class="city-card"><div class="city-name">Providence</div><div class="city-meta">1 routes</div></a>
+<a href="/city/richmond/" class="city-card"><div class="city-name">Richmond</div><div class="city-meta">4 routes</div></a>
+<a href="/city/virginia-beach/" class="city-card"><div class="city-name">Virginia Beach</div><div class="city-meta">2 routes</div></a>
+<a href="/city/washington-dc/" class="city-card"><div class="city-name">Washington DC</div><div class="city-meta">20 routes</div></a>
+</div>
+            </div>
+        </div>
+        
+        <div id="search-results" class="hidden">
+            <h2>Search Results</h2>
+            <div class="cities-grid" id="results-grid"></div>
         </div>
     </div>
-    <footer><p>© 2026 <a href="/" style="color:var(--primary);text-decoration:none">HowLongDrive.com</a></p></footer>
-    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
+    <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
+    <script>
+        const ALL_CITIES = [{"name": "ATL", "routes": 2}, {"name": "Albany", "routes": 1}, {"name": "Albuquerque", "routes": 4}, {"name": "Alexandria", "routes": 1}, {"name": "Alpharetta", "routes": 1}, {"name": "Anaheim", "routes": 2}, {"name": "Anchorage", "routes": 1}, {"name": "Arches National Park", "routes": 1}, {"name": "Arlington", "routes": 3}, {"name": "Arvada", "routes": 1}, {"name": "Aspen", "routes": 1}, {"name": "Atlanta", "routes": 28}, {"name": "Atlantic City", "routes": 1}, {"name": "Aurora", "routes": 2}, {"name": "Austin", "routes": 3}, {"name": "BOS", "routes": 2}, {"name": "BWI", "routes": 2}, {"name": "Baltimore", "routes": 3}, {"name": "Baytown", "routes": 1}, {"name": "Bellevue", "routes": 2}, {"name": "Berkeley", "routes": 1}, {"name": "Bethesda", "routes": 1}, {"name": "Big Bear Lake", "routes": 1}, {"name": "Billings", "routes": 2}, {"name": "Birmingham", "routes": 5}, {"name": "Boca Raton", "routes": 1}, {"name": "Boise", "routes": 6}, {"name": "Boston", "routes": 17}, {"name": "Boulder", "routes": 2}, {"name": "Breckenridge", "routes": 1}, {"name": "Brookline", "routes": 1}, {"name": "Brooklyn", "routes": 1}, {"name": "Burbank", "routes": 1}, {"name": "Cambridge", "routes": 2}, {"name": "Camden", "routes": 1}, {"name": "Carmel", "routes": 1}, {"name": "Chandler", "routes": 1}, {"name": "Charleston", "routes": 3}, {"name": "Charlotte", "routes": 4}, {"name": "Chattanooga", "routes": 3}, {"name": "Cherry Hill", "routes": 1}, {"name": "Chicago", "routes": 35}, {"name": "Cincinnati", "routes": 3}, {"name": "Clearwater Beach", "routes": 1}, {"name": "Cleveland", "routes": 5}, {"name": "Colorado Springs", "routes": 1}, {"name": "Columbus", "routes": 2}, {"name": "Coral Gables", "routes": 1}, {"name": "DCA", "routes": 1}, {"name": "DEN", "routes": 2}, {"name": "DFW", "routes": 3}, {"name": "Dallas", "routes": 26}, {"name": "Daly City", "routes": 1}, {"name": "Daytona Beach", "routes": 1}, {"name": "Death Valley", "routes": 1}, {"name": "Decatur", "routes": 1}, {"name": "Denton", "routes": 1}, {"name": "Denver", "routes": 34}, {"name": "Des Moines", "routes": 4}, {"name": "Detroit", "routes": 8}, {"name": "Disney World", "routes": 2}, {"name": "Disneyland", "routes": 1}, {"name": "Dollywood", "routes": 1}, {"name": "Downtown Atlanta", "routes": 1}, {"name": "Downtown Chicago", "routes": 1}, {"name": "Duluth", "routes": 1}, {"name": "EWR", "routes": 1}, {"name": "El Paso", "routes": 3}, {"name": "Estes Park", "routes": 1}, {"name": "Evanston", "routes": 1}, {"name": "Everett", "routes": 1}, {"name": "Everglades", "routes": 1}, {"name": "FLL", "routes": 2}, {"name": "Fairbanks", "routes": 1}, {"name": "Fargo", "routes": 1}, {"name": "Fort Collins", "routes": 1}, {"name": "Fort Lauderdale", "routes": 3}, {"name": "Fort Worth", "routes": 2}, {"name": "Fremont", "routes": 1}, {"name": "Fresno", "routes": 1}, {"name": "Frisco", "routes": 1}, {"name": "Galveston", "routes": 1}, {"name": "Gatlinburg", "routes": 2}, {"name": "Gilbert", "routes": 1}, {"name": "Glendale", "routes": 2}, {"name": "Grand Canyon", "routes": 2}, {"name": "Grand Rapids", "routes": 2}, {"name": "Great Smoky Mountains", "routes": 1}, {"name": "Green Bay", "routes": 3}, {"name": "HOU", "routes": 1}, {"name": "Hamptons", "routes": 1}, {"name": "Hartford", "routes": 2}, {"name": "Hialeah", "routes": 1}, {"name": "Hoboken", "routes": 1}, {"name": "Hollywood", "routes": 2}, {"name": "Honolulu", "routes": 2}, {"name": "Hoover Dam", "routes": 1}, {"name": "Houston", "routes": 22}, {"name": "IAD", "routes": 1}, {"name": "IAH", "routes": 1}, {"name": "Indianapolis", "routes": 2}, {"name": "Irvine", "routes": 1}, {"name": "Irving", "routes": 1}, {"name": "JFK", "routes": 3}, {"name": "Jackson", "routes": 3}, {"name": "Jacksonville", "routes": 4}, {"name": "Jersey City", "routes": 1}, {"name": "Joliet", "routes": 1}, {"name": "Joshua Tree", "routes": 1}, {"name": "Kansas City", "routes": 10}, {"name": "Katy", "routes": 1}, {"name": "Kennedy Space Center", "routes": 1}, {"name": "Kennesaw", "routes": 1}, {"name": "Kent", "routes": 1}, {"name": "Key West", "routes": 1}, {"name": "King of Prussia", "routes": 1}, {"name": "Kirkland", "routes": 1}, {"name": "Knoxville", "routes": 4}, {"name": "LAS", "routes": 2}, {"name": "LAX", "routes": 5}, {"name": "LGA", "routes": 1}, {"name": "Lake Geneva", "routes": 1}, {"name": "Lake Tahoe", "routes": 2}, {"name": "Lakewood", "routes": 1}, {"name": "Las Vegas", "routes": 15}, {"name": "Las Vegas Strip", "routes": 1}, {"name": "Leavenworth", "routes": 1}, {"name": "Legoland", "routes": 1}, {"name": "Lexington", "routes": 2}, {"name": "Little Rock", "routes": 3}, {"name": "Long Beach", "routes": 2}, {"name": "Long Island City", "routes": 1}, {"name": "Los Angeles", "routes": 33}, {"name": "Louisville", "routes": 4}, {"name": "Lowell", "routes": 1}, {"name": "MCO", "routes": 3}, {"name": "MDW", "routes": 1}, {"name": "MIA", "routes": 3}, {"name": "Madison", "routes": 4}, {"name": "Malibu", "routes": 1}, {"name": "Manhattan", "routes": 3}, {"name": "Marietta", "routes": 1}, {"name": "McKinney", "routes": 1}, {"name": "Memphis", "routes": 7}, {"name": "Mesa", "routes": 1}, {"name": "Miami", "routes": 23}, {"name": "Miami Beach", "routes": 2}, {"name": "Milwaukee", "routes": 3}, {"name": "Minneapolis", "routes": 13}, {"name": "Missoula", "routes": 2}, {"name": "Mobile", "routes": 3}, {"name": "Monterey", "routes": 1}, {"name": "Mount Rainier", "routes": 1}, {"name": "Mount Rushmore", "routes": 1}, {"name": "Muir Woods", "routes": 1}, {"name": "Myrtle Beach", "routes": 3}, {"name": "Napa Valley", "routes": 1}, {"name": "Naperville", "routes": 1}, {"name": "Nashville", "routes": 10}, {"name": "New Orleans", "routes": 14}, {"name": "New Rochelle", "routes": 1}, {"name": "New York", "routes": 33}, {"name": "Newark", "routes": 1}, {"name": "Newton", "routes": 1}, {"name": "Niagara Falls", "routes": 1}, {"name": "Norfolk", "routes": 3}, {"name": "OAK", "routes": 2}, {"name": "ORD", "routes": 2}, {"name": "Oak Park", "routes": 1}, {"name": "Oakland", "routes": 2}, {"name": "Oklahoma City", "routes": 5}, {"name": "Olympic National Park", "routes": 1}, {"name": "Omaha", "routes": 5}, {"name": "Ontario", "routes": 1}, {"name": "Orlando", "routes": 12}, {"name": "PHX", "routes": 3}, {"name": "Palm Springs", "routes": 1}, {"name": "Palo Alto", "routes": 2}, {"name": "Park City", "routes": 1}, {"name": "Pasadena", "routes": 2}, {"name": "Pearl Harbor", "routes": 1}, {"name": "Pearland", "routes": 1}, {"name": "Pensacola", "routes": 3}, {"name": "Peoria", "routes": 1}, {"name": "Philadelphia", "routes": 10}, {"name": "Phoenix", "routes": 24}, {"name": "Pittsburgh", "routes": 1}, {"name": "Plano", "routes": 1}, {"name": "Portland", "routes": 7}, {"name": "Providence", "routes": 1}, {"name": "Quincy", "routes": 1}, {"name": "Raleigh", "routes": 2}, {"name": "Rapid City", "routes": 2}, {"name": "Redmond", "routes": 1}, {"name": "Reno", "routes": 4}, {"name": "Renton", "routes": 1}, {"name": "Reston", "routes": 1}, {"name": "Richmond", "routes": 4}, {"name": "Rockville", "routes": 1}, {"name": "Rocky Mountain NP", "routes": 1}, {"name": "Roswell", "routes": 1}, {"name": "SEA", "routes": 3}, {"name": "SFO", "routes": 3}, {"name": "Sacramento", "routes": 4}, {"name": "Salt Lake City", "routes": 11}, {"name": "San Antonio", "routes": 6}, {"name": "San Diego", "routes": 7}, {"name": "San Diego Zoo", "routes": 1}, {"name": "San Francisco", "routes": 27}, {"name": "San Jose", "routes": 4}, {"name": "San Mateo", "routes": 1}, {"name": "Sandy Springs", "routes": 1}, {"name": "Santa Barbara", "routes": 1}, {"name": "Santa Fe", "routes": 3}, {"name": "Santa Monica", "routes": 2}, {"name": "Savannah", "routes": 3}, {"name": "Schaumburg", "routes": 1}, {"name": "Scottsdale", "routes": 2}, {"name": "Seattle", "routes": 27}, {"name": "Sedona", "routes": 1}, {"name": "Silver Spring", "routes": 1}, {"name": "Sioux Falls", "routes": 2}, {"name": "Snoqualmie Falls", "routes": 1}, {"name": "Somerville", "routes": 1}, {"name": "South Beach", "routes": 1}, {"name": "Spokane", "routes": 4}, {"name": "St Louis", "routes": 3}, {"name": "Stamford", "routes": 1}, {"name": "Statue of Liberty", "routes": 1}, {"name": "Sugar Land", "routes": 1}, {"name": "Sundance", "routes": 1}, {"name": "Tacoma", "routes": 2}, {"name": "Tallahassee", "routes": 3}, {"name": "Tampa", "routes": 5}, {"name": "Taos", "routes": 1}, {"name": "Tempe", "routes": 2}, {"name": "The Woodlands", "routes": 1}, {"name": "Thornton", "routes": 1}, {"name": "Tijuana", "routes": 1}, {"name": "Times Square", "routes": 1}, {"name": "Trenton", "routes": 1}, {"name": "Tucson", "routes": 3}, {"name": "Tulsa", "routes": 3}, {"name": "Tysons", "routes": 1}, {"name": "Universal Orlando", "routes": 2}, {"name": "Universal Studios", "routes": 1}, {"name": "Vail", "routes": 1}, {"name": "Vancouver", "routes": 1}, {"name": "Virginia Beach", "routes": 2}, {"name": "Waikiki", "routes": 1}, {"name": "Walnut Creek", "routes": 1}, {"name": "Washington DC", "routes": 20}, {"name": "Waukegan", "routes": 1}, {"name": "West Palm Beach", "routes": 1}, {"name": "Westminster", "routes": 1}, {"name": "White Plains", "routes": 1}, {"name": "Wichita", "routes": 3}, {"name": "Wilmington", "routes": 2}, {"name": "Wisconsin Dells", "routes": 1}, {"name": "Worcester", "routes": 1}, {"name": "Yonkers", "routes": 1}, {"name": "Yosemite", "routes": 1}, {"name": "Zion National Park", "routes": 1}];
+        
+        function filterCities() {
+            const q = document.getElementById('search').value.toLowerCase();
+            const sections = document.getElementById('all-sections');
+            const results = document.getElementById('search-results');
+            const grid = document.getElementById('results-grid');
+            
+            if (q.length < 1) {
+                sections.classList.remove('hidden');
+                results.classList.add('hidden');
+                return;
+            }
+            
+            sections.classList.add('hidden');
+            results.classList.remove('hidden');
+            
+            const matches = ALL_CITIES.filter(c => c.name.toLowerCase().includes(q)).slice(0, 30);
+            
+            grid.innerHTML = matches.map(c => {
+                const slug = c.name.toLowerCase().replace(/ /g, '-');
+                return `<a href="/city/${slug}/" class="city-card"><div class="city-name">${c.name}</div><div class="city-meta">${c.routes} routes</div></a>`;
+            }).join('');
+        }
+    </script>
 </body>
 </html>
