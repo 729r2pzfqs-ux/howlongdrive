@@ -3,7 +3,7 @@ import os
 import math
 
 routes = []
-for f in ['data/routes.json', 'data/routes_expanded.json']:
+for f in ['data/routes.json', 'data/routes_expanded.json', 'data/routes_commute.json']:
     if os.path.exists(f):
         with open(f, 'r') as file:
             routes.extend(json.load(file))
