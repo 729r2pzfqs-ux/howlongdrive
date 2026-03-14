@@ -6,9 +6,8 @@ routes = []
 for f in ['data/routes.json', 'data/routes_expanded.json']:
     if os.path.exists(f):
         with open(f, 'r') as file:
-            routes.extend(json.load(file))
+            routes.extend(json.load(f))
 
-# Load coordinates
 with open('data/city_coords.json', 'r') as f:
     coords = json.load(f)
 
@@ -87,6 +86,7 @@ template = '''<!DOCTYPE html>
         footer {{ text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
         .green {{ color: #10B981; }}
+        .map-note {{ text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }}
     </style>
 </head>
 <body>
@@ -141,6 +141,7 @@ template = '''<!DOCTYPE html>
             {timeline_html}
         </div>
         <div id="map"></div>
+        <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -152,16 +153,14 @@ template = '''<!DOCTYPE html>
             attribution: '© OpenStreetMap'
         }}).addTo(map);
         
-        var startIcon = L.divIcon({{className:'',html:'<div style="background:#3B82F6;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]}});
-        var chargeIcon = L.divIcon({{className:'',html:'<div style="background:#10B981;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[16,16],iconAnchor:[8,8]}});
-        var endIcon = L.divIcon({{className:'',html:'<div style="background:#EF4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]}});
+        var startIcon = L.divIcon({{className:'',html:'<div style="background:#3B82F6;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><circle cx="12" cy="12" r="4"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]}});
+        var endIcon = L.divIcon({{className:'',html:'<div style="background:#EF4444;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><path d="M4 4l8 8-8 8"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]}});
         
         L.marker([{from_lat}, {from_lng}], {{icon: startIcon}}).addTo(map).bindPopup('<b>{from_city}</b><br>Start');
-        {charge_markers}
         L.marker([{to_lat}, {to_lng}], {{icon: endIcon}}).addTo(map).bindPopup('<b>{to_city}</b><br>Destination');
         
-        var route = [[{from_lat},{from_lng}],{charge_coords}[{to_lat},{to_lng}]];
-        L.polyline(route, {{color: '#10B981', weight: 4, opacity: 0.8}}).addTo(map);
+        var bounds = L.latLngBounds([[{from_lat},{from_lng}], [{to_lat},{to_lng}]]);
+        map.fitBounds(bounds, {{padding: [30, 30]}});
     </script>
 </body>
 </html>'''
@@ -179,7 +178,6 @@ for route in routes:
     if slug in processed: continue
     processed.add(slug)
     
-    # Skip if no coords
     if from_city not in coords or to_city not in coords:
         continue
     
@@ -203,11 +201,8 @@ for route in routes:
     to_lat, to_lng = coords[to_city]
     center_lat = (from_lat + to_lat) / 2
     center_lng = (from_lng + to_lng) / 2
+    zoom = 5 if miles > 800 else (6 if miles > 400 else 7)
     
-    # Calculate zoom based on distance
-    zoom = 6 if miles > 500 else (7 if miles > 200 else 8)
-    
-    # Generate timeline and charge markers
     timeline_html = f'''
             <div class="timeline-item start">
                 <div class="timeline-content">
@@ -216,17 +211,10 @@ for route in routes:
                 </div>
             </div>'''
     
-    charge_markers = ""
-    charge_coords = ""
-    
     if charge_stops > 0:
         for i in range(charge_stops):
-            # Interpolate position
             ratio = (i + 1) / (charge_stops + 1)
-            lat = from_lat + (to_lat - from_lat) * ratio
-            lng = from_lng + (to_lng - from_lng) * ratio
             stop_mile = int(miles * ratio)
-            
             timeline_html += f'''
             <div class="timeline-item">
                 <div class="timeline-content">
@@ -234,9 +222,6 @@ for route in routes:
                     <p>~{stop_mile} mi · Fast charge ~30 min</p>
                 </div>
             </div>'''
-            
-            charge_markers += f"L.marker([{lat}, {lng}], {{icon: chargeIcon}}).addTo(map).bindPopup('<b>Charging Stop {i+1}</b><br>~{stop_mile} miles');\n        "
-            charge_coords += f"[{lat},{lng}],"
     
     timeline_html += f'''
             <div class="timeline-item end">
@@ -253,11 +238,10 @@ for route in routes:
         charge_time=charge_time, ev_cost=ev_cost, gas_cost=gas_cost,
         savings=savings, total_time=total_time, timeline_html=timeline_html,
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
-        center_lat=center_lat, center_lng=center_lng, zoom=zoom,
-        charge_markers=charge_markers, charge_coords=charge_coords
+        center_lat=center_lat, center_lng=center_lng, zoom=zoom
     )
     with open(f'ev/{slug}/index.html', 'w') as f:
         f.write(html)
     count += 1
 
-print(f"✅ Created {count} EV pages with maps")
+print(f"✅ Created {count} EV pages")
