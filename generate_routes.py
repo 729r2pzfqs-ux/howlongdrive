@@ -34,8 +34,8 @@ template = '''<!DOCTYPE html>
         .container {{ max-width: 900px; margin: 0 auto; padding: 0 1rem; }}
         header {{ background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }}
         .header-inner {{ display: flex; justify-content: space-between; align-items: center; }}
-        .logo {{ text-decoration: none; }}
-        .logo img {{ height: 80px; width: auto; }}
+        .logo {{ font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }}
+        .logo img {{ height: 50px; width: auto; }}
         nav a {{ color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.875rem; }}
         nav a:hover {{ color: var(--primary); }}
         .breadcrumb {{ font-size: 0.875rem; color: var(--muted); padding: 1rem 0; }}
@@ -63,7 +63,7 @@ template = '''<!DOCTYPE html>
 <body>
     <header>
         <div class="container header-inner">
-            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive.com"></a>
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
             <nav><a href="/">Home</a><a href="/routes/">Routes</a></nav>
         </div>
     </header>
@@ -130,4 +130,4 @@ for route in routes:
         f.write(html)
     count += 1
 
-print(f"✅ Updated {count} route pages with new template")
+print(f"✅ Updated {count} route pages")
