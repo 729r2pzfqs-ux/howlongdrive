@@ -70,6 +70,7 @@
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
         .green { color: #10B981; }
+        .map-note { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
     </style>
 </head>
 <body>
@@ -172,33 +173,26 @@
             </div>
         </div>
         <div id="map"></div>
+        <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}
         
-        var map = L.map('map').setView([37.663250000000005, -99.8519], 6);
+        var map = L.map('map').setView([37.663250000000005, -99.8519], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
         
-        var startIcon = L.divIcon({className:'',html:'<div style="background:#3B82F6;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
-        var chargeIcon = L.divIcon({className:'',html:'<div style="background:#10B981;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[16,16],iconAnchor:[8,8]});
-        var endIcon = L.divIcon({className:'',html:'<div style="background:#EF4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+        var startIcon = L.divIcon({className:'',html:'<div style="background:#3B82F6;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><circle cx="12" cy="12" r="4"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]});
+        var endIcon = L.divIcon({className:'',html:'<div style="background:#EF4444;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><path d="M4 4l8 8-8 8"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]});
         
         L.marker([33.4484, -112.074], {icon: startIcon}).addTo(map).bindPopup('<b>Phoenix</b><br>Start');
-        L.marker([34.65264285714286, -108.58197142857142], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 1</b><br>~250 miles');
-        L.marker([35.85688571428572, -105.08994285714286], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 2</b><br>~500 miles');
-        L.marker([37.061128571428576, -101.59791428571428], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 3</b><br>~750 miles');
-        L.marker([38.26537142857143, -98.10588571428572], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 4</b><br>~1000 miles');
-        L.marker([39.469614285714286, -94.61385714285714], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 5</b><br>~1250 miles');
-        L.marker([40.673857142857145, -91.12182857142858], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 6</b><br>~1500 miles');
-        
         L.marker([41.8781, -87.6298], {icon: endIcon}).addTo(map).bindPopup('<b>Chicago</b><br>Destination');
         
-        var route = [[33.4484,-112.074],[34.65264285714286,-108.58197142857142],[35.85688571428572,-105.08994285714286],[37.061128571428576,-101.59791428571428],[38.26537142857143,-98.10588571428572],[39.469614285714286,-94.61385714285714],[40.673857142857145,-91.12182857142858],[41.8781,-87.6298]];
-        L.polyline(route, {color: '#10B981', weight: 4, opacity: 0.8}).addTo(map);
+        var bounds = L.latLngBounds([[33.4484,-112.074], [41.8781,-87.6298]]);
+        map.fitBounds(bounds, {padding: [30, 30]});
     </script>
 </body>
 </html>

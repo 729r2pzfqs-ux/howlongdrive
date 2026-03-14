@@ -6,7 +6,7 @@ routes = []
 for f in ['data/routes.json', 'data/routes_expanded.json']:
     if os.path.exists(f):
         with open(f, 'r') as file:
-            routes.extend(json.load(f))
+            routes.extend(json.load(file))
 
 with open('data/city_coords.json', 'r') as f:
     coords = json.load(f)
