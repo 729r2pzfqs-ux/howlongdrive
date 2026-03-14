@@ -1,0 +1,3446 @@
+[
+  {
+    "from": "New York",
+    "to": "San Antonio",
+    "miles": 2055,
+    "time": "34h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "San Diego",
+    "miles": 3156,
+    "time": "52h 36min"
+  },
+  {
+    "from": "New York",
+    "to": "Austin",
+    "miles": 1964,
+    "time": "32h 44min"
+  },
+  {
+    "from": "New York",
+    "to": "Nashville",
+    "miles": 986,
+    "time": "16h 26min"
+  },
+  {
+    "from": "New York",
+    "to": "Portland",
+    "miles": 3171,
+    "time": "52h 51min"
+  },
+  {
+    "from": "New York",
+    "to": "Las Vegas",
+    "miles": 2895,
+    "time": "48h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "Tampa",
+    "miles": 1305,
+    "time": "21h 45min"
+  },
+  {
+    "from": "New York",
+    "to": "Salt Lake City",
+    "miles": 2558,
+    "time": "42h 37min"
+  },
+  {
+    "from": "New York",
+    "to": "San Jose",
+    "miles": 3313,
+    "time": "55h 13min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Philadelphia",
+    "miles": 3104,
+    "time": "51h 44min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "San Antonio",
+    "miles": 1562,
+    "time": "26h 2min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Austin",
+    "miles": 1592,
+    "time": "26h 32min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Boston",
+    "miles": 3368,
+    "time": "56h 7min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Nashville",
+    "miles": 2309,
+    "time": "38h 29min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Detroit",
+    "miles": 2573,
+    "time": "42h 52min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Minneapolis",
+    "miles": 1977,
+    "time": "32h 57min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Orlando",
+    "miles": 2856,
+    "time": "47h 36min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Tampa",
+    "miles": 2794,
+    "time": "46h 34min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "New Orleans",
+    "miles": 2170,
+    "time": "36h 9min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Cleveland",
+    "miles": 2658,
+    "time": "44h 17min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Washington DC",
+    "miles": 2982,
+    "time": "49h 42min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Baltimore",
+    "miles": 3009,
+    "time": "50h 8min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Philadelphia",
+    "miles": 862,
+    "time": "14h 22min"
+  },
+  {
+    "from": "Chicago",
+    "to": "San Antonio",
+    "miles": 1368,
+    "time": "22h 48min"
+  },
+  {
+    "from": "Chicago",
+    "to": "San Diego",
+    "miles": 2251,
+    "time": "37h 30min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Austin",
+    "miles": 1273,
+    "time": "21h 12min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Portland",
+    "miles": 2281,
+    "time": "38h"
+  },
+  {
+    "from": "Chicago",
+    "to": "Las Vegas",
+    "miles": 1977,
+    "time": "32h 57min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Orlando",
+    "miles": 1282,
+    "time": "21h 22min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Tampa",
+    "miles": 1307,
+    "time": "21h 47min"
+  },
+  {
+    "from": "Chicago",
+    "to": "New Orleans",
+    "miles": 1085,
+    "time": "18h 4min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Baltimore",
+    "miles": 786,
+    "time": "13h 5min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Salt Lake City",
+    "miles": 1634,
+    "time": "27h 14min"
+  },
+  {
+    "from": "Chicago",
+    "to": "San Jose",
+    "miles": 2389,
+    "time": "39h 49min"
+  },
+  {
+    "from": "Houston",
+    "to": "Philadelphia",
+    "miles": 1741,
+    "time": "29h"
+  },
+  {
+    "from": "Houston",
+    "to": "San Diego",
+    "miles": 1691,
+    "time": "28h 11min"
+  },
+  {
+    "from": "Houston",
+    "to": "Dallas",
+    "miles": 292,
+    "time": "4h 51min"
+  },
+  {
+    "from": "Houston",
+    "to": "San Francisco",
+    "miles": 2135,
+    "time": "35h 35min"
+  },
+  {
+    "from": "Houston",
+    "to": "Boston",
+    "miles": 2085,
+    "time": "34h 45min"
+  },
+  {
+    "from": "Houston",
+    "to": "Nashville",
+    "miles": 865,
+    "time": "14h 24min"
+  },
+  {
+    "from": "Houston",
+    "to": "Detroit",
+    "miles": 1437,
+    "time": "23h 56min"
+  },
+  {
+    "from": "Houston",
+    "to": "Portland",
+    "miles": 2383,
+    "time": "39h 43min"
+  },
+  {
+    "from": "Houston",
+    "to": "Minneapolis",
+    "miles": 1375,
+    "time": "22h 55min"
+  },
+  {
+    "from": "Houston",
+    "to": "Orlando",
+    "miles": 1102,
+    "time": "18h 22min"
+  },
+  {
+    "from": "Houston",
+    "to": "Tampa",
+    "miles": 1028,
+    "time": "17h 7min"
+  },
+  {
+    "from": "Houston",
+    "to": "Cleveland",
+    "miles": 1448,
+    "time": "24h 7min"
+  },
+  {
+    "from": "Houston",
+    "to": "Washington DC",
+    "miles": 1584,
+    "time": "26h 23min"
+  },
+  {
+    "from": "Houston",
+    "to": "Baltimore",
+    "miles": 1625,
+    "time": "27h 4min"
+  },
+  {
+    "from": "Houston",
+    "to": "Salt Lake City",
+    "miles": 1558,
+    "time": "25h 57min"
+  },
+  {
+    "from": "Houston",
+    "to": "San Jose",
+    "miles": 2090,
+    "time": "34h 50min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Philadelphia",
+    "miles": 2701,
+    "time": "45h"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Austin",
+    "miles": 1129,
+    "time": "18h 48min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Boston",
+    "miles": 2983,
+    "time": "49h 43min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Nashville",
+    "miles": 1875,
+    "time": "31h 15min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Detroit",
+    "miles": 2193,
+    "time": "36h 32min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Portland",
+    "miles": 1307,
+    "time": "21h 47min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Miami",
+    "miles": 2572,
+    "time": "42h 52min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Atlanta",
+    "miles": 2065,
+    "time": "34h 24min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Minneapolis",
+    "miles": 1662,
+    "time": "27h 41min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Orlando",
+    "miles": 2395,
+    "time": "39h 54min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Tampa",
+    "miles": 2331,
+    "time": "38h 51min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "New Orleans",
+    "miles": 1707,
+    "time": "28h 26min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Cleveland",
+    "miles": 2269,
+    "time": "37h 49min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Washington DC",
+    "miles": 2570,
+    "time": "42h 50min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Baltimore",
+    "miles": 2600,
+    "time": "43h 20min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "San Jose",
+    "miles": 798,
+    "time": "13h 18min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Los Angeles",
+    "miles": 3104,
+    "time": "51h 44min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Chicago",
+    "miles": 862,
+    "time": "14h 22min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Houston",
+    "miles": 1741,
+    "time": "29h"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Phoenix",
+    "miles": 2701,
+    "time": "45h"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "San Antonio",
+    "miles": 1956,
+    "time": "32h 36min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "San Diego",
+    "miles": 3078,
+    "time": "51h 17min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Dallas",
+    "miles": 1686,
+    "time": "28h 6min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Austin",
+    "miles": 1865,
+    "time": "31h 4min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "San Francisco",
+    "miles": 3272,
+    "time": "54h 31min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Seattle",
+    "miles": 3085,
+    "time": "51h 24min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Denver",
+    "miles": 2047,
+    "time": "34h 7min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Nashville",
+    "miles": 888,
+    "time": "14h 48min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Detroit",
+    "miles": 574,
+    "time": "9h 33min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Portland",
+    "miles": 3127,
+    "time": "52h 7min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Las Vegas",
+    "miles": 2823,
+    "time": "47h 2min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Miami",
+    "miles": 1329,
+    "time": "22h 8min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Atlanta",
+    "miles": 865,
+    "time": "14h 24min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Minneapolis",
+    "miles": 1278,
+    "time": "21h 18min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Orlando",
+    "miles": 1123,
+    "time": "18h 42min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Tampa",
+    "miles": 1206,
+    "time": "20h 6min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "New Orleans",
+    "miles": 1414,
+    "time": "23h 33min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Cleveland",
+    "miles": 465,
+    "time": "7h 45min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Salt Lake City",
+    "miles": 2496,
+    "time": "41h 36min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "San Jose",
+    "miles": 3248,
+    "time": "54h 7min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "New York",
+    "miles": 2055,
+    "time": "34h 15min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Los Angeles",
+    "miles": 1562,
+    "time": "26h 2min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Chicago",
+    "miles": 1368,
+    "time": "22h 48min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Philadelphia",
+    "miles": 1956,
+    "time": "32h 36min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "San Diego",
+    "miles": 1464,
+    "time": "24h 23min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "San Francisco",
+    "miles": 1933,
+    "time": "32h 13min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Seattle",
+    "miles": 2321,
+    "time": "38h 40min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Denver",
+    "miles": 1042,
+    "time": "17h 22min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Boston",
+    "miles": 2294,
+    "time": "38h 14min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Nashville",
+    "miles": 1070,
+    "time": "17h 49min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Detroit",
+    "miles": 1609,
+    "time": "26h 48min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Portland",
+    "miles": 2234,
+    "time": "37h 14min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Las Vegas",
+    "miles": 1392,
+    "time": "23h 11min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Miami",
+    "miles": 1491,
+    "time": "24h 51min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Atlanta",
+    "miles": 1145,
+    "time": "19h 4min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Minneapolis",
+    "miles": 1445,
+    "time": "24h 4min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Orlando",
+    "miles": 1345,
+    "time": "22h 25min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Tampa",
+    "miles": 1269,
+    "time": "21h 8min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Cleveland",
+    "miles": 1633,
+    "time": "27h 12min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Washington DC",
+    "miles": 1801,
+    "time": "30h"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Baltimore",
+    "miles": 1841,
+    "time": "30h 41min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Salt Lake City",
+    "miles": 1413,
+    "time": "23h 33min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "San Jose",
+    "miles": 1886,
+    "time": "31h 26min"
+  },
+  {
+    "from": "San Diego",
+    "to": "New York",
+    "miles": 3156,
+    "time": "52h 36min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Chicago",
+    "miles": 2251,
+    "time": "37h 30min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Houston",
+    "miles": 1691,
+    "time": "28h 11min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Philadelphia",
+    "miles": 3078,
+    "time": "51h 17min"
+  },
+  {
+    "from": "San Diego",
+    "to": "San Antonio",
+    "miles": 1464,
+    "time": "24h 23min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Dallas",
+    "miles": 1536,
+    "time": "25h 36min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Austin",
+    "miles": 1501,
+    "time": "25h"
+  },
+  {
+    "from": "San Diego",
+    "to": "San Francisco",
+    "miles": 595,
+    "time": "9h 54min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Seattle",
+    "miles": 1383,
+    "time": "23h 3min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Denver",
+    "miles": 1082,
+    "time": "18h 2min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Boston",
+    "miles": 3352,
+    "time": "55h 52min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Nashville",
+    "miles": 2262,
+    "time": "37h 42min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Detroit",
+    "miles": 2559,
+    "time": "42h 38min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Portland",
+    "miles": 1211,
+    "time": "20h 11min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Miami",
+    "miles": 2948,
+    "time": "49h 7min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Atlanta",
+    "miles": 2453,
+    "time": "40h 52min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Minneapolis",
+    "miles": 1990,
+    "time": "33h 9min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Orlando",
+    "miles": 2777,
+    "time": "46h 16min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Tampa",
+    "miles": 2712,
+    "time": "45h 12min"
+  },
+  {
+    "from": "San Diego",
+    "to": "New Orleans",
+    "miles": 2087,
+    "time": "34h 46min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Cleveland",
+    "miles": 2639,
+    "time": "43h 59min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Washington DC",
+    "miles": 2950,
+    "time": "49h 9min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Baltimore",
+    "miles": 2979,
+    "time": "49h 38min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Salt Lake City",
+    "miles": 815,
+    "time": "13h 35min"
+  },
+  {
+    "from": "San Diego",
+    "to": "San Jose",
+    "miles": 541,
+    "time": "9h 1min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Houston",
+    "miles": 292,
+    "time": "4h 51min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Philadelphia",
+    "miles": 1686,
+    "time": "28h 6min"
+  },
+  {
+    "from": "Dallas",
+    "to": "San Diego",
+    "miles": 1536,
+    "time": "25h 36min"
+  },
+  {
+    "from": "Dallas",
+    "to": "San Francisco",
+    "miles": 1925,
+    "time": "32h 5min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Boston",
+    "miles": 2014,
+    "time": "33h 34min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Nashville",
+    "miles": 801,
+    "time": "13h 20min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Detroit",
+    "miles": 1299,
+    "time": "21h 38min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Portland",
+    "miles": 2120,
+    "time": "35h 20min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Orlando",
+    "miles": 1249,
+    "time": "20h 48min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Tampa",
+    "miles": 1191,
+    "time": "19h 51min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Cleveland",
+    "miles": 1332,
+    "time": "22h 11min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Washington DC",
+    "miles": 1536,
+    "time": "25h 36min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Baltimore",
+    "miles": 1574,
+    "time": "26h 14min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Salt Lake City",
+    "miles": 1298,
+    "time": "21h 37min"
+  },
+  {
+    "from": "Dallas",
+    "to": "San Jose",
+    "miles": 1883,
+    "time": "31h 22min"
+  },
+  {
+    "from": "Austin",
+    "to": "New York",
+    "miles": 1964,
+    "time": "32h 44min"
+  },
+  {
+    "from": "Austin",
+    "to": "Los Angeles",
+    "miles": 1592,
+    "time": "26h 32min"
+  },
+  {
+    "from": "Austin",
+    "to": "Chicago",
+    "miles": 1273,
+    "time": "21h 12min"
+  },
+  {
+    "from": "Austin",
+    "to": "Phoenix",
+    "miles": 1129,
+    "time": "18h 48min"
+  },
+  {
+    "from": "Austin",
+    "to": "Philadelphia",
+    "miles": 1865,
+    "time": "31h 4min"
+  },
+  {
+    "from": "Austin",
+    "to": "San Diego",
+    "miles": 1501,
+    "time": "25h"
+  },
+  {
+    "from": "Austin",
+    "to": "San Francisco",
+    "miles": 1949,
+    "time": "32h 29min"
+  },
+  {
+    "from": "Austin",
+    "to": "Seattle",
+    "miles": 2300,
+    "time": "38h 20min"
+  },
+  {
+    "from": "Austin",
+    "to": "Denver",
+    "miles": 1003,
+    "time": "16h 42min"
+  },
+  {
+    "from": "Austin",
+    "to": "Boston",
+    "miles": 2202,
+    "time": "36h 42min"
+  },
+  {
+    "from": "Austin",
+    "to": "Nashville",
+    "miles": 978,
+    "time": "16h 18min"
+  },
+  {
+    "from": "Austin",
+    "to": "Detroit",
+    "miles": 1514,
+    "time": "25h 14min"
+  },
+  {
+    "from": "Austin",
+    "to": "Portland",
+    "miles": 2220,
+    "time": "37h"
+  },
+  {
+    "from": "Austin",
+    "to": "Las Vegas",
+    "miles": 1408,
+    "time": "23h 27min"
+  },
+  {
+    "from": "Austin",
+    "to": "Miami",
+    "miles": 1447,
+    "time": "24h 7min"
+  },
+  {
+    "from": "Austin",
+    "to": "Atlanta",
+    "miles": 1063,
+    "time": "17h 42min"
+  },
+  {
+    "from": "Austin",
+    "to": "Minneapolis",
+    "miles": 1358,
+    "time": "22h 37min"
+  },
+  {
+    "from": "Austin",
+    "to": "Orlando",
+    "miles": 1288,
+    "time": "21h 27min"
+  },
+  {
+    "from": "Austin",
+    "to": "Tampa",
+    "miles": 1216,
+    "time": "20h 15min"
+  },
+  {
+    "from": "Austin",
+    "to": "New Orleans",
+    "miles": 596,
+    "time": "9h 56min"
+  },
+  {
+    "from": "Austin",
+    "to": "Cleveland",
+    "miles": 1538,
+    "time": "25h 37min"
+  },
+  {
+    "from": "Austin",
+    "to": "Washington DC",
+    "miles": 1711,
+    "time": "28h 30min"
+  },
+  {
+    "from": "Austin",
+    "to": "Baltimore",
+    "miles": 1751,
+    "time": "29h 11min"
+  },
+  {
+    "from": "Austin",
+    "to": "Salt Lake City",
+    "miles": 1396,
+    "time": "23h 15min"
+  },
+  {
+    "from": "Austin",
+    "to": "San Jose",
+    "miles": 1904,
+    "time": "31h 44min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Houston",
+    "miles": 2135,
+    "time": "35h 35min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Philadelphia",
+    "miles": 3272,
+    "time": "54h 31min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Antonio",
+    "miles": 1933,
+    "time": "32h 13min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Diego",
+    "miles": 595,
+    "time": "9h 54min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Dallas",
+    "miles": 1925,
+    "time": "32h 5min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Austin",
+    "miles": 1949,
+    "time": "32h 29min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Boston",
+    "miles": 3500,
+    "time": "58h 20min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Nashville",
+    "miles": 2546,
+    "time": "42h 25min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Detroit",
+    "miles": 2713,
+    "time": "45h 13min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Miami",
+    "miles": 3368,
+    "time": "56h 7min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Atlanta",
+    "miles": 2776,
+    "time": "46h 15min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Minneapolis",
+    "miles": 2055,
+    "time": "34h 15min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Orlando",
+    "miles": 3168,
+    "time": "52h 47min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Tampa",
+    "miles": 3115,
+    "time": "51h 54min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "New Orleans",
+    "miles": 2499,
+    "time": "41h 38min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Cleveland",
+    "miles": 2810,
+    "time": "46h 50min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Washington DC",
+    "miles": 3165,
+    "time": "52h 45min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Baltimore",
+    "miles": 3186,
+    "time": "53h 6min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Philadelphia",
+    "miles": 3085,
+    "time": "51h 24min"
+  },
+  {
+    "from": "Seattle",
+    "to": "San Antonio",
+    "miles": 2321,
+    "time": "38h 40min"
+  },
+  {
+    "from": "Seattle",
+    "to": "San Diego",
+    "miles": 1383,
+    "time": "23h 3min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Austin",
+    "miles": 2300,
+    "time": "38h 20min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Boston",
+    "miles": 3231,
+    "time": "53h 51min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Nashville",
+    "miles": 2561,
+    "time": "42h 40min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Detroit",
+    "miles": 2513,
+    "time": "41h 52min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Miami",
+    "miles": 3551,
+    "time": "59h 10min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Atlanta",
+    "miles": 2832,
+    "time": "47h 12min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Orlando",
+    "miles": 3310,
+    "time": "55h 9min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Tampa",
+    "miles": 3284,
+    "time": "54h 44min"
+  },
+  {
+    "from": "Seattle",
+    "to": "New Orleans",
+    "miles": 2728,
+    "time": "45h 28min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Cleveland",
+    "miles": 2626,
+    "time": "43h 45min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Washington DC",
+    "miles": 3018,
+    "time": "50h 17min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Baltimore",
+    "miles": 3026,
+    "time": "50h 25min"
+  },
+  {
+    "from": "Seattle",
+    "to": "San Jose",
+    "miles": 922,
+    "time": "15h 22min"
+  },
+  {
+    "from": "Denver",
+    "to": "Philadelphia",
+    "miles": 2047,
+    "time": "34h 7min"
+  },
+  {
+    "from": "Denver",
+    "to": "San Antonio",
+    "miles": 1042,
+    "time": "17h 22min"
+  },
+  {
+    "from": "Denver",
+    "to": "San Diego",
+    "miles": 1082,
+    "time": "18h 2min"
+  },
+  {
+    "from": "Denver",
+    "to": "Austin",
+    "miles": 1003,
+    "time": "16h 42min"
+  },
+  {
+    "from": "Denver",
+    "to": "Boston",
+    "miles": 2295,
+    "time": "38h 15min"
+  },
+  {
+    "from": "Denver",
+    "to": "Nashville",
+    "miles": 1326,
+    "time": "22h 6min"
+  },
+  {
+    "from": "Denver",
+    "to": "Detroit",
+    "miles": 1500,
+    "time": "25h"
+  },
+  {
+    "from": "Denver",
+    "to": "Miami",
+    "miles": 2242,
+    "time": "37h 22min"
+  },
+  {
+    "from": "Denver",
+    "to": "Orlando",
+    "miles": 2014,
+    "time": "33h 34min"
+  },
+  {
+    "from": "Denver",
+    "to": "Tampa",
+    "miles": 1978,
+    "time": "32h 58min"
+  },
+  {
+    "from": "Denver",
+    "to": "New Orleans",
+    "miles": 1404,
+    "time": "23h 23min"
+  },
+  {
+    "from": "Denver",
+    "to": "Cleveland",
+    "miles": 1591,
+    "time": "26h 30min"
+  },
+  {
+    "from": "Denver",
+    "to": "Washington DC",
+    "miles": 1935,
+    "time": "32h 15min"
+  },
+  {
+    "from": "Denver",
+    "to": "Baltimore",
+    "miles": 1958,
+    "time": "32h 37min"
+  },
+  {
+    "from": "Denver",
+    "to": "San Jose",
+    "miles": 1204,
+    "time": "20h 3min"
+  },
+  {
+    "from": "Boston",
+    "to": "Los Angeles",
+    "miles": 3368,
+    "time": "56h 7min"
+  },
+  {
+    "from": "Boston",
+    "to": "Houston",
+    "miles": 2085,
+    "time": "34h 45min"
+  },
+  {
+    "from": "Boston",
+    "to": "Phoenix",
+    "miles": 2983,
+    "time": "49h 43min"
+  },
+  {
+    "from": "Boston",
+    "to": "San Antonio",
+    "miles": 2294,
+    "time": "38h 14min"
+  },
+  {
+    "from": "Boston",
+    "to": "San Diego",
+    "miles": 3352,
+    "time": "55h 52min"
+  },
+  {
+    "from": "Boston",
+    "to": "Dallas",
+    "miles": 2014,
+    "time": "33h 34min"
+  },
+  {
+    "from": "Boston",
+    "to": "Austin",
+    "miles": 2202,
+    "time": "36h 42min"
+  },
+  {
+    "from": "Boston",
+    "to": "San Francisco",
+    "miles": 3500,
+    "time": "58h 20min"
+  },
+  {
+    "from": "Boston",
+    "to": "Seattle",
+    "miles": 3231,
+    "time": "53h 51min"
+  },
+  {
+    "from": "Boston",
+    "to": "Denver",
+    "miles": 2295,
+    "time": "38h 15min"
+  },
+  {
+    "from": "Boston",
+    "to": "Nashville",
+    "miles": 1224,
+    "time": "20h 23min"
+  },
+  {
+    "from": "Boston",
+    "to": "Portland",
+    "miles": 3293,
+    "time": "54h 52min"
+  },
+  {
+    "from": "Boston",
+    "to": "Las Vegas",
+    "miles": 3080,
+    "time": "51h 20min"
+  },
+  {
+    "from": "Boston",
+    "to": "Minneapolis",
+    "miles": 1457,
+    "time": "24h 17min"
+  },
+  {
+    "from": "Boston",
+    "to": "Orlando",
+    "miles": 1450,
+    "time": "24h 10min"
+  },
+  {
+    "from": "Boston",
+    "to": "Tampa",
+    "miles": 1538,
+    "time": "25h 37min"
+  },
+  {
+    "from": "Boston",
+    "to": "New Orleans",
+    "miles": 1765,
+    "time": "29h 25min"
+  },
+  {
+    "from": "Boston",
+    "to": "Cleveland",
+    "miles": 714,
+    "time": "11h 54min"
+  },
+  {
+    "from": "Boston",
+    "to": "Baltimore",
+    "miles": 467,
+    "time": "7h 46min"
+  },
+  {
+    "from": "Boston",
+    "to": "Salt Lake City",
+    "miles": 2721,
+    "time": "45h 21min"
+  },
+  {
+    "from": "Boston",
+    "to": "San Jose",
+    "miles": 3481,
+    "time": "58h"
+  },
+  {
+    "from": "Nashville",
+    "to": "New York",
+    "miles": 986,
+    "time": "16h 26min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Los Angeles",
+    "miles": 2309,
+    "time": "38h 29min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Houston",
+    "miles": 865,
+    "time": "14h 24min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Phoenix",
+    "miles": 1875,
+    "time": "31h 15min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Philadelphia",
+    "miles": 888,
+    "time": "14h 48min"
+  },
+  {
+    "from": "Nashville",
+    "to": "San Antonio",
+    "miles": 1070,
+    "time": "17h 49min"
+  },
+  {
+    "from": "Nashville",
+    "to": "San Diego",
+    "miles": 2262,
+    "time": "37h 42min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Dallas",
+    "miles": 801,
+    "time": "13h 20min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Austin",
+    "miles": 978,
+    "time": "16h 18min"
+  },
+  {
+    "from": "Nashville",
+    "to": "San Francisco",
+    "miles": 2546,
+    "time": "42h 25min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Seattle",
+    "miles": 2561,
+    "time": "42h 40min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Denver",
+    "miles": 1326,
+    "time": "22h 6min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Boston",
+    "miles": 1224,
+    "time": "20h 23min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Detroit",
+    "miles": 611,
+    "time": "10h 11min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Portland",
+    "miles": 2555,
+    "time": "42h 35min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Las Vegas",
+    "miles": 2049,
+    "time": "34h 8min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Miami",
+    "miles": 1062,
+    "time": "17h 41min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Minneapolis",
+    "miles": 906,
+    "time": "15h 5min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Orlando",
+    "miles": 797,
+    "time": "13h 16min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Tampa",
+    "miles": 807,
+    "time": "13h 26min"
+  },
+  {
+    "from": "Nashville",
+    "to": "New Orleans",
+    "miles": 610,
+    "time": "10h 9min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Cleveland",
+    "miles": 596,
+    "time": "9h 56min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Washington DC",
+    "miles": 736,
+    "time": "12h 16min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Baltimore",
+    "miles": 774,
+    "time": "12h 54min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Salt Lake City",
+    "miles": 1807,
+    "time": "30h 7min"
+  },
+  {
+    "from": "Nashville",
+    "to": "San Jose",
+    "miles": 2514,
+    "time": "41h 53min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Los Angeles",
+    "miles": 2573,
+    "time": "42h 52min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Houston",
+    "miles": 1437,
+    "time": "23h 56min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Phoenix",
+    "miles": 2193,
+    "time": "36h 32min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Philadelphia",
+    "miles": 574,
+    "time": "9h 33min"
+  },
+  {
+    "from": "Detroit",
+    "to": "San Antonio",
+    "miles": 1609,
+    "time": "26h 48min"
+  },
+  {
+    "from": "Detroit",
+    "to": "San Diego",
+    "miles": 2559,
+    "time": "42h 38min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Dallas",
+    "miles": 1299,
+    "time": "21h 38min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Austin",
+    "miles": 1514,
+    "time": "25h 14min"
+  },
+  {
+    "from": "Detroit",
+    "to": "San Francisco",
+    "miles": 2713,
+    "time": "45h 13min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Seattle",
+    "miles": 2513,
+    "time": "41h 52min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Denver",
+    "miles": 1500,
+    "time": "25h"
+  },
+  {
+    "from": "Detroit",
+    "to": "Nashville",
+    "miles": 611,
+    "time": "10h 11min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Portland",
+    "miles": 2553,
+    "time": "42h 32min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Las Vegas",
+    "miles": 2285,
+    "time": "38h 5min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Miami",
+    "miles": 1503,
+    "time": "25h 3min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Orlando",
+    "miles": 1244,
+    "time": "20h 44min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Tampa",
+    "miles": 1292,
+    "time": "21h 32min"
+  },
+  {
+    "from": "Detroit",
+    "to": "New Orleans",
+    "miles": 1222,
+    "time": "20h 22min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Baltimore",
+    "miles": 515,
+    "time": "8h 35min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Salt Lake City",
+    "miles": 1935,
+    "time": "32h 15min"
+  },
+  {
+    "from": "Detroit",
+    "to": "San Jose",
+    "miles": 2692,
+    "time": "44h 52min"
+  },
+  {
+    "from": "Portland",
+    "to": "New York",
+    "miles": 3171,
+    "time": "52h 51min"
+  },
+  {
+    "from": "Portland",
+    "to": "Chicago",
+    "miles": 2281,
+    "time": "38h"
+  },
+  {
+    "from": "Portland",
+    "to": "Houston",
+    "miles": 2383,
+    "time": "39h 43min"
+  },
+  {
+    "from": "Portland",
+    "to": "Phoenix",
+    "miles": 1307,
+    "time": "21h 47min"
+  },
+  {
+    "from": "Portland",
+    "to": "Philadelphia",
+    "miles": 3127,
+    "time": "52h 7min"
+  },
+  {
+    "from": "Portland",
+    "to": "San Antonio",
+    "miles": 2234,
+    "time": "37h 14min"
+  },
+  {
+    "from": "Portland",
+    "to": "San Diego",
+    "miles": 1211,
+    "time": "20h 11min"
+  },
+  {
+    "from": "Portland",
+    "to": "Dallas",
+    "miles": 2120,
+    "time": "35h 20min"
+  },
+  {
+    "from": "Portland",
+    "to": "Austin",
+    "miles": 2220,
+    "time": "37h"
+  },
+  {
+    "from": "Portland",
+    "to": "Boston",
+    "miles": 3293,
+    "time": "54h 52min"
+  },
+  {
+    "from": "Portland",
+    "to": "Nashville",
+    "miles": 2555,
+    "time": "42h 35min"
+  },
+  {
+    "from": "Portland",
+    "to": "Detroit",
+    "miles": 2553,
+    "time": "42h 32min"
+  },
+  {
+    "from": "Portland",
+    "to": "Las Vegas",
+    "miles": 982,
+    "time": "16h 22min"
+  },
+  {
+    "from": "Portland",
+    "to": "Miami",
+    "miles": 3517,
+    "time": "58h 37min"
+  },
+  {
+    "from": "Portland",
+    "to": "Atlanta",
+    "miles": 2819,
+    "time": "46h 59min"
+  },
+  {
+    "from": "Portland",
+    "to": "Minneapolis",
+    "miles": 1850,
+    "time": "30h 49min"
+  },
+  {
+    "from": "Portland",
+    "to": "Orlando",
+    "miles": 3283,
+    "time": "54h 43min"
+  },
+  {
+    "from": "Portland",
+    "to": "Tampa",
+    "miles": 3251,
+    "time": "54h 10min"
+  },
+  {
+    "from": "Portland",
+    "to": "New Orleans",
+    "miles": 2678,
+    "time": "44h 37min"
+  },
+  {
+    "from": "Portland",
+    "to": "Cleveland",
+    "miles": 2664,
+    "time": "44h 23min"
+  },
+  {
+    "from": "Portland",
+    "to": "Washington DC",
+    "miles": 3051,
+    "time": "50h 51min"
+  },
+  {
+    "from": "Portland",
+    "to": "Baltimore",
+    "miles": 3063,
+    "time": "51h 2min"
+  },
+  {
+    "from": "Portland",
+    "to": "San Jose",
+    "miles": 736,
+    "time": "12h 16min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "New York",
+    "miles": 2895,
+    "time": "48h 15min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Chicago",
+    "miles": 1977,
+    "time": "32h 57min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Philadelphia",
+    "miles": 2823,
+    "time": "47h 2min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "San Antonio",
+    "miles": 1392,
+    "time": "23h 11min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Austin",
+    "miles": 1408,
+    "time": "23h 27min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Boston",
+    "miles": 3080,
+    "time": "51h 20min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Nashville",
+    "miles": 2049,
+    "time": "34h 8min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Detroit",
+    "miles": 2285,
+    "time": "38h 5min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Portland",
+    "miles": 982,
+    "time": "16h 22min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Miami",
+    "miles": 2831,
+    "time": "47h 10min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Atlanta",
+    "miles": 2264,
+    "time": "37h 44min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Minneapolis",
+    "miles": 1681,
+    "time": "28h"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Orlando",
+    "miles": 2637,
+    "time": "43h 57min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Tampa",
+    "miles": 2581,
+    "time": "43h"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "New Orleans",
+    "miles": 1961,
+    "time": "32h 40min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Cleveland",
+    "miles": 2373,
+    "time": "39h 32min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Washington DC",
+    "miles": 2705,
+    "time": "45h 5min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Baltimore",
+    "miles": 2730,
+    "time": "45h 30min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "San Jose",
+    "miles": 496,
+    "time": "8h 16min"
+  },
+  {
+    "from": "Miami",
+    "to": "Phoenix",
+    "miles": 2572,
+    "time": "42h 52min"
+  },
+  {
+    "from": "Miami",
+    "to": "Philadelphia",
+    "miles": 1329,
+    "time": "22h 8min"
+  },
+  {
+    "from": "Miami",
+    "to": "San Antonio",
+    "miles": 1491,
+    "time": "24h 51min"
+  },
+  {
+    "from": "Miami",
+    "to": "San Diego",
+    "miles": 2948,
+    "time": "49h 7min"
+  },
+  {
+    "from": "Miami",
+    "to": "Austin",
+    "miles": 1447,
+    "time": "24h 7min"
+  },
+  {
+    "from": "Miami",
+    "to": "San Francisco",
+    "miles": 3368,
+    "time": "56h 7min"
+  },
+  {
+    "from": "Miami",
+    "to": "Seattle",
+    "miles": 3551,
+    "time": "59h 10min"
+  },
+  {
+    "from": "Miami",
+    "to": "Denver",
+    "miles": 2242,
+    "time": "37h 22min"
+  },
+  {
+    "from": "Miami",
+    "to": "Nashville",
+    "miles": 1062,
+    "time": "17h 41min"
+  },
+  {
+    "from": "Miami",
+    "to": "Detroit",
+    "miles": 1503,
+    "time": "25h 3min"
+  },
+  {
+    "from": "Miami",
+    "to": "Portland",
+    "miles": 3517,
+    "time": "58h 37min"
+  },
+  {
+    "from": "Miami",
+    "to": "Las Vegas",
+    "miles": 2831,
+    "time": "47h 10min"
+  },
+  {
+    "from": "Miami",
+    "to": "Minneapolis",
+    "miles": 1968,
+    "time": "32h 47min"
+  },
+  {
+    "from": "Miami",
+    "to": "Cleveland",
+    "miles": 1418,
+    "time": "23h 37min"
+  },
+  {
+    "from": "Miami",
+    "to": "Baltimore",
+    "miles": 1244,
+    "time": "20h 44min"
+  },
+  {
+    "from": "Miami",
+    "to": "Salt Lake City",
+    "miles": 2713,
+    "time": "45h 13min"
+  },
+  {
+    "from": "Miami",
+    "to": "San Jose",
+    "miles": 3326,
+    "time": "55h 25min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Phoenix",
+    "miles": 2065,
+    "time": "34h 24min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Philadelphia",
+    "miles": 865,
+    "time": "14h 24min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "San Antonio",
+    "miles": 1145,
+    "time": "19h 4min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "San Diego",
+    "miles": 2453,
+    "time": "40h 52min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Austin",
+    "miles": 1063,
+    "time": "17h 42min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "San Francisco",
+    "miles": 2776,
+    "time": "46h 15min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Seattle",
+    "miles": 2832,
+    "time": "47h 12min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Portland",
+    "miles": 2819,
+    "time": "46h 59min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Las Vegas",
+    "miles": 2264,
+    "time": "37h 44min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Minneapolis",
+    "miles": 1180,
+    "time": "19h 40min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Cleveland",
+    "miles": 721,
+    "time": "12h 1min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Baltimore",
+    "miles": 749,
+    "time": "12h 28min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Salt Lake City",
+    "miles": 2054,
+    "time": "34h 14min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "San Jose",
+    "miles": 2741,
+    "time": "45h 40min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Los Angeles",
+    "miles": 1977,
+    "time": "32h 57min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Houston",
+    "miles": 1375,
+    "time": "22h 55min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Phoenix",
+    "miles": 1662,
+    "time": "27h 41min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Philadelphia",
+    "miles": 1278,
+    "time": "21h 18min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "San Antonio",
+    "miles": 1445,
+    "time": "24h 4min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "San Diego",
+    "miles": 1990,
+    "time": "33h 9min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Austin",
+    "miles": 1358,
+    "time": "22h 37min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "San Francisco",
+    "miles": 2055,
+    "time": "34h 15min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Boston",
+    "miles": 1457,
+    "time": "24h 17min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Nashville",
+    "miles": 906,
+    "time": "15h 5min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Portland",
+    "miles": 1850,
+    "time": "30h 49min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Las Vegas",
+    "miles": 1681,
+    "time": "28h"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Miami",
+    "miles": 1968,
+    "time": "32h 47min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Atlanta",
+    "miles": 1180,
+    "time": "19h 40min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Orlando",
+    "miles": 1702,
+    "time": "28h 22min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Tampa",
+    "miles": 1713,
+    "time": "28h 33min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "New Orleans",
+    "miles": 1368,
+    "time": "22h 48min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Cleveland",
+    "miles": 818,
+    "time": "13h 37min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Washington DC",
+    "miles": 1210,
+    "time": "20h 10min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Baltimore",
+    "miles": 1218,
+    "time": "20h 18min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Salt Lake City",
+    "miles": 1280,
+    "time": "21h 19min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "San Jose",
+    "miles": 2040,
+    "time": "34h"
+  },
+  {
+    "from": "Orlando",
+    "to": "Los Angeles",
+    "miles": 2856,
+    "time": "47h 36min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Chicago",
+    "miles": 1282,
+    "time": "21h 22min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Houston",
+    "miles": 1102,
+    "time": "18h 22min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Phoenix",
+    "miles": 2395,
+    "time": "39h 54min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Philadelphia",
+    "miles": 1123,
+    "time": "18h 42min"
+  },
+  {
+    "from": "Orlando",
+    "to": "San Antonio",
+    "miles": 1345,
+    "time": "22h 25min"
+  },
+  {
+    "from": "Orlando",
+    "to": "San Diego",
+    "miles": 2777,
+    "time": "46h 16min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Dallas",
+    "miles": 1249,
+    "time": "20h 48min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Austin",
+    "miles": 1288,
+    "time": "21h 27min"
+  },
+  {
+    "from": "Orlando",
+    "to": "San Francisco",
+    "miles": 3168,
+    "time": "52h 47min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Seattle",
+    "miles": 3310,
+    "time": "55h 9min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Denver",
+    "miles": 2014,
+    "time": "33h 34min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Boston",
+    "miles": 1450,
+    "time": "24h 10min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Nashville",
+    "miles": 797,
+    "time": "13h 16min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Detroit",
+    "miles": 1244,
+    "time": "20h 44min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Portland",
+    "miles": 3283,
+    "time": "54h 43min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Las Vegas",
+    "miles": 2637,
+    "time": "43h 57min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Minneapolis",
+    "miles": 1702,
+    "time": "28h 22min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Cleveland",
+    "miles": 1164,
+    "time": "19h 23min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Washington DC",
+    "miles": 985,
+    "time": "16h 25min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Baltimore",
+    "miles": 1028,
+    "time": "17h 7min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Salt Lake City",
+    "miles": 2490,
+    "time": "41h 30min"
+  },
+  {
+    "from": "Orlando",
+    "to": "San Jose",
+    "miles": 3128,
+    "time": "52h 7min"
+  },
+  {
+    "from": "Tampa",
+    "to": "New York",
+    "miles": 1305,
+    "time": "21h 45min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Los Angeles",
+    "miles": 2794,
+    "time": "46h 34min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Chicago",
+    "miles": 1307,
+    "time": "21h 47min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Houston",
+    "miles": 1028,
+    "time": "17h 7min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Phoenix",
+    "miles": 2331,
+    "time": "38h 51min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Philadelphia",
+    "miles": 1206,
+    "time": "20h 6min"
+  },
+  {
+    "from": "Tampa",
+    "to": "San Antonio",
+    "miles": 1269,
+    "time": "21h 8min"
+  },
+  {
+    "from": "Tampa",
+    "to": "San Diego",
+    "miles": 2712,
+    "time": "45h 12min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Dallas",
+    "miles": 1191,
+    "time": "19h 51min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Austin",
+    "miles": 1216,
+    "time": "20h 15min"
+  },
+  {
+    "from": "Tampa",
+    "to": "San Francisco",
+    "miles": 3115,
+    "time": "51h 54min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Seattle",
+    "miles": 3284,
+    "time": "54h 44min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Denver",
+    "miles": 1978,
+    "time": "32h 58min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Boston",
+    "miles": 1538,
+    "time": "25h 37min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Nashville",
+    "miles": 807,
+    "time": "13h 26min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Detroit",
+    "miles": 1292,
+    "time": "21h 32min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Portland",
+    "miles": 3251,
+    "time": "54h 10min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Las Vegas",
+    "miles": 2581,
+    "time": "43h"
+  },
+  {
+    "from": "Tampa",
+    "to": "Minneapolis",
+    "miles": 1713,
+    "time": "28h 33min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Cleveland",
+    "miles": 1218,
+    "time": "20h 18min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Washington DC",
+    "miles": 1064,
+    "time": "17h 44min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Baltimore",
+    "miles": 1107,
+    "time": "18h 26min"
+  },
+  {
+    "from": "Tampa",
+    "to": "Salt Lake City",
+    "miles": 2450,
+    "time": "40h 50min"
+  },
+  {
+    "from": "Tampa",
+    "to": "San Jose",
+    "miles": 3074,
+    "time": "51h 14min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Los Angeles",
+    "miles": 2170,
+    "time": "36h 9min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Chicago",
+    "miles": 1085,
+    "time": "18h 4min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Phoenix",
+    "miles": 1707,
+    "time": "28h 26min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Philadelphia",
+    "miles": 1414,
+    "time": "23h 33min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "San Diego",
+    "miles": 2087,
+    "time": "34h 46min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Austin",
+    "miles": 596,
+    "time": "9h 56min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "San Francisco",
+    "miles": 2499,
+    "time": "41h 38min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Seattle",
+    "miles": 2728,
+    "time": "45h 28min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Denver",
+    "miles": 1404,
+    "time": "23h 23min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Boston",
+    "miles": 1765,
+    "time": "29h 25min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Nashville",
+    "miles": 610,
+    "time": "10h 9min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Detroit",
+    "miles": 1222,
+    "time": "20h 22min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Portland",
+    "miles": 2678,
+    "time": "44h 37min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Las Vegas",
+    "miles": 1961,
+    "time": "32h 40min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Minneapolis",
+    "miles": 1368,
+    "time": "22h 48min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Cleveland",
+    "miles": 1202,
+    "time": "20h 2min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Washington DC",
+    "miles": 1254,
+    "time": "20h 53min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Baltimore",
+    "miles": 1298,
+    "time": "21h 37min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "Salt Lake City",
+    "miles": 1862,
+    "time": "31h 2min"
+  },
+  {
+    "from": "New Orleans",
+    "to": "San Jose",
+    "miles": 2456,
+    "time": "40h 55min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Los Angeles",
+    "miles": 2658,
+    "time": "44h 17min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Houston",
+    "miles": 1448,
+    "time": "24h 7min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Phoenix",
+    "miles": 2269,
+    "time": "37h 49min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Philadelphia",
+    "miles": 465,
+    "time": "7h 45min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "San Antonio",
+    "miles": 1633,
+    "time": "27h 12min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "San Diego",
+    "miles": 2639,
+    "time": "43h 59min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Dallas",
+    "miles": 1332,
+    "time": "22h 11min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Austin",
+    "miles": 1538,
+    "time": "25h 37min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "San Francisco",
+    "miles": 2810,
+    "time": "46h 50min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Seattle",
+    "miles": 2626,
+    "time": "43h 45min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Denver",
+    "miles": 1591,
+    "time": "26h 30min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Boston",
+    "miles": 714,
+    "time": "11h 54min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Nashville",
+    "miles": 596,
+    "time": "9h 56min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Portland",
+    "miles": 2664,
+    "time": "44h 23min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Las Vegas",
+    "miles": 2373,
+    "time": "39h 32min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Miami",
+    "miles": 1418,
+    "time": "23h 37min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Atlanta",
+    "miles": 721,
+    "time": "12h 1min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Minneapolis",
+    "miles": 818,
+    "time": "13h 37min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Orlando",
+    "miles": 1164,
+    "time": "19h 23min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Tampa",
+    "miles": 1218,
+    "time": "20h 18min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "New Orleans",
+    "miles": 1202,
+    "time": "20h 2min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Baltimore",
+    "miles": 400,
+    "time": "6h 40min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Salt Lake City",
+    "miles": 2033,
+    "time": "33h 52min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "San Jose",
+    "miles": 2788,
+    "time": "46h 28min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Los Angeles",
+    "miles": 2982,
+    "time": "49h 42min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Houston",
+    "miles": 1584,
+    "time": "26h 23min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Phoenix",
+    "miles": 2570,
+    "time": "42h 50min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "San Antonio",
+    "miles": 1801,
+    "time": "30h"
+  },
+  {
+    "from": "Washington DC",
+    "to": "San Diego",
+    "miles": 2950,
+    "time": "49h 9min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Dallas",
+    "miles": 1536,
+    "time": "25h 36min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Austin",
+    "miles": 1711,
+    "time": "28h 30min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "San Francisco",
+    "miles": 3165,
+    "time": "52h 45min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Seattle",
+    "miles": 3018,
+    "time": "50h 17min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Denver",
+    "miles": 1935,
+    "time": "32h 15min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Nashville",
+    "miles": 736,
+    "time": "12h 16min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Portland",
+    "miles": 3051,
+    "time": "50h 51min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Las Vegas",
+    "miles": 2705,
+    "time": "45h 5min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Minneapolis",
+    "miles": 1210,
+    "time": "20h 10min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Orlando",
+    "miles": 985,
+    "time": "16h 25min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Tampa",
+    "miles": 1064,
+    "time": "17h 44min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "New Orleans",
+    "miles": 1254,
+    "time": "20h 53min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Baltimore",
+    "miles": 45,
+    "time": "45min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Salt Lake City",
+    "miles": 2394,
+    "time": "39h 53min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "San Jose",
+    "miles": 3140,
+    "time": "52h 20min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Los Angeles",
+    "miles": 3009,
+    "time": "50h 8min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Chicago",
+    "miles": 786,
+    "time": "13h 5min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Houston",
+    "miles": 1625,
+    "time": "27h 4min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Phoenix",
+    "miles": 2600,
+    "time": "43h 20min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "San Antonio",
+    "miles": 1841,
+    "time": "30h 41min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "San Diego",
+    "miles": 2979,
+    "time": "49h 38min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Dallas",
+    "miles": 1574,
+    "time": "26h 14min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Austin",
+    "miles": 1751,
+    "time": "29h 11min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "San Francisco",
+    "miles": 3186,
+    "time": "53h 6min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Seattle",
+    "miles": 3026,
+    "time": "50h 25min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Denver",
+    "miles": 1958,
+    "time": "32h 37min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Boston",
+    "miles": 467,
+    "time": "7h 46min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Nashville",
+    "miles": 774,
+    "time": "12h 54min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Detroit",
+    "miles": 515,
+    "time": "8h 35min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Portland",
+    "miles": 3063,
+    "time": "51h 2min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Las Vegas",
+    "miles": 2730,
+    "time": "45h 30min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Miami",
+    "miles": 1244,
+    "time": "20h 44min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Atlanta",
+    "miles": 749,
+    "time": "12h 28min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Minneapolis",
+    "miles": 1218,
+    "time": "20h 18min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Orlando",
+    "miles": 1028,
+    "time": "17h 7min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Tampa",
+    "miles": 1107,
+    "time": "18h 26min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "New Orleans",
+    "miles": 1298,
+    "time": "21h 37min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Cleveland",
+    "miles": 400,
+    "time": "6h 40min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Washington DC",
+    "miles": 45,
+    "time": "45min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Salt Lake City",
+    "miles": 2413,
+    "time": "40h 13min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "San Jose",
+    "miles": 3162,
+    "time": "52h 42min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "New York",
+    "miles": 2558,
+    "time": "42h 37min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Chicago",
+    "miles": 1634,
+    "time": "27h 14min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Houston",
+    "miles": 1558,
+    "time": "25h 57min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Philadelphia",
+    "miles": 2496,
+    "time": "41h 36min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "San Antonio",
+    "miles": 1413,
+    "time": "23h 33min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "San Diego",
+    "miles": 815,
+    "time": "13h 35min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Dallas",
+    "miles": 1298,
+    "time": "21h 37min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Austin",
+    "miles": 1396,
+    "time": "23h 15min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Boston",
+    "miles": 2721,
+    "time": "45h 21min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Nashville",
+    "miles": 1807,
+    "time": "30h 7min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Detroit",
+    "miles": 1935,
+    "time": "32h 15min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Miami",
+    "miles": 2713,
+    "time": "45h 13min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Atlanta",
+    "miles": 2054,
+    "time": "34h 14min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Minneapolis",
+    "miles": 1280,
+    "time": "21h 19min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Orlando",
+    "miles": 2490,
+    "time": "41h 30min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Tampa",
+    "miles": 2450,
+    "time": "40h 50min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "New Orleans",
+    "miles": 1862,
+    "time": "31h 2min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Cleveland",
+    "miles": 2033,
+    "time": "33h 52min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Washington DC",
+    "miles": 2394,
+    "time": "39h 53min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Baltimore",
+    "miles": 2413,
+    "time": "40h 13min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "San Jose",
+    "miles": 761,
+    "time": "12h 41min"
+  },
+  {
+    "from": "San Jose",
+    "to": "New York",
+    "miles": 3313,
+    "time": "55h 13min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Chicago",
+    "miles": 2389,
+    "time": "39h 49min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Houston",
+    "miles": 2090,
+    "time": "34h 50min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Phoenix",
+    "miles": 798,
+    "time": "13h 18min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Philadelphia",
+    "miles": 3248,
+    "time": "54h 7min"
+  },
+  {
+    "from": "San Jose",
+    "to": "San Antonio",
+    "miles": 1886,
+    "time": "31h 26min"
+  },
+  {
+    "from": "San Jose",
+    "to": "San Diego",
+    "miles": 541,
+    "time": "9h 1min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Dallas",
+    "miles": 1883,
+    "time": "31h 22min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Austin",
+    "miles": 1904,
+    "time": "31h 44min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Seattle",
+    "miles": 922,
+    "time": "15h 22min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Denver",
+    "miles": 1204,
+    "time": "20h 3min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Boston",
+    "miles": 3481,
+    "time": "58h"
+  },
+  {
+    "from": "San Jose",
+    "to": "Nashville",
+    "miles": 2514,
+    "time": "41h 53min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Detroit",
+    "miles": 2692,
+    "time": "44h 52min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Portland",
+    "miles": 736,
+    "time": "12h 16min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Las Vegas",
+    "miles": 496,
+    "time": "8h 16min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Miami",
+    "miles": 3326,
+    "time": "55h 25min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Atlanta",
+    "miles": 2741,
+    "time": "45h 40min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Minneapolis",
+    "miles": 2040,
+    "time": "34h"
+  },
+  {
+    "from": "San Jose",
+    "to": "Orlando",
+    "miles": 3128,
+    "time": "52h 7min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Tampa",
+    "miles": 3074,
+    "time": "51h 14min"
+  },
+  {
+    "from": "San Jose",
+    "to": "New Orleans",
+    "miles": 2456,
+    "time": "40h 55min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Cleveland",
+    "miles": 2788,
+    "time": "46h 28min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Washington DC",
+    "miles": 3140,
+    "time": "52h 20min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Baltimore",
+    "miles": 3162,
+    "time": "52h 42min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Salt Lake City",
+    "miles": 761,
+    "time": "12h 41min"
+  }
+]

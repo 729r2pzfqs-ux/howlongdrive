@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driving Times from Katy - Routes & Distances | HowLongDrive</title>
-    <meta name="description" content="Find driving times from Katy, USA to other cities. Browse 1 routes with distances, drive times, and trip costs.">
+    <meta name="description" content="Find driving times from Katy to 1 destinations. Distances, drive times, and trip costs.">
     <link rel="canonical" href="https://howlongdrive.com/city/katy/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
@@ -23,9 +23,7 @@
         .hero { background: var(--card); padding: 2rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }
         h1 { font-size: 2rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
         h1 svg { width: 32px; height: 32px; color: var(--primary); }
-        .subtitle { color: var(--muted); }
-        .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
-        .stat { text-align: center; }
+        .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
         .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
         .stat-label { font-size: 0.875rem; color: var(--muted); }
         .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
@@ -34,7 +32,6 @@
         .route-title { font-weight: 600; }
         .route-meta { color: var(--muted); font-size: 0.875rem; margin-top: 0.25rem; }
         .route-time { font-weight: 600; color: var(--primary); font-size: 1.1rem; }
-        .ev-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.75rem 1.5rem; background: var(--green); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     </style>
@@ -42,27 +39,18 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script>
 </head>
 <body>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
-        </div>
-    </header>
+    <header><div class="container header-inner">
+        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
+    </div></header>
     <div class="container">
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Katy</h1>
-            <p class="subtitle">USA</p>
-            <div class="stats">
-                <div class="stat"><div class="stat-value">1</div><div class="stat-label">Destinations</div></div>
-            </div>
+            <div class="stats"><div><div class="stat-value">1</div><div class="stat-label">Destinations</div></div></div>
         </div>
         <h2 style="margin-bottom:1rem">Driving Times from Katy</h2>
-        <div class="routes-grid">
-<a href="/route/katy-to-houston/" class="route-card"><div><div class="route-title">Houston</div><div class="route-meta">30 miles</div></div><div class="route-time">35 min</div></a>
-        </div>
-        <div style="text-align:center">
-            <a href="/ev/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Plan EV Trip from Katy</a>
-        </div>
+        <div class="routes-grid"><a href="/route/katy-to-houston/" class="route-card"><div><div class="route-title">Houston</div><div class="route-meta">30 miles</div></div><div class="route-time">35 min</div></a>
+</div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
 </body>

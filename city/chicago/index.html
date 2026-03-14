@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driving Times from Chicago - Routes & Distances | HowLongDrive</title>
-    <meta name="description" content="Find driving times from Chicago, Illinois to other cities. Browse 35 routes with distances, drive times, and trip costs.">
+    <meta name="description" content="Find driving times from Chicago to 47 destinations. Distances, drive times, and trip costs.">
     <link rel="canonical" href="https://howlongdrive.com/city/chicago/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
@@ -23,9 +23,7 @@
         .hero { background: var(--card); padding: 2rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }
         h1 { font-size: 2rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
         h1 svg { width: 32px; height: 32px; color: var(--primary); }
-        .subtitle { color: var(--muted); }
-        .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
-        .stat { text-align: center; }
+        .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
         .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
         .stat-label { font-size: 0.875rem; color: var(--muted); }
         .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
@@ -34,7 +32,6 @@
         .route-title { font-weight: 600; }
         .route-meta { color: var(--muted); font-size: 0.875rem; margin-top: 0.25rem; }
         .route-time { font-weight: 600; color: var(--primary); font-size: 1.1rem; }
-        .ev-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.75rem 1.5rem; background: var(--green); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     </style>
@@ -42,23 +39,17 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script>
 </head>
 <body>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
-        </div>
-    </header>
+    <header><div class="container header-inner">
+        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
+    </div></header>
     <div class="container">
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Chicago</h1>
-            <p class="subtitle">Illinois</p>
-            <div class="stats">
-                <div class="stat"><div class="stat-value">35</div><div class="stat-label">Destinations</div></div>
-            </div>
+            <div class="stats"><div><div class="stat-value">47</div><div class="stat-label">Destinations</div></div></div>
         </div>
         <h2 style="margin-bottom:1rem">Driving Times from Chicago</h2>
-        <div class="routes-grid">
-<a href="/route/chicago-to-oak-park/" class="route-card"><div><div class="route-title">Oak Park</div><div class="route-meta">9 miles</div></div><div class="route-time">20 min</div></a>
+        <div class="routes-grid"><a href="/route/chicago-to-oak-park/" class="route-card"><div><div class="route-title">Oak Park</div><div class="route-meta">9 miles</div></div><div class="route-time">20 min</div></a>
 <a href="/route/chicago-to-mdw/" class="route-card"><div><div class="route-title">MDW</div><div class="route-meta">12 miles</div></div><div class="route-time">25 min</div></a>
 <a href="/route/chicago-to-evanston/" class="route-card"><div><div class="route-title">Evanston</div><div class="route-meta">14 miles</div></div><div class="route-time">25 min</div></a>
 <a href="/route/chicago-to-ord/" class="route-card"><div><div class="route-title">ORD</div><div class="route-meta">18 miles</div></div><div class="route-time">35 min</div></a>
@@ -83,20 +74,29 @@
 <a href="/route/chicago-to-kansas-city/" class="route-card"><div><div class="route-title">Kansas City</div><div class="route-meta">530 miles</div></div><div class="route-time">8h 0min</div></a>
 <a href="/route/chicago-to-washington-dc/" class="route-card"><div><div class="route-title">Washington DC</div><div class="route-meta">700 miles</div></div><div class="route-time">11h 0min</div></a>
 <a href="/route/chicago-to-atlanta/" class="route-card"><div><div class="route-title">Atlanta</div><div class="route-meta">720 miles</div></div><div class="route-time">11h 0min</div></a>
+<a href="/route/chicago-to-baltimore/" class="route-card"><div><div class="route-title">Baltimore</div><div class="route-meta">786 miles</div></div><div class="route-time">13h 5min</div></a>
 <a href="/route/chicago-to-new-york/" class="route-card"><div><div class="route-title">New York</div><div class="route-meta">790 miles</div></div><div class="route-time">12h 0min</div></a>
+<a href="/route/chicago-to-philadelphia/" class="route-card"><div><div class="route-title">Philadelphia</div><div class="route-meta">862 miles</div></div><div class="route-time">14h 22min</div></a>
 <a href="/route/chicago-to-dallas/" class="route-card"><div><div class="route-title">Dallas</div><div class="route-meta">920 miles</div></div><div class="route-time">14h 0min</div></a>
 <a href="/route/chicago-to-boston/" class="route-card"><div><div class="route-title">Boston</div><div class="route-meta">980 miles</div></div><div class="route-time">15h 30min</div></a>
 <a href="/route/chicago-to-denver/" class="route-card"><div><div class="route-title">Denver</div><div class="route-meta">1000 miles</div></div><div class="route-time">14h 30min</div></a>
+<a href="/route/chicago-to-new-orleans/" class="route-card"><div><div class="route-title">New Orleans</div><div class="route-meta">1085 miles</div></div><div class="route-time">18h 4min</div></a>
 <a href="/route/chicago-to-houston/" class="route-card"><div><div class="route-title">Houston</div><div class="route-meta">1090 miles</div></div><div class="route-time">16h 0min</div></a>
+<a href="/route/chicago-to-austin/" class="route-card"><div><div class="route-title">Austin</div><div class="route-meta">1273 miles</div></div><div class="route-time">21h 12min</div></a>
+<a href="/route/chicago-to-orlando/" class="route-card"><div><div class="route-title">Orlando</div><div class="route-meta">1282 miles</div></div><div class="route-time">21h 22min</div></a>
+<a href="/route/chicago-to-tampa/" class="route-card"><div><div class="route-title">Tampa</div><div class="route-meta">1307 miles</div></div><div class="route-time">21h 47min</div></a>
+<a href="/route/chicago-to-san-antonio/" class="route-card"><div><div class="route-title">San Antonio</div><div class="route-meta">1368 miles</div></div><div class="route-time">22h 48min</div></a>
 <a href="/route/chicago-to-miami/" class="route-card"><div><div class="route-title">Miami</div><div class="route-meta">1380 miles</div></div><div class="route-time">20h 0min</div></a>
+<a href="/route/chicago-to-salt-lake-city/" class="route-card"><div><div class="route-title">Salt Lake City</div><div class="route-meta">1634 miles</div></div><div class="route-time">27h 14min</div></a>
 <a href="/route/chicago-to-phoenix/" class="route-card"><div><div class="route-title">Phoenix</div><div class="route-meta">1750 miles</div></div><div class="route-time">24h 0min</div></a>
+<a href="/route/chicago-to-las-vegas/" class="route-card"><div><div class="route-title">Las Vegas</div><div class="route-meta">1977 miles</div></div><div class="route-time">32h 57min</div></a>
 <a href="/route/chicago-to-los-angeles/" class="route-card"><div><div class="route-title">Los Angeles</div><div class="route-meta">2015 miles</div></div><div class="route-time">29h 0min</div></a>
 <a href="/route/chicago-to-seattle/" class="route-card"><div><div class="route-title">Seattle</div><div class="route-meta">2060 miles</div></div><div class="route-time">29h 0min</div></a>
 <a href="/route/chicago-to-san-francisco/" class="route-card"><div><div class="route-title">San Francisco</div><div class="route-meta">2130 miles</div></div><div class="route-time">31h 0min</div></a>
-        </div>
-        <div style="text-align:center">
-            <a href="/ev/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Plan EV Trip from Chicago</a>
-        </div>
+<a href="/route/chicago-to-san-diego/" class="route-card"><div><div class="route-title">San Diego</div><div class="route-meta">2251 miles</div></div><div class="route-time">37h 30min</div></a>
+<a href="/route/chicago-to-portland/" class="route-card"><div><div class="route-title">Portland</div><div class="route-meta">2281 miles</div></div><div class="route-time">38h</div></a>
+<a href="/route/chicago-to-san-jose/" class="route-card"><div><div class="route-title">San Jose</div><div class="route-meta">2389 miles</div></div><div class="route-time">39h 49min</div></a>
+</div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
 </body>
