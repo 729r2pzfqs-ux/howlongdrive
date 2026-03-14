@@ -1,0 +1,1298 @@
+[
+  {
+    "from": "Cheyenne",
+    "to": "Denver",
+    "miles": 116,
+    "time": "2h 6min"
+  },
+  {
+    "from": "Denver",
+    "to": "Cheyenne",
+    "miles": 116,
+    "time": "2h 6min"
+  },
+  {
+    "from": "Cheyenne",
+    "to": "Salt Lake City",
+    "miles": 443,
+    "time": "8h 3min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Cheyenne",
+    "miles": 443,
+    "time": "8h 3min"
+  },
+  {
+    "from": "Cheyenne",
+    "to": "Rapid City",
+    "miles": 262,
+    "time": "4h 45min"
+  },
+  {
+    "from": "Rapid City",
+    "to": "Cheyenne",
+    "miles": 262,
+    "time": "4h 45min"
+  },
+  {
+    "from": "Casper",
+    "to": "Denver",
+    "miles": 272,
+    "time": "4h 56min"
+  },
+  {
+    "from": "Denver",
+    "to": "Casper",
+    "miles": 272,
+    "time": "4h 56min"
+  },
+  {
+    "from": "Casper",
+    "to": "Billings",
+    "miles": 274,
+    "time": "4h 58min"
+  },
+  {
+    "from": "Billings",
+    "to": "Casper",
+    "miles": 274,
+    "time": "4h 58min"
+  },
+  {
+    "from": "Casper",
+    "to": "Salt Lake City",
+    "miles": 386,
+    "time": "7h 1min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Casper",
+    "miles": 386,
+    "time": "7h 1min"
+  },
+  {
+    "from": "Casper",
+    "to": "Cheyenne",
+    "miles": 170,
+    "time": "3h 5min"
+  },
+  {
+    "from": "Cheyenne",
+    "to": "Casper",
+    "miles": 170,
+    "time": "3h 5min"
+  },
+  {
+    "from": "Laramie",
+    "to": "Denver",
+    "miles": 135,
+    "time": "2h 27min"
+  },
+  {
+    "from": "Denver",
+    "to": "Laramie",
+    "miles": 135,
+    "time": "2h 27min"
+  },
+  {
+    "from": "Laramie",
+    "to": "Cheyenne",
+    "miles": 50,
+    "time": "0h 54min"
+  },
+  {
+    "from": "Cheyenne",
+    "to": "Laramie",
+    "miles": 50,
+    "time": "0h 54min"
+  },
+  {
+    "from": "Bangor",
+    "to": "Portland ME",
+    "miles": 129,
+    "time": "2h 20min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Bangor",
+    "miles": 129,
+    "time": "2h 20min"
+  },
+  {
+    "from": "Bangor",
+    "to": "Boston",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Boston",
+    "to": "Bangor",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Bangor",
+    "to": "Bar Harbor",
+    "miles": 47,
+    "time": "0h 51min"
+  },
+  {
+    "from": "Bar Harbor",
+    "to": "Bangor",
+    "miles": 47,
+    "time": "0h 51min"
+  },
+  {
+    "from": "Augusta",
+    "to": "Portland ME",
+    "miles": 61,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Augusta",
+    "miles": 61,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Augusta",
+    "to": "Boston",
+    "miles": 179,
+    "time": "3h 15min"
+  },
+  {
+    "from": "Boston",
+    "to": "Augusta",
+    "miles": 179,
+    "time": "3h 15min"
+  },
+  {
+    "from": "Augusta",
+    "to": "Bangor",
+    "miles": 72,
+    "time": "1h 18min"
+  },
+  {
+    "from": "Bangor",
+    "to": "Augusta",
+    "miles": 72,
+    "time": "1h 18min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Boston",
+    "miles": 218,
+    "time": "3h 57min"
+  },
+  {
+    "from": "Boston",
+    "to": "Burlington VT",
+    "miles": 218,
+    "time": "3h 57min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "New York",
+    "miles": 315,
+    "time": "5h 43min"
+  },
+  {
+    "from": "New York",
+    "to": "Burlington VT",
+    "miles": 315,
+    "time": "5h 43min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Montreal",
+    "miles": 87,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Montreal",
+    "to": "Burlington VT",
+    "miles": 87,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Montpelier",
+    "to": "Burlington VT",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Montpelier",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Montpelier",
+    "to": "Boston",
+    "miles": 182,
+    "time": "3h 18min"
+  },
+  {
+    "from": "Boston",
+    "to": "Montpelier",
+    "miles": 182,
+    "time": "3h 18min"
+  },
+  {
+    "from": "Rutland",
+    "to": "Burlington VT",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Rutland",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Rutland",
+    "to": "Boston",
+    "miles": 155,
+    "time": "2h 49min"
+  },
+  {
+    "from": "Boston",
+    "to": "Rutland",
+    "miles": 155,
+    "time": "2h 49min"
+  },
+  {
+    "from": "Rutland",
+    "to": "Albany",
+    "miles": 92,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Albany",
+    "to": "Rutland",
+    "miles": 92,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Manchester NH",
+    "to": "Boston",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Boston",
+    "to": "Manchester NH",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Manchester NH",
+    "to": "Portland ME",
+    "miles": 90,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Manchester NH",
+    "miles": 90,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Concord NH",
+    "to": "Boston",
+    "miles": 76,
+    "time": "1h 22min"
+  },
+  {
+    "from": "Boston",
+    "to": "Concord NH",
+    "miles": 76,
+    "time": "1h 22min"
+  },
+  {
+    "from": "Concord NH",
+    "to": "Manchester NH",
+    "miles": 18,
+    "time": "0h 19min"
+  },
+  {
+    "from": "Manchester NH",
+    "to": "Concord NH",
+    "miles": 18,
+    "time": "0h 19min"
+  },
+  {
+    "from": "Concord NH",
+    "to": "Portland ME",
+    "miles": 85,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Concord NH",
+    "miles": 85,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Portsmouth NH",
+    "to": "Boston",
+    "miles": 61,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Boston",
+    "to": "Portsmouth NH",
+    "miles": 61,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Portsmouth NH",
+    "to": "Portland ME",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Portsmouth NH",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Nashua",
+    "to": "Boston",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Boston",
+    "to": "Nashua",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Nashua",
+    "to": "Manchester NH",
+    "miles": 19,
+    "time": "0h 20min"
+  },
+  {
+    "from": "Manchester NH",
+    "to": "Nashua",
+    "miles": 19,
+    "time": "0h 20min"
+  },
+  {
+    "from": "Charleston WV",
+    "to": "Pittsburgh",
+    "miles": 202,
+    "time": "3h 40min"
+  },
+  {
+    "from": "Pittsburgh",
+    "to": "Charleston WV",
+    "miles": 202,
+    "time": "3h 40min"
+  },
+  {
+    "from": "Charleston WV",
+    "to": "Columbus",
+    "miles": 159,
+    "time": "2h 53min"
+  },
+  {
+    "from": "Columbus",
+    "to": "Charleston WV",
+    "miles": 159,
+    "time": "2h 53min"
+  },
+  {
+    "from": "Charleston WV",
+    "to": "Washington DC",
+    "miles": 301,
+    "time": "5h 28min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Charleston WV",
+    "miles": 301,
+    "time": "5h 28min"
+  },
+  {
+    "from": "Morgantown",
+    "to": "Pittsburgh",
+    "miles": 67,
+    "time": "1h 13min"
+  },
+  {
+    "from": "Pittsburgh",
+    "to": "Morgantown",
+    "miles": 67,
+    "time": "1h 13min"
+  },
+  {
+    "from": "Morgantown",
+    "to": "Washington DC",
+    "miles": 196,
+    "time": "3h 33min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Morgantown",
+    "miles": 196,
+    "time": "3h 33min"
+  },
+  {
+    "from": "Huntington WV",
+    "to": "Charleston WV",
+    "miles": 53,
+    "time": "0h 57min"
+  },
+  {
+    "from": "Charleston WV",
+    "to": "Huntington WV",
+    "miles": 53,
+    "time": "0h 57min"
+  },
+  {
+    "from": "Huntington WV",
+    "to": "Columbus",
+    "miles": 132,
+    "time": "2h 23min"
+  },
+  {
+    "from": "Columbus",
+    "to": "Huntington WV",
+    "miles": 132,
+    "time": "2h 23min"
+  },
+  {
+    "from": "Huntington WV",
+    "to": "Cincinnati",
+    "miles": 145,
+    "time": "2h 38min"
+  },
+  {
+    "from": "Cincinnati",
+    "to": "Huntington WV",
+    "miles": 145,
+    "time": "2h 38min"
+  },
+  {
+    "from": "Newport",
+    "to": "Providence",
+    "miles": 28,
+    "time": "0h 30min"
+  },
+  {
+    "from": "Providence",
+    "to": "Newport",
+    "miles": 28,
+    "time": "0h 30min"
+  },
+  {
+    "from": "Newport",
+    "to": "Boston",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Boston",
+    "to": "Newport",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Newport",
+    "to": "New York",
+    "miles": 180,
+    "time": "3h 16min"
+  },
+  {
+    "from": "New York",
+    "to": "Newport",
+    "miles": 180,
+    "time": "3h 16min"
+  },
+  {
+    "from": "New Haven",
+    "to": "New York",
+    "miles": 83,
+    "time": "1h 30min"
+  },
+  {
+    "from": "New York",
+    "to": "New Haven",
+    "miles": 83,
+    "time": "1h 30min"
+  },
+  {
+    "from": "New Haven",
+    "to": "Boston",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "Boston",
+    "to": "New Haven",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "New Haven",
+    "to": "Hartford",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Hartford",
+    "to": "New Haven",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Hartford",
+    "to": "New York",
+    "miles": 120,
+    "time": "2h 10min"
+  },
+  {
+    "from": "New York",
+    "to": "Hartford",
+    "miles": 120,
+    "time": "2h 10min"
+  },
+  {
+    "from": "Hartford",
+    "to": "Boston",
+    "miles": 110,
+    "time": "2h"
+  },
+  {
+    "from": "Boston",
+    "to": "Hartford",
+    "miles": 110,
+    "time": "2h"
+  },
+  {
+    "from": "Hartford",
+    "to": "New Haven",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "New Haven",
+    "to": "Hartford",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Stamford CT",
+    "to": "New York",
+    "miles": 40,
+    "time": "0h 43min"
+  },
+  {
+    "from": "New York",
+    "to": "Stamford CT",
+    "miles": 40,
+    "time": "0h 43min"
+  },
+  {
+    "from": "Stamford CT",
+    "to": "New Haven",
+    "miles": 43,
+    "time": "0h 46min"
+  },
+  {
+    "from": "New Haven",
+    "to": "Stamford CT",
+    "miles": 43,
+    "time": "0h 46min"
+  },
+  {
+    "from": "Bridgeport",
+    "to": "New York",
+    "miles": 64,
+    "time": "1h 9min"
+  },
+  {
+    "from": "New York",
+    "to": "Bridgeport",
+    "miles": 64,
+    "time": "1h 9min"
+  },
+  {
+    "from": "Bridgeport",
+    "to": "New Haven",
+    "miles": 19,
+    "time": "0h 20min"
+  },
+  {
+    "from": "New Haven",
+    "to": "Bridgeport",
+    "miles": 19,
+    "time": "0h 20min"
+  },
+  {
+    "from": "Bridgeport",
+    "to": "Hartford",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Hartford",
+    "to": "Bridgeport",
+    "miles": 57,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Springfield MA",
+    "to": "Boston",
+    "miles": 96,
+    "time": "1h 44min"
+  },
+  {
+    "from": "Boston",
+    "to": "Springfield MA",
+    "miles": 96,
+    "time": "1h 44min"
+  },
+  {
+    "from": "Springfield MA",
+    "to": "Hartford",
+    "miles": 28,
+    "time": "0h 30min"
+  },
+  {
+    "from": "Hartford",
+    "to": "Springfield MA",
+    "miles": 28,
+    "time": "0h 30min"
+  },
+  {
+    "from": "Springfield MA",
+    "to": "New York",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "New York",
+    "to": "Springfield MA",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "Plymouth",
+    "to": "Boston",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Boston",
+    "to": "Plymouth",
+    "miles": 41,
+    "time": "0h 44min"
+  },
+  {
+    "from": "Plymouth",
+    "to": "Cape Cod",
+    "miles": 33,
+    "time": "0h 36min"
+  },
+  {
+    "from": "Cape Cod",
+    "to": "Plymouth",
+    "miles": 33,
+    "time": "0h 36min"
+  },
+  {
+    "from": "Plymouth",
+    "to": "Providence",
+    "miles": 47,
+    "time": "0h 51min"
+  },
+  {
+    "from": "Providence",
+    "to": "Plymouth",
+    "miles": 47,
+    "time": "0h 51min"
+  },
+  {
+    "from": "Wilmington DE",
+    "to": "Philadelphia",
+    "miles": 29,
+    "time": "0h 31min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Wilmington DE",
+    "miles": 29,
+    "time": "0h 31min"
+  },
+  {
+    "from": "Wilmington DE",
+    "to": "Baltimore",
+    "miles": 78,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Wilmington DE",
+    "miles": 78,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Wilmington DE",
+    "to": "New York",
+    "miles": 126,
+    "time": "2h 17min"
+  },
+  {
+    "from": "New York",
+    "to": "Wilmington DE",
+    "miles": 126,
+    "time": "2h 17min"
+  },
+  {
+    "from": "Dover",
+    "to": "Philadelphia",
+    "miles": 69,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Dover",
+    "miles": 69,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Dover",
+    "to": "Baltimore",
+    "miles": 70,
+    "time": "1h 16min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Dover",
+    "miles": 70,
+    "time": "1h 16min"
+  },
+  {
+    "from": "Dover",
+    "to": "Wilmington DE",
+    "miles": 48,
+    "time": "0h 52min"
+  },
+  {
+    "from": "Wilmington DE",
+    "to": "Dover",
+    "miles": 48,
+    "time": "0h 52min"
+  },
+  {
+    "from": "Rehoboth Beach",
+    "to": "Philadelphia",
+    "miles": 102,
+    "time": "1h 51min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Rehoboth Beach",
+    "miles": 102,
+    "time": "1h 51min"
+  },
+  {
+    "from": "Rehoboth Beach",
+    "to": "Baltimore",
+    "miles": 109,
+    "time": "1h 58min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Rehoboth Beach",
+    "miles": 109,
+    "time": "1h 58min"
+  },
+  {
+    "from": "Rehoboth Beach",
+    "to": "Washington DC",
+    "miles": 127,
+    "time": "2h 18min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Rehoboth Beach",
+    "miles": 127,
+    "time": "2h 18min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "New York",
+    "miles": 234,
+    "time": "4h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "Syracuse",
+    "miles": 234,
+    "time": "4h 15min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "Buffalo",
+    "miles": 166,
+    "time": "3h 1min"
+  },
+  {
+    "from": "Buffalo",
+    "to": "Syracuse",
+    "miles": 166,
+    "time": "3h 1min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "Albany",
+    "miles": 149,
+    "time": "2h 42min"
+  },
+  {
+    "from": "Albany",
+    "to": "Syracuse",
+    "miles": 149,
+    "time": "2h 42min"
+  },
+  {
+    "from": "Rochester NY",
+    "to": "Buffalo",
+    "miles": 80,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Buffalo",
+    "to": "Rochester NY",
+    "miles": 80,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Rochester NY",
+    "to": "Syracuse",
+    "miles": 88,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "Rochester NY",
+    "miles": 88,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Rochester NY",
+    "to": "New York",
+    "miles": 300,
+    "time": "5h 27min"
+  },
+  {
+    "from": "New York",
+    "to": "Rochester NY",
+    "miles": 300,
+    "time": "5h 27min"
+  },
+  {
+    "from": "Ithaca",
+    "to": "Syracuse",
+    "miles": 54,
+    "time": "0h 58min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "Ithaca",
+    "miles": 54,
+    "time": "0h 58min"
+  },
+  {
+    "from": "Ithaca",
+    "to": "New York",
+    "miles": 211,
+    "time": "3h 50min"
+  },
+  {
+    "from": "New York",
+    "to": "Ithaca",
+    "miles": 211,
+    "time": "3h 50min"
+  },
+  {
+    "from": "Binghamton",
+    "to": "New York",
+    "miles": 165,
+    "time": "3h"
+  },
+  {
+    "from": "New York",
+    "to": "Binghamton",
+    "miles": 165,
+    "time": "3h"
+  },
+  {
+    "from": "Binghamton",
+    "to": "Syracuse",
+    "miles": 79,
+    "time": "1h 26min"
+  },
+  {
+    "from": "Syracuse",
+    "to": "Binghamton",
+    "miles": 79,
+    "time": "1h 26min"
+  },
+  {
+    "from": "Binghamton",
+    "to": "Scranton",
+    "miles": 59,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Scranton",
+    "to": "Binghamton",
+    "miles": 59,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Saratoga Springs",
+    "to": "Albany",
+    "miles": 35,
+    "time": "0h 38min"
+  },
+  {
+    "from": "Albany",
+    "to": "Saratoga Springs",
+    "miles": 35,
+    "time": "0h 38min"
+  },
+  {
+    "from": "Saratoga Springs",
+    "to": "New York",
+    "miles": 197,
+    "time": "3h 34min"
+  },
+  {
+    "from": "New York",
+    "to": "Saratoga Springs",
+    "miles": 197,
+    "time": "3h 34min"
+  },
+  {
+    "from": "Saratoga Springs",
+    "to": "Boston",
+    "miles": 176,
+    "time": "3h 12min"
+  },
+  {
+    "from": "Boston",
+    "to": "Saratoga Springs",
+    "miles": 176,
+    "time": "3h 12min"
+  },
+  {
+    "from": "Lake Placid",
+    "to": "Albany",
+    "miles": 135,
+    "time": "2h 27min"
+  },
+  {
+    "from": "Albany",
+    "to": "Lake Placid",
+    "miles": 135,
+    "time": "2h 27min"
+  },
+  {
+    "from": "Lake Placid",
+    "to": "Burlington VT",
+    "miles": 48,
+    "time": "0h 52min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Lake Placid",
+    "miles": 48,
+    "time": "0h 52min"
+  },
+  {
+    "from": "Lake Placid",
+    "to": "Montreal",
+    "miles": 104,
+    "time": "1h 53min"
+  },
+  {
+    "from": "Montreal",
+    "to": "Lake Placid",
+    "miles": 104,
+    "time": "1h 53min"
+  },
+  {
+    "from": "Scranton",
+    "to": "New York",
+    "miles": 118,
+    "time": "2h 8min"
+  },
+  {
+    "from": "New York",
+    "to": "Scranton",
+    "miles": 118,
+    "time": "2h 8min"
+  },
+  {
+    "from": "Scranton",
+    "to": "Philadelphia",
+    "miles": 124,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Scranton",
+    "miles": 124,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Harrisburg",
+    "to": "Philadelphia",
+    "miles": 112,
+    "time": "2h 2min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Harrisburg",
+    "miles": 112,
+    "time": "2h 2min"
+  },
+  {
+    "from": "Harrisburg",
+    "to": "Pittsburgh",
+    "miles": 196,
+    "time": "3h 33min"
+  },
+  {
+    "from": "Pittsburgh",
+    "to": "Harrisburg",
+    "miles": 196,
+    "time": "3h 33min"
+  },
+  {
+    "from": "Harrisburg",
+    "to": "Baltimore",
+    "miles": 83,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Harrisburg",
+    "miles": 83,
+    "time": "1h 30min"
+  },
+  {
+    "from": "State College",
+    "to": "Pittsburgh",
+    "miles": 137,
+    "time": "2h 29min"
+  },
+  {
+    "from": "Pittsburgh",
+    "to": "State College",
+    "miles": 137,
+    "time": "2h 29min"
+  },
+  {
+    "from": "State College",
+    "to": "Harrisburg",
+    "miles": 74,
+    "time": "1h 20min"
+  },
+  {
+    "from": "Harrisburg",
+    "to": "State College",
+    "miles": 74,
+    "time": "1h 20min"
+  },
+  {
+    "from": "State College",
+    "to": "Philadelphia",
+    "miles": 183,
+    "time": "3h 19min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "State College",
+    "miles": 183,
+    "time": "3h 19min"
+  },
+  {
+    "from": "Erie PA",
+    "to": "Pittsburgh",
+    "miles": 140,
+    "time": "2h 32min"
+  },
+  {
+    "from": "Pittsburgh",
+    "to": "Erie PA",
+    "miles": 140,
+    "time": "2h 32min"
+  },
+  {
+    "from": "Erie PA",
+    "to": "Cleveland",
+    "miles": 112,
+    "time": "2h 2min"
+  },
+  {
+    "from": "Cleveland",
+    "to": "Erie PA",
+    "miles": 112,
+    "time": "2h 2min"
+  },
+  {
+    "from": "Erie PA",
+    "to": "Buffalo",
+    "miles": 96,
+    "time": "1h 44min"
+  },
+  {
+    "from": "Buffalo",
+    "to": "Erie PA",
+    "miles": 96,
+    "time": "1h 44min"
+  },
+  {
+    "from": "Gettysburg",
+    "to": "Baltimore",
+    "miles": 59,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Gettysburg",
+    "miles": 59,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Gettysburg",
+    "to": "Harrisburg",
+    "miles": 42,
+    "time": "0h 45min"
+  },
+  {
+    "from": "Harrisburg",
+    "to": "Gettysburg",
+    "miles": 42,
+    "time": "0h 45min"
+  },
+  {
+    "from": "Gettysburg",
+    "to": "Washington DC",
+    "miles": 77,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Gettysburg",
+    "miles": 77,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Montreal",
+    "to": "New York",
+    "miles": 397,
+    "time": "7h 13min"
+  },
+  {
+    "from": "New York",
+    "to": "Montreal",
+    "miles": 397,
+    "time": "7h 13min"
+  },
+  {
+    "from": "Montreal",
+    "to": "Boston",
+    "miles": 300,
+    "time": "5h 27min"
+  },
+  {
+    "from": "Boston",
+    "to": "Montreal",
+    "miles": 300,
+    "time": "5h 27min"
+  },
+  {
+    "from": "Montreal",
+    "to": "Burlington VT",
+    "miles": 87,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Burlington VT",
+    "to": "Montreal",
+    "miles": 87,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Toronto",
+    "to": "Buffalo",
+    "miles": 70,
+    "time": "1h 16min"
+  },
+  {
+    "from": "Buffalo",
+    "to": "Toronto",
+    "miles": 70,
+    "time": "1h 16min"
+  },
+  {
+    "from": "Toronto",
+    "to": "Detroit",
+    "miles": 247,
+    "time": "4h 29min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Toronto",
+    "miles": 247,
+    "time": "4h 29min"
+  },
+  {
+    "from": "Toronto",
+    "to": "New York",
+    "miles": 410,
+    "time": "7h 27min"
+  },
+  {
+    "from": "New York",
+    "to": "Toronto",
+    "miles": 410,
+    "time": "7h 27min"
+  },
+  {
+    "from": "Niagara Falls CA",
+    "to": "Toronto",
+    "miles": 50,
+    "time": "0h 54min"
+  },
+  {
+    "from": "Toronto",
+    "to": "Niagara Falls CA",
+    "miles": 50,
+    "time": "0h 54min"
+  },
+  {
+    "from": "Niagara Falls CA",
+    "to": "Buffalo",
+    "miles": 20,
+    "time": "0h 21min"
+  },
+  {
+    "from": "Buffalo",
+    "to": "Niagara Falls CA",
+    "miles": 20,
+    "time": "0h 21min"
+  }
+]
