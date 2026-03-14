@@ -203,10 +203,10 @@
     42.6526,
     -73.7562
   ],
-  "Hartford": [
-    41.7658,
-    -72.6734
-  ],
+  "Hartford": {
+    "lat": 41.7658,
+    "lng": -72.6734
+  },
   "Providence": {
     "lat": 41.824,
     "lng": -71.4128
@@ -1258,5 +1258,157 @@
   "Calgary": {
     "lat": 51.0447,
     "lng": -114.0719
+  },
+  "Cheyenne": {
+    "lat": 41.14,
+    "lng": -104.8202
+  },
+  "Casper": {
+    "lat": 42.8666,
+    "lng": -106.3131
+  },
+  "Laramie": {
+    "lat": 41.3114,
+    "lng": -105.5911
+  },
+  "Bangor": {
+    "lat": 44.8016,
+    "lng": -68.7712
+  },
+  "Augusta": {
+    "lat": 44.3106,
+    "lng": -69.7795
+  },
+  "Burlington VT": {
+    "lat": 44.4759,
+    "lng": -73.2121
+  },
+  "Montpelier": {
+    "lat": 44.2601,
+    "lng": -72.5754
+  },
+  "Rutland": {
+    "lat": 43.6106,
+    "lng": -72.9726
+  },
+  "Manchester NH": {
+    "lat": 42.9956,
+    "lng": -71.4548
+  },
+  "Concord NH": {
+    "lat": 43.2081,
+    "lng": -71.5376
+  },
+  "Portsmouth NH": {
+    "lat": 43.0718,
+    "lng": -70.7626
+  },
+  "Nashua": {
+    "lat": 42.7654,
+    "lng": -71.4676
+  },
+  "Charleston WV": {
+    "lat": 38.3498,
+    "lng": -81.6326
+  },
+  "Morgantown": {
+    "lat": 39.6295,
+    "lng": -79.9559
+  },
+  "Huntington WV": {
+    "lat": 38.4192,
+    "lng": -82.4452
+  },
+  "Newport": {
+    "lat": 41.4901,
+    "lng": -71.3128
+  },
+  "New Haven": {
+    "lat": 41.3083,
+    "lng": -72.9279
+  },
+  "Stamford CT": {
+    "lat": 41.0534,
+    "lng": -73.5387
+  },
+  "Bridgeport": {
+    "lat": 41.1865,
+    "lng": -73.1952
+  },
+  "Springfield MA": {
+    "lat": 42.1015,
+    "lng": -72.5898
+  },
+  "Plymouth": {
+    "lat": 41.9584,
+    "lng": -70.6673
+  },
+  "Wilmington DE": {
+    "lat": 39.7391,
+    "lng": -75.5398
+  },
+  "Dover": {
+    "lat": 39.1582,
+    "lng": -75.5244
+  },
+  "Rehoboth Beach": {
+    "lat": 38.721,
+    "lng": -75.076
+  },
+  "Syracuse": {
+    "lat": 43.0481,
+    "lng": -76.1474
+  },
+  "Rochester NY": {
+    "lat": 43.1566,
+    "lng": -77.6088
+  },
+  "Ithaca": {
+    "lat": 42.444,
+    "lng": -76.5019
+  },
+  "Binghamton": {
+    "lat": 42.0987,
+    "lng": -75.918
+  },
+  "Saratoga Springs": {
+    "lat": 43.0831,
+    "lng": -73.7846
+  },
+  "Lake Placid": {
+    "lat": 44.2795,
+    "lng": -73.9799
+  },
+  "Scranton": {
+    "lat": 41.409,
+    "lng": -75.6624
+  },
+  "Harrisburg": {
+    "lat": 40.2732,
+    "lng": -76.8867
+  },
+  "State College": {
+    "lat": 40.7934,
+    "lng": -77.86
+  },
+  "Erie PA": {
+    "lat": 42.1292,
+    "lng": -80.0851
+  },
+  "Gettysburg": {
+    "lat": 39.8309,
+    "lng": -77.2311
+  },
+  "Montreal": {
+    "lat": 45.5017,
+    "lng": -73.5673
+  },
+  "Toronto": {
+    "lat": 43.6532,
+    "lng": -79.3832
+  },
+  "Niagara Falls CA": {
+    "lat": 43.0896,
+    "lng": -79.0849
   }
 }

@@ -9,7 +9,11 @@ const ROUTE_MAP = {
     "Portland ME"
   ],
   "Albany": [
-    "New York"
+    "Lake Placid",
+    "New York",
+    "Rutland",
+    "Saratoga Springs",
+    "Syracuse"
   ],
   "Albuquerque": [
     "Black Canyon",
@@ -107,6 +111,11 @@ const ROUTE_MAP = {
   "Atlantic City": [
     "New York"
   ],
+  "Augusta": [
+    "Bangor",
+    "Boston",
+    "Portland ME"
+  ],
   "Aurora": [
     "Chicago",
     "Denver"
@@ -165,6 +174,9 @@ const ROUTE_MAP = {
     "Dallas",
     "Denver",
     "Detroit",
+    "Dover",
+    "Gettysburg",
+    "Harrisburg",
     "Houston",
     "Las Vegas",
     "Los Angeles",
@@ -177,6 +189,7 @@ const ROUTE_MAP = {
     "Philadelphia",
     "Phoenix",
     "Portland",
+    "Rehoboth Beach",
     "Salt Lake City",
     "San Antonio",
     "San Diego",
@@ -185,9 +198,17 @@ const ROUTE_MAP = {
     "Seattle",
     "Shenandoah",
     "Tampa",
-    "Washington DC"
+    "Washington DC",
+    "Wilmington DE"
+  ],
+  "Bangor": [
+    "Augusta",
+    "Bar Harbor",
+    "Boston",
+    "Portland ME"
   ],
   "Bar Harbor": [
+    "Bangor",
     "Boston",
     "New York",
     "Portland ME"
@@ -221,8 +242,14 @@ const ROUTE_MAP = {
   "Billings": [
     "Big Sky",
     "Boise",
+    "Casper",
     "Denver",
     "Yellowstone"
+  ],
+  "Binghamton": [
+    "New York",
+    "Scranton",
+    "Syracuse"
   ],
   "Birmingham": [
     "Atlanta",
@@ -255,15 +282,19 @@ const ROUTE_MAP = {
   "Boston": [
     "Acadia",
     "Atlanta",
+    "Augusta",
     "Austin",
     "BOS",
     "Baltimore",
+    "Bangor",
     "Bar Harbor",
     "Brookline",
+    "Burlington VT",
     "Cambridge",
     "Cape Cod",
     "Chicago",
     "Cleveland",
+    "Concord NH",
     "Dallas",
     "Denver",
     "Detroit",
@@ -273,27 +304,38 @@ const ROUTE_MAP = {
     "Las Vegas",
     "Los Angeles",
     "Lowell",
+    "Manchester NH",
     "Marthas Vineyard",
     "Miami",
     "Minneapolis",
+    "Montpelier",
+    "Montreal",
     "Nantucket",
+    "Nashua",
     "Nashville",
+    "New Haven",
     "New Orleans",
     "New York",
+    "Newport",
     "Newton",
     "Orlando",
     "Philadelphia",
     "Phoenix",
+    "Plymouth",
     "Portland",
+    "Portsmouth NH",
     "Providence",
     "Quincy",
+    "Rutland",
     "Salt Lake City",
     "San Antonio",
     "San Diego",
     "San Francisco",
     "San Jose",
+    "Saratoga Springs",
     "Seattle",
     "Somerville",
+    "Springfield MA",
     "Stowe",
     "Tampa",
     "Washington DC",
@@ -306,6 +348,11 @@ const ROUTE_MAP = {
   "Breckenridge": [
     "Denver"
   ],
+  "Bridgeport": [
+    "Hartford",
+    "New Haven",
+    "New York"
+  ],
   "Brookline": [
     "Boston"
   ],
@@ -317,11 +364,26 @@ const ROUTE_MAP = {
     "Phoenix",
     "Salt Lake City"
   ],
+  "Buffalo": [
+    "Erie PA",
+    "Niagara Falls CA",
+    "Rochester NY",
+    "Syracuse",
+    "Toronto"
+  ],
   "Burbank": [
     "Los Angeles"
   ],
   "Burlington": [
     "Stowe"
+  ],
+  "Burlington VT": [
+    "Boston",
+    "Lake Placid",
+    "Montpelier",
+    "Montreal",
+    "New York",
+    "Rutland"
   ],
   "Cambridge": [
     "BOS",
@@ -338,6 +400,7 @@ const ROUTE_MAP = {
   "Cape Cod": [
     "Boston",
     "New York",
+    "Plymouth",
     "Providence"
   ],
   "Capitol Reef": [
@@ -353,6 +416,12 @@ const ROUTE_MAP = {
   "Carmel": [
     "San Francisco"
   ],
+  "Casper": [
+    "Billings",
+    "Cheyenne",
+    "Denver",
+    "Salt Lake City"
+  ],
   "Chandler": [
     "Phoenix"
   ],
@@ -361,6 +430,12 @@ const ROUTE_MAP = {
     "Hilton Head",
     "Myrtle Beach",
     "Savannah"
+  ],
+  "Charleston WV": [
+    "Columbus",
+    "Huntington WV",
+    "Pittsburgh",
+    "Washington DC"
   ],
   "Charlotte": [
     "Atlanta",
@@ -376,6 +451,13 @@ const ROUTE_MAP = {
   ],
   "Cherry Hill": [
     "Philadelphia"
+  ],
+  "Cheyenne": [
+    "Casper",
+    "Denver",
+    "Laramie",
+    "Rapid City",
+    "Salt Lake City"
   ],
   "Chicago": [
     "Atlanta",
@@ -428,6 +510,7 @@ const ROUTE_MAP = {
   ],
   "Cincinnati": [
     "Columbus",
+    "Huntington WV",
     "Lexington",
     "Louisville"
   ],
@@ -444,6 +527,7 @@ const ROUTE_MAP = {
     "Dallas",
     "Denver",
     "Detroit",
+    "Erie PA",
     "Houston",
     "Las Vegas",
     "Los Angeles",
@@ -469,8 +553,15 @@ const ROUTE_MAP = {
     "Denver"
   ],
   "Columbus": [
+    "Charleston WV",
     "Cincinnati",
-    "Cleveland"
+    "Cleveland",
+    "Huntington WV"
+  ],
+  "Concord NH": [
+    "Boston",
+    "Manchester NH",
+    "Portland ME"
   ],
   "Coral Gables": [
     "Miami"
@@ -574,6 +665,8 @@ const ROUTE_MAP = {
     "Breckenridge",
     "Canyonlands",
     "Capitol Reef",
+    "Casper",
+    "Cheyenne",
     "Chicago",
     "Cleveland",
     "Colorado Springs",
@@ -588,6 +681,7 @@ const ROUTE_MAP = {
     "Jackson Hole",
     "Kansas City",
     "Lakewood",
+    "Laramie",
     "Las Vegas",
     "Los Angeles",
     "Mesa Verde",
@@ -657,6 +751,7 @@ const ROUTE_MAP = {
     "San Jose",
     "Seattle",
     "Tampa",
+    "Toronto",
     "Washington DC"
   ],
   "Disney World": [
@@ -668,6 +763,11 @@ const ROUTE_MAP = {
   ],
   "Dollywood": [
     "Nashville"
+  ],
+  "Dover": [
+    "Baltimore",
+    "Philadelphia",
+    "Wilmington DE"
   ],
   "Downtown Atlanta": [
     "ATL"
@@ -688,6 +788,11 @@ const ROUTE_MAP = {
     "San Antonio",
     "Tucson",
     "White Sands"
+  ],
+  "Erie PA": [
+    "Buffalo",
+    "Cleveland",
+    "Pittsburgh"
   ],
   "Estes Park": [
     "Denver"
@@ -744,6 +849,11 @@ const ROUTE_MAP = {
     "Knoxville",
     "Nashville"
   ],
+  "Gettysburg": [
+    "Baltimore",
+    "Harrisburg",
+    "Washington DC"
+  ],
   "Gilbert": [
     "Phoenix"
   ],
@@ -786,9 +896,19 @@ const ROUTE_MAP = {
   "Hamptons": [
     "New York"
   ],
+  "Harrisburg": [
+    "Baltimore",
+    "Gettysburg",
+    "Philadelphia",
+    "Pittsburgh",
+    "State College"
+  ],
   "Hartford": [
     "Boston",
-    "New York"
+    "Bridgeport",
+    "New Haven",
+    "New York",
+    "Springfield MA"
   ],
   "Hialeah": [
     "Miami"
@@ -862,6 +982,11 @@ const ROUTE_MAP = {
     "The Woodlands",
     "Washington DC"
   ],
+  "Huntington WV": [
+    "Charleston WV",
+    "Cincinnati",
+    "Columbus"
+  ],
   "IAD": [
     "Washington DC"
   ],
@@ -878,6 +1003,10 @@ const ROUTE_MAP = {
   ],
   "Irving": [
     "Dallas"
+  ],
+  "Ithaca": [
+    "New York",
+    "Syracuse"
   ],
   "JFK": [
     "Brooklyn",
@@ -970,11 +1099,20 @@ const ROUTE_MAP = {
   "Lake Geneva": [
     "Chicago"
   ],
+  "Lake Placid": [
+    "Albany",
+    "Burlington VT",
+    "Montreal"
+  ],
   "Lake Tahoe": [
     "Reno",
     "San Francisco"
   ],
   "Lakewood": [
+    "Denver"
+  ],
+  "Laramie": [
+    "Cheyenne",
     "Denver"
   ],
   "Las Vegas": [
@@ -1142,6 +1280,12 @@ const ROUTE_MAP = {
     "Los Angeles",
     "San Francisco"
   ],
+  "Manchester NH": [
+    "Boston",
+    "Concord NH",
+    "Nashua",
+    "Portland ME"
+  ],
   "Manhattan": [
     "EWR",
     "JFK",
@@ -1283,10 +1427,24 @@ const ROUTE_MAP = {
   "Monterey": [
     "San Francisco"
   ],
+  "Montpelier": [
+    "Boston",
+    "Burlington VT"
+  ],
+  "Montreal": [
+    "Boston",
+    "Burlington VT",
+    "Lake Placid",
+    "New York"
+  ],
   "Monument Valley": [
     "Albuquerque",
     "Las Vegas",
     "Phoenix"
+  ],
+  "Morgantown": [
+    "Pittsburgh",
+    "Washington DC"
   ],
   "Mount Rainier": [
     "Seattle"
@@ -1311,6 +1469,10 @@ const ROUTE_MAP = {
   ],
   "Naperville": [
     "Chicago"
+  ],
+  "Nashua": [
+    "Boston",
+    "Manchester NH"
   ],
   "Nashville": [
     "Atlanta",
@@ -1350,6 +1512,13 @@ const ROUTE_MAP = {
     "Seattle",
     "Tampa",
     "Washington DC"
+  ],
+  "New Haven": [
+    "Boston",
+    "Bridgeport",
+    "Hartford",
+    "New York",
+    "Stamford CT"
   ],
   "New Orleans": [
     "Atlanta",
@@ -1398,7 +1567,10 @@ const ROUTE_MAP = {
     "Austin",
     "Baltimore",
     "Bar Harbor",
+    "Binghamton",
     "Boston",
+    "Bridgeport",
+    "Burlington VT",
     "Cape Cod",
     "Chicago",
     "Cleveland",
@@ -1409,6 +1581,7 @@ const ROUTE_MAP = {
     "Hartford",
     "Hoboken",
     "Houston",
+    "Ithaca",
     "Jersey City",
     "Killington",
     "Las Vegas",
@@ -1417,38 +1590,58 @@ const ROUTE_MAP = {
     "Marthas Vineyard",
     "Miami",
     "Minneapolis",
+    "Montreal",
     "Nantucket",
     "Nashville",
+    "New Haven",
     "New Orleans",
     "New Rochelle",
     "Newark",
+    "Newport",
     "Niagara Falls",
     "Orlando",
     "Philadelphia",
     "Phoenix",
     "Portland",
+    "Rochester NY",
     "Salt Lake City",
     "San Antonio",
     "San Diego",
     "San Francisco",
     "San Jose",
+    "Saratoga Springs",
+    "Scranton",
     "Seattle",
+    "Springfield MA",
     "Stamford",
+    "Stamford CT",
     "Statue of Liberty",
     "Stowe",
+    "Syracuse",
     "Tampa",
+    "Toronto",
     "Washington DC",
     "White Plains",
+    "Wilmington DE",
     "Yonkers"
   ],
   "Newark": [
     "New York"
+  ],
+  "Newport": [
+    "Boston",
+    "New York",
+    "Providence"
   ],
   "Newton": [
     "Boston"
   ],
   "Niagara Falls": [
     "New York"
+  ],
+  "Niagara Falls CA": [
+    "Buffalo",
+    "Toronto"
   ],
   "Norfolk": [
     "Outer Banks",
@@ -1583,6 +1776,8 @@ const ROUTE_MAP = {
     "Dallas",
     "Denver",
     "Detroit",
+    "Dover",
+    "Harrisburg",
     "Houston",
     "King of Prussia",
     "Las Vegas",
@@ -1596,16 +1791,20 @@ const ROUTE_MAP = {
     "Phoenix",
     "Pittsburgh",
     "Portland",
+    "Rehoboth Beach",
     "Salt Lake City",
     "San Antonio",
     "San Diego",
     "San Francisco",
     "San Jose",
+    "Scranton",
     "Seattle",
+    "State College",
     "Tampa",
     "Trenton",
     "Washington DC",
-    "Wilmington"
+    "Wilmington",
+    "Wilmington DE"
   ],
   "Phoenix": [
     "Albuquerque",
@@ -1658,10 +1857,20 @@ const ROUTE_MAP = {
     "Washington DC"
   ],
   "Pittsburgh": [
-    "Philadelphia"
+    "Charleston WV",
+    "Erie PA",
+    "Harrisburg",
+    "Morgantown",
+    "Philadelphia",
+    "State College"
   ],
   "Plano": [
     "Dallas"
+  ],
+  "Plymouth": [
+    "Boston",
+    "Cape Cod",
+    "Providence"
   ],
   "Portland": [
     "Atlanta",
@@ -1700,12 +1909,23 @@ const ROUTE_MAP = {
   ],
   "Portland ME": [
     "Acadia",
-    "Bar Harbor"
+    "Augusta",
+    "Bangor",
+    "Bar Harbor",
+    "Concord NH",
+    "Manchester NH",
+    "Portsmouth NH"
+  ],
+  "Portsmouth NH": [
+    "Boston",
+    "Portland ME"
   ],
   "Providence": [
     "Boston",
     "Cape Cod",
-    "Marthas Vineyard"
+    "Marthas Vineyard",
+    "Newport",
+    "Plymouth"
   ],
   "Quincy": [
     "Boston"
@@ -1717,6 +1937,7 @@ const ROUTE_MAP = {
   ],
   "Rapid City": [
     "Badlands",
+    "Cheyenne",
     "Denver",
     "Mount Rushmore"
   ],
@@ -1727,6 +1948,11 @@ const ROUTE_MAP = {
     "Portland",
     "Sacramento",
     "San Francisco"
+  ],
+  "Rehoboth Beach": [
+    "Baltimore",
+    "Philadelphia",
+    "Washington DC"
   ],
   "Reno": [
     "Lake Tahoe",
@@ -1748,6 +1974,11 @@ const ROUTE_MAP = {
     "Virginia Beach",
     "Washington DC"
   ],
+  "Rochester NY": [
+    "Buffalo",
+    "New York",
+    "Syracuse"
+  ],
   "Rockville": [
     "Washington DC"
   ],
@@ -1756,6 +1987,11 @@ const ROUTE_MAP = {
   ],
   "Roswell": [
     "Atlanta"
+  ],
+  "Rutland": [
+    "Albany",
+    "Boston",
+    "Burlington VT"
   ],
   "SEA": [
     "Bellevue",
@@ -1786,6 +2022,8 @@ const ROUTE_MAP = {
     "Bryce Canyon",
     "Canyonlands",
     "Capitol Reef",
+    "Casper",
+    "Cheyenne",
     "Chicago",
     "Cleveland",
     "Dallas",
@@ -1990,6 +2228,11 @@ const ROUTE_MAP = {
     "LAX",
     "Los Angeles"
   ],
+  "Saratoga Springs": [
+    "Albany",
+    "Boston",
+    "New York"
+  ],
   "Savannah": [
     "Atlanta",
     "Charleston",
@@ -2002,6 +2245,11 @@ const ROUTE_MAP = {
   "Scottsdale": [
     "PHX",
     "Phoenix"
+  ],
+  "Scranton": [
+    "Binghamton",
+    "New York",
+    "Philadelphia"
   ],
   "Seattle": [
     "Atlanta",
@@ -2089,6 +2337,11 @@ const ROUTE_MAP = {
     "Seattle",
     "Whitefish"
   ],
+  "Springfield MA": [
+    "Boston",
+    "Hartford",
+    "New York"
+  ],
   "St Louis": [
     "Chicago",
     "Kansas City",
@@ -2096,6 +2349,15 @@ const ROUTE_MAP = {
   ],
   "Stamford": [
     "New York"
+  ],
+  "Stamford CT": [
+    "New Haven",
+    "New York"
+  ],
+  "State College": [
+    "Harrisburg",
+    "Philadelphia",
+    "Pittsburgh"
   ],
   "Statue of Liberty": [
     "New York"
@@ -2119,6 +2381,14 @@ const ROUTE_MAP = {
   ],
   "Sundance": [
     "Salt Lake City"
+  ],
+  "Syracuse": [
+    "Albany",
+    "Binghamton",
+    "Buffalo",
+    "Ithaca",
+    "New York",
+    "Rochester NY"
   ],
   "Tacoma": [
     "SEA",
@@ -2189,6 +2459,12 @@ const ROUTE_MAP = {
   "Times Square": [
     "JFK"
   ],
+  "Toronto": [
+    "Buffalo",
+    "Detroit",
+    "New York",
+    "Niagara Falls CA"
+  ],
   "Trenton": [
     "Philadelphia"
   ],
@@ -2237,18 +2513,21 @@ const ROUTE_MAP = {
     "Baltimore",
     "Bethesda",
     "Boston",
+    "Charleston WV",
     "Chicago",
     "Cleveland",
     "DCA",
     "Dallas",
     "Denver",
     "Detroit",
+    "Gettysburg",
     "Houston",
     "IAD",
     "Las Vegas",
     "Los Angeles",
     "Miami",
     "Minneapolis",
+    "Morgantown",
     "Nashville",
     "New Orleans",
     "New York",
@@ -2257,6 +2536,7 @@ const ROUTE_MAP = {
     "Philadelphia",
     "Phoenix",
     "Portland",
+    "Rehoboth Beach",
     "Reston",
     "Richmond",
     "Rockville",
@@ -2300,6 +2580,12 @@ const ROUTE_MAP = {
   ],
   "Wilmington": [
     "Myrtle Beach",
+    "Philadelphia"
+  ],
+  "Wilmington DE": [
+    "Baltimore",
+    "Dover",
+    "New York",
     "Philadelphia"
   ],
   "Wisconsin Dells": [
