@@ -28,6 +28,7 @@ template = '''<!DOCTYPE html>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="theme-color" content="#10B981">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{"@type":"Question","name":"How many charging stops from {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"You'll need approximately {charge_stops} charging stops for this {miles}-mile EV trip, assuming a 250-mile range per charge."}}}},{{"@type":"Question","name":"How long does the EV trip take from {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"Total trip time is approximately {total_time}, including {time} driving and ~{charge_time} minutes of charging."}}}},{{"@type":"Question","name":"How much does it cost to drive an EV from {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"Electricity cost is approximately ${ev_cost}, compared to ${gas_cost} for gas - saving you ${savings}."}}}}]}}</script>
     <style>
         :root {{ --primary: #10B981; --primary-dark: #059669; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -84,12 +85,21 @@ template = '''<!DOCTYPE html>
         #map {{ height: 350px; border-radius: 0.75rem; margin-top: 1.5rem; }}
         .cta {{ display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.75rem 1.25rem; background: white; color: var(--primary); border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }}
         .gas-link {{ display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.75rem 1.25rem; background: rgba(255,255,255,0.2); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }}
+        .faq {{ margin-top: 1.5rem; }}
+        .faq h2 {{ font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }}
+        .faq h2 svg {{ width: 20px; height: 20px; color: var(--primary); }}
+        .faq-item {{ background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }}
+        .faq-q {{ font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }}
+        .faq-q:hover {{ background: #f0fdf4; }}
+        .faq-q svg {{ width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }}
+        .faq-item.open .faq-q svg {{ transform: rotate(180deg); }}
+        .faq-a {{ padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }}
+        .faq-item.open .faq-a {{ display: block; }}
         footer {{ text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
         .green {{ color: #10B981; }}
-        .map-note {{ text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }}
     </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
     <header>
         <div class="container header-inner">
@@ -141,7 +151,26 @@ template = '''<!DOCTYPE html>
             {timeline_html}
         </div>
         <div id="map"></div>
-        <p class="map-note">Map shows route overview. Charging stations available along major highways.</p>
+        
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> EV Trip FAQ</h2>
+            <div class="faq-item open">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many charging stops from {from_city} to {to_city}?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">You'll need approximately <strong>{charge_stops} charging stops</strong> for this {miles}-mile EV trip, assuming a 250-mile range per charge. {stops_desc}</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does the EV trip take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">Total trip time is approximately <strong>{total_time}</strong>, including {time} of driving and ~{charge_time} minutes of charging stops.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost vs gas?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">EV cost: <strong>${ev_cost}</strong> vs Gas: ${gas_cost}. You save <strong class="green">${savings}</strong> driving electric!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where can I charge along the route?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">{charger_answer}</div>
+            </div>
+        </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -205,10 +234,8 @@ for route in routes:
     center_lng = (from_lng + to_lng) / 2
     zoom = 5 if miles > 800 else (6 if miles > 400 else 7)
     
-    # Get waypoints for this route
     route_waypoints = waypoints.get(slug, [])
     
-    # Timeline
     timeline_html = f'''
             <div class="timeline-item start">
                 <div class="timeline-content">
@@ -219,10 +246,11 @@ for route in routes:
     
     waypoint_markers = ""
     stops_desc = ""
+    charger_answer = ""
     
     if charge_stops > 0 and route_waypoints:
-        # Use real waypoints
-        stops_desc = "Charge at " + ", ".join(route_waypoints[:charge_stops])
+        stops_desc = "Recommended stops: " + ", ".join(route_waypoints[:charge_stops]) + "."
+        charger_answer = f"Recommended charging locations include <strong>{', '.join(route_waypoints[:charge_stops])}</strong>. Tesla Superchargers and major networks like Electrify America have stations along this route."
         for i, wp in enumerate(route_waypoints[:charge_stops]):
             timeline_html += f'''
             <div class="timeline-item">
@@ -231,13 +259,12 @@ for route in routes:
                     <p>Fast charge ~30 min</p>
                 </div>
             </div>'''
-            # Add marker if we have coords
             if wp in coords:
                 wp_lat, wp_lng = coords[wp]
                 waypoint_markers += f"L.marker([{wp_lat}, {wp_lng}], {{icon: chargeIcon}}).addTo(map).bindPopup('<b>{wp}</b><br>Charging Stop');\n        "
     elif charge_stops > 0:
-        # Fallback to generic stops
-        stops_desc = f"{charge_stops} charging stops along the route"
+        stops_desc = f"Plan for {charge_stops} charging stops along the route."
+        charger_answer = f"Multiple charging options available along major highways. Use PlugShare or your vehicle's navigation to find stations. Tesla Superchargers and Electrify America are common on this route."
         for i in range(charge_stops):
             ratio = (i + 1) / (charge_stops + 1)
             stop_mile = int(miles * ratio)
@@ -249,7 +276,8 @@ for route in routes:
                 </div>
             </div>'''
     else:
-        stops_desc = "No charging stops needed"
+        stops_desc = "No charging stops needed - within single charge range!"
+        charger_answer = "This trip is within single-charge range for most EVs! You can complete it without stopping to charge, but consider topping up at your destination."
     
     timeline_html += f'''
             <div class="timeline-item end">
@@ -267,10 +295,11 @@ for route in routes:
         savings=savings, total_time=total_time, timeline_html=timeline_html,
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
         center_lat=center_lat, center_lng=center_lng, zoom=zoom,
-        waypoint_markers=waypoint_markers, stops_desc=stops_desc
+        waypoint_markers=waypoint_markers, stops_desc=stops_desc,
+        charger_answer=charger_answer
     )
     with open(f'ev/{slug}/index.html', 'w') as f:
         f.write(html)
     count += 1
 
-print(f"✅ Created {count} EV pages with real waypoints")
+print(f"✅ Created {count} EV pages with FAQ")
