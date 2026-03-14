@@ -12,6 +12,7 @@
     <meta property="og:description" content="Driving time from Tampa to Atlanta: 7h 0min, 460 miles">
     <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does it take to drive from Tampa to Atlanta?","acceptedAnswer":{"@type":"Answer","text":"The drive from Tampa to Atlanta takes approximately 7h 0min covering 460 miles via I-75."}},{"@type":"Question","name":"How much does gas cost for Tampa to Atlanta?","acceptedAnswer":{"@type":"Answer","text":"At 30 MPG and $3.50/gallon, expect to spend approximately $53 on gas for this 460-mile trip."}},{"@type":"Question","name":"What is the best time to drive from Tampa to Atlanta?","acceptedAnswer":{"@type":"Answer","text":"Weekday mid-day to avoid heavy traffic."}}]}</script>
     <style>
         :root { --primary: #4B6E93; --primary-dark: #3a5775; --accent: #EFA24F; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -59,6 +60,16 @@
         .map-note { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
         .cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.6rem 1.25rem; background: var(--accent); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
         .ev-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.6rem 1.25rem; background: var(--green); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+        .faq { margin-top: 1.5rem; }
+        .faq h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .faq h2 svg { width: 20px; height: 20px; color: var(--primary); }
+        .faq-item { background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .faq-q { font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .faq-q:hover { background: #f8fafc; }
+        .faq-q svg { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }
+        .faq-item.open .faq-a { display: block; }
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     </style>
@@ -98,7 +109,7 @@
                 <div class="row"><span>Distance</span><span>460 miles (740 km)</span></div>
                 <div class="row"><span>Drive Time</span><span>7h 0min</span></div>
                 <div class="row"><span>Route</span><span>I-75</span></div>
-                <div class="row"><span>Best Time</span><span>Avoid rush hours</span></div>
+                <div class="row"><span>Best Time</span><span>Weekday mid-day</span></div>
             </div>
             <div class="card">
                 <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V12a2 2 0 012-2h2a2 2 0 012 2v10M9 22V8a2 2 0 012-2h2a2 2 0 012 2v14M15 22V4a2 2 0 012-2h2a2 2 0 012 2v18"/></svg> Fuel Costs</h3>
@@ -108,6 +119,26 @@
         </div>
         <div id="map"></div>
         <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
+        
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Frequently Asked Questions</h2>
+            <div class="faq-item open">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does it take to drive from Tampa to Atlanta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">The drive from Tampa to Atlanta takes approximately <strong>7h 0min</strong> covering 460 miles via I-75. Actual time may vary based on traffic, weather, and road conditions.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does gas cost for Tampa to Atlanta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">At 30 MPG and $3.50/gallon, expect to spend approximately <strong>$53</strong> on gas for this 460-mile trip. You'll need about 15.3 gallons of fuel.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the best time to drive from Tampa to Atlanta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a"><strong>Weekday mid-day</strong> to avoid heavy traffic. Weekday mornings before 7 AM or evenings after 7 PM typically have less congestion.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are there tolls on the Tampa to Atlanta route?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">Yes, expect approximately <strong>$13</strong> in tolls along this route. Consider getting an E-ZPass or similar transponder for faster toll payment.</div>
+            </div>
+        </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
