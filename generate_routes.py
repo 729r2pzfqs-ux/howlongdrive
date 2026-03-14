@@ -30,7 +30,7 @@ template = '''<!DOCTYPE html>
     <style>
         :root {{ --primary: #4B6E93; --primary-dark: #3a5775; --accent: #EFA24F; --accent-dark: #d88a3a; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{ font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }}
+        body {{ font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }}
         .container {{ max-width: 900px; margin: 0 auto; padding: 0 1rem; }}
         header {{ background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }}
         .header-inner {{ display: flex; justify-content: space-between; align-items: center; }}
@@ -40,23 +40,26 @@ template = '''<!DOCTYPE html>
         nav a:hover {{ color: var(--primary); }}
         .breadcrumb {{ font-size: 0.875rem; color: var(--muted); padding: 1rem 0; }}
         .breadcrumb a {{ color: var(--primary); text-decoration: none; }}
-        .hero {{ background: var(--card); padding: 2rem; border-radius: 1rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
-        h1 {{ font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary); }}
-        .subtitle {{ color: var(--muted); margin-bottom: 1.5rem; }}
-        .stats {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }}
-        .stat {{ text-align: center; padding: 1.5rem; background: var(--bg); border-radius: 0.75rem; }}
-        .stat-value {{ font-size: 2rem; font-weight: 700; color: var(--primary); }}
-        .stat-label {{ color: var(--muted); font-size: 0.875rem; margin-top: 0.25rem; }}
-        .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }}
+        .hero {{ background: var(--card); padding: 2.5rem; border-radius: 1rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }}
+        h1 {{ font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--text); font-weight: 600; }}
+        .subtitle {{ color: var(--muted); margin-bottom: 2rem; font-size: 1rem; }}
+        .stats {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }}
+        .stat {{ text-align: center; padding: 1.5rem 1rem; background: var(--bg); border-radius: 0.75rem; }}
+        .stat-value {{ font-size: 2.25rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }}
+        .stat-label {{ color: var(--muted); font-size: 0.875rem; margin-top: 0.5rem; font-weight: 500; }}
+        .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }}
         @media (max-width: 640px) {{ .grid, .stats {{ grid-template-columns: 1fr; }} }}
-        .card {{ background: var(--card); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
-        .card h3 {{ margin-bottom: 1rem; font-size: 1rem; color: var(--primary); }}
-        .row {{ display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }}
+        .card {{ background: var(--card); padding: 1.75rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }}
+        .card h3 {{ margin-bottom: 1.25rem; font-size: 1rem; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }}
+        .card h3 svg {{ width: 18px; height: 18px; color: var(--primary); }}
+        .row {{ display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.9375rem; }}
         .row:last-child {{ border: none; }}
-        .row a {{ color: var(--primary); text-decoration: none; }}
-        .reverse-link {{ display: inline-block; margin-top: 1.5rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }}
-        .reverse-link:hover {{ background: var(--accent-dark); }}
-        footer {{ text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
+        .row span:first-child {{ color: var(--muted); }}
+        .row span:last-child {{ font-weight: 500; }}
+        .row a {{ color: var(--primary); text-decoration: none; font-weight: 500; }}
+        .cta {{ display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.875rem 1.75rem; background: var(--accent); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.9375rem; }}
+        .cta:hover {{ background: var(--accent-dark); }}
+        footer {{ text-align: center; padding: 2.5rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
     </style>
 </head>
@@ -70,20 +73,40 @@ template = '''<!DOCTYPE html>
     <div class="container">
         <div class="breadcrumb"><a href="/">Home</a> → <a href="/routes/">Routes</a> → {from_city} to {to_city}</div>
         <div class="hero">
-            <h1>🚗 {from_city} to {to_city}</h1>
-            <p class="subtitle">via {highway}</p>
+            <h1>{from_city} to {to_city} Driving Time</h1>
+            <p class="subtitle">{highway}</p>
             <div class="stats">
-                <div class="stat"><div class="stat-value">{time}</div><div class="stat-label">⏱️ Drive Time</div></div>
-                <div class="stat"><div class="stat-value">{miles}</div><div class="stat-label">📏 Miles</div></div>
-                <div class="stat"><div class="stat-value">${gas_cost}</div><div class="stat-label">⛽ Est. Gas</div></div>
+                <div class="stat"><div class="stat-value">{time_short}</div><div class="stat-label">Driving Time</div></div>
+                <div class="stat"><div class="stat-value">{miles}</div><div class="stat-label">Miles</div></div>
+                <div class="stat"><div class="stat-value">${gas_cost}</div><div class="stat-label">Est. Gas Cost</div></div>
             </div>
-            <a href="/route/{reverse_slug}/" class="reverse-link">🔄 {to_city} → {from_city}</a>
+            <a href="/route/{reverse_slug}/" class="cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg> {to_city} to {from_city}</a>
         </div>
         <div class="grid">
-            <div class="card"><h3>🛣️ Route Details</h3><div class="row"><span>Distance</span><span>{miles} mi ({km} km)</span></div><div class="row"><span>Drive Time</span><span>{time}</span></div><div class="row"><span>Route</span><span>{highway}</span></div><div class="row"><span>Avg Speed</span><span>{avg_speed} mph</span></div></div>
-            <div class="card"><h3>💰 Trip Cost</h3><div class="row"><span>Gas (~{gallons} gal)</span><span>${gas_cost}</span></div><div class="row"><span>Est. Tolls</span><span>${tolls}</span></div><div class="row"><span><strong>Total</strong></span><span><strong>${total_cost}</strong></span></div></div>
-            <div class="card"><h3>⏰ Best Times to Drive</h3><div class="row"><span>Fastest</span><span>Weekdays 10am-3pm</span></div><div class="row"><span>Avoid</span><span>Fri 3-7pm, Sun 4-8pm</span></div><div class="row"><span>Rush Hour</span><span>+30min to +2hr</span></div></div>
-            <div class="card"><h3>🔄 Return Trip</h3><div class="row"><a href="/route/{reverse_slug}/">{to_city} → {from_city}</a><span>{time}</span></div></div>
+            <div class="card">
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg> Route Details</h3>
+                <div class="row"><span>Distance</span><span>{miles} miles ({km} km)</span></div>
+                <div class="row"><span>Drive Time</span><span>{time}</span></div>
+                <div class="row"><span>Main Route</span><span>{highway_short}</span></div>
+                <div class="row"><span>Avg Speed</span><span>{avg_speed} mph</span></div>
+            </div>
+            <div class="card">
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Fuel Costs</h3>
+                <div class="row"><span>Gas (30 mpg)</span><span>~{gallons} gallons</span></div>
+                <div class="row"><span>Est. Cost</span><span>${gas_cost}</span></div>
+                <div class="row"><span>Tolls</span><span>~${tolls_low}-{tolls_high}</span></div>
+                <div class="row"><span>Total Trip Cost</span><span>~${total_low}-{total_high}</span></div>
+            </div>
+            <div class="card">
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Best Times to Drive</h3>
+                <div class="row"><span>Fastest</span><span>Weekdays 10am-3pm</span></div>
+                <div class="row"><span>Avoid</span><span>Fri 3-7pm, Sun 4-8pm</span></div>
+                <div class="row"><span>Rush Hour Adds</span><span>+30min to +2hr</span></div>
+            </div>
+            <div class="card">
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg> Return Trip</h3>
+                <div class="row"><a href="/route/{reverse_slug}/">{to_city} → {from_city}</a><span>{time}</span></div>
+            </div>
         </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
@@ -110,24 +133,33 @@ for route in routes:
     km = int(miles * 1.6)
     gallons = round(miles / 30, 1)
     gas_cost = int(gallons * 3.5)
-    tolls = 10 if miles < 150 else (20 if miles < 300 else (35 if miles < 500 else 50))
-    total_cost = gas_cost + tolls
+    tolls_low = 10 if miles < 150 else (15 if miles < 300 else (20 if miles < 500 else 25))
+    tolls_high = tolls_low + 10 if miles < 300 else tolls_low + 15
+    total_low = gas_cost + tolls_low
+    total_high = gas_cost + tolls_high
     hours = 0
     if 'h' in time:
         parts = time.replace('min', '').split('h')
         hours = int(parts[0]) + (int(parts[1].strip()) / 60 if len(parts) > 1 and parts[1].strip() else 0)
     avg_speed = int(miles / hours) if hours > 0 else 65
     
+    # Shorter time format
+    time_short = time.replace('min', 'm').replace(' ', '')
+    
+    # Shorter highway
+    highway_short = highway.split()[0] if ' ' in highway else highway
+    
     os.makedirs(f'route/{slug}', exist_ok=True)
     
     html = template.format(
-        from_city=from_city, to_city=to_city, time=time, miles=miles,
-        highway=highway, slug=slug, reverse_slug=reverse_slug, km=km,
-        gallons=gallons, gas_cost=gas_cost, tolls=tolls, total_cost=total_cost, avg_speed=avg_speed
+        from_city=from_city, to_city=to_city, time=time, time_short=time_short, miles=miles,
+        highway=highway, highway_short=highway_short, slug=slug, reverse_slug=reverse_slug, km=km,
+        gallons=gallons, gas_cost=gas_cost, tolls_low=tolls_low, tolls_high=tolls_high,
+        total_low=total_low, total_high=total_high, avg_speed=avg_speed
     )
     
     with open(f'route/{slug}/index.html', 'w') as f:
         f.write(html)
     count += 1
 
-print(f"✅ Updated {count} route pages")
+print(f"✅ Updated {count} route pages with professional template")
