@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York to Dallas EV Charging Stops | HowLongDrive</title>
-    <meta name="description" content="Electric car trip from New York to Dallas: 1550 miles, 6 charging stops. 6 charging stops along the route">
+    <meta name="description" content="Electric car trip from New York to Dallas: 1550 miles, 6 charging stops. Plan for 6 charging stops along the route.">
     <link rel="canonical" href="https://howlongdrive.com/ev/new-york-to-dallas/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="theme-color" content="#10B981">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many charging stops from New York to Dallas?","acceptedAnswer":{"@type":"Answer","text":"You'll need approximately 6 charging stops for this 1550-mile EV trip, assuming a 250-mile range per charge."}},{"@type":"Question","name":"How long does the EV trip take from New York to Dallas?","acceptedAnswer":{"@type":"Answer","text":"Total trip time is approximately 27h 0m, including 24h 0min driving and ~180 minutes of charging."}},{"@type":"Question","name":"How much does it cost to drive an EV from New York to Dallas?","acceptedAnswer":{"@type":"Answer","text":"Electricity cost is approximately $62, compared to $180 for gas - saving you $118."}}]}</script>
     <style>
         :root { --primary: #10B981; --primary-dark: #059669; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -65,10 +66,19 @@
         #map { height: 350px; border-radius: 0.75rem; margin-top: 1.5rem; }
         .cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.75rem 1.25rem; background: white; color: var(--primary); border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
         .gas-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.75rem 1.25rem; background: rgba(255,255,255,0.2); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
+        .faq { margin-top: 1.5rem; }
+        .faq h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .faq h2 svg { width: 20px; height: 20px; color: var(--primary); }
+        .faq-item { background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .faq-q { font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .faq-q:hover { background: #f0fdf4; }
+        .faq-q svg { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }
+        .faq-item.open .faq-a { display: block; }
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
         .green { color: #10B981; }
-        .map-note { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -170,7 +180,26 @@
             </div>
         </div>
         <div id="map"></div>
-        <p class="map-note">Map shows route overview. Charging stations available along major highways.</p>
+        
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> EV Trip FAQ</h2>
+            <div class="faq-item open">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many charging stops from New York to Dallas?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">You'll need approximately <strong>6 charging stops</strong> for this 1550-mile EV trip, assuming a 250-mile range per charge. Plan for 6 charging stops along the route.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does the EV trip take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">Total trip time is approximately <strong>27h 0m</strong>, including 24h 0min of driving and ~180 minutes of charging stops.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost vs gas?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">EV cost: <strong>$62</strong> vs Gas: $180. You save <strong class="green">$118</strong> driving electric!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where can I charge along the route?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">Multiple charging options available along major highways. Use PlugShare or your vehicle's navigation to find stations. Tesla Superchargers and Electrify America are common on this route.</div>
+            </div>
+        </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
