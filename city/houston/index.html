@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driving Times from Houston - Routes & Distances | HowLongDrive</title>
-    <meta name="description" content="Find driving times from Houston, Texas to other cities. Browse 13 routes with distances, drive times, and trip costs.">
+    <meta name="description" content="Find driving times from Houston, Texas to other cities. Browse 22 routes with distances, drive times, and trip costs.">
     <link rel="canonical" href="https://howlongdrive.com/city/houston/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="theme-color" content="#4B6E93">
-    <meta property="og:title" content="Driving Times from Houston">
-    <meta property="og:description" content="Find driving times from Houston to other cities">
-    <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
     <style>
         :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --green: #10B981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,17 +19,7 @@
         nav { display: flex; align-items: center; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        .close-btn { display: none; }
-        @media (max-width: 768px) {
-            .logo img { height: 60px; } .logo span { display: none; }
-            nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; }
-            nav.active { right: 0; }
-            .hamburger { display: block; z-index: 1001; }
-            .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; }
-            .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
-            .overlay.active { display: block; }
-        }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { display: none; } }
         .hero { background: var(--card); padding: 2rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }
         h1 { font-size: 2rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
         h1 svg { width: 32px; height: 32px; color: var(--primary); }
@@ -52,20 +38,14 @@
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script>
+</head>
 <body>
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-            <div class="overlay" onclick="toggleMenu()"></div>
-            <nav id="nav">
-                <button class="close-btn" style="display:none" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-                <a href="/">Home</a>
-                <a href="/routes/">Routes</a>
-                <a href="/cities/">Cities</a>
-                <a href="/ev/" class="ev-badge">EV Trips</a>
-            </nav>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
         </div>
     </header>
     <div class="container">
@@ -73,111 +53,38 @@
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Houston</h1>
             <p class="subtitle">Texas</p>
             <div class="stats">
-                <div class="stat"><div class="stat-value">13</div><div class="stat-label">Destinations</div></div>
+                <div class="stat"><div class="stat-value">22</div><div class="stat-label">Destinations</div></div>
             </div>
         </div>
-        
         <h2 style="margin-bottom:1rem">Driving Times from Houston</h2>
         <div class="routes-grid">
-            
-            <a href="/route/houston-to-austin/" class="route-card">
-                <div>
-                    <div class="route-title">Austin</div>
-                    <div class="route-meta">165 miles</div>
-                </div>
-                <div class="route-time">2h 30min</div>
-            </a>
-            <a href="/route/houston-to-san-antonio/" class="route-card">
-                <div>
-                    <div class="route-title">San Antonio</div>
-                    <div class="route-meta">200 miles</div>
-                </div>
-                <div class="route-time">2h 45min</div>
-            </a>
-            <a href="/route/houston-to-new-orleans/" class="route-card">
-                <div>
-                    <div class="route-title">New Orleans</div>
-                    <div class="route-meta">350 miles</div>
-                </div>
-                <div class="route-time">5h 0min</div>
-            </a>
-            <a href="/route/houston-to-oklahoma-city/" class="route-card">
-                <div>
-                    <div class="route-title">Oklahoma City</div>
-                    <div class="route-meta">450 miles</div>
-                </div>
-                <div class="route-time">7h 0min</div>
-            </a>
-            <a href="/route/houston-to-atlanta/" class="route-card">
-                <div>
-                    <div class="route-title">Atlanta</div>
-                    <div class="route-meta">790 miles</div>
-                </div>
-                <div class="route-time">12h 0min</div>
-            </a>
-            <a href="/route/houston-to-denver/" class="route-card">
-                <div>
-                    <div class="route-title">Denver</div>
-                    <div class="route-meta">1030 miles</div>
-                </div>
-                <div class="route-time">15h 0min</div>
-            </a>
-            <a href="/route/houston-to-chicago/" class="route-card">
-                <div>
-                    <div class="route-title">Chicago</div>
-                    <div class="route-meta">1090 miles</div>
-                </div>
-                <div class="route-time">16h 0min</div>
-            </a>
-            <a href="/route/houston-to-phoenix/" class="route-card">
-                <div>
-                    <div class="route-title">Phoenix</div>
-                    <div class="route-meta">1175 miles</div>
-                </div>
-                <div class="route-time">15h 0min</div>
-            </a>
-            <a href="/route/houston-to-miami/" class="route-card">
-                <div>
-                    <div class="route-title">Miami</div>
-                    <div class="route-meta">1190 miles</div>
-                </div>
-                <div class="route-time">17h 0min</div>
-            </a>
-            <a href="/route/houston-to-las-vegas/" class="route-card">
-                <div>
-                    <div class="route-title">Las Vegas</div>
-                    <div class="route-meta">1480 miles</div>
-                </div>
-                <div class="route-time">21h 0min</div>
-            </a>
-            <a href="/route/houston-to-los-angeles/" class="route-card">
-                <div>
-                    <div class="route-title">Los Angeles</div>
-                    <div class="route-meta">1550 miles</div>
-                </div>
-                <div class="route-time">22h 0min</div>
-            </a>
-            <a href="/route/houston-to-new-york/" class="route-card">
-                <div>
-                    <div class="route-title">New York</div>
-                    <div class="route-meta">1630 miles</div>
-                </div>
-                <div class="route-time">25h 0min</div>
-            </a>
-            <a href="/route/houston-to-seattle/" class="route-card">
-                <div>
-                    <div class="route-title">Seattle</div>
-                    <div class="route-meta">2340 miles</div>
-                </div>
-                <div class="route-time">33h 0min</div>
-            </a>
+<a href="/route/houston-to-hou/" class="route-card"><div><div class="route-title">HOU</div><div class="route-meta">12 miles</div></div><div class="route-time">25 min</div></a>
+<a href="/route/houston-to-pasadena/" class="route-card"><div><div class="route-title">Pasadena</div><div class="route-meta">15 miles</div></div><div class="route-time">25 min</div></a>
+<a href="/route/houston-to-pearland/" class="route-card"><div><div class="route-title">Pearland</div><div class="route-meta">18 miles</div></div><div class="route-time">25 min</div></a>
+<a href="/route/houston-to-sugar-land/" class="route-card"><div><div class="route-title">Sugar Land</div><div class="route-meta">22 miles</div></div><div class="route-time">30 min</div></a>
+<a href="/route/houston-to-iah/" class="route-card"><div><div class="route-title">IAH</div><div class="route-meta">22 miles</div></div><div class="route-time">35 min</div></a>
+<a href="/route/houston-to-baytown/" class="route-card"><div><div class="route-title">Baytown</div><div class="route-meta">27 miles</div></div><div class="route-time">35 min</div></a>
+<a href="/route/houston-to-the-woodlands/" class="route-card"><div><div class="route-title">The Woodlands</div><div class="route-meta">30 miles</div></div><div class="route-time">40 min</div></a>
+<a href="/route/houston-to-katy/" class="route-card"><div><div class="route-title">Katy</div><div class="route-meta">30 miles</div></div><div class="route-time">35 min</div></a>
+<a href="/route/houston-to-galveston/" class="route-card"><div><div class="route-title">Galveston</div><div class="route-meta">50 miles</div></div><div class="route-time">1h</div></a>
+<a href="/route/houston-to-austin/" class="route-card"><div><div class="route-title">Austin</div><div class="route-meta">165 miles</div></div><div class="route-time">2h 30min</div></a>
+<a href="/route/houston-to-san-antonio/" class="route-card"><div><div class="route-title">San Antonio</div><div class="route-meta">200 miles</div></div><div class="route-time">2h 45min</div></a>
+<a href="/route/houston-to-new-orleans/" class="route-card"><div><div class="route-title">New Orleans</div><div class="route-meta">350 miles</div></div><div class="route-time">5h 0min</div></a>
+<a href="/route/houston-to-oklahoma-city/" class="route-card"><div><div class="route-title">Oklahoma City</div><div class="route-meta">450 miles</div></div><div class="route-time">7h 0min</div></a>
+<a href="/route/houston-to-atlanta/" class="route-card"><div><div class="route-title">Atlanta</div><div class="route-meta">790 miles</div></div><div class="route-time">12h 0min</div></a>
+<a href="/route/houston-to-denver/" class="route-card"><div><div class="route-title">Denver</div><div class="route-meta">1030 miles</div></div><div class="route-time">15h 0min</div></a>
+<a href="/route/houston-to-chicago/" class="route-card"><div><div class="route-title">Chicago</div><div class="route-meta">1090 miles</div></div><div class="route-time">16h 0min</div></a>
+<a href="/route/houston-to-phoenix/" class="route-card"><div><div class="route-title">Phoenix</div><div class="route-meta">1175 miles</div></div><div class="route-time">15h 0min</div></a>
+<a href="/route/houston-to-miami/" class="route-card"><div><div class="route-title">Miami</div><div class="route-meta">1190 miles</div></div><div class="route-time">17h 0min</div></a>
+<a href="/route/houston-to-las-vegas/" class="route-card"><div><div class="route-title">Las Vegas</div><div class="route-meta">1480 miles</div></div><div class="route-time">21h 0min</div></a>
+<a href="/route/houston-to-los-angeles/" class="route-card"><div><div class="route-title">Los Angeles</div><div class="route-meta">1550 miles</div></div><div class="route-time">22h 0min</div></a>
+<a href="/route/houston-to-new-york/" class="route-card"><div><div class="route-title">New York</div><div class="route-meta">1630 miles</div></div><div class="route-time">25h 0min</div></a>
+<a href="/route/houston-to-seattle/" class="route-card"><div><div class="route-title">Seattle</div><div class="route-meta">2340 miles</div></div><div class="route-time">33h 0min</div></a>
         </div>
-        
         <div style="text-align:center">
             <a href="/ev/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Plan EV Trip from Houston</a>
         </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
-    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
 </body>
 </html>
