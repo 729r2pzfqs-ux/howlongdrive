@@ -1,1 +1,1988 @@
-const ROUTE_MAP = {"New York": ["Albany", "Atlanta", "Atlantic City", "Baltimore", "Boston", "Chicago", "Cleveland", "Dallas", "Denver", "Detroit", "Hamptons", "Hartford", "Hoboken", "Houston", "Jersey City", "Long Island City", "Los Angeles", "Miami", "Minneapolis", "New Orleans", "New Rochelle", "Newark", "Niagara Falls", "Orlando", "Philadelphia", "Phoenix", "San Francisco", "Seattle", "Stamford", "Statue of Liberty", "Washington DC", "White Plains", "Yonkers"], "Los Angeles": ["Anaheim", "Atlanta", "Big Bear Lake", "Burbank", "Chicago", "Dallas", "Denver", "Disneyland", "Fresno", "Glendale", "Houston", "Irvine", "Joshua Tree", "LAX", "Las Vegas", "Long Beach", "Malibu", "Miami", "New York", "Ontario", "Palm Springs", "Pasadena", "Phoenix", "Portland", "Sacramento", "Salt Lake City", "San Diego", "San Francisco", "San Jose", "Santa Barbara", "Santa Monica", "Seattle", "Universal Studios"], "Chicago": ["Atlanta", "Aurora", "Boston", "Cleveland", "Dallas", "Denver", "Des Moines", "Detroit", "Evanston", "Grand Rapids", "Green Bay", "Houston", "Indianapolis", "Joliet", "Kansas City", "Lake Geneva", "Los Angeles", "MDW", "Madison", "Miami", "Milwaukee", "Minneapolis", "Naperville", "Nashville", "New York", "ORD", "Oak Park", "Phoenix", "San Francisco", "Schaumburg", "Seattle", "St Louis", "Washington DC", "Waukegan", "Wisconsin Dells"], "Houston": ["Atlanta", "Austin", "Baytown", "Chicago", "Denver", "Galveston", "HOU", "IAH", "Katy", "Las Vegas", "Los Angeles", "Miami", "New Orleans", "New York", "Oklahoma City", "Pasadena", "Pearland", "Phoenix", "San Antonio", "Seattle", "Sugar Land", "The Woodlands"], "Phoenix": ["Albuquerque", "Chandler", "Chicago", "Dallas", "Denver", "Gilbert", "Glendale", "Grand Canyon", "Houston", "Las Vegas", "Los Angeles", "Mesa", "New York", "PHX", "Peoria", "Salt Lake City", "San Antonio", "San Diego", "San Francisco", "Scottsdale", "Seattle", "Sedona", "Tempe", "Tucson"], "Philadelphia": ["Baltimore", "Boston", "Camden", "Cherry Hill", "King of Prussia", "New York", "Pittsburgh", "Trenton", "Washington DC", "Wilmington"], "San Antonio": ["Austin", "Dallas", "El Paso", "Houston", "New Orleans", "Phoenix"], "San Diego": ["Las Vegas", "Legoland", "Los Angeles", "Phoenix", "San Diego Zoo", "Tijuana", "Tucson"], "Dallas": ["Arlington", "Atlanta", "Austin", "Chicago", "DFW", "Denton", "Denver", "Fort Worth", "Frisco", "Irving", "Kansas City", "Las Vegas", "Little Rock", "Los Angeles", "McKinney", "Memphis", "Miami", "Minneapolis", "New Orleans", "New York", "Oklahoma City", "Phoenix", "Plano", "San Antonio", "Seattle", "Tulsa"], "San Jose": ["Los Angeles", "SFO", "Sacramento", "San Francisco"], "Austin": ["Dallas", "Houston", "San Antonio"], "Jacksonville": ["Orlando", "Savannah", "Tallahassee", "Tampa"], "San Francisco": ["Berkeley", "Carmel", "Chicago", "Daly City", "Denver", "Fremont", "Lake Tahoe", "Las Vegas", "Los Angeles", "Monterey", "Muir Woods", "Napa Valley", "New York", "OAK", "Oakland", "Palo Alto", "Phoenix", "Portland", "Reno", "SFO", "Sacramento", "Salt Lake City", "San Jose", "San Mateo", "Seattle", "Walnut Creek", "Yosemite"], "Columbus": ["Cincinnati", "Cleveland"], "Charlotte": ["Atlanta", "Charleston", "Myrtle Beach", "Raleigh"], "Denver": ["Albuquerque", "Arvada", "Aspen", "Atlanta", "Aurora", "Billings", "Boulder", "Breckenridge", "Chicago", "Colorado Springs", "DEN", "Dallas", "Estes Park", "Fort Collins", "Houston", "Kansas City", "Lakewood", "Las Vegas", "Los Angeles", "Minneapolis", "New York", "Omaha", "Phoenix", "Portland", "Rapid City", "Rocky Mountain NP", "Salt Lake City", "San Francisco", "Santa Fe", "Seattle", "Thornton", "Vail", "Westminster", "Wichita"], "Seattle": ["Bellevue", "Boise", "Chicago", "Dallas", "Denver", "Everett", "Houston", "Kent", "Kirkland", "Las Vegas", "Leavenworth", "Los Angeles", "Minneapolis", "Mount Rainier", "New York", "Olympic National Park", "Phoenix", "Portland", "Redmond", "Renton", "SEA", "Salt Lake City", "San Francisco", "Snoqualmie Falls", "Spokane", "Tacoma", "Vancouver"], "Boston": ["Atlanta", "BOS", "Brookline", "Cambridge", "Chicago", "Detroit", "Hartford", "Lowell", "Miami", "New York", "Newton", "Philadelphia", "Providence", "Quincy", "Somerville", "Washington DC", "Worcester"], "Nashville": ["Atlanta", "Birmingham", "Chattanooga", "Chicago", "Dollywood", "Gatlinburg", "Great Smoky Mountains", "Knoxville", "Louisville", "Memphis"], "Miami": ["Atlanta", "Boca Raton", "Boston", "Chicago", "Coral Gables", "Dallas", "Everglades", "FLL", "Fort Lauderdale", "Hialeah", "Hollywood", "Houston", "Key West", "Los Angeles", "MIA", "Miami Beach", "New Orleans", "New York", "Orlando", "South Beach", "Tampa", "Washington DC", "West Palm Beach"], "Atlanta": ["ATL", "Alpharetta", "Birmingham", "Boston", "Charlotte", "Chattanooga", "Chicago", "Dallas", "Decatur", "Denver", "Detroit", "Houston", "Kennesaw", "Knoxville", "Los Angeles", "Marietta", "Memphis", "Miami", "Nashville", "New Orleans", "New York", "Orlando", "Roswell", "Sandy Springs", "Savannah", "Tallahassee", "Tampa", "Washington DC"], "Washington DC": ["Alexandria", "Arlington", "Atlanta", "BWI", "Bethesda", "Boston", "Chicago", "Cleveland", "DCA", "Detroit", "IAD", "Miami", "New York", "Norfolk", "Philadelphia", "Reston", "Richmond", "Rockville", "Silver Spring", "Tysons"], "Las Vegas": ["Dallas", "Death Valley", "Denver", "Grand Canyon", "Hoover Dam", "Houston", "LAS", "Los Angeles", "Phoenix", "Reno", "Salt Lake City", "San Diego", "San Francisco", "Seattle", "Zion National Park"], "Minneapolis": ["Chicago", "Dallas", "Denver", "Des Moines", "Detroit", "Duluth", "Fargo", "Kansas City", "Madison", "New York", "Omaha", "Seattle", "Sioux Falls"], "Detroit": ["Atlanta", "Boston", "Chicago", "Cleveland", "Grand Rapids", "Minneapolis", "New York", "Washington DC"], "Kansas City": ["Chicago", "Dallas", "Denver", "Des Moines", "Minneapolis", "Oklahoma City", "Omaha", "St Louis", "Tulsa", "Wichita"], "Orlando": ["Atlanta", "Clearwater Beach", "Daytona Beach", "Disney World", "Jacksonville", "Kennedy Space Center", "MCO", "Miami", "New Orleans", "New York", "Tampa", "Universal Orlando"], "Portland": ["Boise", "Denver", "Los Angeles", "Salt Lake City", "San Francisco", "Seattle", "Spokane"], "Tampa": ["Atlanta", "Jacksonville", "Miami", "New Orleans", "Orlando"], "Salt Lake City": ["Arches National Park", "Boise", "Denver", "Las Vegas", "Los Angeles", "Park City", "Phoenix", "Portland", "San Francisco", "Seattle", "Sundance"], "New Orleans": ["Atlanta", "Birmingham", "Dallas", "Houston", "Jackson", "Little Rock", "Memphis", "Miami", "Mobile", "New York", "Orlando", "Pensacola", "San Antonio", "Tampa"], "Memphis": ["Atlanta", "Dallas", "Jackson", "Little Rock", "Nashville", "New Orleans", "St Louis"], "Baltimore": ["BWI", "New York", "Philadelphia"], "Hartford": ["Boston", "New York"], "Albany": ["New York"], "Fresno": ["Los Angeles"], "Sacramento": ["Los Angeles", "Reno", "San Francisco", "San Jose"], "Milwaukee": ["Chicago", "Green Bay", "Madison"], "Indianapolis": ["Chicago", "Louisville"], "St Louis": ["Chicago", "Kansas City", "Memphis"], "Cleveland": ["Chicago", "Columbus", "Detroit", "New York", "Washington DC"], "Oklahoma City": ["Dallas", "Houston", "Kansas City", "Tulsa", "Wichita"], "Tucson": ["El Paso", "Phoenix", "San Diego"], "Albuquerque": ["Denver", "El Paso", "Phoenix", "Santa Fe"], "Pittsburgh": ["Philadelphia"], "Reno": ["Lake Tahoe", "Las Vegas", "Sacramento", "San Francisco"], "Cincinnati": ["Columbus", "Lexington", "Louisville"], "Raleigh": ["Charlotte", "Richmond"], "Colorado Springs": ["Denver"], "Vancouver": ["Seattle"], "Spokane": ["Boise", "Missoula", "Portland", "Seattle"], "Providence": ["Boston"], "El Paso": ["Albuquerque", "San Antonio", "Tucson"], "Little Rock": ["Dallas", "Memphis", "New Orleans"], "Santa Monica": ["LAX", "Los Angeles"], "Long Beach": ["LAX", "Los Angeles"], "Anaheim": ["LAX", "Los Angeles"], "Pasadena": ["Houston", "Los Angeles"], "Burbank": ["Los Angeles"], "Irvine": ["Los Angeles"], "Glendale": ["Los Angeles", "Phoenix"], "Ontario": ["Los Angeles"], "Newark": ["New York"], "Jersey City": ["New York"], "Stamford": ["New York"], "White Plains": ["New York"], "Yonkers": ["New York"], "Hoboken": ["New York"], "New Rochelle": ["New York"], "Long Island City": ["New York"], "Naperville": ["Chicago"], "Evanston": ["Chicago"], "Schaumburg": ["Chicago"], "Aurora": ["Chicago", "Denver"], "Oak Park": ["Chicago"], "Joliet": ["Chicago"], "Waukegan": ["Chicago"], "Fort Worth": ["DFW", "Dallas"], "Arlington": ["DFW", "Dallas", "Washington DC"], "Plano": ["Dallas"], "Irving": ["Dallas"], "Frisco": ["Dallas"], "McKinney": ["Dallas"], "Denton": ["Dallas"], "Galveston": ["Houston"], "The Woodlands": ["Houston"], "Sugar Land": ["Houston"], "Katy": ["Houston"], "Pearland": ["Houston"], "Baytown": ["Houston"], "Alexandria": ["Washington DC"], "Bethesda": ["Washington DC"], "Silver Spring": ["Washington DC"], "Rockville": ["Washington DC"], "Tysons": ["Washington DC"], "Reston": ["Washington DC"], "Fort Lauderdale": ["FLL", "MIA", "Miami"], "West Palm Beach": ["Miami"], "Boca Raton": ["Miami"], "Hollywood": ["LAX", "Miami"], "Coral Gables": ["Miami"], "Miami Beach": ["MIA", "Miami"], "Hialeah": ["Miami"], "Camden": ["Philadelphia"], "Wilmington": ["Myrtle Beach", "Philadelphia"], "Trenton": ["Philadelphia"], "King of Prussia": ["Philadelphia"], "Cherry Hill": ["Philadelphia"], "Marietta": ["Atlanta"], "Decatur": ["Atlanta"], "Sandy Springs": ["Atlanta"], "Alpharetta": ["Atlanta"], "Roswell": ["Atlanta"], "Kennesaw": ["Atlanta"], "Scottsdale": ["PHX", "Phoenix"], "Mesa": ["Phoenix"], "Tempe": ["PHX", "Phoenix"], "Chandler": ["Phoenix"], "Gilbert": ["Phoenix"], "Peoria": ["Phoenix"], "Oakland": ["OAK", "San Francisco"], "Berkeley": ["San Francisco"], "Palo Alto": ["SFO", "San Francisco"], "Fremont": ["San Francisco"], "San Mateo": ["San Francisco"], "Daly City": ["San Francisco"], "Walnut Creek": ["San Francisco"], "Bellevue": ["SEA", "Seattle"], "Tacoma": ["SEA", "Seattle"], "Everett": ["Seattle"], "Redmond": ["Seattle"], "Kirkland": ["Seattle"], "Renton": ["Seattle"], "Kent": ["Seattle"], "Boulder": ["DEN", "Denver"], "Lakewood": ["Denver"], "Arvada": ["Denver"], "Westminster": ["Denver"], "Thornton": ["Denver"], "Fort Collins": ["Denver"], "Cambridge": ["BOS", "Boston"], "Quincy": ["Boston"], "Somerville": ["Boston"], "Newton": ["Boston"], "Brookline": ["Boston"], "Worcester": ["Boston"], "Lowell": ["Boston"], "Grand Canyon": ["Las Vegas", "Phoenix"], "Death Valley": ["Las Vegas"], "Zion National Park": ["Las Vegas"], "Hoover Dam": ["Las Vegas"], "Disneyland": ["Los Angeles"], "Universal Studios": ["Los Angeles"], "Palm Springs": ["Los Angeles"], "Joshua Tree": ["Los Angeles"], "Big Bear Lake": ["Los Angeles"], "Malibu": ["Los Angeles"], "Santa Barbara": ["Los Angeles"], "Yosemite": ["San Francisco"], "Napa Valley": ["San Francisco"], "Lake Tahoe": ["Reno", "San Francisco"], "Monterey": ["San Francisco"], "Carmel": ["San Francisco"], "Muir Woods": ["San Francisco"], "Disney World": ["MCO", "Orlando"], "Universal Orlando": ["MCO", "Orlando"], "Kennedy Space Center": ["Orlando"], "Clearwater Beach": ["Orlando"], "Daytona Beach": ["Orlando"], "Key West": ["Miami"], "Everglades": ["Miami"], "South Beach": ["Miami"], "Sedona": ["Phoenix"], "Rocky Mountain NP": ["Denver"], "Aspen": ["Denver"], "Vail": ["Denver"], "Breckenridge": ["Denver"], "Estes Park": ["Denver"], "Mount Rainier": ["Seattle"], "Olympic National Park": ["Seattle"], "Snoqualmie Falls": ["Seattle"], "Leavenworth": ["Seattle"], "Niagara Falls": ["New York"], "Hamptons": ["New York"], "Atlantic City": ["New York"], "Statue of Liberty": ["New York"], "Wisconsin Dells": ["Chicago"], "Lake Geneva": ["Chicago"], "Dollywood": ["Nashville"], "Gatlinburg": ["Knoxville", "Nashville"], "Great Smoky Mountains": ["Nashville"], "Park City": ["Salt Lake City"], "Sundance": ["Salt Lake City"], "Arches National Park": ["Salt Lake City"], "Legoland": ["San Diego"], "San Diego Zoo": ["San Diego"], "Tijuana": ["San Diego"], "LAX": ["Anaheim", "Hollywood", "Long Beach", "Los Angeles", "Santa Monica"], "JFK": ["Brooklyn", "Manhattan", "Times Square"], "LGA": ["Manhattan"], "EWR": ["Manhattan"], "ORD": ["Chicago", "Downtown Chicago"], "MDW": ["Chicago"], "DFW": ["Arlington", "Dallas", "Fort Worth"], "ATL": ["Atlanta", "Downtown Atlanta"], "SFO": ["Palo Alto", "San Francisco", "San Jose"], "OAK": ["Oakland", "San Francisco"], "MIA": ["Fort Lauderdale", "Miami", "Miami Beach"], "FLL": ["Fort Lauderdale", "Miami"], "SEA": ["Bellevue", "Seattle", "Tacoma"], "DEN": ["Boulder", "Denver"], "PHX": ["Phoenix", "Scottsdale", "Tempe"], "BOS": ["Boston", "Cambridge"], "MCO": ["Disney World", "Orlando", "Universal Orlando"], "LAS": ["Las Vegas", "Las Vegas Strip"], "IAH": ["Houston"], "HOU": ["Houston"], "DCA": ["Washington DC"], "IAD": ["Washington DC"], "BWI": ["Baltimore", "Washington DC"], "Manhattan": ["EWR", "JFK", "LGA"], "Times Square": ["JFK"], "Brooklyn": ["JFK"], "Downtown Chicago": ["ORD"], "Downtown Atlanta": ["ATL"], "Las Vegas Strip": ["LAS"], "Boise": ["Billings", "Missoula", "Portland", "Salt Lake City", "Seattle", "Spokane"], "Santa Fe": ["Albuquerque", "Denver", "Taos"], "Tulsa": ["Dallas", "Kansas City", "Oklahoma City"], "Wichita": ["Denver", "Kansas City", "Oklahoma City"], "Omaha": ["Denver", "Des Moines", "Kansas City", "Minneapolis", "Sioux Falls"], "Des Moines": ["Chicago", "Kansas City", "Minneapolis", "Omaha"], "Jackson": ["Birmingham", "Memphis", "New Orleans"], "Birmingham": ["Atlanta", "Jackson", "Mobile", "Nashville", "New Orleans"], "Mobile": ["Birmingham", "New Orleans", "Pensacola"], "Pensacola": ["Mobile", "New Orleans", "Tallahassee"], "Tallahassee": ["Atlanta", "Jacksonville", "Pensacola"], "Savannah": ["Atlanta", "Charleston", "Jacksonville"], "Charleston": ["Charlotte", "Myrtle Beach", "Savannah"], "Myrtle Beach": ["Charleston", "Charlotte", "Wilmington"], "Richmond": ["Norfolk", "Raleigh", "Virginia Beach", "Washington DC"], "Norfolk": ["Richmond", "Virginia Beach", "Washington DC"], "Virginia Beach": ["Norfolk", "Richmond"], "Knoxville": ["Atlanta", "Chattanooga", "Gatlinburg", "Nashville"], "Chattanooga": ["Atlanta", "Knoxville", "Nashville"], "Louisville": ["Cincinnati", "Indianapolis", "Lexington", "Nashville"], "Lexington": ["Cincinnati", "Louisville"], "Grand Rapids": ["Chicago", "Detroit"], "Madison": ["Chicago", "Green Bay", "Milwaukee", "Minneapolis"], "Green Bay": ["Chicago", "Madison", "Milwaukee"], "Duluth": ["Minneapolis"], "Fargo": ["Minneapolis"], "Sioux Falls": ["Minneapolis", "Omaha"], "Rapid City": ["Denver", "Mount Rushmore"], "Billings": ["Boise", "Denver"], "Missoula": ["Boise", "Spokane"], "Anchorage": ["Fairbanks"], "Honolulu": ["Pearl Harbor", "Waikiki"], "Taos": ["Santa Fe"], "Mount Rushmore": ["Rapid City"], "Fairbanks": ["Anchorage"], "Pearl Harbor": ["Honolulu"], "Waikiki": ["Honolulu"]};
+const ROUTE_MAP = {
+  "ATL": [
+    "Atlanta",
+    "Downtown Atlanta"
+  ],
+  "Albany": [
+    "New York"
+  ],
+  "Albuquerque": [
+    "Denver",
+    "El Paso",
+    "Phoenix",
+    "Santa Fe"
+  ],
+  "Alexandria": [
+    "Washington DC"
+  ],
+  "Alpharetta": [
+    "Atlanta"
+  ],
+  "Anaheim": [
+    "LAX",
+    "Los Angeles"
+  ],
+  "Anchorage": [
+    "Fairbanks"
+  ],
+  "Arches National Park": [
+    "Salt Lake City"
+  ],
+  "Arlington": [
+    "DFW",
+    "Dallas",
+    "Washington DC"
+  ],
+  "Arvada": [
+    "Denver"
+  ],
+  "Aspen": [
+    "Denver"
+  ],
+  "Atlanta": [
+    "ATL",
+    "Alpharetta",
+    "Austin",
+    "Baltimore",
+    "Birmingham",
+    "Boston",
+    "Charlotte",
+    "Chattanooga",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Decatur",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Kennesaw",
+    "Knoxville",
+    "Las Vegas",
+    "Los Angeles",
+    "Marietta",
+    "Memphis",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Roswell",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Sandy Springs",
+    "Savannah",
+    "Seattle",
+    "Tallahassee",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Atlantic City": [
+    "New York"
+  ],
+  "Aurora": [
+    "Chicago",
+    "Denver"
+  ],
+  "Austin": [
+    "Atlanta",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "BOS": [
+    "Boston",
+    "Cambridge"
+  ],
+  "BWI": [
+    "Baltimore",
+    "Washington DC"
+  ],
+  "Baltimore": [
+    "Atlanta",
+    "Austin",
+    "BWI",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Baytown": [
+    "Houston"
+  ],
+  "Bellevue": [
+    "SEA",
+    "Seattle"
+  ],
+  "Berkeley": [
+    "San Francisco"
+  ],
+  "Bethesda": [
+    "Washington DC"
+  ],
+  "Big Bear Lake": [
+    "Los Angeles"
+  ],
+  "Billings": [
+    "Boise",
+    "Denver"
+  ],
+  "Birmingham": [
+    "Atlanta",
+    "Jackson",
+    "Mobile",
+    "Nashville",
+    "New Orleans"
+  ],
+  "Boca Raton": [
+    "Miami"
+  ],
+  "Boise": [
+    "Billings",
+    "Missoula",
+    "Portland",
+    "Salt Lake City",
+    "Seattle",
+    "Spokane"
+  ],
+  "Boston": [
+    "Atlanta",
+    "Austin",
+    "BOS",
+    "Baltimore",
+    "Brookline",
+    "Cambridge",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Hartford",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Lowell",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Newton",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Providence",
+    "Quincy",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Somerville",
+    "Tampa",
+    "Washington DC",
+    "Worcester"
+  ],
+  "Boulder": [
+    "DEN",
+    "Denver"
+  ],
+  "Breckenridge": [
+    "Denver"
+  ],
+  "Brookline": [
+    "Boston"
+  ],
+  "Brooklyn": [
+    "JFK"
+  ],
+  "Burbank": [
+    "Los Angeles"
+  ],
+  "Cambridge": [
+    "BOS",
+    "Boston"
+  ],
+  "Camden": [
+    "Philadelphia"
+  ],
+  "Carmel": [
+    "San Francisco"
+  ],
+  "Chandler": [
+    "Phoenix"
+  ],
+  "Charleston": [
+    "Charlotte",
+    "Myrtle Beach",
+    "Savannah"
+  ],
+  "Charlotte": [
+    "Atlanta",
+    "Charleston",
+    "Myrtle Beach",
+    "Raleigh"
+  ],
+  "Chattanooga": [
+    "Atlanta",
+    "Knoxville",
+    "Nashville"
+  ],
+  "Cherry Hill": [
+    "Philadelphia"
+  ],
+  "Chicago": [
+    "Atlanta",
+    "Aurora",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Des Moines",
+    "Detroit",
+    "Evanston",
+    "Grand Rapids",
+    "Green Bay",
+    "Houston",
+    "Indianapolis",
+    "Joliet",
+    "Kansas City",
+    "Lake Geneva",
+    "Las Vegas",
+    "Los Angeles",
+    "MDW",
+    "Madison",
+    "Miami",
+    "Milwaukee",
+    "Minneapolis",
+    "Naperville",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "ORD",
+    "Oak Park",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Schaumburg",
+    "Seattle",
+    "St Louis",
+    "Tampa",
+    "Washington DC",
+    "Waukegan",
+    "Wisconsin Dells"
+  ],
+  "Cincinnati": [
+    "Columbus",
+    "Lexington",
+    "Louisville"
+  ],
+  "Clearwater Beach": [
+    "Orlando"
+  ],
+  "Cleveland": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Columbus",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Colorado Springs": [
+    "Denver"
+  ],
+  "Columbus": [
+    "Cincinnati",
+    "Cleveland"
+  ],
+  "Coral Gables": [
+    "Miami"
+  ],
+  "DCA": [
+    "Washington DC"
+  ],
+  "DEN": [
+    "Boulder",
+    "Denver"
+  ],
+  "DFW": [
+    "Arlington",
+    "Dallas",
+    "Fort Worth"
+  ],
+  "Dallas": [
+    "Arlington",
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "DFW",
+    "Denton",
+    "Denver",
+    "Detroit",
+    "Fort Worth",
+    "Frisco",
+    "Houston",
+    "Irving",
+    "Kansas City",
+    "Las Vegas",
+    "Little Rock",
+    "Los Angeles",
+    "McKinney",
+    "Memphis",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Oklahoma City",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Plano",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Tulsa",
+    "Washington DC"
+  ],
+  "Daly City": [
+    "San Francisco"
+  ],
+  "Daytona Beach": [
+    "Orlando"
+  ],
+  "Death Valley": [
+    "Las Vegas"
+  ],
+  "Decatur": [
+    "Atlanta"
+  ],
+  "Denton": [
+    "Dallas"
+  ],
+  "Denver": [
+    "Albuquerque",
+    "Arvada",
+    "Aspen",
+    "Atlanta",
+    "Aurora",
+    "Austin",
+    "Baltimore",
+    "Billings",
+    "Boston",
+    "Boulder",
+    "Breckenridge",
+    "Chicago",
+    "Cleveland",
+    "Colorado Springs",
+    "DEN",
+    "Dallas",
+    "Detroit",
+    "Estes Park",
+    "Fort Collins",
+    "Houston",
+    "Kansas City",
+    "Lakewood",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Omaha",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Rapid City",
+    "Rocky Mountain NP",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Santa Fe",
+    "Seattle",
+    "Tampa",
+    "Thornton",
+    "Vail",
+    "Washington DC",
+    "Westminster",
+    "Wichita"
+  ],
+  "Des Moines": [
+    "Chicago",
+    "Kansas City",
+    "Minneapolis",
+    "Omaha"
+  ],
+  "Detroit": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Grand Rapids",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Disney World": [
+    "MCO",
+    "Orlando"
+  ],
+  "Disneyland": [
+    "Los Angeles"
+  ],
+  "Dollywood": [
+    "Nashville"
+  ],
+  "Downtown Atlanta": [
+    "ATL"
+  ],
+  "Downtown Chicago": [
+    "ORD"
+  ],
+  "Duluth": [
+    "Minneapolis"
+  ],
+  "EWR": [
+    "Manhattan"
+  ],
+  "El Paso": [
+    "Albuquerque",
+    "San Antonio",
+    "Tucson"
+  ],
+  "Estes Park": [
+    "Denver"
+  ],
+  "Evanston": [
+    "Chicago"
+  ],
+  "Everett": [
+    "Seattle"
+  ],
+  "Everglades": [
+    "Miami"
+  ],
+  "FLL": [
+    "Fort Lauderdale",
+    "Miami"
+  ],
+  "Fairbanks": [
+    "Anchorage"
+  ],
+  "Fargo": [
+    "Minneapolis"
+  ],
+  "Fort Collins": [
+    "Denver"
+  ],
+  "Fort Lauderdale": [
+    "FLL",
+    "MIA",
+    "Miami"
+  ],
+  "Fort Worth": [
+    "DFW",
+    "Dallas"
+  ],
+  "Fremont": [
+    "San Francisco"
+  ],
+  "Fresno": [
+    "Los Angeles"
+  ],
+  "Frisco": [
+    "Dallas"
+  ],
+  "Galveston": [
+    "Houston"
+  ],
+  "Gatlinburg": [
+    "Knoxville",
+    "Nashville"
+  ],
+  "Gilbert": [
+    "Phoenix"
+  ],
+  "Glendale": [
+    "Los Angeles",
+    "Phoenix"
+  ],
+  "Grand Canyon": [
+    "Las Vegas",
+    "Phoenix"
+  ],
+  "Grand Rapids": [
+    "Chicago",
+    "Detroit"
+  ],
+  "Great Smoky Mountains": [
+    "Nashville"
+  ],
+  "Green Bay": [
+    "Chicago",
+    "Madison",
+    "Milwaukee"
+  ],
+  "HOU": [
+    "Houston"
+  ],
+  "Hamptons": [
+    "New York"
+  ],
+  "Hartford": [
+    "Boston",
+    "New York"
+  ],
+  "Hialeah": [
+    "Miami"
+  ],
+  "Hoboken": [
+    "New York"
+  ],
+  "Hollywood": [
+    "LAX",
+    "Miami"
+  ],
+  "Honolulu": [
+    "Pearl Harbor",
+    "Waikiki"
+  ],
+  "Hoover Dam": [
+    "Las Vegas"
+  ],
+  "Houston": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Baytown",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Galveston",
+    "HOU",
+    "IAH",
+    "Katy",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Oklahoma City",
+    "Orlando",
+    "Pasadena",
+    "Pearland",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Sugar Land",
+    "Tampa",
+    "The Woodlands",
+    "Washington DC"
+  ],
+  "IAD": [
+    "Washington DC"
+  ],
+  "IAH": [
+    "Houston"
+  ],
+  "Indianapolis": [
+    "Chicago",
+    "Louisville"
+  ],
+  "Irvine": [
+    "Los Angeles"
+  ],
+  "Irving": [
+    "Dallas"
+  ],
+  "JFK": [
+    "Brooklyn",
+    "Manhattan",
+    "Times Square"
+  ],
+  "Jackson": [
+    "Birmingham",
+    "Memphis",
+    "New Orleans"
+  ],
+  "Jacksonville": [
+    "Orlando",
+    "Savannah",
+    "Tallahassee",
+    "Tampa"
+  ],
+  "Jersey City": [
+    "New York"
+  ],
+  "Joliet": [
+    "Chicago"
+  ],
+  "Joshua Tree": [
+    "Los Angeles"
+  ],
+  "Kansas City": [
+    "Chicago",
+    "Dallas",
+    "Denver",
+    "Des Moines",
+    "Minneapolis",
+    "Oklahoma City",
+    "Omaha",
+    "St Louis",
+    "Tulsa",
+    "Wichita"
+  ],
+  "Katy": [
+    "Houston"
+  ],
+  "Kennedy Space Center": [
+    "Orlando"
+  ],
+  "Kennesaw": [
+    "Atlanta"
+  ],
+  "Kent": [
+    "Seattle"
+  ],
+  "Key West": [
+    "Miami"
+  ],
+  "King of Prussia": [
+    "Philadelphia"
+  ],
+  "Kirkland": [
+    "Seattle"
+  ],
+  "Knoxville": [
+    "Atlanta",
+    "Chattanooga",
+    "Gatlinburg",
+    "Nashville"
+  ],
+  "LAS": [
+    "Las Vegas",
+    "Las Vegas Strip"
+  ],
+  "LAX": [
+    "Anaheim",
+    "Hollywood",
+    "Long Beach",
+    "Los Angeles",
+    "Santa Monica"
+  ],
+  "LGA": [
+    "Manhattan"
+  ],
+  "Lake Geneva": [
+    "Chicago"
+  ],
+  "Lake Tahoe": [
+    "Reno",
+    "San Francisco"
+  ],
+  "Lakewood": [
+    "Denver"
+  ],
+  "Las Vegas": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Death Valley",
+    "Denver",
+    "Detroit",
+    "Grand Canyon",
+    "Hoover Dam",
+    "Houston",
+    "LAS",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Reno",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC",
+    "Zion National Park"
+  ],
+  "Las Vegas Strip": [
+    "LAS"
+  ],
+  "Leavenworth": [
+    "Seattle"
+  ],
+  "Legoland": [
+    "San Diego"
+  ],
+  "Lexington": [
+    "Cincinnati",
+    "Louisville"
+  ],
+  "Little Rock": [
+    "Dallas",
+    "Memphis",
+    "New Orleans"
+  ],
+  "Long Beach": [
+    "LAX",
+    "Los Angeles"
+  ],
+  "Long Island City": [
+    "New York"
+  ],
+  "Los Angeles": [
+    "Anaheim",
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Big Bear Lake",
+    "Boston",
+    "Burbank",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Disneyland",
+    "Fresno",
+    "Glendale",
+    "Houston",
+    "Irvine",
+    "Joshua Tree",
+    "LAX",
+    "Las Vegas",
+    "Long Beach",
+    "Malibu",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Ontario",
+    "Orlando",
+    "Palm Springs",
+    "Pasadena",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Sacramento",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Santa Barbara",
+    "Santa Monica",
+    "Seattle",
+    "Tampa",
+    "Universal Studios",
+    "Washington DC"
+  ],
+  "Louisville": [
+    "Cincinnati",
+    "Indianapolis",
+    "Lexington",
+    "Nashville"
+  ],
+  "Lowell": [
+    "Boston"
+  ],
+  "MCO": [
+    "Disney World",
+    "Orlando",
+    "Universal Orlando"
+  ],
+  "MDW": [
+    "Chicago"
+  ],
+  "MIA": [
+    "Fort Lauderdale",
+    "Miami",
+    "Miami Beach"
+  ],
+  "Madison": [
+    "Chicago",
+    "Green Bay",
+    "Milwaukee",
+    "Minneapolis"
+  ],
+  "Malibu": [
+    "Los Angeles"
+  ],
+  "Manhattan": [
+    "EWR",
+    "JFK",
+    "LGA"
+  ],
+  "Marietta": [
+    "Atlanta"
+  ],
+  "McKinney": [
+    "Dallas"
+  ],
+  "Memphis": [
+    "Atlanta",
+    "Dallas",
+    "Jackson",
+    "Little Rock",
+    "Nashville",
+    "New Orleans",
+    "St Louis"
+  ],
+  "Mesa": [
+    "Phoenix"
+  ],
+  "Miami": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boca Raton",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Coral Gables",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Everglades",
+    "FLL",
+    "Fort Lauderdale",
+    "Hialeah",
+    "Hollywood",
+    "Houston",
+    "Key West",
+    "Las Vegas",
+    "Los Angeles",
+    "MIA",
+    "Miami Beach",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "South Beach",
+    "Tampa",
+    "Washington DC",
+    "West Palm Beach"
+  ],
+  "Miami Beach": [
+    "MIA",
+    "Miami"
+  ],
+  "Milwaukee": [
+    "Chicago",
+    "Green Bay",
+    "Madison"
+  ],
+  "Minneapolis": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Des Moines",
+    "Detroit",
+    "Duluth",
+    "Fargo",
+    "Houston",
+    "Kansas City",
+    "Las Vegas",
+    "Los Angeles",
+    "Madison",
+    "Miami",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Omaha",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Sioux Falls",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Missoula": [
+    "Boise",
+    "Spokane"
+  ],
+  "Mobile": [
+    "Birmingham",
+    "New Orleans",
+    "Pensacola"
+  ],
+  "Monterey": [
+    "San Francisco"
+  ],
+  "Mount Rainier": [
+    "Seattle"
+  ],
+  "Mount Rushmore": [
+    "Rapid City"
+  ],
+  "Muir Woods": [
+    "San Francisco"
+  ],
+  "Myrtle Beach": [
+    "Charleston",
+    "Charlotte",
+    "Wilmington"
+  ],
+  "Napa Valley": [
+    "San Francisco"
+  ],
+  "Naperville": [
+    "Chicago"
+  ],
+  "Nashville": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Birmingham",
+    "Boston",
+    "Chattanooga",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Dollywood",
+    "Gatlinburg",
+    "Great Smoky Mountains",
+    "Houston",
+    "Knoxville",
+    "Las Vegas",
+    "Los Angeles",
+    "Louisville",
+    "Memphis",
+    "Miami",
+    "Minneapolis",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "New Orleans": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Birmingham",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Jackson",
+    "Las Vegas",
+    "Little Rock",
+    "Los Angeles",
+    "Memphis",
+    "Miami",
+    "Minneapolis",
+    "Mobile",
+    "Nashville",
+    "New York",
+    "Orlando",
+    "Pensacola",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "New Rochelle": [
+    "New York"
+  ],
+  "New York": [
+    "Albany",
+    "Atlanta",
+    "Atlantic City",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Hamptons",
+    "Hartford",
+    "Hoboken",
+    "Houston",
+    "Jersey City",
+    "Las Vegas",
+    "Long Island City",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New Rochelle",
+    "Newark",
+    "Niagara Falls",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Stamford",
+    "Statue of Liberty",
+    "Tampa",
+    "Washington DC",
+    "White Plains",
+    "Yonkers"
+  ],
+  "Newark": [
+    "New York"
+  ],
+  "Newton": [
+    "Boston"
+  ],
+  "Niagara Falls": [
+    "New York"
+  ],
+  "Norfolk": [
+    "Richmond",
+    "Virginia Beach",
+    "Washington DC"
+  ],
+  "OAK": [
+    "Oakland",
+    "San Francisco"
+  ],
+  "ORD": [
+    "Chicago",
+    "Downtown Chicago"
+  ],
+  "Oak Park": [
+    "Chicago"
+  ],
+  "Oakland": [
+    "OAK",
+    "San Francisco"
+  ],
+  "Oklahoma City": [
+    "Dallas",
+    "Houston",
+    "Kansas City",
+    "Tulsa",
+    "Wichita"
+  ],
+  "Olympic National Park": [
+    "Seattle"
+  ],
+  "Omaha": [
+    "Denver",
+    "Des Moines",
+    "Kansas City",
+    "Minneapolis",
+    "Sioux Falls"
+  ],
+  "Ontario": [
+    "Los Angeles"
+  ],
+  "Orlando": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Clearwater Beach",
+    "Cleveland",
+    "Dallas",
+    "Daytona Beach",
+    "Denver",
+    "Detroit",
+    "Disney World",
+    "Houston",
+    "Jacksonville",
+    "Kennedy Space Center",
+    "Las Vegas",
+    "Los Angeles",
+    "MCO",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Universal Orlando",
+    "Washington DC"
+  ],
+  "PHX": [
+    "Phoenix",
+    "Scottsdale",
+    "Tempe"
+  ],
+  "Palm Springs": [
+    "Los Angeles"
+  ],
+  "Palo Alto": [
+    "SFO",
+    "San Francisco"
+  ],
+  "Park City": [
+    "Salt Lake City"
+  ],
+  "Pasadena": [
+    "Houston",
+    "Los Angeles"
+  ],
+  "Pearl Harbor": [
+    "Honolulu"
+  ],
+  "Pearland": [
+    "Houston"
+  ],
+  "Pensacola": [
+    "Mobile",
+    "New Orleans",
+    "Tallahassee"
+  ],
+  "Peoria": [
+    "Phoenix"
+  ],
+  "Philadelphia": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Camden",
+    "Cherry Hill",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "King of Prussia",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Phoenix",
+    "Pittsburgh",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Trenton",
+    "Washington DC",
+    "Wilmington"
+  ],
+  "Phoenix": [
+    "Albuquerque",
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chandler",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Gilbert",
+    "Glendale",
+    "Grand Canyon",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Mesa",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "PHX",
+    "Peoria",
+    "Philadelphia",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Scottsdale",
+    "Seattle",
+    "Sedona",
+    "Tampa",
+    "Tempe",
+    "Tucson",
+    "Washington DC"
+  ],
+  "Pittsburgh": [
+    "Philadelphia"
+  ],
+  "Plano": [
+    "Dallas"
+  ],
+  "Portland": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boise",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Spokane",
+    "Tampa",
+    "Washington DC"
+  ],
+  "Providence": [
+    "Boston"
+  ],
+  "Quincy": [
+    "Boston"
+  ],
+  "Raleigh": [
+    "Charlotte",
+    "Richmond"
+  ],
+  "Rapid City": [
+    "Denver",
+    "Mount Rushmore"
+  ],
+  "Redmond": [
+    "Seattle"
+  ],
+  "Reno": [
+    "Lake Tahoe",
+    "Las Vegas",
+    "Sacramento",
+    "San Francisco"
+  ],
+  "Renton": [
+    "Seattle"
+  ],
+  "Reston": [
+    "Washington DC"
+  ],
+  "Richmond": [
+    "Norfolk",
+    "Raleigh",
+    "Virginia Beach",
+    "Washington DC"
+  ],
+  "Rockville": [
+    "Washington DC"
+  ],
+  "Rocky Mountain NP": [
+    "Denver"
+  ],
+  "Roswell": [
+    "Atlanta"
+  ],
+  "SEA": [
+    "Bellevue",
+    "Seattle",
+    "Tacoma"
+  ],
+  "SFO": [
+    "Palo Alto",
+    "San Francisco",
+    "San Jose"
+  ],
+  "Sacramento": [
+    "Los Angeles",
+    "Reno",
+    "San Francisco",
+    "San Jose"
+  ],
+  "Salt Lake City": [
+    "Arches National Park",
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boise",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Park City",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Sundance",
+    "Tampa",
+    "Washington DC"
+  ],
+  "San Antonio": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "El Paso",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "San Diego": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Legoland",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego Zoo",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Tampa",
+    "Tijuana",
+    "Tucson",
+    "Washington DC"
+  ],
+  "San Diego Zoo": [
+    "San Diego"
+  ],
+  "San Francisco": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Berkeley",
+    "Boston",
+    "Carmel",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Daly City",
+    "Denver",
+    "Detroit",
+    "Fremont",
+    "Houston",
+    "Lake Tahoe",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Monterey",
+    "Muir Woods",
+    "Napa Valley",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "OAK",
+    "Oakland",
+    "Orlando",
+    "Palo Alto",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Reno",
+    "SFO",
+    "Sacramento",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Jose",
+    "San Mateo",
+    "Seattle",
+    "Tampa",
+    "Walnut Creek",
+    "Washington DC",
+    "Yosemite"
+  ],
+  "San Jose": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "SFO",
+    "Sacramento",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "Seattle",
+    "Tampa",
+    "Washington DC"
+  ],
+  "San Mateo": [
+    "San Francisco"
+  ],
+  "Sandy Springs": [
+    "Atlanta"
+  ],
+  "Santa Barbara": [
+    "Los Angeles"
+  ],
+  "Santa Fe": [
+    "Albuquerque",
+    "Denver",
+    "Taos"
+  ],
+  "Santa Monica": [
+    "LAX",
+    "Los Angeles"
+  ],
+  "Savannah": [
+    "Atlanta",
+    "Charleston",
+    "Jacksonville"
+  ],
+  "Schaumburg": [
+    "Chicago"
+  ],
+  "Scottsdale": [
+    "PHX",
+    "Phoenix"
+  ],
+  "Seattle": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Bellevue",
+    "Boise",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Everett",
+    "Houston",
+    "Kent",
+    "Kirkland",
+    "Las Vegas",
+    "Leavenworth",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Mount Rainier",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Olympic National Park",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Redmond",
+    "Renton",
+    "SEA",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Snoqualmie Falls",
+    "Spokane",
+    "Tacoma",
+    "Tampa",
+    "Vancouver",
+    "Washington DC"
+  ],
+  "Sedona": [
+    "Phoenix"
+  ],
+  "Silver Spring": [
+    "Washington DC"
+  ],
+  "Sioux Falls": [
+    "Minneapolis",
+    "Omaha"
+  ],
+  "Snoqualmie Falls": [
+    "Seattle"
+  ],
+  "Somerville": [
+    "Boston"
+  ],
+  "South Beach": [
+    "Miami"
+  ],
+  "Spokane": [
+    "Boise",
+    "Missoula",
+    "Portland",
+    "Seattle"
+  ],
+  "St Louis": [
+    "Chicago",
+    "Kansas City",
+    "Memphis"
+  ],
+  "Stamford": [
+    "New York"
+  ],
+  "Statue of Liberty": [
+    "New York"
+  ],
+  "Sugar Land": [
+    "Houston"
+  ],
+  "Sundance": [
+    "Salt Lake City"
+  ],
+  "Tacoma": [
+    "SEA",
+    "Seattle"
+  ],
+  "Tallahassee": [
+    "Atlanta",
+    "Jacksonville",
+    "Pensacola"
+  ],
+  "Tampa": [
+    "Atlanta",
+    "Austin",
+    "Baltimore",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "Jacksonville",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Washington DC"
+  ],
+  "Taos": [
+    "Santa Fe"
+  ],
+  "Tempe": [
+    "PHX",
+    "Phoenix"
+  ],
+  "The Woodlands": [
+    "Houston"
+  ],
+  "Thornton": [
+    "Denver"
+  ],
+  "Tijuana": [
+    "San Diego"
+  ],
+  "Times Square": [
+    "JFK"
+  ],
+  "Trenton": [
+    "Philadelphia"
+  ],
+  "Tucson": [
+    "El Paso",
+    "Phoenix",
+    "San Diego"
+  ],
+  "Tulsa": [
+    "Dallas",
+    "Kansas City",
+    "Oklahoma City"
+  ],
+  "Tysons": [
+    "Washington DC"
+  ],
+  "Universal Orlando": [
+    "MCO",
+    "Orlando"
+  ],
+  "Universal Studios": [
+    "Los Angeles"
+  ],
+  "Vail": [
+    "Denver"
+  ],
+  "Vancouver": [
+    "Seattle"
+  ],
+  "Virginia Beach": [
+    "Norfolk",
+    "Richmond"
+  ],
+  "Waikiki": [
+    "Honolulu"
+  ],
+  "Walnut Creek": [
+    "San Francisco"
+  ],
+  "Washington DC": [
+    "Alexandria",
+    "Arlington",
+    "Atlanta",
+    "Austin",
+    "BWI",
+    "Baltimore",
+    "Bethesda",
+    "Boston",
+    "Chicago",
+    "Cleveland",
+    "DCA",
+    "Dallas",
+    "Denver",
+    "Detroit",
+    "Houston",
+    "IAD",
+    "Las Vegas",
+    "Los Angeles",
+    "Miami",
+    "Minneapolis",
+    "Nashville",
+    "New Orleans",
+    "New York",
+    "Norfolk",
+    "Orlando",
+    "Philadelphia",
+    "Phoenix",
+    "Portland",
+    "Reston",
+    "Richmond",
+    "Rockville",
+    "Salt Lake City",
+    "San Antonio",
+    "San Diego",
+    "San Francisco",
+    "San Jose",
+    "Seattle",
+    "Silver Spring",
+    "Tampa",
+    "Tysons"
+  ],
+  "Waukegan": [
+    "Chicago"
+  ],
+  "West Palm Beach": [
+    "Miami"
+  ],
+  "Westminster": [
+    "Denver"
+  ],
+  "White Plains": [
+    "New York"
+  ],
+  "Wichita": [
+    "Denver",
+    "Kansas City",
+    "Oklahoma City"
+  ],
+  "Wilmington": [
+    "Myrtle Beach",
+    "Philadelphia"
+  ],
+  "Wisconsin Dells": [
+    "Chicago"
+  ],
+  "Worcester": [
+    "Boston"
+  ],
+  "Yonkers": [
+    "New York"
+  ],
+  "Yosemite": [
+    "San Francisco"
+  ],
+  "Zion National Park": [
+    "Las Vegas"
+  ]
+};
