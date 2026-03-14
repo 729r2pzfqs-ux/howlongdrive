@@ -207,10 +207,10 @@
     41.7658,
     -72.6734
   ],
-  "Providence": [
-    41.824,
-    -71.4128
-  ],
+  "Providence": {
+    "lat": 41.824,
+    "lng": -71.4128
+  },
   "Little Rock": [
     34.7465,
     -92.2896
@@ -639,10 +639,10 @@
     36.0544,
     -112.1401
   ],
-  "Death Valley": [
-    36.5054,
-    -117.0794
-  ],
+  "Death Valley": {
+    "lat": 36.5054,
+    "lng": -117.0794
+  },
   "Zion National Park": [
     37.2982,
     -113.0263
@@ -803,10 +803,10 @@
     35.7143,
     -83.5102
   ],
-  "Great Smoky Mountains": [
-    35.6118,
-    -83.4895
-  ],
+  "Great Smoky Mountains": {
+    "lat": 35.6532,
+    "lng": -83.507
+  },
   "Park City": [
     40.6461,
     -111.498
@@ -1074,5 +1074,189 @@
   "Waikiki": [
     21.2793,
     -157.8292
-  ]
+  ],
+  "Yellowstone": {
+    "lat": 44.428,
+    "lng": -110.5885
+  },
+  "Glacier National Park": {
+    "lat": 48.7596,
+    "lng": -113.787
+  },
+  "Acadia": {
+    "lat": 44.3386,
+    "lng": -68.2733
+  },
+  "Bryce Canyon": {
+    "lat": 37.593,
+    "lng": -112.1871
+  },
+  "Carlsbad Caverns": {
+    "lat": 32.1479,
+    "lng": -104.5567
+  },
+  "Mammoth Cave": {
+    "lat": 37.187,
+    "lng": -86.1006
+  },
+  "Crater Lake": {
+    "lat": 42.9446,
+    "lng": -122.109
+  },
+  "Redwood": {
+    "lat": 41.2132,
+    "lng": -124.0046
+  },
+  "Sequoia": {
+    "lat": 36.4864,
+    "lng": -118.5658
+  },
+  "Big Bend": {
+    "lat": 29.25,
+    "lng": -103.25
+  },
+  "Shenandoah": {
+    "lat": 38.2928,
+    "lng": -78.6796
+  },
+  "Grand Teton": {
+    "lat": 43.7904,
+    "lng": -110.6818
+  },
+  "Badlands": {
+    "lat": 43.8554,
+    "lng": -102.3397
+  },
+  "Mesa Verde": {
+    "lat": 37.2309,
+    "lng": -108.4618
+  },
+  "Petrified Forest": {
+    "lat": 34.91,
+    "lng": -109.8068
+  },
+  "Canyonlands": {
+    "lat": 38.3269,
+    "lng": -109.8783
+  },
+  "Capitol Reef": {
+    "lat": 38.28,
+    "lng": -111.17
+  },
+  "Black Canyon": {
+    "lat": 38.5754,
+    "lng": -107.7416
+  },
+  "Hot Springs": {
+    "lat": 34.5217,
+    "lng": -93.0424
+  },
+  "Jackson Hole": {
+    "lat": 43.4799,
+    "lng": -110.7624
+  },
+  "Telluride": {
+    "lat": 37.9375,
+    "lng": -107.8123
+  },
+  "Steamboat Springs": {
+    "lat": 40.485,
+    "lng": -106.8317
+  },
+  "Big Sky": {
+    "lat": 45.2618,
+    "lng": -111.4018
+  },
+  "Sun Valley": {
+    "lat": 43.6826,
+    "lng": -114.3521
+  },
+  "Mammoth Lakes": {
+    "lat": 37.6485,
+    "lng": -118.9721
+  },
+  "Taos Ski Valley": {
+    "lat": 36.5964,
+    "lng": -105.4542
+  },
+  "Crested Butte": {
+    "lat": 38.8697,
+    "lng": -106.9878
+  },
+  "Whitefish": {
+    "lat": 48.4111,
+    "lng": -114.3528
+  },
+  "Stowe": {
+    "lat": 44.4654,
+    "lng": -72.6874
+  },
+  "Killington": {
+    "lat": 43.6045,
+    "lng": -72.8201
+  },
+  "Cape Cod": {
+    "lat": 41.6688,
+    "lng": -70.2962
+  },
+  "Marthas Vineyard": {
+    "lat": 41.3805,
+    "lng": -70.6456
+  },
+  "Nantucket": {
+    "lat": 41.2835,
+    "lng": -70.0995
+  },
+  "Bar Harbor": {
+    "lat": 44.3876,
+    "lng": -68.2039
+  },
+  "Outer Banks": {
+    "lat": 35.5585,
+    "lng": -75.4665
+  },
+  "Hilton Head": {
+    "lat": 32.2163,
+    "lng": -80.7526
+  },
+  "Moab": {
+    "lat": 38.5733,
+    "lng": -109.5498
+  },
+  "Monument Valley": {
+    "lat": 36.998,
+    "lng": -110.0985
+  },
+  "Antelope Canyon": {
+    "lat": 36.8619,
+    "lng": -111.3743
+  },
+  "White Sands": {
+    "lat": 32.7872,
+    "lng": -106.3257
+  },
+  "Horseshoe Bend": {
+    "lat": 36.8791,
+    "lng": -111.5103
+  },
+  "Boulder": {
+    "lat": 40.015,
+    "lng": -105.2705
+  },
+  "Portland ME": {
+    "lat": 43.6591,
+    "lng": -70.2568
+  },
+  "Flagstaff": {
+    "lat": 35.1983,
+    "lng": -111.6513
+  },
+  "Burlington": {
+    "lat": 44.4759,
+    "lng": -73.2121
+  },
+  "Calgary": {
+    "lat": 51.0447,
+    "lng": -114.0719
+  }
 }

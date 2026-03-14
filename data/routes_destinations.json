@@ -1,0 +1,1526 @@
+[
+  {
+    "from": "Salt Lake City",
+    "to": "Yellowstone",
+    "miles": 327,
+    "time": "5h 56min"
+  },
+  {
+    "from": "Yellowstone",
+    "to": "Salt Lake City",
+    "miles": 327,
+    "time": "5h 56min"
+  },
+  {
+    "from": "Denver",
+    "to": "Yellowstone",
+    "miles": 540,
+    "time": "9h 49min"
+  },
+  {
+    "from": "Yellowstone",
+    "to": "Denver",
+    "miles": 540,
+    "time": "9h 49min"
+  },
+  {
+    "from": "Boise",
+    "to": "Yellowstone",
+    "miles": 355,
+    "time": "6h 27min"
+  },
+  {
+    "from": "Yellowstone",
+    "to": "Boise",
+    "miles": 355,
+    "time": "6h 27min"
+  },
+  {
+    "from": "Billings",
+    "to": "Yellowstone",
+    "miles": 172,
+    "time": "3h 7min"
+  },
+  {
+    "from": "Yellowstone",
+    "to": "Billings",
+    "miles": 172,
+    "time": "3h 7min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Glacier National Park",
+    "miles": 501,
+    "time": "9h 6min"
+  },
+  {
+    "from": "Glacier National Park",
+    "to": "Seattle",
+    "miles": 501,
+    "time": "9h 6min"
+  },
+  {
+    "from": "Missoula",
+    "to": "Glacier National Park",
+    "miles": 163,
+    "time": "2h 57min"
+  },
+  {
+    "from": "Glacier National Park",
+    "to": "Missoula",
+    "miles": 163,
+    "time": "2h 57min"
+  },
+  {
+    "from": "Spokane",
+    "to": "Glacier National Park",
+    "miles": 229,
+    "time": "4h 9min"
+  },
+  {
+    "from": "Glacier National Park",
+    "to": "Spokane",
+    "miles": 229,
+    "time": "4h 9min"
+  },
+  {
+    "from": "Boston",
+    "to": "Acadia",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Acadia",
+    "to": "Boston",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Acadia",
+    "miles": 136,
+    "time": "2h 28min"
+  },
+  {
+    "from": "Acadia",
+    "to": "Portland ME",
+    "miles": 136,
+    "time": "2h 28min"
+  },
+  {
+    "from": "New York",
+    "to": "Acadia",
+    "miles": 480,
+    "time": "8h 43min"
+  },
+  {
+    "from": "Acadia",
+    "to": "New York",
+    "miles": 480,
+    "time": "8h 43min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Bryce Canyon",
+    "miles": 238,
+    "time": "4h 19min"
+  },
+  {
+    "from": "Bryce Canyon",
+    "to": "Las Vegas",
+    "miles": 238,
+    "time": "4h 19min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Bryce Canyon",
+    "miles": 274,
+    "time": "4h 58min"
+  },
+  {
+    "from": "Bryce Canyon",
+    "to": "Salt Lake City",
+    "miles": 274,
+    "time": "4h 58min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Bryce Canyon",
+    "miles": 358,
+    "time": "6h 30min"
+  },
+  {
+    "from": "Bryce Canyon",
+    "to": "Phoenix",
+    "miles": 358,
+    "time": "6h 30min"
+  },
+  {
+    "from": "El Paso",
+    "to": "Carlsbad Caverns",
+    "miles": 145,
+    "time": "2h 38min"
+  },
+  {
+    "from": "Carlsbad Caverns",
+    "to": "El Paso",
+    "miles": 145,
+    "time": "2h 38min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Carlsbad Caverns",
+    "miles": 294,
+    "time": "5h 20min"
+  },
+  {
+    "from": "Carlsbad Caverns",
+    "to": "Albuquerque",
+    "miles": 294,
+    "time": "5h 20min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Carlsbad Caverns",
+    "miles": 567,
+    "time": "10h 18min"
+  },
+  {
+    "from": "Carlsbad Caverns",
+    "to": "Dallas",
+    "miles": 567,
+    "time": "10h 18min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Mammoth Cave",
+    "miles": 100,
+    "time": "1h 49min"
+  },
+  {
+    "from": "Mammoth Cave",
+    "to": "Nashville",
+    "miles": 100,
+    "time": "1h 49min"
+  },
+  {
+    "from": "Louisville",
+    "to": "Mammoth Cave",
+    "miles": 94,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Mammoth Cave",
+    "to": "Louisville",
+    "miles": 94,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Indianapolis",
+    "to": "Mammoth Cave",
+    "miles": 222,
+    "time": "4h 2min"
+  },
+  {
+    "from": "Mammoth Cave",
+    "to": "Indianapolis",
+    "miles": 222,
+    "time": "4h 2min"
+  },
+  {
+    "from": "Portland",
+    "to": "Crater Lake",
+    "miles": 224,
+    "time": "4h 4min"
+  },
+  {
+    "from": "Crater Lake",
+    "to": "Portland",
+    "miles": 224,
+    "time": "4h 4min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Crater Lake",
+    "miles": 446,
+    "time": "8h 6min"
+  },
+  {
+    "from": "Crater Lake",
+    "to": "San Francisco",
+    "miles": 446,
+    "time": "8h 6min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Crater Lake",
+    "miles": 402,
+    "time": "7h 18min"
+  },
+  {
+    "from": "Crater Lake",
+    "to": "Seattle",
+    "miles": 402,
+    "time": "7h 18min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Redwood",
+    "miles": 315,
+    "time": "5h 43min"
+  },
+  {
+    "from": "Redwood",
+    "to": "San Francisco",
+    "miles": 315,
+    "time": "5h 43min"
+  },
+  {
+    "from": "Portland",
+    "to": "Redwood",
+    "miles": 380,
+    "time": "6h 54min"
+  },
+  {
+    "from": "Redwood",
+    "to": "Portland",
+    "miles": 380,
+    "time": "6h 54min"
+  },
+  {
+    "from": "Sacramento",
+    "to": "Redwood",
+    "miles": 281,
+    "time": "5h 6min"
+  },
+  {
+    "from": "Redwood",
+    "to": "Sacramento",
+    "miles": 281,
+    "time": "5h 6min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Sequoia",
+    "miles": 211,
+    "time": "3h 50min"
+  },
+  {
+    "from": "Sequoia",
+    "to": "Los Angeles",
+    "miles": 211,
+    "time": "3h 50min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Sequoia",
+    "miles": 287,
+    "time": "5h 13min"
+  },
+  {
+    "from": "Sequoia",
+    "to": "San Francisco",
+    "miles": 287,
+    "time": "5h 13min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Sequoia",
+    "miles": 239,
+    "time": "4h 20min"
+  },
+  {
+    "from": "Sequoia",
+    "to": "Las Vegas",
+    "miles": 239,
+    "time": "4h 20min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Death Valley",
+    "miles": 138,
+    "time": "2h 30min"
+  },
+  {
+    "from": "Death Valley",
+    "to": "Las Vegas",
+    "miles": 138,
+    "time": "2h 30min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Death Valley",
+    "miles": 227,
+    "time": "4h 7min"
+  },
+  {
+    "from": "Death Valley",
+    "to": "Los Angeles",
+    "miles": 227,
+    "time": "4h 7min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Death Valley",
+    "miles": 441,
+    "time": "8h 1min"
+  },
+  {
+    "from": "Death Valley",
+    "to": "Phoenix",
+    "miles": 441,
+    "time": "8h 1min"
+  },
+  {
+    "from": "El Paso",
+    "to": "Big Bend",
+    "miles": 324,
+    "time": "5h 53min"
+  },
+  {
+    "from": "Big Bend",
+    "to": "El Paso",
+    "miles": 324,
+    "time": "5h 53min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Big Bend",
+    "miles": 358,
+    "time": "6h 30min"
+  },
+  {
+    "from": "Big Bend",
+    "to": "San Antonio",
+    "miles": 358,
+    "time": "6h 30min"
+  },
+  {
+    "from": "Austin",
+    "to": "Big Bend",
+    "miles": 422,
+    "time": "7h 40min"
+  },
+  {
+    "from": "Big Bend",
+    "to": "Austin",
+    "miles": 422,
+    "time": "7h 40min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Shenandoah",
+    "miles": 122,
+    "time": "2h 13min"
+  },
+  {
+    "from": "Shenandoah",
+    "to": "Washington DC",
+    "miles": 122,
+    "time": "2h 13min"
+  },
+  {
+    "from": "Richmond",
+    "to": "Shenandoah",
+    "miles": 106,
+    "time": "1h 55min"
+  },
+  {
+    "from": "Shenandoah",
+    "to": "Richmond",
+    "miles": 106,
+    "time": "1h 55min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "Shenandoah",
+    "miles": 163,
+    "time": "2h 57min"
+  },
+  {
+    "from": "Shenandoah",
+    "to": "Baltimore",
+    "miles": 163,
+    "time": "2h 57min"
+  },
+  {
+    "from": "Knoxville",
+    "to": "Great Smoky Mountains",
+    "miles": 39,
+    "time": "0h 42min"
+  },
+  {
+    "from": "Great Smoky Mountains",
+    "to": "Knoxville",
+    "miles": 39,
+    "time": "0h 42min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Great Smoky Mountains",
+    "miles": 233,
+    "time": "4h 14min"
+  },
+  {
+    "from": "Great Smoky Mountains",
+    "to": "Nashville",
+    "miles": 233,
+    "time": "4h 14min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Great Smoky Mountains",
+    "miles": 175,
+    "time": "3h 10min"
+  },
+  {
+    "from": "Great Smoky Mountains",
+    "to": "Atlanta",
+    "miles": 175,
+    "time": "3h 10min"
+  },
+  {
+    "from": "Charlotte",
+    "to": "Great Smoky Mountains",
+    "miles": 191,
+    "time": "3h 28min"
+  },
+  {
+    "from": "Great Smoky Mountains",
+    "to": "Charlotte",
+    "miles": 191,
+    "time": "3h 28min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Grand Teton",
+    "miles": 272,
+    "time": "4h 56min"
+  },
+  {
+    "from": "Grand Teton",
+    "to": "Salt Lake City",
+    "miles": 272,
+    "time": "4h 56min"
+  },
+  {
+    "from": "Denver",
+    "to": "Grand Teton",
+    "miles": 506,
+    "time": "9h 11min"
+  },
+  {
+    "from": "Grand Teton",
+    "to": "Denver",
+    "miles": 506,
+    "time": "9h 11min"
+  },
+  {
+    "from": "Boise",
+    "to": "Grand Teton",
+    "miles": 344,
+    "time": "6h 15min"
+  },
+  {
+    "from": "Grand Teton",
+    "to": "Boise",
+    "miles": 344,
+    "time": "6h 15min"
+  },
+  {
+    "from": "Rapid City",
+    "to": "Badlands",
+    "miles": 58,
+    "time": "1h 3min"
+  },
+  {
+    "from": "Badlands",
+    "to": "Rapid City",
+    "miles": 58,
+    "time": "1h 3min"
+  },
+  {
+    "from": "Sioux Falls",
+    "to": "Badlands",
+    "miles": 351,
+    "time": "6h 22min"
+  },
+  {
+    "from": "Badlands",
+    "to": "Sioux Falls",
+    "miles": 351,
+    "time": "6h 22min"
+  },
+  {
+    "from": "Denver",
+    "to": "Badlands",
+    "miles": 394,
+    "time": "7h 9min"
+  },
+  {
+    "from": "Badlands",
+    "to": "Denver",
+    "miles": 394,
+    "time": "7h 9min"
+  },
+  {
+    "from": "Denver",
+    "to": "Mesa Verde",
+    "miles": 319,
+    "time": "5h 47min"
+  },
+  {
+    "from": "Mesa Verde",
+    "to": "Denver",
+    "miles": 319,
+    "time": "5h 47min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Mesa Verde",
+    "miles": 224,
+    "time": "4h 4min"
+  },
+  {
+    "from": "Mesa Verde",
+    "to": "Albuquerque",
+    "miles": 224,
+    "time": "4h 4min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Mesa Verde",
+    "miles": 414,
+    "time": "7h 31min"
+  },
+  {
+    "from": "Mesa Verde",
+    "to": "Phoenix",
+    "miles": 414,
+    "time": "7h 31min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Petrified Forest",
+    "miles": 205,
+    "time": "3h 43min"
+  },
+  {
+    "from": "Petrified Forest",
+    "to": "Phoenix",
+    "miles": 205,
+    "time": "3h 43min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Petrified Forest",
+    "miles": 223,
+    "time": "4h 3min"
+  },
+  {
+    "from": "Petrified Forest",
+    "to": "Albuquerque",
+    "miles": 223,
+    "time": "4h 3min"
+  },
+  {
+    "from": "Flagstaff",
+    "to": "Petrified Forest",
+    "miles": 132,
+    "time": "2h 23min"
+  },
+  {
+    "from": "Petrified Forest",
+    "to": "Flagstaff",
+    "miles": 132,
+    "time": "2h 23min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Canyonlands",
+    "miles": 249,
+    "time": "4h 31min"
+  },
+  {
+    "from": "Canyonlands",
+    "to": "Salt Lake City",
+    "miles": 249,
+    "time": "4h 31min"
+  },
+  {
+    "from": "Denver",
+    "to": "Canyonlands",
+    "miles": 349,
+    "time": "6h 20min"
+  },
+  {
+    "from": "Canyonlands",
+    "to": "Denver",
+    "miles": 349,
+    "time": "6h 20min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Canyonlands",
+    "miles": 406,
+    "time": "7h 22min"
+  },
+  {
+    "from": "Canyonlands",
+    "to": "Las Vegas",
+    "miles": 406,
+    "time": "7h 22min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Capitol Reef",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Capitol Reef",
+    "to": "Salt Lake City",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Capitol Reef",
+    "miles": 328,
+    "time": "5h 57min"
+  },
+  {
+    "from": "Capitol Reef",
+    "to": "Las Vegas",
+    "miles": 328,
+    "time": "5h 57min"
+  },
+  {
+    "from": "Denver",
+    "to": "Capitol Reef",
+    "miles": 433,
+    "time": "7h 52min"
+  },
+  {
+    "from": "Capitol Reef",
+    "to": "Denver",
+    "miles": 433,
+    "time": "7h 52min"
+  },
+  {
+    "from": "Denver",
+    "to": "Black Canyon",
+    "miles": 209,
+    "time": "3h 47min"
+  },
+  {
+    "from": "Black Canyon",
+    "to": "Denver",
+    "miles": 209,
+    "time": "3h 47min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Black Canyon",
+    "miles": 310,
+    "time": "5h 38min"
+  },
+  {
+    "from": "Black Canyon",
+    "to": "Albuquerque",
+    "miles": 310,
+    "time": "5h 38min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Black Canyon",
+    "miles": 334,
+    "time": "6h 4min"
+  },
+  {
+    "from": "Black Canyon",
+    "to": "Salt Lake City",
+    "miles": 334,
+    "time": "6h 4min"
+  },
+  {
+    "from": "Little Rock",
+    "to": "Hot Springs",
+    "miles": 56,
+    "time": "1h 1min"
+  },
+  {
+    "from": "Hot Springs",
+    "to": "Little Rock",
+    "miles": 56,
+    "time": "1h 1min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Hot Springs",
+    "miles": 309,
+    "time": "5h 37min"
+  },
+  {
+    "from": "Hot Springs",
+    "to": "Dallas",
+    "miles": 309,
+    "time": "5h 37min"
+  },
+  {
+    "from": "Memphis",
+    "to": "Hot Springs",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Hot Springs",
+    "to": "Memphis",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Jackson Hole",
+    "miles": 245,
+    "time": "4h 27min"
+  },
+  {
+    "from": "Jackson Hole",
+    "to": "Salt Lake City",
+    "miles": 245,
+    "time": "4h 27min"
+  },
+  {
+    "from": "Denver",
+    "to": "Jackson Hole",
+    "miles": 493,
+    "time": "8h 57min"
+  },
+  {
+    "from": "Jackson Hole",
+    "to": "Denver",
+    "miles": 493,
+    "time": "8h 57min"
+  },
+  {
+    "from": "Boise",
+    "to": "Jackson Hole",
+    "miles": 340,
+    "time": "6h 10min"
+  },
+  {
+    "from": "Jackson Hole",
+    "to": "Boise",
+    "miles": 340,
+    "time": "6h 10min"
+  },
+  {
+    "from": "Denver",
+    "to": "Telluride",
+    "miles": 245,
+    "time": "4h 27min"
+  },
+  {
+    "from": "Telluride",
+    "to": "Denver",
+    "miles": 245,
+    "time": "4h 27min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Telluride",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Telluride",
+    "to": "Albuquerque",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Telluride",
+    "miles": 489,
+    "time": "8h 53min"
+  },
+  {
+    "from": "Telluride",
+    "to": "Phoenix",
+    "miles": 489,
+    "time": "8h 53min"
+  },
+  {
+    "from": "Denver",
+    "to": "Steamboat Springs",
+    "miles": 137,
+    "time": "2h 29min"
+  },
+  {
+    "from": "Steamboat Springs",
+    "to": "Denver",
+    "miles": 137,
+    "time": "2h 29min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Steamboat Springs",
+    "miles": 332,
+    "time": "6h 2min"
+  },
+  {
+    "from": "Steamboat Springs",
+    "to": "Salt Lake City",
+    "miles": 332,
+    "time": "6h 2min"
+  },
+  {
+    "from": "Boise",
+    "to": "Big Sky",
+    "miles": 328,
+    "time": "5h 57min"
+  },
+  {
+    "from": "Big Sky",
+    "to": "Boise",
+    "miles": 328,
+    "time": "5h 57min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Big Sky",
+    "miles": 389,
+    "time": "7h 4min"
+  },
+  {
+    "from": "Big Sky",
+    "to": "Salt Lake City",
+    "miles": 389,
+    "time": "7h 4min"
+  },
+  {
+    "from": "Billings",
+    "to": "Big Sky",
+    "miles": 181,
+    "time": "3h 17min"
+  },
+  {
+    "from": "Big Sky",
+    "to": "Billings",
+    "miles": 181,
+    "time": "3h 17min"
+  },
+  {
+    "from": "Boise",
+    "to": "Sun Valley",
+    "miles": 115,
+    "time": "2h 5min"
+  },
+  {
+    "from": "Sun Valley",
+    "to": "Boise",
+    "miles": 115,
+    "time": "2h 5min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Sun Valley",
+    "miles": 297,
+    "time": "5h 24min"
+  },
+  {
+    "from": "Sun Valley",
+    "to": "Salt Lake City",
+    "miles": 297,
+    "time": "5h 24min"
+  },
+  {
+    "from": "Portland",
+    "to": "Sun Valley",
+    "miles": 535,
+    "time": "9h 43min"
+  },
+  {
+    "from": "Sun Valley",
+    "to": "Portland",
+    "miles": 535,
+    "time": "9h 43min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Mammoth Lakes",
+    "miles": 314,
+    "time": "5h 42min"
+  },
+  {
+    "from": "Mammoth Lakes",
+    "to": "Los Angeles",
+    "miles": 314,
+    "time": "5h 42min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Mammoth Lakes",
+    "miles": 235,
+    "time": "4h 16min"
+  },
+  {
+    "from": "Mammoth Lakes",
+    "to": "San Francisco",
+    "miles": 235,
+    "time": "4h 16min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Mammoth Lakes",
+    "miles": 293,
+    "time": "5h 19min"
+  },
+  {
+    "from": "Mammoth Lakes",
+    "to": "Las Vegas",
+    "miles": 293,
+    "time": "5h 19min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Taos Ski Valley",
+    "miles": 155,
+    "time": "2h 49min"
+  },
+  {
+    "from": "Taos Ski Valley",
+    "to": "Albuquerque",
+    "miles": 155,
+    "time": "2h 49min"
+  },
+  {
+    "from": "Santa Fe",
+    "to": "Taos Ski Valley",
+    "miles": 85,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Taos Ski Valley",
+    "to": "Santa Fe",
+    "miles": 85,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Denver",
+    "to": "Taos Ski Valley",
+    "miles": 273,
+    "time": "4h 57min"
+  },
+  {
+    "from": "Taos Ski Valley",
+    "to": "Denver",
+    "miles": 273,
+    "time": "4h 57min"
+  },
+  {
+    "from": "Denver",
+    "to": "Crested Butte",
+    "miles": 153,
+    "time": "2h 46min"
+  },
+  {
+    "from": "Crested Butte",
+    "to": "Denver",
+    "miles": 153,
+    "time": "2h 46min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Crested Butte",
+    "miles": 327,
+    "time": "5h 56min"
+  },
+  {
+    "from": "Crested Butte",
+    "to": "Albuquerque",
+    "miles": 327,
+    "time": "5h 56min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Whitefish",
+    "miles": 466,
+    "time": "8h 28min"
+  },
+  {
+    "from": "Whitefish",
+    "to": "Seattle",
+    "miles": 466,
+    "time": "8h 28min"
+  },
+  {
+    "from": "Missoula",
+    "to": "Whitefish",
+    "miles": 134,
+    "time": "2h 26min"
+  },
+  {
+    "from": "Whitefish",
+    "to": "Missoula",
+    "miles": 134,
+    "time": "2h 26min"
+  },
+  {
+    "from": "Spokane",
+    "to": "Whitefish",
+    "miles": 188,
+    "time": "3h 25min"
+  },
+  {
+    "from": "Whitefish",
+    "to": "Spokane",
+    "miles": 188,
+    "time": "3h 25min"
+  },
+  {
+    "from": "Boston",
+    "to": "Stowe",
+    "miles": 208,
+    "time": "3h 46min"
+  },
+  {
+    "from": "Stowe",
+    "to": "Boston",
+    "miles": 208,
+    "time": "3h 46min"
+  },
+  {
+    "from": "New York",
+    "to": "Stowe",
+    "miles": 334,
+    "time": "6h 4min"
+  },
+  {
+    "from": "Stowe",
+    "to": "New York",
+    "miles": 334,
+    "time": "6h 4min"
+  },
+  {
+    "from": "Burlington",
+    "to": "Stowe",
+    "miles": 32,
+    "time": "0h 34min"
+  },
+  {
+    "from": "Stowe",
+    "to": "Burlington",
+    "miles": 32,
+    "time": "0h 34min"
+  },
+  {
+    "from": "Boston",
+    "to": "Killington",
+    "miles": 154,
+    "time": "2h 47min"
+  },
+  {
+    "from": "Killington",
+    "to": "Boston",
+    "miles": 154,
+    "time": "2h 47min"
+  },
+  {
+    "from": "New York",
+    "to": "Killington",
+    "miles": 261,
+    "time": "4h 44min"
+  },
+  {
+    "from": "Killington",
+    "to": "New York",
+    "miles": 261,
+    "time": "4h 44min"
+  },
+  {
+    "from": "Boston",
+    "to": "Cape Cod",
+    "miles": 77,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Cape Cod",
+    "to": "Boston",
+    "miles": 77,
+    "time": "1h 23min"
+  },
+  {
+    "from": "New York",
+    "to": "Cape Cod",
+    "miles": 254,
+    "time": "4h 37min"
+  },
+  {
+    "from": "Cape Cod",
+    "to": "New York",
+    "miles": 254,
+    "time": "4h 37min"
+  },
+  {
+    "from": "Providence",
+    "to": "Cape Cod",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Cape Cod",
+    "to": "Providence",
+    "miles": 73,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Boston",
+    "to": "Marthas Vineyard",
+    "miles": 88,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Marthas Vineyard",
+    "to": "Boston",
+    "miles": 88,
+    "time": "1h 36min"
+  },
+  {
+    "from": "New York",
+    "to": "Marthas Vineyard",
+    "miles": 226,
+    "time": "4h 6min"
+  },
+  {
+    "from": "Marthas Vineyard",
+    "to": "New York",
+    "miles": 226,
+    "time": "4h 6min"
+  },
+  {
+    "from": "Providence",
+    "to": "Marthas Vineyard",
+    "miles": 62,
+    "time": "1h 7min"
+  },
+  {
+    "from": "Marthas Vineyard",
+    "to": "Providence",
+    "miles": 62,
+    "time": "1h 7min"
+  },
+  {
+    "from": "Boston",
+    "to": "Nantucket",
+    "miles": 111,
+    "time": "2h 1min"
+  },
+  {
+    "from": "Nantucket",
+    "to": "Boston",
+    "miles": 111,
+    "time": "2h 1min"
+  },
+  {
+    "from": "New York",
+    "to": "Nantucket",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Nantucket",
+    "to": "New York",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Boston",
+    "to": "Bar Harbor",
+    "miles": 250,
+    "time": "4h 32min"
+  },
+  {
+    "from": "Bar Harbor",
+    "to": "Boston",
+    "miles": 250,
+    "time": "4h 32min"
+  },
+  {
+    "from": "Portland ME",
+    "to": "Bar Harbor",
+    "miles": 142,
+    "time": "2h 34min"
+  },
+  {
+    "from": "Bar Harbor",
+    "to": "Portland ME",
+    "miles": 142,
+    "time": "2h 34min"
+  },
+  {
+    "from": "New York",
+    "to": "Bar Harbor",
+    "miles": 486,
+    "time": "8h 50min"
+  },
+  {
+    "from": "Bar Harbor",
+    "to": "New York",
+    "miles": 486,
+    "time": "8h 50min"
+  },
+  {
+    "from": "Norfolk",
+    "to": "Outer Banks",
+    "miles": 125,
+    "time": "2h 16min"
+  },
+  {
+    "from": "Outer Banks",
+    "to": "Norfolk",
+    "miles": 125,
+    "time": "2h 16min"
+  },
+  {
+    "from": "Raleigh",
+    "to": "Outer Banks",
+    "miles": 223,
+    "time": "4h 3min"
+  },
+  {
+    "from": "Outer Banks",
+    "to": "Raleigh",
+    "miles": 223,
+    "time": "4h 3min"
+  },
+  {
+    "from": "Richmond",
+    "to": "Outer Banks",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Outer Banks",
+    "to": "Richmond",
+    "miles": 219,
+    "time": "3h 58min"
+  },
+  {
+    "from": "Charleston",
+    "to": "Hilton Head",
+    "miles": 76,
+    "time": "1h 22min"
+  },
+  {
+    "from": "Hilton Head",
+    "to": "Charleston",
+    "miles": 76,
+    "time": "1h 22min"
+  },
+  {
+    "from": "Savannah",
+    "to": "Hilton Head",
+    "miles": 27,
+    "time": "0h 29min"
+  },
+  {
+    "from": "Hilton Head",
+    "to": "Savannah",
+    "miles": 27,
+    "time": "0h 29min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Hilton Head",
+    "miles": 294,
+    "time": "5h 20min"
+  },
+  {
+    "from": "Hilton Head",
+    "to": "Atlanta",
+    "miles": 294,
+    "time": "5h 20min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Moab",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Moab",
+    "to": "Salt Lake City",
+    "miles": 244,
+    "time": "4h 26min"
+  },
+  {
+    "from": "Denver",
+    "to": "Moab",
+    "miles": 321,
+    "time": "5h 50min"
+  },
+  {
+    "from": "Moab",
+    "to": "Denver",
+    "miles": 321,
+    "time": "5h 50min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Moab",
+    "miles": 436,
+    "time": "7h 55min"
+  },
+  {
+    "from": "Moab",
+    "to": "Las Vegas",
+    "miles": 436,
+    "time": "7h 55min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Monument Valley",
+    "miles": 336,
+    "time": "6h 6min"
+  },
+  {
+    "from": "Monument Valley",
+    "to": "Phoenix",
+    "miles": 336,
+    "time": "6h 6min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Monument Valley",
+    "miles": 356,
+    "time": "6h 28min"
+  },
+  {
+    "from": "Monument Valley",
+    "to": "Las Vegas",
+    "miles": 356,
+    "time": "6h 28min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Monument Valley",
+    "miles": 292,
+    "time": "5h 18min"
+  },
+  {
+    "from": "Monument Valley",
+    "to": "Albuquerque",
+    "miles": 292,
+    "time": "5h 18min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Antelope Canyon",
+    "miles": 268,
+    "time": "4h 52min"
+  },
+  {
+    "from": "Antelope Canyon",
+    "to": "Las Vegas",
+    "miles": 268,
+    "time": "4h 52min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Antelope Canyon",
+    "miles": 298,
+    "time": "5h 25min"
+  },
+  {
+    "from": "Antelope Canyon",
+    "to": "Phoenix",
+    "miles": 298,
+    "time": "5h 25min"
+  },
+  {
+    "from": "Flagstaff",
+    "to": "Antelope Canyon",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "Antelope Canyon",
+    "to": "Flagstaff",
+    "miles": 144,
+    "time": "2h 37min"
+  },
+  {
+    "from": "El Paso",
+    "to": "White Sands",
+    "miles": 89,
+    "time": "1h 37min"
+  },
+  {
+    "from": "White Sands",
+    "to": "El Paso",
+    "miles": 89,
+    "time": "1h 37min"
+  },
+  {
+    "from": "Albuquerque",
+    "to": "White Sands",
+    "miles": 199,
+    "time": "3h 37min"
+  },
+  {
+    "from": "White Sands",
+    "to": "Albuquerque",
+    "miles": 199,
+    "time": "3h 37min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "White Sands",
+    "miles": 691,
+    "time": "12h 33min"
+  },
+  {
+    "from": "White Sands",
+    "to": "Las Vegas",
+    "miles": 691,
+    "time": "12h 33min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Horseshoe Bend",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Horseshoe Bend",
+    "to": "Las Vegas",
+    "miles": 259,
+    "time": "4h 42min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Horseshoe Bend",
+    "miles": 298,
+    "time": "5h 25min"
+  },
+  {
+    "from": "Horseshoe Bend",
+    "to": "Phoenix",
+    "miles": 298,
+    "time": "5h 25min"
+  },
+  {
+    "from": "Flagstaff",
+    "to": "Horseshoe Bend",
+    "miles": 145,
+    "time": "2h 38min"
+  },
+  {
+    "from": "Horseshoe Bend",
+    "to": "Flagstaff",
+    "miles": 145,
+    "time": "2h 38min"
+  }
+]
