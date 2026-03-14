@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Road Trip Planner - Electric Car Charging Stops | HowLongDrive</title>
+    <meta name="description" content="Plan your electric car road trip. Find charging stops, calculate trip time, and compare EV vs gas costs for any route.">
+    <link rel="canonical" href="https://howlongdrive.com/ev/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="theme-color" content="#10B981">
+    <style>
+        :root { --primary: #10B981; --primary-dark: #059669; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: #4B6E93; text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 100px; width: auto; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        .ev-badge { background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hero { background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 4rem 2rem; text-align: center; color: white; border-radius: 1rem; margin: 2rem 0; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; }
+        .search-box { background: white; border-radius: 0.75rem; padding: 1.5rem; max-width: 500px; margin: 0 auto; }
+        .search-row { display: flex; gap: 0.75rem; }
+        .search-input { flex: 1; padding: 0.875rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .search-btn { background: var(--primary); color: white; border: none; padding: 0.875rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; }
+        .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 2rem 0; }
+        .route-card { background: var(--card); border-radius: 0.75rem; padding: 1.5rem; text-decoration: none; color: inherit; border: 1px solid var(--border); }
+        .route-card:hover { border-color: var(--primary); }
+        .route-title { font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .route-meta { color: var(--muted); font-size: 0.875rem; }
+        .badge { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } .hero h1 { font-size: 1.75rem; } .search-row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/routes/">Routes</a>
+                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>⚡ EV Road Trip Planner</h1>
+            <p>Plan your electric car trip with charging stops</p>
+            <div class="search-box">
+                <div class="search-row">
+                    <input type="text" class="search-input" placeholder="From city" id="from">
+                    <input type="text" class="search-input" placeholder="To city" id="to">
+                    <button class="search-btn" onclick="search()">Plan Trip</button>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-bottom:1rem">Popular EV Routes</h2>
+        <div class="routes-grid">
+            <a href="/ev/los-angeles-to-las-vegas/" class="route-card">
+                <div class="route-title">⚡ LA → Las Vegas <span class="badge">1 stop</span></div>
+                <div class="route-meta">270 miles · 4h 30m total · Save $25</div>
+            </a>
+            <a href="/ev/san-francisco-to-los-angeles/" class="route-card">
+                <div class="route-title">⚡ SF → Los Angeles <span class="badge">1 stop</span></div>
+                <div class="route-meta">380 miles · 6h 30m total · Save $30</div>
+            </a>
+            <a href="/ev/new-york-to-boston/" class="route-card">
+                <div class="route-title">⚡ NYC → Boston <span class="badge">0 stops</span></div>
+                <div class="route-meta">215 miles · 4h 15m total · Save $17</div>
+            </a>
+            <a href="/ev/seattle-to-portland/" class="route-card">
+                <div class="route-title">⚡ Seattle → Portland <span class="badge">0 stops</span></div>
+                <div class="route-meta">175 miles · 2h 45m total · Save $14</div>
+            </a>
+            <a href="/ev/miami-to-orlando/" class="route-card">
+                <div class="route-title">⚡ Miami → Orlando <span class="badge">0 stops</span></div>
+                <div class="route-meta">235 miles · 3h 30m total · Save $18</div>
+            </a>
+            <a href="/ev/chicago-to-detroit/" class="route-card">
+                <div class="route-title">⚡ Chicago → Detroit <span class="badge">1 stop</span></div>
+                <div class="route-meta">280 miles · 5h total · Save $22</div>
+            </a>
+            <a href="/ev/new-york-to-miami/" class="route-card">
+                <div class="route-title">⚡ NYC → Miami <span class="badge">4 stops</span></div>
+                <div class="route-meta">1280 miles · 21h total · Save $101</div>
+            </a>
+            <a href="/ev/los-angeles-to-san-francisco/" class="route-card">
+                <div class="route-title">⚡ LA → San Francisco <span class="badge">1 stop</span></div>
+                <div class="route-meta">380 miles · 6h 30m total · Save $30</div>
+            </a>
+        </div>
+    </div>
+    
+    <footer><p>© 2026 <a href="/">HowLongDrive.com</a> · EV Trip Planner</p></footer>
+    
+    <script>
+        function search() {
+            const from = document.getElementById('from').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            const to = document.getElementById('to').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            if (from && to) window.location.href = '/ev/' + from + '-to-' + to + '/';
+        }
+    </script>
+</body>
+</html>
