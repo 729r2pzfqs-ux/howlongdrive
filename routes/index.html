@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Driving Routes - US Road Trip Routes | HowLongDrive</title>
+    <meta name="description" content="Browse popular driving routes across the US. Find driving times, distances, and trip costs for road trips between major cities.">
+    <link rel="canonical" href="https://howlongdrive.com/routes/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="theme-color" content="#4B6E93">
+    <style>
+        :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 100px; width: auto; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .ev-badge { background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .hamburger svg { width: 24px; height: 24px; }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { position: absolute; top: 1rem; right: 1rem; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
+        h1 { font-size: 2rem; margin: 2rem 0 1rem; }
+        .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 1rem 0; }
+        .route-card { background: var(--card); border-radius: 0.75rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid var(--border); }
+        .route-card:hover { border-color: var(--primary); }
+        .route-title { font-weight: 600; margin-bottom: 0.5rem; }
+        .route-meta { color: var(--muted); font-size: 0.875rem; }
+        h2 { margin: 2rem 0 1rem; font-size: 1.25rem; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav id="nav">
+                <button class="close-btn" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+                <a href="/">Home</a>
+                <a href="/routes/">Routes</a>
+                <a href="/cities/">Cities</a>
+                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>🛣️ Popular Driving Routes</h1>
+        
+        <h2>East Coast</h2>
+        <div class="routes-grid">
+            <a href="/route/new-york-to-boston/" class="route-card"><div class="route-title">New York → Boston</div><div class="route-meta">⏱️ 4h 15min · 📍 215 miles</div></a>
+            <a href="/route/new-york-to-washington-dc/" class="route-card"><div class="route-title">New York → Washington DC</div><div class="route-meta">⏱️ 4h · 📍 225 miles</div></a>
+            <a href="/route/new-york-to-philadelphia/" class="route-card"><div class="route-title">New York → Philadelphia</div><div class="route-meta">⏱️ 1h 45min · 📍 95 miles</div></a>
+            <a href="/route/miami-to-orlando/" class="route-card"><div class="route-title">Miami → Orlando</div><div class="route-meta">⏱️ 3h 30min · 📍 235 miles</div></a>
+            <a href="/route/boston-to-washington-dc/" class="route-card"><div class="route-title">Boston → Washington DC</div><div class="route-meta">⏱️ 7h 30min · 📍 440 miles</div></a>
+            <a href="/route/atlanta-to-miami/" class="route-card"><div class="route-title">Atlanta → Miami</div><div class="route-meta">⏱️ 10h · 📍 660 miles</div></a>
+        </div>
+        
+        <h2>West Coast</h2>
+        <div class="routes-grid">
+            <a href="/route/los-angeles-to-las-vegas/" class="route-card"><div class="route-title">Los Angeles → Las Vegas</div><div class="route-meta">⏱️ 4h · 📍 270 miles</div></a>
+            <a href="/route/san-francisco-to-los-angeles/" class="route-card"><div class="route-title">San Francisco → Los Angeles</div><div class="route-meta">⏱️ 5h 45min · 📍 380 miles</div></a>
+            <a href="/route/seattle-to-portland/" class="route-card"><div class="route-title">Seattle → Portland</div><div class="route-meta">⏱️ 2h 45min · 📍 175 miles</div></a>
+            <a href="/route/los-angeles-to-san-diego/" class="route-card"><div class="route-title">Los Angeles → San Diego</div><div class="route-meta">⏱️ 2h · 📍 120 miles</div></a>
+            <a href="/route/seattle-to-san-francisco/" class="route-card"><div class="route-title">Seattle → San Francisco</div><div class="route-meta">⏱️ 12h 30min · 📍 810 miles</div></a>
+            <a href="/route/phoenix-to-las-vegas/" class="route-card"><div class="route-title">Phoenix → Las Vegas</div><div class="route-meta">⏱️ 4h 30min · 📍 300 miles</div></a>
+        </div>
+        
+        <h2>Midwest</h2>
+        <div class="routes-grid">
+            <a href="/route/chicago-to-detroit/" class="route-card"><div class="route-title">Chicago → Detroit</div><div class="route-meta">⏱️ 4h 30min · 📍 280 miles</div></a>
+            <a href="/route/chicago-to-st-louis/" class="route-card"><div class="route-title">Chicago → St. Louis</div><div class="route-meta">⏱️ 4h 30min · 📍 300 miles</div></a>
+            <a href="/route/denver-to-las-vegas/" class="route-card"><div class="route-title">Denver → Las Vegas</div><div class="route-meta">⏱️ 10h 30min · 📍 750 miles</div></a>
+            <a href="/route/dallas-to-houston/" class="route-card"><div class="route-title">Dallas → Houston</div><div class="route-meta">⏱️ 3h 30min · 📍 240 miles</div></a>
+            <a href="/route/chicago-to-minneapolis/" class="route-card"><div class="route-title">Chicago → Minneapolis</div><div class="route-meta">⏱️ 6h · 📍 410 miles</div></a>
+            <a href="/route/kansas-city-to-denver/" class="route-card"><div class="route-title">Kansas City → Denver</div><div class="route-meta">⏱️ 9h · 📍 600 miles</div></a>
+        </div>
+        
+        <h2>Cross Country</h2>
+        <div class="routes-grid">
+            <a href="/route/new-york-to-los-angeles/" class="route-card"><div class="route-title">New York → Los Angeles</div><div class="route-meta">⏱️ 41h · 📍 2,775 miles</div></a>
+            <a href="/route/new-york-to-miami/" class="route-card"><div class="route-title">New York → Miami</div><div class="route-meta">⏱️ 19h · 📍 1,280 miles</div></a>
+            <a href="/route/chicago-to-los-angeles/" class="route-card"><div class="route-title">Chicago → Los Angeles</div><div class="route-meta">⏱️ 29h · 📍 2,015 miles</div></a>
+            <a href="/route/seattle-to-new-york/" class="route-card"><div class="route-title">Seattle → New York</div><div class="route-meta">⏱️ 45h · 📍 2,850 miles</div></a>
+        </div>
+    </div>
+    <footer><p>© 2026 <a href="/" style="color:var(--primary);text-decoration:none">HowLongDrive.com</a></p></footer>
+    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
+</body>
+</html>
