@@ -1867,5 +1867,19 @@
     "time": "2h 15min",
     "miles": 135,
     "highway": "I-40 E"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Los Angeles",
+    "time": "5h 45min",
+    "miles": 380,
+    "highway": "I-5 S"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "San Francisco",
+    "time": "5h 45min",
+    "miles": 380,
+    "highway": "I-5 N"
   }
 ]
