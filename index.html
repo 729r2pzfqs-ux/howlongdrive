@@ -47,8 +47,14 @@
         .hero p { color: var(--muted); font-size: 1.25rem; margin-bottom: 2rem; }
         .search-box { background: var(--card); border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
         .search-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
-        .search-input { flex: 1; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .input-wrapper { flex: 1; position: relative; }
+        .search-input { width: 100%; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
         .search-input:focus { outline: none; border-color: var(--primary); }
+        .dropdown { position: absolute; top: 100%; left: 0; right: 0; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 100; max-height: 250px; overflow-y: auto; }
+        .dropdown.active { display: block; }
+        .dropdown-item { padding: 0.75rem 1rem; cursor: pointer; border-bottom: 1px solid var(--border); }
+        .dropdown-item:last-child { border-bottom: none; }
+        .dropdown-item:hover, .dropdown-item.selected { background: var(--bg); color: var(--primary); }
         .search-btn { background: var(--accent); color: white; border: none; padding: 1rem 2rem; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; }
         .search-btn:hover { background: var(--accent-dark); }
         .popular { padding: 4rem 0; }
@@ -82,8 +88,14 @@
                 <p>Find driving times, distances, and route information between any two cities</p>
                 <div class="search-box">
                     <div class="search-row">
-                        <input type="text" class="search-input" placeholder="From (e.g., New York)" id="from">
-                        <input type="text" class="search-input" placeholder="To (e.g., Boston)" id="to">
+                        <div class="input-wrapper">
+                            <input type="text" class="search-input" placeholder="From (e.g., New York)" id="from" autocomplete="off">
+                            <div class="dropdown" id="from-dropdown"></div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" class="search-input" placeholder="To (e.g., Boston)" id="to" autocomplete="off">
+                            <div class="dropdown" id="to-dropdown"></div>
+                        </div>
                     </div>
                     <button class="search-btn" onclick="search()">Get Driving Time</button>
                 </div>
@@ -130,6 +142,83 @@
     </footer>
 
     <script>
+        const CITIES = [
+            "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia",
+            "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville",
+            "Fort Worth", "Columbus", "Charlotte", "San Francisco", "Indianapolis",
+            "Seattle", "Denver", "Washington DC", "Boston", "El Paso", "Nashville",
+            "Detroit", "Oklahoma City", "Portland", "Las Vegas", "Memphis", "Louisville",
+            "Baltimore", "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Sacramento",
+            "Kansas City", "Atlanta", "Miami", "Orlando", "Tampa", "Minneapolis",
+            "Cleveland", "Raleigh", "St Louis", "Pittsburgh", "Cincinnati", "Salt Lake City",
+            "New Orleans", "Hartford", "Providence", "Albany", "Little Rock", "Spokane",
+            "Reno", "Colorado Springs", "Vancouver"
+        ].sort();
+
+        function setupAutocomplete(inputId, dropdownId) {
+            const input = document.getElementById(inputId);
+            const dropdown = document.getElementById(dropdownId);
+            let selectedIndex = -1;
+
+            input.addEventListener('input', function() {
+                const val = this.value.toLowerCase();
+                dropdown.innerHTML = '';
+                selectedIndex = -1;
+                
+                if (val.length < 1) {
+                    dropdown.classList.remove('active');
+                    return;
+                }
+
+                const matches = CITIES.filter(c => c.toLowerCase().includes(val)).slice(0, 8);
+                
+                if (matches.length === 0) {
+                    dropdown.classList.remove('active');
+                    return;
+                }
+
+                matches.forEach((city, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'dropdown-item';
+                    div.textContent = city;
+                    div.onclick = () => {
+                        input.value = city;
+                        dropdown.classList.remove('active');
+                    };
+                    dropdown.appendChild(div);
+                });
+                dropdown.classList.add('active');
+            });
+
+            input.addEventListener('keydown', function(e) {
+                const items = dropdown.querySelectorAll('.dropdown-item');
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+                    items.forEach((it, i) => it.classList.toggle('selected', i === selectedIndex));
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    selectedIndex = Math.max(selectedIndex - 1, 0);
+                    items.forEach((it, i) => it.classList.toggle('selected', i === selectedIndex));
+                } else if (e.key === 'Enter' && selectedIndex >= 0) {
+                    e.preventDefault();
+                    input.value = items[selectedIndex].textContent;
+                    dropdown.classList.remove('active');
+                } else if (e.key === 'Escape') {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
+
+        setupAutocomplete('from', 'from-dropdown');
+        setupAutocomplete('to', 'to-dropdown');
+
         function search() {
             const from = document.getElementById('from').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
             const to = document.getElementById('to').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -137,6 +226,13 @@
                 window.location.href = '/route/' + from + '-to-' + to + '/';
             }
         }
+
+        // Enter to search
+        document.getElementById('to').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !document.getElementById('to-dropdown').classList.contains('active')) {
+                search();
+            }
+        });
     </script>
 </body>
 </html>
