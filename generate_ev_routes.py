@@ -228,8 +228,8 @@ for route in routes:
     total_mins = hours * 60 + mins + charge_time
     total_time = f"{total_mins // 60}h {total_mins % 60}m"
     
-    from_lat, from_lng = coords[from_city]
-    to_lat, to_lng = coords[to_city]
+    from_data = coords.get(from_city, {}); from_lat = from_data.get('lat', 0) if isinstance(from_data, dict) else from_data[0]; from_lng = from_data.get('lng', 0) if isinstance(from_data, dict) else from_data[1]
+    to_data = coords.get(to_city, {}); to_lat = to_data.get('lat', 0) if isinstance(to_data, dict) else to_data[0]; to_lng = to_data.get('lng', 0) if isinstance(to_data, dict) else to_data[1]
     center_lat = (from_lat + to_lat) / 2
     center_lng = (from_lng + to_lng) / 2
     zoom = 5 if miles > 800 else (6 if miles > 400 else 7)
