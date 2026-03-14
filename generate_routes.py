@@ -24,6 +24,7 @@ template = '''<!DOCTYPE html>
     <meta property="og:description" content="Driving time from {from_city} to {to_city}: {time}, {miles} miles">
     <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{"@type":"Question","name":"How long does it take to drive from {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"The drive from {from_city} to {to_city} takes approximately {time} covering {miles} miles via {highway}."}}}},{{"@type":"Question","name":"How much does gas cost for {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"At 30 MPG and $3.50/gallon, expect to spend approximately ${gas_cost} on gas for this {miles}-mile trip."}}}},{{"@type":"Question","name":"What is the best time to drive from {from_city} to {to_city}?","acceptedAnswer":{{"@type":"Answer","text":"{best_time} to avoid heavy traffic."}}}}]}}</script>
     <style>
         :root {{ --primary: #4B6E93; --primary-dark: #3a5775; --accent: #EFA24F; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -71,10 +72,20 @@ template = '''<!DOCTYPE html>
         .map-note {{ text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }}
         .cta {{ display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.6rem 1.25rem; background: var(--accent); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }}
         .ev-link {{ display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.6rem 1.25rem; background: var(--green); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }}
+        .faq {{ margin-top: 1.5rem; }}
+        .faq h2 {{ font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }}
+        .faq h2 svg {{ width: 20px; height: 20px; color: var(--primary); }}
+        .faq-item {{ background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }}
+        .faq-q {{ font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }}
+        .faq-q:hover {{ background: #f8fafc; }}
+        .faq-q svg {{ width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }}
+        .faq-item.open .faq-q svg {{ transform: rotate(180deg); }}
+        .faq-a {{ padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }}
+        .faq-item.open .faq-a {{ display: block; }}
         footer {{ text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
     </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
     <header>
         <div class="container header-inner">
@@ -120,6 +131,26 @@ template = '''<!DOCTYPE html>
         </div>
         <div id="map"></div>
         <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
+        
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Frequently Asked Questions</h2>
+            <div class="faq-item open">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does it take to drive from {from_city} to {to_city}?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">The drive from {from_city} to {to_city} takes approximately <strong>{time}</strong> covering {miles} miles via {highway}. Actual time may vary based on traffic, weather, and road conditions.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does gas cost for {from_city} to {to_city}?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">At 30 MPG and $3.50/gallon, expect to spend approximately <strong>${gas_cost}</strong> on gas for this {miles}-mile trip. You'll need about {gallons} gallons of fuel.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the best time to drive from {from_city} to {to_city}?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a"><strong>{best_time}</strong> to avoid heavy traffic. Weekday mornings before 7 AM or evenings after 7 PM typically have less congestion.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are there tolls on the {from_city} to {to_city} route?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-a">{toll_answer}</div>
+            </div>
+        </div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -153,7 +184,7 @@ highways = {
     "Orlando": "I-4", "Tampa": "I-75", "Salt Lake City": "I-80", "New Orleans": "I-10"
 }
 
-best_times = ["Early morning (6-8 AM)", "Mid-morning (9-11 AM)", "Late evening (8-10 PM)", "Avoid rush hours"]
+best_times = ["Early morning (6-8 AM)", "Mid-morning (9-11 AM)", "Late evening (8-10 PM)", "Weekday mid-day"]
 
 count = 0
 processed = set()
@@ -179,6 +210,14 @@ for route in routes:
     highway = highways.get(from_city, "Interstate")
     best_time = best_times[count % len(best_times)]
     
+    # Toll answer
+    if tolls > 10:
+        toll_answer = f"Yes, expect approximately <strong>${tolls}</strong> in tolls along this route. Consider getting an E-ZPass or similar transponder for faster toll payment."
+    elif tolls > 0:
+        toll_answer = f"There may be minor tolls (around <strong>${tolls}</strong>) on parts of this route. Some sections have toll-free alternatives."
+    else:
+        toll_answer = "This route is primarily toll-free, though some bridges or tunnels may have small fees."
+    
     from_lat, from_lng = coords[from_city]
     to_lat, to_lng = coords[to_city]
     center_lat = (from_lat + to_lat) / 2
@@ -190,6 +229,7 @@ for route in routes:
         from_city=from_city, to_city=to_city, time=time, miles=miles,
         slug=slug, reverse_slug=reverse_slug, km=km, gallons=gallons,
         gas_cost=gas_cost, tolls=tolls, highway=highway, best_time=best_time,
+        toll_answer=toll_answer,
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
         center_lat=center_lat, center_lng=center_lng, zoom=zoom
     )
@@ -197,4 +237,4 @@ for route in routes:
         f.write(html)
     count += 1
 
-print(f"✅ Updated {count} route pages with maps")
+print(f"✅ Updated {count} route pages with FAQ")
