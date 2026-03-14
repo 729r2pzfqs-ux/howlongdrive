@@ -481,7 +481,7 @@
   },
   "Cherry Hill": {
     "lat": 39.9346,
-    "lng": -74.9936
+    "lng": -75.0307
   },
   "Marietta": {
     "lat": 33.9526,
@@ -1410,5 +1410,189 @@
   "Niagara Falls CA": {
     "lat": 43.0896,
     "lng": -79.0849
+  },
+  "Hackensack": {
+    "lat": 40.8859,
+    "lng": -74.0435
+  },
+  "Paramus": {
+    "lat": 40.9445,
+    "lng": -74.0754
+  },
+  "Edison": {
+    "lat": 40.5187,
+    "lng": -74.4121
+  },
+  "Woodbridge": {
+    "lat": 40.5576,
+    "lng": -74.2846
+  },
+  "Elizabeth": {
+    "lat": 40.664,
+    "lng": -74.2107
+  },
+  "Paterson": {
+    "lat": 40.9168,
+    "lng": -74.1718
+  },
+  "Montclair": {
+    "lat": 40.8259,
+    "lng": -74.209
+  },
+  "Morristown": {
+    "lat": 40.7968,
+    "lng": -74.4815
+  },
+  "Fort Lee": {
+    "lat": 40.8509,
+    "lng": -73.9712
+  },
+  "Torrance": {
+    "lat": 33.8358,
+    "lng": -118.3406
+  },
+  "Downey": {
+    "lat": 33.9401,
+    "lng": -118.1332
+  },
+  "Inglewood": {
+    "lat": 33.9617,
+    "lng": -118.3531
+  },
+  "Costa Mesa": {
+    "lat": 33.6411,
+    "lng": -117.9187
+  },
+  "Fullerton": {
+    "lat": 33.8703,
+    "lng": -117.9242
+  },
+  "Huntington Beach": {
+    "lat": 33.6595,
+    "lng": -117.9988
+  },
+  "Santa Ana": {
+    "lat": 33.7455,
+    "lng": -117.8677
+  },
+  "Redondo Beach": {
+    "lat": 33.8492,
+    "lng": -118.3884
+  },
+  "Culver City": {
+    "lat": 34.0211,
+    "lng": -118.3965
+  },
+  "Beverly Hills": {
+    "lat": 34.0736,
+    "lng": -118.4004
+  },
+  "Arlington Heights": {
+    "lat": 42.0884,
+    "lng": -87.9806
+  },
+  "Elgin": {
+    "lat": 42.0354,
+    "lng": -88.2826
+  },
+  "Oak Lawn": {
+    "lat": 41.7139,
+    "lng": -87.7528
+  },
+  "Skokie": {
+    "lat": 42.0324,
+    "lng": -87.7416
+  },
+  "Des Plaines": {
+    "lat": 42.0334,
+    "lng": -87.8834
+  },
+  "Orland Park": {
+    "lat": 41.6303,
+    "lng": -87.8539
+  },
+  "Downers Grove": {
+    "lat": 41.8089,
+    "lng": -88.0112
+  },
+  "Wheaton": {
+    "lat": 41.8661,
+    "lng": -88.107
+  },
+  "Elmhurst": {
+    "lat": 41.8995,
+    "lng": -87.9403
+  },
+  "Palatine": {
+    "lat": 42.1103,
+    "lng": -88.0343
+  },
+  "League City": {
+    "lat": 29.5075,
+    "lng": -95.0949
+  },
+  "Round Rock": {
+    "lat": 30.5083,
+    "lng": -97.6789
+  },
+  "Cedar Park": {
+    "lat": 30.5052,
+    "lng": -97.8203
+  },
+  "Georgetown": {
+    "lat": 30.6333,
+    "lng": -97.6781
+  },
+  "San Rafael": {
+    "lat": 37.9735,
+    "lng": -122.5311
+  },
+  "Sausalito": {
+    "lat": 37.8591,
+    "lng": -122.4853
+  },
+  "Aurora CO": {
+    "lat": 39.7294,
+    "lng": -104.8319
+  },
+  "Lakewood CO": {
+    "lat": 39.7047,
+    "lng": -105.0814
+  },
+  "Dearborn": {
+    "lat": 42.3223,
+    "lng": -83.1763
+  },
+  "Troy MI": {
+    "lat": 42.6056,
+    "lng": -83.1499
+  },
+  "Royal Oak": {
+    "lat": 42.4895,
+    "lng": -83.1446
+  },
+  "Aventura": {
+    "lat": 25.9565,
+    "lng": -80.1392
+  },
+  "Doral": {
+    "lat": 25.8195,
+    "lng": -80.3553
+  },
+  "St Paul": {
+    "lat": 44.9537,
+    "lng": -93.09
+  },
+  "Bloomington MN": {
+    "lat": 44.8408,
+    "lng": -93.2983
+  },
+  "Plymouth MN": {
+    "lat": 45.0105,
+    "lng": -93.4555
+  },
+  "Edina": {
+    "lat": 44.8897,
+    "lng": -93.3499
   }
 }

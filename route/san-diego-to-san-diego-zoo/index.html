@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does it take to drive from San Diego to San Diego Zoo?","acceptedAnswer":{"@type":"Answer","text":"The drive from San Diego to San Diego Zoo takes approximately 15 min covering 5 miles via I-5."}},{"@type":"Question","name":"How much does gas cost for San Diego to San Diego Zoo?","acceptedAnswer":{"@type":"Answer","text":"At 30 MPG and $3.50/gallon, expect to spend approximately $0 on gas for this 5-mile trip."}},{"@type":"Question","name":"What is the best time to drive from San Diego to San Diego Zoo?","acceptedAnswer":{"@type":"Answer","text":"Mid-morning (9-11 AM) to avoid heavy traffic."}}]}</script>
     <style>
-        :root { --primary: #4B6E93; --primary-dark: #3a5775; --accent: #10B981; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        :root { --primary: #4B6E93; --primary-dark: #3a5775; --accent: #EFA24F; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
@@ -151,7 +151,7 @@
         }).addTo(map);
         
         var startIcon = L.divIcon({className:'',html:'<div style="background:#4B6E93;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
-        var endIcon = L.divIcon({className:'',html:'<div style="background:#10B981;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
+        var endIcon = L.divIcon({className:'',html:'<div style="background:#EFA24F;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
         
         L.marker([32.7157, -117.1611], {icon: startIcon}).addTo(map).bindPopup('<b>San Diego</b><br>Start');
         L.marker([32.7353, -117.149], {icon: endIcon}).addTo(map).bindPopup('<b>San Diego Zoo</b><br>Destination');
