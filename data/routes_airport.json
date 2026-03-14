@@ -1,0 +1,590 @@
+[
+  {
+    "from": "LAX",
+    "to": "Los Angeles",
+    "miles": 18,
+    "time": "30 min"
+  },
+  {
+    "from": "LAX",
+    "to": "Santa Monica",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "LAX",
+    "to": "Anaheim",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "LAX",
+    "to": "Long Beach",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "LAX",
+    "to": "Hollywood",
+    "miles": 15,
+    "time": "30 min"
+  },
+  {
+    "from": "JFK",
+    "to": "Manhattan",
+    "miles": 15,
+    "time": "40 min"
+  },
+  {
+    "from": "JFK",
+    "to": "Times Square",
+    "miles": 18,
+    "time": "50 min"
+  },
+  {
+    "from": "JFK",
+    "to": "Brooklyn",
+    "miles": 10,
+    "time": "25 min"
+  },
+  {
+    "from": "LGA",
+    "to": "Manhattan",
+    "miles": 9,
+    "time": "30 min"
+  },
+  {
+    "from": "EWR",
+    "to": "Manhattan",
+    "miles": 16,
+    "time": "40 min"
+  },
+  {
+    "from": "ORD",
+    "to": "Chicago",
+    "miles": 18,
+    "time": "35 min"
+  },
+  {
+    "from": "ORD",
+    "to": "Downtown Chicago",
+    "miles": 20,
+    "time": "45 min"
+  },
+  {
+    "from": "MDW",
+    "to": "Chicago",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "DFW",
+    "to": "Dallas",
+    "miles": 20,
+    "time": "30 min"
+  },
+  {
+    "from": "DFW",
+    "to": "Fort Worth",
+    "miles": 25,
+    "time": "35 min"
+  },
+  {
+    "from": "DFW",
+    "to": "Arlington",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "ATL",
+    "to": "Atlanta",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "ATL",
+    "to": "Downtown Atlanta",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "SFO",
+    "to": "San Francisco",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "SFO",
+    "to": "Palo Alto",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "SFO",
+    "to": "San Jose",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "OAK",
+    "to": "San Francisco",
+    "miles": 20,
+    "time": "35 min"
+  },
+  {
+    "from": "OAK",
+    "to": "Oakland",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "MIA",
+    "to": "Miami",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "MIA",
+    "to": "Miami Beach",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "MIA",
+    "to": "Fort Lauderdale",
+    "miles": 30,
+    "time": "40 min"
+  },
+  {
+    "from": "FLL",
+    "to": "Fort Lauderdale",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "FLL",
+    "to": "Miami",
+    "miles": 28,
+    "time": "40 min"
+  },
+  {
+    "from": "SEA",
+    "to": "Seattle",
+    "miles": 15,
+    "time": "30 min"
+  },
+  {
+    "from": "SEA",
+    "to": "Bellevue",
+    "miles": 20,
+    "time": "35 min"
+  },
+  {
+    "from": "SEA",
+    "to": "Tacoma",
+    "miles": 25,
+    "time": "35 min"
+  },
+  {
+    "from": "DEN",
+    "to": "Denver",
+    "miles": 25,
+    "time": "40 min"
+  },
+  {
+    "from": "DEN",
+    "to": "Boulder",
+    "miles": 45,
+    "time": "55 min"
+  },
+  {
+    "from": "PHX",
+    "to": "Phoenix",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "PHX",
+    "to": "Scottsdale",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "PHX",
+    "to": "Tempe",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "BOS",
+    "to": "Boston",
+    "miles": 5,
+    "time": "20 min"
+  },
+  {
+    "from": "BOS",
+    "to": "Cambridge",
+    "miles": 8,
+    "time": "25 min"
+  },
+  {
+    "from": "MCO",
+    "to": "Orlando",
+    "miles": 12,
+    "time": "20 min"
+  },
+  {
+    "from": "MCO",
+    "to": "Disney World",
+    "miles": 22,
+    "time": "30 min"
+  },
+  {
+    "from": "MCO",
+    "to": "Universal Orlando",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "LAS",
+    "to": "Las Vegas",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "LAS",
+    "to": "Las Vegas Strip",
+    "miles": 3,
+    "time": "10 min"
+  },
+  {
+    "from": "IAH",
+    "to": "Houston",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "HOU",
+    "to": "Houston",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "DCA",
+    "to": "Washington DC",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "IAD",
+    "to": "Washington DC",
+    "miles": 28,
+    "time": "45 min"
+  },
+  {
+    "from": "BWI",
+    "to": "Washington DC",
+    "miles": 35,
+    "time": "50 min"
+  },
+  {
+    "from": "BWI",
+    "to": "Baltimore",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "LAX",
+    "miles": 18,
+    "time": "30 min"
+  },
+  {
+    "from": "Santa Monica",
+    "to": "LAX",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Anaheim",
+    "to": "LAX",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "Long Beach",
+    "to": "LAX",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "Hollywood",
+    "to": "LAX",
+    "miles": 15,
+    "time": "30 min"
+  },
+  {
+    "from": "Manhattan",
+    "to": "JFK",
+    "miles": 15,
+    "time": "40 min"
+  },
+  {
+    "from": "Times Square",
+    "to": "JFK",
+    "miles": 18,
+    "time": "50 min"
+  },
+  {
+    "from": "Brooklyn",
+    "to": "JFK",
+    "miles": 10,
+    "time": "25 min"
+  },
+  {
+    "from": "Manhattan",
+    "to": "LGA",
+    "miles": 9,
+    "time": "30 min"
+  },
+  {
+    "from": "Manhattan",
+    "to": "EWR",
+    "miles": 16,
+    "time": "40 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "ORD",
+    "miles": 18,
+    "time": "35 min"
+  },
+  {
+    "from": "Downtown Chicago",
+    "to": "ORD",
+    "miles": 20,
+    "time": "45 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "MDW",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "DFW",
+    "miles": 20,
+    "time": "30 min"
+  },
+  {
+    "from": "Fort Worth",
+    "to": "DFW",
+    "miles": 25,
+    "time": "35 min"
+  },
+  {
+    "from": "Arlington",
+    "to": "DFW",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "ATL",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "Downtown Atlanta",
+    "to": "ATL",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "SFO",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Palo Alto",
+    "to": "SFO",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "SFO",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "OAK",
+    "miles": 20,
+    "time": "35 min"
+  },
+  {
+    "from": "Oakland",
+    "to": "OAK",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "Miami",
+    "to": "MIA",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "Miami Beach",
+    "to": "MIA",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Fort Lauderdale",
+    "to": "MIA",
+    "miles": 30,
+    "time": "40 min"
+  },
+  {
+    "from": "Fort Lauderdale",
+    "to": "FLL",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Miami",
+    "to": "FLL",
+    "miles": 28,
+    "time": "40 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "SEA",
+    "miles": 15,
+    "time": "30 min"
+  },
+  {
+    "from": "Bellevue",
+    "to": "SEA",
+    "miles": 20,
+    "time": "35 min"
+  },
+  {
+    "from": "Tacoma",
+    "to": "SEA",
+    "miles": 25,
+    "time": "35 min"
+  },
+  {
+    "from": "Denver",
+    "to": "DEN",
+    "miles": 25,
+    "time": "40 min"
+  },
+  {
+    "from": "Boulder",
+    "to": "DEN",
+    "miles": 45,
+    "time": "55 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "PHX",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "Scottsdale",
+    "to": "PHX",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "Tempe",
+    "to": "PHX",
+    "miles": 10,
+    "time": "20 min"
+  },
+  {
+    "from": "Boston",
+    "to": "BOS",
+    "miles": 5,
+    "time": "20 min"
+  },
+  {
+    "from": "Cambridge",
+    "to": "BOS",
+    "miles": 8,
+    "time": "25 min"
+  },
+  {
+    "from": "Orlando",
+    "to": "MCO",
+    "miles": 12,
+    "time": "20 min"
+  },
+  {
+    "from": "Disney World",
+    "to": "MCO",
+    "miles": 22,
+    "time": "30 min"
+  },
+  {
+    "from": "Universal Orlando",
+    "to": "MCO",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "LAS",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Las Vegas Strip",
+    "to": "LAS",
+    "miles": 3,
+    "time": "10 min"
+  },
+  {
+    "from": "Houston",
+    "to": "IAH",
+    "miles": 22,
+    "time": "35 min"
+  },
+  {
+    "from": "Houston",
+    "to": "HOU",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "DCA",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "IAD",
+    "miles": 28,
+    "time": "45 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "BWI",
+    "miles": 35,
+    "time": "50 min"
+  },
+  {
+    "from": "Baltimore",
+    "to": "BWI",
+    "miles": 10,
+    "time": "20 min"
+  }
+]

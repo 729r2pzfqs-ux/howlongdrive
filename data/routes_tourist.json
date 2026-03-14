@@ -1,0 +1,626 @@
+[
+  {
+    "from": "Las Vegas",
+    "to": "Grand Canyon",
+    "miles": 280,
+    "time": "4h 15min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Death Valley",
+    "miles": 140,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Zion National Park",
+    "miles": 160,
+    "time": "2h 30min"
+  },
+  {
+    "from": "Las Vegas",
+    "to": "Hoover Dam",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Disneyland",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Universal Studios",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Palm Springs",
+    "miles": 110,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Joshua Tree",
+    "miles": 130,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Big Bear Lake",
+    "miles": 100,
+    "time": "2h"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Malibu",
+    "miles": 35,
+    "time": "50 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Santa Barbara",
+    "miles": 95,
+    "time": "1h 45min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Yosemite",
+    "miles": 170,
+    "time": "3h"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Napa Valley",
+    "miles": 55,
+    "time": "1h 15min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Lake Tahoe",
+    "miles": 195,
+    "time": "3h 30min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Monterey",
+    "miles": 120,
+    "time": "2h"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Carmel",
+    "miles": 125,
+    "time": "2h 15min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Muir Woods",
+    "miles": 17,
+    "time": "35 min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Disney World",
+    "miles": 22,
+    "time": "30 min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Universal Orlando",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Kennedy Space Center",
+    "miles": 50,
+    "time": "55 min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Clearwater Beach",
+    "miles": 105,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Orlando",
+    "to": "Daytona Beach",
+    "miles": 55,
+    "time": "1h"
+  },
+  {
+    "from": "Miami",
+    "to": "Key West",
+    "miles": 160,
+    "time": "3h 30min"
+  },
+  {
+    "from": "Miami",
+    "to": "Everglades",
+    "miles": 45,
+    "time": "1h"
+  },
+  {
+    "from": "Miami",
+    "to": "South Beach",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Sedona",
+    "miles": 115,
+    "time": "2h"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Grand Canyon",
+    "miles": 230,
+    "time": "3h 45min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Scottsdale",
+    "miles": 12,
+    "time": "20 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Rocky Mountain NP",
+    "miles": 70,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Denver",
+    "to": "Aspen",
+    "miles": 160,
+    "time": "3h"
+  },
+  {
+    "from": "Denver",
+    "to": "Vail",
+    "miles": 100,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Denver",
+    "to": "Breckenridge",
+    "miles": 80,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Denver",
+    "to": "Estes Park",
+    "miles": 65,
+    "time": "1h 20min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Mount Rainier",
+    "miles": 60,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Olympic National Park",
+    "miles": 80,
+    "time": "2h"
+  },
+  {
+    "from": "Seattle",
+    "to": "Snoqualmie Falls",
+    "miles": 30,
+    "time": "40 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Leavenworth",
+    "miles": 120,
+    "time": "2h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "Niagara Falls",
+    "miles": 400,
+    "time": "6h 30min"
+  },
+  {
+    "from": "New York",
+    "to": "Hamptons",
+    "miles": 100,
+    "time": "2h"
+  },
+  {
+    "from": "New York",
+    "to": "Atlantic City",
+    "miles": 130,
+    "time": "2h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "Statue of Liberty",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Wisconsin Dells",
+    "miles": 195,
+    "time": "3h"
+  },
+  {
+    "from": "Chicago",
+    "to": "Lake Geneva",
+    "miles": 80,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Dollywood",
+    "miles": 220,
+    "time": "3h 30min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Gatlinburg",
+    "miles": 220,
+    "time": "3h 45min"
+  },
+  {
+    "from": "Nashville",
+    "to": "Great Smoky Mountains",
+    "miles": 230,
+    "time": "4h"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Park City",
+    "miles": 32,
+    "time": "40 min"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Sundance",
+    "miles": 50,
+    "time": "1h"
+  },
+  {
+    "from": "Salt Lake City",
+    "to": "Arches National Park",
+    "miles": 230,
+    "time": "3h 45min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Legoland",
+    "miles": 35,
+    "time": "40 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "San Diego Zoo",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Tijuana",
+    "miles": 20,
+    "time": "30 min"
+  },
+  {
+    "from": "Grand Canyon",
+    "to": "Las Vegas",
+    "miles": 280,
+    "time": "4h 15min"
+  },
+  {
+    "from": "Death Valley",
+    "to": "Las Vegas",
+    "miles": 140,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Zion National Park",
+    "to": "Las Vegas",
+    "miles": 160,
+    "time": "2h 30min"
+  },
+  {
+    "from": "Hoover Dam",
+    "to": "Las Vegas",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "Disneyland",
+    "to": "Los Angeles",
+    "miles": 35,
+    "time": "45 min"
+  },
+  {
+    "from": "Universal Studios",
+    "to": "Los Angeles",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Palm Springs",
+    "to": "Los Angeles",
+    "miles": 110,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Joshua Tree",
+    "to": "Los Angeles",
+    "miles": 130,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Big Bear Lake",
+    "to": "Los Angeles",
+    "miles": 100,
+    "time": "2h"
+  },
+  {
+    "from": "Malibu",
+    "to": "Los Angeles",
+    "miles": 35,
+    "time": "50 min"
+  },
+  {
+    "from": "Santa Barbara",
+    "to": "Los Angeles",
+    "miles": 95,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Yosemite",
+    "to": "San Francisco",
+    "miles": 170,
+    "time": "3h"
+  },
+  {
+    "from": "Napa Valley",
+    "to": "San Francisco",
+    "miles": 55,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Lake Tahoe",
+    "to": "San Francisco",
+    "miles": 195,
+    "time": "3h 30min"
+  },
+  {
+    "from": "Monterey",
+    "to": "San Francisco",
+    "miles": 120,
+    "time": "2h"
+  },
+  {
+    "from": "Carmel",
+    "to": "San Francisco",
+    "miles": 125,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Muir Woods",
+    "to": "San Francisco",
+    "miles": 17,
+    "time": "35 min"
+  },
+  {
+    "from": "Disney World",
+    "to": "Orlando",
+    "miles": 22,
+    "time": "30 min"
+  },
+  {
+    "from": "Universal Orlando",
+    "to": "Orlando",
+    "miles": 15,
+    "time": "25 min"
+  },
+  {
+    "from": "Kennedy Space Center",
+    "to": "Orlando",
+    "miles": 50,
+    "time": "55 min"
+  },
+  {
+    "from": "Clearwater Beach",
+    "to": "Orlando",
+    "miles": 105,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Daytona Beach",
+    "to": "Orlando",
+    "miles": 55,
+    "time": "1h"
+  },
+  {
+    "from": "Key West",
+    "to": "Miami",
+    "miles": 160,
+    "time": "3h 30min"
+  },
+  {
+    "from": "Everglades",
+    "to": "Miami",
+    "miles": 45,
+    "time": "1h"
+  },
+  {
+    "from": "South Beach",
+    "to": "Miami",
+    "miles": 8,
+    "time": "20 min"
+  },
+  {
+    "from": "Sedona",
+    "to": "Phoenix",
+    "miles": 115,
+    "time": "2h"
+  },
+  {
+    "from": "Grand Canyon",
+    "to": "Phoenix",
+    "miles": 230,
+    "time": "3h 45min"
+  },
+  {
+    "from": "Scottsdale",
+    "to": "Phoenix",
+    "miles": 12,
+    "time": "20 min"
+  },
+  {
+    "from": "Rocky Mountain NP",
+    "to": "Denver",
+    "miles": 70,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Aspen",
+    "to": "Denver",
+    "miles": 160,
+    "time": "3h"
+  },
+  {
+    "from": "Vail",
+    "to": "Denver",
+    "miles": 100,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Breckenridge",
+    "to": "Denver",
+    "miles": 80,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Estes Park",
+    "to": "Denver",
+    "miles": 65,
+    "time": "1h 20min"
+  },
+  {
+    "from": "Mount Rainier",
+    "to": "Seattle",
+    "miles": 60,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Olympic National Park",
+    "to": "Seattle",
+    "miles": 80,
+    "time": "2h"
+  },
+  {
+    "from": "Snoqualmie Falls",
+    "to": "Seattle",
+    "miles": 30,
+    "time": "40 min"
+  },
+  {
+    "from": "Leavenworth",
+    "to": "Seattle",
+    "miles": 120,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Niagara Falls",
+    "to": "New York",
+    "miles": 400,
+    "time": "6h 30min"
+  },
+  {
+    "from": "Hamptons",
+    "to": "New York",
+    "miles": 100,
+    "time": "2h"
+  },
+  {
+    "from": "Atlantic City",
+    "to": "New York",
+    "miles": 130,
+    "time": "2h 15min"
+  },
+  {
+    "from": "Statue of Liberty",
+    "to": "New York",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Wisconsin Dells",
+    "to": "Chicago",
+    "miles": 195,
+    "time": "3h"
+  },
+  {
+    "from": "Lake Geneva",
+    "to": "Chicago",
+    "miles": 80,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Dollywood",
+    "to": "Nashville",
+    "miles": 220,
+    "time": "3h 30min"
+  },
+  {
+    "from": "Gatlinburg",
+    "to": "Nashville",
+    "miles": 220,
+    "time": "3h 45min"
+  },
+  {
+    "from": "Great Smoky Mountains",
+    "to": "Nashville",
+    "miles": 230,
+    "time": "4h"
+  },
+  {
+    "from": "Park City",
+    "to": "Salt Lake City",
+    "miles": 32,
+    "time": "40 min"
+  },
+  {
+    "from": "Sundance",
+    "to": "Salt Lake City",
+    "miles": 50,
+    "time": "1h"
+  },
+  {
+    "from": "Arches National Park",
+    "to": "Salt Lake City",
+    "miles": 230,
+    "time": "3h 45min"
+  },
+  {
+    "from": "Legoland",
+    "to": "San Diego",
+    "miles": 35,
+    "time": "40 min"
+  },
+  {
+    "from": "San Diego Zoo",
+    "to": "San Diego",
+    "miles": 5,
+    "time": "15 min"
+  },
+  {
+    "from": "Tijuana",
+    "to": "San Diego",
+    "miles": 20,
+    "time": "30 min"
+  }
+]
