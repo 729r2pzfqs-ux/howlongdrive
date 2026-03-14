@@ -70,6 +70,7 @@
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
         .green { color: #10B981; }
+        .map-note { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
     </style>
 </head>
 <body>
@@ -142,28 +143,26 @@
             </div>
         </div>
         <div id="map"></div>
+        <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}
         
-        var map = L.map('map').setView([31.850050000000003, -87.22975], 7);
+        var map = L.map('map').setView([31.850050000000003, -87.22975], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
         
-        var startIcon = L.divIcon({className:'',html:'<div style="background:#3B82F6;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
-        var chargeIcon = L.divIcon({className:'',html:'<div style="background:#10B981;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[16,16],iconAnchor:[8,8]});
-        var endIcon = L.divIcon({className:'',html:'<div style="background:#EF4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+        var startIcon = L.divIcon({className:'',html:'<div style="background:#3B82F6;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><circle cx="12" cy="12" r="4"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]});
+        var endIcon = L.divIcon({className:'',html:'<div style="background:#EF4444;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><path d="M4 4l8 8-8 8"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]});
         
         L.marker([33.749, -84.388], {icon: startIcon}).addTo(map).bindPopup('<b>Atlanta</b><br>Start');
-        L.marker([31.850050000000003, -87.22975], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 1</b><br>~235 miles');
-        
         L.marker([29.9511, -90.0715], {icon: endIcon}).addTo(map).bindPopup('<b>New Orleans</b><br>Destination');
         
-        var route = [[33.749,-84.388],[31.850050000000003,-87.22975],[29.9511,-90.0715]];
-        L.polyline(route, {color: '#10B981', weight: 4, opacity: 0.8}).addTo(map);
+        var bounds = L.latLngBounds([[33.749,-84.388], [29.9511,-90.0715]]);
+        map.fitBounds(bounds, {padding: [30, 30]});
     </script>
 </body>
 </html>
