@@ -1,0 +1,7202 @@
+[
+  {
+    "from": "Newark",
+    "to": "New York",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "New York",
+    "to": "Newark",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Jersey City",
+    "to": "New York",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "New York",
+    "to": "Jersey City",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Stamford",
+    "to": "New York",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "New York",
+    "to": "Stamford",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "White Plains",
+    "to": "New York",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "New York",
+    "to": "White Plains",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Yonkers",
+    "to": "New York",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "New York",
+    "to": "Yonkers",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Hoboken",
+    "to": "New York",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "New York",
+    "to": "Hoboken",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "New Rochelle",
+    "to": "New York",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "New York",
+    "to": "New Rochelle",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Hackensack",
+    "to": "New York",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "New York",
+    "to": "Hackensack",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Paramus",
+    "to": "New York",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "New York",
+    "to": "Paramus",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Edison",
+    "to": "New York",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "New York",
+    "to": "Edison",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Woodbridge",
+    "to": "New York",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "New York",
+    "to": "Woodbridge",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Elizabeth",
+    "to": "New York",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "New York",
+    "to": "Elizabeth",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Paterson",
+    "to": "New York",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "New York",
+    "to": "Paterson",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Clifton",
+    "to": "New York",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "New York",
+    "to": "Clifton",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Passaic",
+    "to": "New York",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "New York",
+    "to": "Passaic",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Union City",
+    "to": "New York",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "New York",
+    "to": "Union City",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Bayonne",
+    "to": "New York",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "New York",
+    "to": "Bayonne",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "East Orange",
+    "to": "New York",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "New York",
+    "to": "East Orange",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Bloomfield",
+    "to": "New York",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "New York",
+    "to": "Bloomfield",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Montclair",
+    "to": "New York",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "New York",
+    "to": "Montclair",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Glen Ridge",
+    "to": "New York",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "New York",
+    "to": "Glen Ridge",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Maplewood",
+    "to": "New York",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "New York",
+    "to": "Maplewood",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Millburn",
+    "to": "New York",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "New York",
+    "to": "Millburn",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Summit",
+    "to": "New York",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "New York",
+    "to": "Summit",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Morristown",
+    "to": "New York",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "New York",
+    "to": "Morristown",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Parsippany",
+    "to": "New York",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "New York",
+    "to": "Parsippany",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Wayne",
+    "to": "New York",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "New York",
+    "to": "Wayne",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Fort Lee",
+    "to": "New York",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "New York",
+    "to": "Fort Lee",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Teaneck",
+    "to": "New York",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "New York",
+    "to": "Teaneck",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Englewood",
+    "to": "New York",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "New York",
+    "to": "Englewood",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Santa Monica",
+    "to": "Los Angeles",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Santa Monica",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Long Beach",
+    "to": "Los Angeles",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Long Beach",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Anaheim",
+    "to": "Los Angeles",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Anaheim",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Pasadena",
+    "to": "Los Angeles",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Pasadena",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Burbank",
+    "to": "Los Angeles",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Burbank",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Irvine",
+    "to": "Los Angeles",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Irvine",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Glendale",
+    "to": "Los Angeles",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Glendale",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Ontario",
+    "to": "Los Angeles",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Ontario",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Torrance",
+    "to": "Los Angeles",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Torrance",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Pomona",
+    "to": "Los Angeles",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Pomona",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Downey",
+    "to": "Los Angeles",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Downey",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "West Covina",
+    "to": "Los Angeles",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "West Covina",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "El Monte",
+    "to": "Los Angeles",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "El Monte",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Inglewood",
+    "to": "Los Angeles",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Inglewood",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Costa Mesa",
+    "to": "Los Angeles",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Costa Mesa",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Fullerton",
+    "to": "Los Angeles",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Fullerton",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Orange",
+    "to": "Los Angeles",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Orange",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Huntington Beach",
+    "to": "Los Angeles",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Huntington Beach",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Garden Grove",
+    "to": "Los Angeles",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Garden Grove",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Santa Ana",
+    "to": "Los Angeles",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Santa Ana",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Lakewood",
+    "to": "Los Angeles",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Lakewood",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Whittier",
+    "to": "Los Angeles",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Whittier",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Newport Beach",
+    "to": "Los Angeles",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Newport Beach",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Arcadia",
+    "to": "Los Angeles",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Arcadia",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Redondo Beach",
+    "to": "Los Angeles",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Redondo Beach",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Manhattan Beach",
+    "to": "Los Angeles",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Manhattan Beach",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Hermosa Beach",
+    "to": "Los Angeles",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Hermosa Beach",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Culver City",
+    "to": "Los Angeles",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Culver City",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Beverly Hills",
+    "to": "Los Angeles",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Beverly Hills",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "West Hollywood",
+    "to": "Los Angeles",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Los Angeles",
+    "to": "West Hollywood",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Naperville",
+    "to": "Chicago",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Naperville",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Evanston",
+    "to": "Chicago",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Evanston",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Schaumburg",
+    "to": "Chicago",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Schaumburg",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Aurora",
+    "to": "Chicago",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Aurora",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Oak Park",
+    "to": "Chicago",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Oak Park",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Joliet",
+    "to": "Chicago",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Joliet",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Waukegan",
+    "to": "Chicago",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Waukegan",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Cicero",
+    "to": "Chicago",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Cicero",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Arlington Heights",
+    "to": "Chicago",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Arlington Heights",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Elgin",
+    "to": "Chicago",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Elgin",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Oak Lawn",
+    "to": "Chicago",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Oak Lawn",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Skokie",
+    "to": "Chicago",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Skokie",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Des Plaines",
+    "to": "Chicago",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Des Plaines",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Orland Park",
+    "to": "Chicago",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Orland Park",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Tinley Park",
+    "to": "Chicago",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Tinley Park",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Downers Grove",
+    "to": "Chicago",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Downers Grove",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Wheaton",
+    "to": "Chicago",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Wheaton",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Elmhurst",
+    "to": "Chicago",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Elmhurst",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Lombard",
+    "to": "Chicago",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Lombard",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Buffalo Grove",
+    "to": "Chicago",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Buffalo Grove",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Palatine",
+    "to": "Chicago",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Palatine",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Park Ridge",
+    "to": "Chicago",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Park Ridge",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Berwyn",
+    "to": "Chicago",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Berwyn",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Mount Prospect",
+    "to": "Chicago",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Mount Prospect",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Hoffman Estates",
+    "to": "Chicago",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Hoffman Estates",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Glenview",
+    "to": "Chicago",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Glenview",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Niles",
+    "to": "Chicago",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Niles",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Morton Grove",
+    "to": "Chicago",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Morton Grove",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Wilmette",
+    "to": "Chicago",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Wilmette",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Winnetka",
+    "to": "Chicago",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Chicago",
+    "to": "Winnetka",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Sugar Land",
+    "to": "Houston",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Sugar Land",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "The Woodlands",
+    "to": "Houston",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Houston",
+    "to": "The Woodlands",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Katy",
+    "to": "Houston",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Katy",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Pearland",
+    "to": "Houston",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Pearland",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "League City",
+    "to": "Houston",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Houston",
+    "to": "League City",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Baytown",
+    "to": "Houston",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Baytown",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Pasadena TX",
+    "to": "Houston",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Pasadena TX",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Missouri City",
+    "to": "Houston",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Missouri City",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Friendswood",
+    "to": "Houston",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Friendswood",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Conroe",
+    "to": "Houston",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Conroe",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Spring",
+    "to": "Houston",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Houston",
+    "to": "Spring",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Humble",
+    "to": "Houston",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Humble",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Cypress",
+    "to": "Houston",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Cypress",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Kingwood",
+    "to": "Houston",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Kingwood",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Clear Lake",
+    "to": "Houston",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Clear Lake",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Richmond",
+    "to": "Houston",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Richmond",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Rosenberg",
+    "to": "Houston",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Houston",
+    "to": "Rosenberg",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Galveston",
+    "to": "Houston",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Houston",
+    "to": "Galveston",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Texas City",
+    "to": "Houston",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Houston",
+    "to": "Texas City",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "La Porte",
+    "to": "Houston",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Houston",
+    "to": "La Porte",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Deer Park",
+    "to": "Houston",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Houston",
+    "to": "Deer Park",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Channelview",
+    "to": "Houston",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Houston",
+    "to": "Channelview",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Bellaire",
+    "to": "Houston",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Houston",
+    "to": "Bellaire",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "West University Place",
+    "to": "Houston",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Houston",
+    "to": "West University Place",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Memorial",
+    "to": "Houston",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Houston",
+    "to": "Memorial",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Energy Corridor",
+    "to": "Houston",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Houston",
+    "to": "Energy Corridor",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Galleria",
+    "to": "Houston",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Houston",
+    "to": "Galleria",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Montrose",
+    "to": "Houston",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Houston",
+    "to": "Montrose",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Heights",
+    "to": "Houston",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Houston",
+    "to": "Heights",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Midtown Houston",
+    "to": "Houston",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Houston",
+    "to": "Midtown Houston",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Fort Worth",
+    "to": "Dallas",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Fort Worth",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Arlington",
+    "to": "Dallas",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Arlington",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Plano",
+    "to": "Dallas",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Plano",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Irving",
+    "to": "Dallas",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Irving",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Frisco",
+    "to": "Dallas",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Frisco",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "McKinney",
+    "to": "Dallas",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "McKinney",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Denton",
+    "to": "Dallas",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Denton",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Carrollton",
+    "to": "Dallas",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Carrollton",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Richardson",
+    "to": "Dallas",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Richardson",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Lewisville",
+    "to": "Dallas",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Lewisville",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Allen",
+    "to": "Dallas",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Allen",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Flower Mound",
+    "to": "Dallas",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Flower Mound",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Mesquite",
+    "to": "Dallas",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Mesquite",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Grand Prairie",
+    "to": "Dallas",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Grand Prairie",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Garland",
+    "to": "Dallas",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Garland",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Rockwall",
+    "to": "Dallas",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Rockwall",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Rowlett",
+    "to": "Dallas",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Rowlett",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Wylie",
+    "to": "Dallas",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Wylie",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Murphy",
+    "to": "Dallas",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Murphy",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Southlake",
+    "to": "Dallas",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Southlake",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Grapevine",
+    "to": "Dallas",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Grapevine",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Coppell",
+    "to": "Dallas",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Coppell",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Addison",
+    "to": "Dallas",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Addison",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Highland Park",
+    "to": "Dallas",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Highland Park",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "University Park",
+    "to": "Dallas",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Dallas",
+    "to": "University Park",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Farmers Branch",
+    "to": "Dallas",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Farmers Branch",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "The Colony",
+    "to": "Dallas",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Dallas",
+    "to": "The Colony",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Little Elm",
+    "to": "Dallas",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Little Elm",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Prosper",
+    "to": "Dallas",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Prosper",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Celina",
+    "to": "Dallas",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Dallas",
+    "to": "Celina",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Scottsdale",
+    "to": "Phoenix",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Scottsdale",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Mesa",
+    "to": "Phoenix",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Mesa",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Tempe",
+    "to": "Phoenix",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Tempe",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Chandler",
+    "to": "Phoenix",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Chandler",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Gilbert",
+    "to": "Phoenix",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Gilbert",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Glendale AZ",
+    "to": "Phoenix",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Glendale AZ",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Peoria AZ",
+    "to": "Phoenix",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Peoria AZ",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Surprise",
+    "to": "Phoenix",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Surprise",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Avondale",
+    "to": "Phoenix",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Avondale",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Goodyear",
+    "to": "Phoenix",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Goodyear",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Buckeye",
+    "to": "Phoenix",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Buckeye",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Queen Creek",
+    "to": "Phoenix",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Queen Creek",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Tan Valley",
+    "to": "Phoenix",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "San Tan Valley",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Cave Creek",
+    "to": "Phoenix",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Cave Creek",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Fountain Hills",
+    "to": "Phoenix",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Fountain Hills",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Paradise Valley",
+    "to": "Phoenix",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Paradise Valley",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Carefree",
+    "to": "Phoenix",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Carefree",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Anthem",
+    "to": "Phoenix",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Anthem",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Ahwatukee",
+    "to": "Phoenix",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Ahwatukee",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Arcadia Phoenix",
+    "to": "Phoenix",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Arcadia Phoenix",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Laveen",
+    "to": "Phoenix",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Laveen",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Maryvale",
+    "to": "Phoenix",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Maryvale",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Encanto",
+    "to": "Phoenix",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Encanto",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Sunnyslope",
+    "to": "Phoenix",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Sunnyslope",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Moon Valley",
+    "to": "Phoenix",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Moon Valley",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Desert Ridge",
+    "to": "Phoenix",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Desert Ridge",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Kierland",
+    "to": "Phoenix",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Kierland",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "North Scottsdale",
+    "to": "Phoenix",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "North Scottsdale",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "South Scottsdale",
+    "to": "Phoenix",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "South Scottsdale",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Old Town Scottsdale",
+    "to": "Phoenix",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Phoenix",
+    "to": "Old Town Scottsdale",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Camden",
+    "to": "Philadelphia",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Camden",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Wilmington DE",
+    "to": "Philadelphia",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Wilmington DE",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Trenton",
+    "to": "Philadelphia",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Trenton",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "King of Prussia",
+    "to": "Philadelphia",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "King of Prussia",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Cherry Hill",
+    "to": "Philadelphia",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Cherry Hill",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Norristown",
+    "to": "Philadelphia",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Norristown",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Chester",
+    "to": "Philadelphia",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Chester",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Media",
+    "to": "Philadelphia",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Media",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "West Chester",
+    "to": "Philadelphia",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "West Chester",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Conshohocken",
+    "to": "Philadelphia",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Conshohocken",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Ardmore",
+    "to": "Philadelphia",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Ardmore",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Bryn Mawr",
+    "to": "Philadelphia",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Bryn Mawr",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Haverford",
+    "to": "Philadelphia",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Haverford",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Radnor",
+    "to": "Philadelphia",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Radnor",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Wayne PA",
+    "to": "Philadelphia",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Wayne PA",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Villanova",
+    "to": "Philadelphia",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Villanova",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Collegeville",
+    "to": "Philadelphia",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Collegeville",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Lansdale",
+    "to": "Philadelphia",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Lansdale",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Doylestown",
+    "to": "Philadelphia",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Doylestown",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Newtown PA",
+    "to": "Philadelphia",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Newtown PA",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Bensalem",
+    "to": "Philadelphia",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Bensalem",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Bristol PA",
+    "to": "Philadelphia",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Bristol PA",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Levittown PA",
+    "to": "Philadelphia",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Levittown PA",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Abington",
+    "to": "Philadelphia",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Abington",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Jenkintown",
+    "to": "Philadelphia",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Jenkintown",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Elkins Park",
+    "to": "Philadelphia",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Elkins Park",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Cheltenham",
+    "to": "Philadelphia",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Cheltenham",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Glenside",
+    "to": "Philadelphia",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Glenside",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Ambler",
+    "to": "Philadelphia",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Ambler",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Blue Bell",
+    "to": "Philadelphia",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Philadelphia",
+    "to": "Blue Bell",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "New Braunfels",
+    "to": "San Antonio",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "New Braunfels",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "San Marcos",
+    "to": "San Antonio",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "San Marcos",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Seguin",
+    "to": "San Antonio",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Seguin",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Schertz",
+    "to": "San Antonio",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Schertz",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Cibolo",
+    "to": "San Antonio",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Cibolo",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Universal City",
+    "to": "San Antonio",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Universal City",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Live Oak",
+    "to": "San Antonio",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Live Oak",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Selma",
+    "to": "San Antonio",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Selma",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Converse",
+    "to": "San Antonio",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Converse",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Kirby",
+    "to": "San Antonio",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Kirby",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Windcrest",
+    "to": "San Antonio",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Windcrest",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Alamo Heights",
+    "to": "San Antonio",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Alamo Heights",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Terrell Hills",
+    "to": "San Antonio",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Terrell Hills",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Olmos Park",
+    "to": "San Antonio",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Olmos Park",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Shavano Park",
+    "to": "San Antonio",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Shavano Park",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Castle Hills",
+    "to": "San Antonio",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Castle Hills",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Hill Country Village",
+    "to": "San Antonio",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Hill Country Village",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Leon Valley",
+    "to": "San Antonio",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Leon Valley",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Balcones Heights",
+    "to": "San Antonio",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Balcones Heights",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Helotes",
+    "to": "San Antonio",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Helotes",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Boerne",
+    "to": "San Antonio",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Boerne",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Bulverde",
+    "to": "San Antonio",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Bulverde",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Spring Branch",
+    "to": "San Antonio",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Spring Branch",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Garden Ridge",
+    "to": "San Antonio",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Garden Ridge",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Fair Oaks Ranch",
+    "to": "San Antonio",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Fair Oaks Ranch",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Hollywood Park",
+    "to": "San Antonio",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Hollywood Park",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Grey Forest",
+    "to": "San Antonio",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Grey Forest",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Von Ormy",
+    "to": "San Antonio",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Von Ormy",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Somerset",
+    "to": "San Antonio",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Somerset",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Lytle",
+    "to": "San Antonio",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "San Antonio",
+    "to": "Lytle",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Chula Vista",
+    "to": "San Diego",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Chula Vista",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Oceanside",
+    "to": "San Diego",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Oceanside",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Escondido",
+    "to": "San Diego",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Escondido",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Carlsbad",
+    "to": "San Diego",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Carlsbad",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "El Cajon",
+    "to": "San Diego",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "El Cajon",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Vista",
+    "to": "San Diego",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Vista",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Marcos CA",
+    "to": "San Diego",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "San Marcos CA",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Encinitas",
+    "to": "San Diego",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Encinitas",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "National City",
+    "to": "San Diego",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "National City",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "La Mesa",
+    "to": "San Diego",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "La Mesa",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Santee",
+    "to": "San Diego",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Santee",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Poway",
+    "to": "San Diego",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Poway",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Imperial Beach",
+    "to": "San Diego",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Imperial Beach",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Coronado",
+    "to": "San Diego",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Coronado",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Solana Beach",
+    "to": "San Diego",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Solana Beach",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Del Mar",
+    "to": "San Diego",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Del Mar",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Rancho Santa Fe",
+    "to": "San Diego",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Rancho Santa Fe",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "La Jolla",
+    "to": "San Diego",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "San Diego",
+    "to": "La Jolla",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Pacific Beach",
+    "to": "San Diego",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Pacific Beach",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Ocean Beach",
+    "to": "San Diego",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Ocean Beach",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Point Loma",
+    "to": "San Diego",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Point Loma",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Mission Valley",
+    "to": "San Diego",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Mission Valley",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Hillcrest",
+    "to": "San Diego",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Hillcrest",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "North Park",
+    "to": "San Diego",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "San Diego",
+    "to": "North Park",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Normal Heights",
+    "to": "San Diego",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Normal Heights",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Kensington",
+    "to": "San Diego",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Kensington",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "University Heights",
+    "to": "San Diego",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "San Diego",
+    "to": "University Heights",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Clairemont",
+    "to": "San Diego",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Clairemont",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Mira Mesa",
+    "to": "San Diego",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Mira Mesa",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Scripps Ranch",
+    "to": "San Diego",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "San Diego",
+    "to": "Scripps Ranch",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Sunnyvale",
+    "to": "San Jose",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Sunnyvale",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Santa Clara",
+    "to": "San Jose",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Santa Clara",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Mountain View",
+    "to": "San Jose",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Mountain View",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Palo Alto",
+    "to": "San Jose",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Palo Alto",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Cupertino",
+    "to": "San Jose",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Cupertino",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Milpitas",
+    "to": "San Jose",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Milpitas",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Fremont",
+    "to": "San Jose",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Fremont",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Newark CA",
+    "to": "San Jose",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Newark CA",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Union City CA",
+    "to": "San Jose",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Union City CA",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Hayward",
+    "to": "San Jose",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Hayward",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Mateo",
+    "to": "San Jose",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "San Mateo",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Redwood City",
+    "to": "San Jose",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Redwood City",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Menlo Park",
+    "to": "San Jose",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Menlo Park",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Los Altos",
+    "to": "San Jose",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Los Altos",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Los Gatos",
+    "to": "San Jose",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Los Gatos",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Saratoga",
+    "to": "San Jose",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Saratoga",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Campbell",
+    "to": "San Jose",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Campbell",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Morgan Hill",
+    "to": "San Jose",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Morgan Hill",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Gilroy",
+    "to": "San Jose",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Gilroy",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Almaden Valley",
+    "to": "San Jose",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Almaden Valley",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Evergreen",
+    "to": "San Jose",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Evergreen",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Berryessa",
+    "to": "San Jose",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Berryessa",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Willow Glen",
+    "to": "San Jose",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Willow Glen",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Rose Garden",
+    "to": "San Jose",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Rose Garden",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Cambrian Park",
+    "to": "San Jose",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Cambrian Park",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Blossom Valley",
+    "to": "San Jose",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Blossom Valley",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Silver Creek",
+    "to": "San Jose",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Silver Creek",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Alum Rock",
+    "to": "San Jose",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Alum Rock",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "East Foothills",
+    "to": "San Jose",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "San Jose",
+    "to": "East Foothills",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Alviso",
+    "to": "San Jose",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "San Jose",
+    "to": "Alviso",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Round Rock",
+    "to": "Austin",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Round Rock",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Cedar Park",
+    "to": "Austin",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Cedar Park",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Georgetown",
+    "to": "Austin",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Georgetown",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Pflugerville",
+    "to": "Austin",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Pflugerville",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "San Marcos",
+    "to": "Austin",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Austin",
+    "to": "San Marcos",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Kyle",
+    "to": "Austin",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Kyle",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Buda",
+    "to": "Austin",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Buda",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Leander",
+    "to": "Austin",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Leander",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Lakeway",
+    "to": "Austin",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Lakeway",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Bee Cave",
+    "to": "Austin",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Bee Cave",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "West Lake Hills",
+    "to": "Austin",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Austin",
+    "to": "West Lake Hills",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Rollingwood",
+    "to": "Austin",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Rollingwood",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Sunset Valley",
+    "to": "Austin",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Sunset Valley",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Manor",
+    "to": "Austin",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Manor",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Hutto",
+    "to": "Austin",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Hutto",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Taylor",
+    "to": "Austin",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Taylor",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Bastrop",
+    "to": "Austin",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Bastrop",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Elgin",
+    "to": "Austin",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Elgin",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Dripping Springs",
+    "to": "Austin",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Dripping Springs",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Wimberley",
+    "to": "Austin",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Austin",
+    "to": "Wimberley",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Lago Vista",
+    "to": "Austin",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Austin",
+    "to": "Lago Vista",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Jonestown",
+    "to": "Austin",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Austin",
+    "to": "Jonestown",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Point Venture",
+    "to": "Austin",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Austin",
+    "to": "Point Venture",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Volente",
+    "to": "Austin",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Austin",
+    "to": "Volente",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Anderson Mill",
+    "to": "Austin",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Austin",
+    "to": "Anderson Mill",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Wells Branch",
+    "to": "Austin",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Austin",
+    "to": "Wells Branch",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Brushy Creek",
+    "to": "Austin",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Austin",
+    "to": "Brushy Creek",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Avery Ranch",
+    "to": "Austin",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Austin",
+    "to": "Avery Ranch",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Mueller",
+    "to": "Austin",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Austin",
+    "to": "Mueller",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "East Austin",
+    "to": "Austin",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Austin",
+    "to": "East Austin",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Oakland",
+    "to": "San Francisco",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Oakland",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Berkeley",
+    "to": "San Francisco",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Berkeley",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Daly City",
+    "to": "San Francisco",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Daly City",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Mateo",
+    "to": "San Francisco",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Mateo",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Fremont",
+    "to": "San Francisco",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Fremont",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Hayward",
+    "to": "San Francisco",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Hayward",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Redwood City",
+    "to": "San Francisco",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Redwood City",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Palo Alto",
+    "to": "San Francisco",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Palo Alto",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Mountain View",
+    "to": "San Francisco",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Mountain View",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Sunnyvale",
+    "to": "San Francisco",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Sunnyvale",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Santa Clara",
+    "to": "San Francisco",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Santa Clara",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "South San Francisco",
+    "to": "San Francisco",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "South San Francisco",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "San Bruno",
+    "to": "San Francisco",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Bruno",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Millbrae",
+    "to": "San Francisco",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Millbrae",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Burlingame",
+    "to": "San Francisco",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Burlingame",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Carlos",
+    "to": "San Francisco",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Carlos",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Belmont",
+    "to": "San Francisco",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Belmont",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Foster City",
+    "to": "San Francisco",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Foster City",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Menlo Park",
+    "to": "San Francisco",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Menlo Park",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Atherton",
+    "to": "San Francisco",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Atherton",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Woodside",
+    "to": "San Francisco",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Woodside",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Portola Valley",
+    "to": "San Francisco",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Portola Valley",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Sausalito",
+    "to": "San Francisco",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Sausalito",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Mill Valley",
+    "to": "San Francisco",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Mill Valley",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Tiburon",
+    "to": "San Francisco",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Tiburon",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Corte Madera",
+    "to": "San Francisco",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Corte Madera",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Larkspur",
+    "to": "San Francisco",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Larkspur",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "San Rafael",
+    "to": "San Francisco",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "San Rafael",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Novato",
+    "to": "San Francisco",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Novato",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Walnut Creek",
+    "to": "San Francisco",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "San Francisco",
+    "to": "Walnut Creek",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Bellevue",
+    "to": "Seattle",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Bellevue",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Tacoma",
+    "to": "Seattle",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Tacoma",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Everett",
+    "to": "Seattle",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Everett",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Redmond",
+    "to": "Seattle",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Redmond",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Kirkland",
+    "to": "Seattle",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Kirkland",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Renton",
+    "to": "Seattle",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Renton",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Kent",
+    "to": "Seattle",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Kent",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Federal Way",
+    "to": "Seattle",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Federal Way",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Auburn",
+    "to": "Seattle",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Auburn",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Sammamish",
+    "to": "Seattle",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Sammamish",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Issaquah",
+    "to": "Seattle",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Issaquah",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Burien",
+    "to": "Seattle",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Burien",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "SeaTac",
+    "to": "Seattle",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "SeaTac",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Tukwila",
+    "to": "Seattle",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Tukwila",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Shoreline",
+    "to": "Seattle",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Shoreline",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Lynnwood",
+    "to": "Seattle",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Lynnwood",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Edmonds",
+    "to": "Seattle",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Edmonds",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Mountlake Terrace",
+    "to": "Seattle",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Mountlake Terrace",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Mukilteo",
+    "to": "Seattle",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Mukilteo",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Bothell",
+    "to": "Seattle",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Bothell",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Woodinville",
+    "to": "Seattle",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Woodinville",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Kenmore",
+    "to": "Seattle",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Kenmore",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Lake Forest Park",
+    "to": "Seattle",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Lake Forest Park",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Mercer Island",
+    "to": "Seattle",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Mercer Island",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Newcastle",
+    "to": "Seattle",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Newcastle",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Maple Valley",
+    "to": "Seattle",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Maple Valley",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Covington",
+    "to": "Seattle",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Covington",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Black Diamond",
+    "to": "Seattle",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Black Diamond",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Snoqualmie",
+    "to": "Seattle",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Seattle",
+    "to": "Snoqualmie",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "North Bend",
+    "to": "Seattle",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Seattle",
+    "to": "North Bend",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Aurora",
+    "to": "Denver",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Aurora",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Lakewood",
+    "to": "Denver",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Lakewood",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Arvada",
+    "to": "Denver",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Arvada",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Westminster",
+    "to": "Denver",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Westminster",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Thornton",
+    "to": "Denver",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Thornton",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Centennial",
+    "to": "Denver",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Centennial",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Boulder",
+    "to": "Denver",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Boulder",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Fort Collins",
+    "to": "Denver",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Fort Collins",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Loveland",
+    "to": "Denver",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Loveland",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Greeley",
+    "to": "Denver",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Greeley",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Longmont",
+    "to": "Denver",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Longmont",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Broomfield",
+    "to": "Denver",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Broomfield",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Brighton",
+    "to": "Denver",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Brighton",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Commerce City",
+    "to": "Denver",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Denver",
+    "to": "Commerce City",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Northglenn",
+    "to": "Denver",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Northglenn",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Federal Heights",
+    "to": "Denver",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Federal Heights",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Wheat Ridge",
+    "to": "Denver",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Wheat Ridge",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Edgewater",
+    "to": "Denver",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Denver",
+    "to": "Edgewater",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Golden",
+    "to": "Denver",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Denver",
+    "to": "Golden",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Morrison",
+    "to": "Denver",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Denver",
+    "to": "Morrison",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Evergreen",
+    "to": "Denver",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Denver",
+    "to": "Evergreen",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Conifer",
+    "to": "Denver",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Denver",
+    "to": "Conifer",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Bailey",
+    "to": "Denver",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Denver",
+    "to": "Bailey",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Parker",
+    "to": "Denver",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Denver",
+    "to": "Parker",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Castle Rock",
+    "to": "Denver",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Denver",
+    "to": "Castle Rock",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Lone Tree",
+    "to": "Denver",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Denver",
+    "to": "Lone Tree",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Highlands Ranch",
+    "to": "Denver",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Denver",
+    "to": "Highlands Ranch",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Littleton",
+    "to": "Denver",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Denver",
+    "to": "Littleton",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Englewood",
+    "to": "Denver",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Denver",
+    "to": "Englewood",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Cherry Creek",
+    "to": "Denver",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Denver",
+    "to": "Cherry Creek",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Cambridge",
+    "to": "Boston",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Cambridge",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Somerville",
+    "to": "Boston",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Somerville",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Brookline",
+    "to": "Boston",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Brookline",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Newton",
+    "to": "Boston",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Newton",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Quincy",
+    "to": "Boston",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Quincy",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Waltham",
+    "to": "Boston",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Waltham",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Medford",
+    "to": "Boston",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Medford",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Malden",
+    "to": "Boston",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Malden",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Revere",
+    "to": "Boston",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Revere",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Everett",
+    "to": "Boston",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Everett",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Chelsea",
+    "to": "Boston",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Boston",
+    "to": "Chelsea",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Lynn",
+    "to": "Boston",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Lynn",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Salem",
+    "to": "Boston",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Salem",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Peabody",
+    "to": "Boston",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Peabody",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Beverly",
+    "to": "Boston",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Beverly",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Gloucester",
+    "to": "Boston",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Gloucester",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Marblehead",
+    "to": "Boston",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Marblehead",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Swampscott",
+    "to": "Boston",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Swampscott",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Nahant",
+    "to": "Boston",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Nahant",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Lexington",
+    "to": "Boston",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Boston",
+    "to": "Lexington",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Concord",
+    "to": "Boston",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Boston",
+    "to": "Concord",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Bedford",
+    "to": "Boston",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Boston",
+    "to": "Bedford",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Burlington",
+    "to": "Boston",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Boston",
+    "to": "Burlington",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Woburn",
+    "to": "Boston",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Boston",
+    "to": "Woburn",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Reading",
+    "to": "Boston",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Boston",
+    "to": "Reading",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Wakefield",
+    "to": "Boston",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Boston",
+    "to": "Wakefield",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Stoneham",
+    "to": "Boston",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Boston",
+    "to": "Stoneham",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Melrose",
+    "to": "Boston",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Boston",
+    "to": "Melrose",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Winchester",
+    "to": "Boston",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Boston",
+    "to": "Winchester",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Arlington",
+    "to": "Boston",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Boston",
+    "to": "Arlington",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Marietta",
+    "to": "Atlanta",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Marietta",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Decatur",
+    "to": "Atlanta",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Decatur",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Sandy Springs",
+    "to": "Atlanta",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Sandy Springs",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Alpharetta",
+    "to": "Atlanta",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Alpharetta",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Roswell",
+    "to": "Atlanta",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Roswell",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Johns Creek",
+    "to": "Atlanta",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Johns Creek",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Dunwoody",
+    "to": "Atlanta",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Dunwoody",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Brookhaven",
+    "to": "Atlanta",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Brookhaven",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Smyrna",
+    "to": "Atlanta",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Smyrna",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Kennesaw",
+    "to": "Atlanta",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Kennesaw",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Peachtree City",
+    "to": "Atlanta",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Peachtree City",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Newnan",
+    "to": "Atlanta",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Newnan",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Lawrenceville",
+    "to": "Atlanta",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Lawrenceville",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Duluth",
+    "to": "Atlanta",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Duluth",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Suwanee",
+    "to": "Atlanta",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Suwanee",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Snellville",
+    "to": "Atlanta",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Snellville",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Stone Mountain",
+    "to": "Atlanta",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Stone Mountain",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Tucker",
+    "to": "Atlanta",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Tucker",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Chamblee",
+    "to": "Atlanta",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Chamblee",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Doraville",
+    "to": "Atlanta",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Doraville",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Clarkston",
+    "to": "Atlanta",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Clarkston",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Avondale Estates",
+    "to": "Atlanta",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Avondale Estates",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Pine Lake",
+    "to": "Atlanta",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Pine Lake",
+    "miles": 41,
+    "time": "1h 27min"
+  },
+  {
+    "from": "Lake City",
+    "to": "Atlanta",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Lake City",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "East Point",
+    "to": "Atlanta",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "East Point",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "College Park",
+    "to": "Atlanta",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "College Park",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Hapeville",
+    "to": "Atlanta",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Hapeville",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Forest Park",
+    "to": "Atlanta",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Forest Park",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Morrow",
+    "to": "Atlanta",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Morrow",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Jonesboro",
+    "to": "Atlanta",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Atlanta",
+    "to": "Jonesboro",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Fort Lauderdale",
+    "to": "Miami",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Fort Lauderdale",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Hollywood FL",
+    "to": "Miami",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Hollywood FL",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Hialeah",
+    "to": "Miami",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Hialeah",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Coral Gables",
+    "to": "Miami",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Coral Gables",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Miami Beach",
+    "to": "Miami",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Miami Beach",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Boca Raton",
+    "to": "Miami",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Boca Raton",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Pompano Beach",
+    "to": "Miami",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Pompano Beach",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Deerfield Beach",
+    "to": "Miami",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Deerfield Beach",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Delray Beach",
+    "to": "Miami",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Delray Beach",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Boynton Beach",
+    "to": "Miami",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Boynton Beach",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "West Palm Beach",
+    "to": "Miami",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Miami",
+    "to": "West Palm Beach",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Palm Beach Gardens",
+    "to": "Miami",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Palm Beach Gardens",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Jupiter",
+    "to": "Miami",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Jupiter",
+    "miles": 17,
+    "time": "36 min"
+  },
+  {
+    "from": "Aventura",
+    "to": "Miami",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Aventura",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Sunny Isles Beach",
+    "to": "Miami",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Sunny Isles Beach",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "North Miami",
+    "to": "Miami",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "Miami",
+    "to": "North Miami",
+    "miles": 15,
+    "time": "32 min"
+  },
+  {
+    "from": "North Miami Beach",
+    "to": "Miami",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Miami",
+    "to": "North Miami Beach",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Miami Lakes",
+    "to": "Miami",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Miami Lakes",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Doral",
+    "to": "Miami",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Doral",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Sweetwater",
+    "to": "Miami",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Miami",
+    "to": "Sweetwater",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Kendall",
+    "to": "Miami",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Miami",
+    "to": "Kendall",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Pinecrest",
+    "to": "Miami",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Miami",
+    "to": "Pinecrest",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Palmetto Bay",
+    "to": "Miami",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Miami",
+    "to": "Palmetto Bay",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Cutler Bay",
+    "to": "Miami",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Miami",
+    "to": "Cutler Bay",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Homestead",
+    "to": "Miami",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Miami",
+    "to": "Homestead",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Key Biscayne",
+    "to": "Miami",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Miami",
+    "to": "Key Biscayne",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Coconut Grove",
+    "to": "Miami",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Miami",
+    "to": "Coconut Grove",
+    "miles": 48,
+    "time": "1h 42min"
+  },
+  {
+    "from": "Little Havana",
+    "to": "Miami",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Miami",
+    "to": "Little Havana",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Wynwood",
+    "to": "Miami",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Miami",
+    "to": "Wynwood",
+    "miles": 38,
+    "time": "1h 21min"
+  },
+  {
+    "from": "Brickell",
+    "to": "Miami",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Miami",
+    "to": "Brickell",
+    "miles": 31,
+    "time": "1h 6min"
+  },
+  {
+    "from": "Arlington",
+    "to": "Washington DC",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Arlington",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Alexandria",
+    "to": "Washington DC",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Alexandria",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Bethesda",
+    "to": "Washington DC",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Bethesda",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Silver Spring",
+    "to": "Washington DC",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Silver Spring",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Rockville",
+    "to": "Washington DC",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Rockville",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Tysons",
+    "to": "Washington DC",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Tysons",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Reston",
+    "to": "Washington DC",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Reston",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Fairfax",
+    "to": "Washington DC",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Fairfax",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Falls Church",
+    "to": "Washington DC",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Falls Church",
+    "miles": 10,
+    "time": "21 min"
+  },
+  {
+    "from": "McLean",
+    "to": "Washington DC",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "McLean",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Vienna",
+    "to": "Washington DC",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Vienna",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Herndon",
+    "to": "Washington DC",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Herndon",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Chantilly",
+    "to": "Washington DC",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Chantilly",
+    "miles": 28,
+    "time": "1h 0min"
+  },
+  {
+    "from": "Centreville",
+    "to": "Washington DC",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Centreville",
+    "miles": 16,
+    "time": "34 min"
+  },
+  {
+    "from": "Manassas",
+    "to": "Washington DC",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Manassas",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Woodbridge",
+    "to": "Washington DC",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Woodbridge",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Springfield",
+    "to": "Washington DC",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Springfield",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Annandale",
+    "to": "Washington DC",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Annandale",
+    "miles": 23,
+    "time": "49 min"
+  },
+  {
+    "from": "Burke",
+    "to": "Washington DC",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Burke",
+    "miles": 19,
+    "time": "40 min"
+  },
+  {
+    "from": "Lorton",
+    "to": "Washington DC",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Lorton",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "College Park",
+    "to": "Washington DC",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "College Park",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Hyattsville",
+    "to": "Washington DC",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Hyattsville",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Takoma Park",
+    "to": "Washington DC",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Takoma Park",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Chevy Chase",
+    "to": "Washington DC",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Chevy Chase",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Potomac",
+    "to": "Washington DC",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Potomac",
+    "miles": 47,
+    "time": "1h 40min"
+  },
+  {
+    "from": "Gaithersburg",
+    "to": "Washington DC",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Gaithersburg",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Germantown",
+    "to": "Washington DC",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Germantown",
+    "miles": 36,
+    "time": "1h 17min"
+  },
+  {
+    "from": "Frederick",
+    "to": "Washington DC",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Frederick",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Laurel",
+    "to": "Washington DC",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Laurel",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Bowie",
+    "to": "Washington DC",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Washington DC",
+    "to": "Bowie",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "St Paul",
+    "to": "Minneapolis",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "St Paul",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Bloomington",
+    "to": "Minneapolis",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Bloomington",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Plymouth",
+    "to": "Minneapolis",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Plymouth",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Maple Grove",
+    "to": "Minneapolis",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Maple Grove",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Woodbury",
+    "to": "Minneapolis",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Woodbury",
+    "miles": 13,
+    "time": "27 min"
+  },
+  {
+    "from": "Eagan",
+    "to": "Minneapolis",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Eagan",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Eden Prairie",
+    "to": "Minneapolis",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Eden Prairie",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Minnetonka",
+    "to": "Minneapolis",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Minnetonka",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Edina",
+    "to": "Minneapolis",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Edina",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "St Louis Park",
+    "to": "Minneapolis",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "St Louis Park",
+    "miles": 11,
+    "time": "23 min"
+  },
+  {
+    "from": "Hopkins",
+    "to": "Minneapolis",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Hopkins",
+    "miles": 27,
+    "time": "57 min"
+  },
+  {
+    "from": "Richfield",
+    "to": "Minneapolis",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Richfield",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Brooklyn Park",
+    "to": "Minneapolis",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Brooklyn Park",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Brooklyn Center",
+    "to": "Minneapolis",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Brooklyn Center",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Crystal",
+    "to": "Minneapolis",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Crystal",
+    "miles": 20,
+    "time": "42 min"
+  },
+  {
+    "from": "Golden Valley",
+    "to": "Minneapolis",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Golden Valley",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "New Hope",
+    "to": "Minneapolis",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "New Hope",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Robbinsdale",
+    "to": "Minneapolis",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Robbinsdale",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Columbia Heights",
+    "to": "Minneapolis",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Columbia Heights",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Fridley",
+    "to": "Minneapolis",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Fridley",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Coon Rapids",
+    "to": "Minneapolis",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Coon Rapids",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Blaine",
+    "to": "Minneapolis",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Blaine",
+    "miles": 45,
+    "time": "1h 36min"
+  },
+  {
+    "from": "Anoka",
+    "to": "Minneapolis",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Anoka",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Burnsville",
+    "to": "Minneapolis",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Burnsville",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Apple Valley",
+    "to": "Minneapolis",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Apple Valley",
+    "miles": 39,
+    "time": "1h 23min"
+  },
+  {
+    "from": "Lakeville",
+    "to": "Minneapolis",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Lakeville",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Prior Lake",
+    "to": "Minneapolis",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Prior Lake",
+    "miles": 49,
+    "time": "1h 45min"
+  },
+  {
+    "from": "Shakopee",
+    "to": "Minneapolis",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Shakopee",
+    "miles": 40,
+    "time": "1h 25min"
+  },
+  {
+    "from": "Chanhassen",
+    "to": "Minneapolis",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Chanhassen",
+    "miles": 32,
+    "time": "1h 8min"
+  },
+  {
+    "from": "Wayzata",
+    "to": "Minneapolis",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Minneapolis",
+    "to": "Wayzata",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Dearborn",
+    "to": "Detroit",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Dearborn",
+    "miles": 9,
+    "time": "19 min"
+  },
+  {
+    "from": "Livonia",
+    "to": "Detroit",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Livonia",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Troy",
+    "to": "Detroit",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Troy",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Sterling Heights",
+    "to": "Detroit",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Sterling Heights",
+    "miles": 7,
+    "time": "15 min"
+  },
+  {
+    "from": "Warren",
+    "to": "Detroit",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Warren",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Southfield",
+    "to": "Detroit",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Southfield",
+    "miles": 5,
+    "time": "10 min"
+  },
+  {
+    "from": "Farmington Hills",
+    "to": "Detroit",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Farmington Hills",
+    "miles": 8,
+    "time": "17 min"
+  },
+  {
+    "from": "Novi",
+    "to": "Detroit",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Novi",
+    "miles": 12,
+    "time": "25 min"
+  },
+  {
+    "from": "Ann Arbor",
+    "to": "Detroit",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Ann Arbor",
+    "miles": 14,
+    "time": "30 min"
+  },
+  {
+    "from": "Royal Oak",
+    "to": "Detroit",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Royal Oak",
+    "miles": 6,
+    "time": "12 min"
+  },
+  {
+    "from": "Birmingham",
+    "to": "Detroit",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Birmingham",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Bloomfield Hills",
+    "to": "Detroit",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Bloomfield Hills",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "West Bloomfield",
+    "to": "Detroit",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Detroit",
+    "to": "West Bloomfield",
+    "miles": 29,
+    "time": "1h 2min"
+  },
+  {
+    "from": "Northville",
+    "to": "Detroit",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Northville",
+    "miles": 25,
+    "time": "53 min"
+  },
+  {
+    "from": "Plymouth MI",
+    "to": "Detroit",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Plymouth MI",
+    "miles": 24,
+    "time": "51 min"
+  },
+  {
+    "from": "Canton",
+    "to": "Detroit",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Canton",
+    "miles": 18,
+    "time": "38 min"
+  },
+  {
+    "from": "Westland",
+    "to": "Detroit",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Westland",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Garden City",
+    "to": "Detroit",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Garden City",
+    "miles": 26,
+    "time": "55 min"
+  },
+  {
+    "from": "Dearborn Heights",
+    "to": "Detroit",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Dearborn Heights",
+    "miles": 21,
+    "time": "45 min"
+  },
+  {
+    "from": "Redford",
+    "to": "Detroit",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Redford",
+    "miles": 22,
+    "time": "47 min"
+  },
+  {
+    "from": "Oak Park MI",
+    "to": "Detroit",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Oak Park MI",
+    "miles": 42,
+    "time": "1h 30min"
+  },
+  {
+    "from": "Ferndale",
+    "to": "Detroit",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Ferndale",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Hazel Park",
+    "to": "Detroit",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Hazel Park",
+    "miles": 34,
+    "time": "1h 12min"
+  },
+  {
+    "from": "Madison Heights",
+    "to": "Detroit",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Madison Heights",
+    "miles": 30,
+    "time": "1h 4min"
+  },
+  {
+    "from": "Roseville",
+    "to": "Detroit",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Roseville",
+    "miles": 33,
+    "time": "1h 10min"
+  },
+  {
+    "from": "St Clair Shores",
+    "to": "Detroit",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Detroit",
+    "to": "St Clair Shores",
+    "miles": 43,
+    "time": "1h 32min"
+  },
+  {
+    "from": "Grosse Pointe",
+    "to": "Detroit",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Grosse Pointe",
+    "miles": 37,
+    "time": "1h 19min"
+  },
+  {
+    "from": "Grosse Pointe Park",
+    "to": "Detroit",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Grosse Pointe Park",
+    "miles": 35,
+    "time": "1h 15min"
+  },
+  {
+    "from": "Grosse Pointe Woods",
+    "to": "Detroit",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Grosse Pointe Woods",
+    "miles": 46,
+    "time": "1h 38min"
+  },
+  {
+    "from": "Harper Woods",
+    "to": "Detroit",
+    "miles": 44,
+    "time": "1h 34min"
+  },
+  {
+    "from": "Detroit",
+    "to": "Harper Woods",
+    "miles": 44,
+    "time": "1h 34min"
+  }
+]
