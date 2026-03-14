@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities - Driving Times From Major US Cities | HowLongDrive</title>
+    <meta name="description" content="Find driving times from major US cities. Browse routes from New York, Los Angeles, Chicago, Houston, and more.">
+    <link rel="canonical" href="https://howlongdrive.com/cities/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="theme-color" content="#4B6E93">
+    <style>
+        :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 100px; width: auto; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        .ev-badge { background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .hamburger svg { width: 24px; height: 24px; }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { position: absolute; top: 1rem; right: 1rem; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
+        h1 { font-size: 2rem; margin: 2rem 0 1rem; }
+        .cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; padding: 1rem 0; }
+        .city-card { background: var(--card); border-radius: 0.75rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid var(--border); text-align: center; }
+        .city-card:hover { border-color: var(--primary); background: #f0f9ff; }
+        .city-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem; }
+        .city-state { color: var(--muted); font-size: 0.875rem; }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav id="nav">
+                <button class="close-btn" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+                <a href="/">Home</a>
+                <a href="/routes/">Routes</a>
+                <a href="/cities/">Cities</a>
+                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>🏙️ Browse by City</h1>
+        <p style="color:var(--muted);margin-bottom:1.5rem">Select a city to see driving times to other destinations</p>
+        
+        <div class="cities-grid">
+            <a href="/route/new-york-to-boston/" class="city-card"><div class="city-name">New York</div><div class="city-state">New York</div></a>
+            <a href="/route/los-angeles-to-las-vegas/" class="city-card"><div class="city-name">Los Angeles</div><div class="city-state">California</div></a>
+            <a href="/route/chicago-to-detroit/" class="city-card"><div class="city-name">Chicago</div><div class="city-state">Illinois</div></a>
+            <a href="/route/houston-to-dallas/" class="city-card"><div class="city-name">Houston</div><div class="city-state">Texas</div></a>
+            <a href="/route/phoenix-to-las-vegas/" class="city-card"><div class="city-name">Phoenix</div><div class="city-state">Arizona</div></a>
+            <a href="/route/philadelphia-to-new-york/" class="city-card"><div class="city-name">Philadelphia</div><div class="city-state">Pennsylvania</div></a>
+            <a href="/route/san-antonio-to-austin/" class="city-card"><div class="city-name">San Antonio</div><div class="city-state">Texas</div></a>
+            <a href="/route/san-diego-to-los-angeles/" class="city-card"><div class="city-name">San Diego</div><div class="city-state">California</div></a>
+            <a href="/route/dallas-to-houston/" class="city-card"><div class="city-name">Dallas</div><div class="city-state">Texas</div></a>
+            <a href="/route/san-jose-to-san-francisco/" class="city-card"><div class="city-name">San Jose</div><div class="city-state">California</div></a>
+            <a href="/route/austin-to-houston/" class="city-card"><div class="city-name">Austin</div><div class="city-state">Texas</div></a>
+            <a href="/route/jacksonville-to-orlando/" class="city-card"><div class="city-name">Jacksonville</div><div class="city-state">Florida</div></a>
+            <a href="/route/san-francisco-to-los-angeles/" class="city-card"><div class="city-name">San Francisco</div><div class="city-state">California</div></a>
+            <a href="/route/seattle-to-portland/" class="city-card"><div class="city-name">Seattle</div><div class="city-state">Washington</div></a>
+            <a href="/route/denver-to-las-vegas/" class="city-card"><div class="city-name">Denver</div><div class="city-state">Colorado</div></a>
+            <a href="/route/washington-dc-to-new-york/" class="city-card"><div class="city-name">Washington DC</div><div class="city-state">District</div></a>
+            <a href="/route/boston-to-new-york/" class="city-card"><div class="city-name">Boston</div><div class="city-state">Massachusetts</div></a>
+            <a href="/route/nashville-to-atlanta/" class="city-card"><div class="city-name">Nashville</div><div class="city-state">Tennessee</div></a>
+            <a href="/route/detroit-to-chicago/" class="city-card"><div class="city-name">Detroit</div><div class="city-state">Michigan</div></a>
+            <a href="/route/portland-to-seattle/" class="city-card"><div class="city-name">Portland</div><div class="city-state">Oregon</div></a>
+            <a href="/route/las-vegas-to-los-angeles/" class="city-card"><div class="city-name">Las Vegas</div><div class="city-state">Nevada</div></a>
+            <a href="/route/miami-to-orlando/" class="city-card"><div class="city-name">Miami</div><div class="city-state">Florida</div></a>
+            <a href="/route/atlanta-to-charlotte/" class="city-card"><div class="city-name">Atlanta</div><div class="city-state">Georgia</div></a>
+            <a href="/route/minneapolis-to-chicago/" class="city-card"><div class="city-name">Minneapolis</div><div class="city-state">Minnesota</div></a>
+            <a href="/route/orlando-to-miami/" class="city-card"><div class="city-name">Orlando</div><div class="city-state">Florida</div></a>
+            <a href="/route/tampa-to-miami/" class="city-card"><div class="city-name">Tampa</div><div class="city-state">Florida</div></a>
+            <a href="/route/salt-lake-city-to-las-vegas/" class="city-card"><div class="city-name">Salt Lake City</div><div class="city-state">Utah</div></a>
+            <a href="/route/new-orleans-to-houston/" class="city-card"><div class="city-name">New Orleans</div><div class="city-state">Louisiana</div></a>
+        </div>
+    </div>
+    <footer><p>© 2026 <a href="/" style="color:var(--primary);text-decoration:none">HowLongDrive.com</a></p></footer>
+    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
+</body>
+</html>
