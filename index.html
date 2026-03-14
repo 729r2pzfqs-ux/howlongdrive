@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Long Drive - Driving Times Between Cities | HowLongDrive.com</title>
+    <meta name="description" content="Find driving times and distances between any two cities. Plan your road trip with accurate drive time estimates, gas costs, and route information.">
+    <link rel="canonical" href="https://howlongdrive.com/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:title" content="How Long Drive - Driving Times Between Cities">
+    <meta property="og:description" content="Find driving times and distances between any two cities. Plan your road trip easily.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://howlongdrive.com/">
+    <meta name="twitter:card" content="summary">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+        .logo svg { width: 28px; height: 28px; }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .hero { text-align: center; padding: 4rem 1rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { color: var(--muted); font-size: 1.25rem; margin-bottom: 2rem; }
+        .search-box { background: var(--card); border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
+        .search-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+        .search-input { flex: 1; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .search-btn { background: var(--primary); color: white; border: none; padding: 1rem 2rem; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; }
+        .search-btn:hover { background: var(--primary-dark); }
+        .popular { padding: 4rem 0; }
+        .popular h2 { text-align: center; margin-bottom: 2rem; }
+        .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+        .route-card { background: var(--card); border-radius: 0.75rem; padding: 1.5rem; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: box-shadow 0.2s; }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; margin-bottom: 0.5rem; }
+        .route-meta { color: var(--muted); font-size: 0.875rem; }
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.875rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 512 512" fill="none">
+                    <circle cx="256" cy="256" r="220" fill="currentColor" opacity="0.1"/>
+                    <circle cx="256" cy="256" r="220" fill="none" stroke="currentColor" stroke-width="20"/>
+                    <path d="M140 280h232M140 280l40-80h152l40 80M156 320a24 24 0 1 0 0-1M356 320a24 24 0 1 0 0-1" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                HowLongDrive
+            </a>
+            <nav>
+                <a href="/routes/">Popular Routes</a>
+                <a href="/cities/">Cities</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>How Long Does It Take to Drive?</h1>
+                <p>Find driving times, distances, and route information between any two cities</p>
+                <div class="search-box">
+                    <div class="search-row">
+                        <input type="text" class="search-input" placeholder="From (e.g., New York)" id="from">
+                        <input type="text" class="search-input" placeholder="To (e.g., Boston)" id="to">
+                    </div>
+                    <button class="search-btn" onclick="search()">Get Driving Time</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular">
+            <div class="container">
+                <h2>Popular Routes</h2>
+                <div class="routes-grid">
+                    <a href="/route/new-york-to-boston/" class="route-card">
+                        <div class="route-title">New York to Boston</div>
+                        <div class="route-meta">🚗 4h 15min · 215 miles</div>
+                    </a>
+                    <a href="/route/los-angeles-to-las-vegas/" class="route-card">
+                        <div class="route-title">Los Angeles to Las Vegas</div>
+                        <div class="route-meta">🚗 4h 0min · 270 miles</div>
+                    </a>
+                    <a href="/route/chicago-to-detroit/" class="route-card">
+                        <div class="route-title">Chicago to Detroit</div>
+                        <div class="route-meta">🚗 4h 30min · 280 miles</div>
+                    </a>
+                    <a href="/route/san-francisco-to-los-angeles/" class="route-card">
+                        <div class="route-title">San Francisco to Los Angeles</div>
+                        <div class="route-meta">🚗 5h 45min · 380 miles</div>
+                    </a>
+                    <a href="/route/miami-to-orlando/" class="route-card">
+                        <div class="route-title">Miami to Orlando</div>
+                        <div class="route-meta">🚗 3h 30min · 235 miles</div>
+                    </a>
+                    <a href="/route/seattle-to-portland/" class="route-card">
+                        <div class="route-title">Seattle to Portland</div>
+                        <div class="route-meta">🚗 2h 45min · 175 miles</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 HowLongDrive.com · Driving times and distances for trip planning</p>
+        </div>
+    </footer>
+
+    <script>
+        function search() {
+            const from = document.getElementById('from').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            const to = document.getElementById('to').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            if (from && to) {
+                window.location.href = '/route/' + from + '-to-' + to + '/';
+            }
+        }
+    </script>
+</body>
+</html>
