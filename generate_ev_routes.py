@@ -11,6 +11,9 @@ for f in ['data/routes.json', 'data/routes_expanded.json']:
 with open('data/city_coords.json', 'r') as f:
     coords = json.load(f)
 
+with open('data/route_waypoints.json', 'r') as f:
+    waypoints = json.load(f)
+
 EV_RANGE = 250
 CHARGE_TIME = 30
 
@@ -20,7 +23,7 @@ template = '''<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{from_city} to {to_city} EV Charging Stops | HowLongDrive</title>
-    <meta name="description" content="Electric car trip from {from_city} to {to_city}: {miles} miles, {charge_stops} charging stops.">
+    <meta name="description" content="Electric car trip from {from_city} to {to_city}: {miles} miles, {charge_stops} charging stops. {stops_desc}">
     <link rel="canonical" href="https://howlongdrive.com/ev/{slug}/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="theme-color" content="#10B981">
@@ -70,9 +73,7 @@ template = '''<!DOCTYPE html>
         .row span:first-child svg {{ width: 14px; height: 14px; }}
         .row span:last-child {{ font-weight: 500; }}
         .timeline {{ margin-top: 1.5rem; }}
-        .timeline-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }}
-        .map-btn {{ background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; }}
-        .map-btn svg {{ width: 16px; height: 16px; }}
+        .timeline-header {{ margin-bottom: 1rem; }}
         .timeline-item {{ display: flex; gap: 1rem; padding: 0.75rem 0; border-left: 3px solid var(--primary); padding-left: 1.25rem; margin-left: 0.5rem; position: relative; }}
         .timeline-item::before {{ content: ''; position: absolute; left: -7px; top: 1rem; width: 10px; height: 10px; background: var(--primary); border-radius: 50%; }}
         .timeline-item.start::before {{ background: #3B82F6; }}
@@ -135,13 +136,12 @@ template = '''<!DOCTYPE html>
         </div>
         <div class="card timeline">
             <div class="timeline-header">
-                <h3 style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:#10B981"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Charging Stops</h3>
-                <a href="#map" class="map-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> View Map</a>
+                <h3 style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:#10B981"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Recommended Charging Stops</h3>
             </div>
             {timeline_html}
         </div>
         <div id="map"></div>
-        <p class="map-note">Map shows start and destination. Actual route follows highways.</p>
+        <p class="map-note">Map shows route overview. Charging stations available along major highways.</p>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -153,14 +153,16 @@ template = '''<!DOCTYPE html>
             attribution: '© OpenStreetMap'
         }}).addTo(map);
         
-        var startIcon = L.divIcon({{className:'',html:'<div style="background:#3B82F6;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><circle cx="12" cy="12" r="4"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]}});
-        var endIcon = L.divIcon({{className:'',html:'<div style="background:#EF4444;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px"><path d="M4 4l8 8-8 8"/></svg></div>',iconSize:[24,24],iconAnchor:[12,12]}});
+        var startIcon = L.divIcon({{className:'',html:'<div style="background:#3B82F6;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]}});
+        var chargeIcon = L.divIcon({{className:'',html:'<div style="background:#10B981;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]}});
+        var endIcon = L.divIcon({{className:'',html:'<div style="background:#EF4444;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]}});
         
         L.marker([{from_lat}, {from_lng}], {{icon: startIcon}}).addTo(map).bindPopup('<b>{from_city}</b><br>Start');
+        {waypoint_markers}
         L.marker([{to_lat}, {to_lng}], {{icon: endIcon}}).addTo(map).bindPopup('<b>{to_city}</b><br>Destination');
         
         var bounds = L.latLngBounds([[{from_lat},{from_lng}], [{to_lat},{to_lng}]]);
-        map.fitBounds(bounds, {{padding: [30, 30]}});
+        map.fitBounds(bounds, {{padding: [40, 40]}});
     </script>
 </body>
 </html>'''
@@ -203,6 +205,10 @@ for route in routes:
     center_lng = (from_lng + to_lng) / 2
     zoom = 5 if miles > 800 else (6 if miles > 400 else 7)
     
+    # Get waypoints for this route
+    route_waypoints = waypoints.get(slug, [])
+    
+    # Timeline
     timeline_html = f'''
             <div class="timeline-item start">
                 <div class="timeline-content">
@@ -211,7 +217,27 @@ for route in routes:
                 </div>
             </div>'''
     
-    if charge_stops > 0:
+    waypoint_markers = ""
+    stops_desc = ""
+    
+    if charge_stops > 0 and route_waypoints:
+        # Use real waypoints
+        stops_desc = "Charge at " + ", ".join(route_waypoints[:charge_stops])
+        for i, wp in enumerate(route_waypoints[:charge_stops]):
+            timeline_html += f'''
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> {wp}</h4>
+                    <p>Fast charge ~30 min</p>
+                </div>
+            </div>'''
+            # Add marker if we have coords
+            if wp in coords:
+                wp_lat, wp_lng = coords[wp]
+                waypoint_markers += f"L.marker([{wp_lat}, {wp_lng}], {{icon: chargeIcon}}).addTo(map).bindPopup('<b>{wp}</b><br>Charging Stop');\n        "
+    elif charge_stops > 0:
+        # Fallback to generic stops
+        stops_desc = f"{charge_stops} charging stops along the route"
         for i in range(charge_stops):
             ratio = (i + 1) / (charge_stops + 1)
             stop_mile = int(miles * ratio)
@@ -222,6 +248,8 @@ for route in routes:
                     <p>~{stop_mile} mi · Fast charge ~30 min</p>
                 </div>
             </div>'''
+    else:
+        stops_desc = "No charging stops needed"
     
     timeline_html += f'''
             <div class="timeline-item end">
@@ -238,10 +266,11 @@ for route in routes:
         charge_time=charge_time, ev_cost=ev_cost, gas_cost=gas_cost,
         savings=savings, total_time=total_time, timeline_html=timeline_html,
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
-        center_lat=center_lat, center_lng=center_lng, zoom=zoom
+        center_lat=center_lat, center_lng=center_lng, zoom=zoom,
+        waypoint_markers=waypoint_markers, stops_desc=stops_desc
     )
     with open(f'ev/{slug}/index.html', 'w') as f:
         f.write(html)
     count += 1
 
-print(f"✅ Created {count} EV pages")
+print(f"✅ Created {count} EV pages with real waypoints")
