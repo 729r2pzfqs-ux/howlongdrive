@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seattle to Spokane EV Charging Stops - Electric Car Trip | HowLongDrive</title>
-    <meta name="description" content="Electric car trip from Seattle to Spokane: 280 miles, 1 charging stops needed.">
+    <title>Seattle to Spokane EV Charging Stops | HowLongDrive</title>
+    <meta name="description" content="Electric car trip from Seattle to Spokane: 280 miles, 1 charging stops.">
     <link rel="canonical" href="https://howlongdrive.com/ev/seattle-to-spokane/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="theme-color" content="#10B981">
-    <meta property="og:title" content="Seattle to Spokane EV Trip">
-    <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <style>
         :root { --primary: #10B981; --primary-dark: #059669; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,14 +22,13 @@
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        .hamburger svg { width: 24px; height: 24px; }
-        .close-btn { display: none; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; }
+        .close-btn { display: none; }
         @media (max-width: 768px) {
             .logo img { height: 60px; } .logo span { display: none; }
             nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; }
             nav.active { right: 0; }
             .hamburger { display: block; z-index: 1001; }
-            .close-btn { display: block; }
+            .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; }
             .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
             .overlay.active { display: block; }
             .stats { grid-template-columns: 1fr 1fr !important; }
@@ -38,34 +36,38 @@
         }
         .breadcrumb { font-size: 0.875rem; color: var(--muted); padding: 1rem 0; }
         .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .hero { background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 2.5rem; border-radius: 1rem; margin-bottom: 1.5rem; color: white; }
-        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.75rem; }
-        h1 svg { width: 28px; height: 28px; }
-        .subtitle { opacity: 0.9; margin-bottom: 2rem; }
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        .stat { text-align: center; padding: 1.25rem 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; }
-        .stat-value { font-size: 1.75rem; font-weight: 700; }
-        .stat-label { font-size: 0.8rem; opacity: 0.9; margin-top: 0.25rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
-        .card { background: var(--card); padding: 1.75rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .card h3 { margin-bottom: 1.25rem; font-size: 1rem; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
-        .card h3 svg { width: 20px; height: 20px; color: var(--primary); }
-        .row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.9375rem; }
+        .hero { background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 2rem; border-radius: 1rem; margin-bottom: 1.5rem; color: white; }
+        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+        h1 svg { width: 24px; height: 24px; }
+        .subtitle { opacity: 0.9; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+        .stat { text-align: center; padding: 1rem 0.5rem; background: rgba(255,255,255,0.15); border-radius: 0.5rem; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; }
+        .stat-label { font-size: 0.75rem; opacity: 0.9; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .card { background: var(--card); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .card h3 { margin-bottom: 1rem; font-size: 0.9rem; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+        .card h3 svg { width: 18px; height: 18px; color: var(--primary); }
+        .row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
         .row:last-child { border: none; }
-        .row span:first-child { color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
-        .row span:first-child svg { width: 16px; height: 16px; }
+        .row span:first-child { color: var(--muted); display: flex; align-items: center; gap: 0.4rem; }
+        .row span:first-child svg { width: 14px; height: 14px; }
         .row span:last-child { font-weight: 500; }
         .timeline { margin-top: 1.5rem; }
-        .timeline-item { display: flex; gap: 1rem; padding: 1rem 0; border-left: 3px solid var(--primary); padding-left: 1.5rem; margin-left: 0.5rem; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -7px; top: 1.25rem; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
+        .timeline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .map-btn { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .map-btn svg { width: 16px; height: 16px; }
+        .timeline-item { display: flex; gap: 1rem; padding: 0.75rem 0; border-left: 3px solid var(--primary); padding-left: 1.25rem; margin-left: 0.5rem; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -7px; top: 1rem; width: 10px; height: 10px; background: var(--primary); border-radius: 50%; }
         .timeline-item.start::before { background: #3B82F6; }
         .timeline-item.end::before { background: #EF4444; }
-        .timeline-content h4 { font-weight: 600; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem; }
-        .timeline-content h4 svg { width: 16px; height: 16px; }
-        .timeline-content p { font-size: 0.875rem; color: var(--muted); }
-        .cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.875rem 1.75rem; background: white; color: var(--primary); border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
-        .gas-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-left: 1rem; padding: 0.875rem 1.75rem; background: rgba(255,255,255,0.2); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
-        footer { text-align: center; padding: 2.5rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+        .timeline-content h4 { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.15rem; display: flex; align-items: center; gap: 0.4rem; }
+        .timeline-content h4 svg { width: 14px; height: 14px; }
+        .timeline-content p { font-size: 0.8rem; color: var(--muted); }
+        #map { height: 350px; border-radius: 0.75rem; margin-top: 1.5rem; }
+        .cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.75rem 1.25rem; background: white; color: var(--primary); border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
+        .gas-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.75rem 1.25rem; background: rgba(255,255,255,0.2); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
+        footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
         .green { color: #10B981; }
     </style>
@@ -74,7 +76,7 @@
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
             <div class="overlay" onclick="toggleMenu()"></div>
             <nav id="nav">
                 <button class="close-btn" style="display:none" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
@@ -91,9 +93,9 @@
             <p class="subtitle">Electric Vehicle Road Trip</p>
             <div class="stats">
                 <div class="stat"><div class="stat-value">280</div><div class="stat-label">Miles</div></div>
-                <div class="stat"><div class="stat-value">1</div><div class="stat-label">Charging Stops</div></div>
-                <div class="stat"><div class="stat-value">4h 45m</div><div class="stat-label">Total Time</div></div>
-                <div class="stat"><div class="stat-value">$11</div><div class="stat-label">Est. Cost</div></div>
+                <div class="stat"><div class="stat-value">1</div><div class="stat-label">Stops</div></div>
+                <div class="stat"><div class="stat-value">4h 45m</div><div class="stat-label">Total</div></div>
+                <div class="stat"><div class="stat-value">$11</div><div class="stat-label">Cost</div></div>
             </div>
             <a href="/route/seattle-to-spokane/" class="cta">View Gas Route</a>
             <a href="/ev/spokane-to-seattle/" class="gas-link">Return Trip</a>
@@ -103,41 +105,65 @@
                 <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trip Details</h3>
                 <div class="row"><span>Distance</span><span>280 miles</span></div>
                 <div class="row"><span>Drive Time</span><span>4h 15min</span></div>
-                <div class="row"><span>Charging Stops</span><span>1 stops</span></div>
+                <div class="row"><span>Charging Stops</span><span>1</span></div>
                 <div class="row"><span>Charging Time</span><span>~30 min</span></div>
-                <div class="row"><span>Total Trip Time</span><span>4h 45m</span></div>
+                <div class="row"><span>Total Trip</span><span>4h 45m</span></div>
             </div>
             <div class="card">
                 <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Cost Comparison</h3>
-                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Cost</span><span>$11</span></div>
-                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V12a2 2 0 012-2h2a2 2 0 012 2v10M9 22V8a2 2 0 012-2h2a2 2 0 012 2v14M15 22V4a2 2 0 012-2h2a2 2 0 012 2v18"/></svg> Gas Cost</span><span>$32</span></div>
-                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> You Save</span><span class="green" style="font-weight:700">$21</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV</span><span>$11</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V12a2 2 0 012-2h2a2 2 0 012 2v10M9 22V8a2 2 0 012-2h2a2 2 0 012 2v14"/></svg> Gas</span><span>$32</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Save</span><span class="green" style="font-weight:700">$21</span></div>
             </div>
         </div>
         <div class="card timeline">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Suggested Charging Stops</h3>
+            <div class="timeline-header">
+                <h3 style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:#10B981"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Charging Stops</h3>
+                <a href="#map" class="map-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> View Map</a>
+            </div>
             
             <div class="timeline-item start">
                 <div class="timeline-content">
-                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Start: Seattle</h4>
-                    <p>Begin with a full charge</p>
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Seattle</h4>
+                    <p>Start with full charge</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h4><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Charging Stop 1</h4>
-                    <p>~140 miles - Fast charge ~30 min</p>
+                    <p>~140 mi · Fast charge ~30 min</p>
                 </div>
             </div>
             <div class="timeline-item end">
                 <div class="timeline-content">
-                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Arrive: Spokane</h4>
-                    <p>280 miles - 4h 45m total</p>
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Spokane</h4>
+                    <p>280 mi · 4h 45m</p>
                 </div>
             </div>
         </div>
+        <div id="map"></div>
     </div>
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
-    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}
+        
+        var map = L.map('map').setView([47.6325, -119.87905], 7);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+        
+        var startIcon = L.divIcon({className:'',html:'<div style="background:#3B82F6;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+        var chargeIcon = L.divIcon({className:'',html:'<div style="background:#10B981;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[16,16],iconAnchor:[8,8]});
+        var endIcon = L.divIcon({className:'',html:'<div style="background:#EF4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+        
+        L.marker([47.6062, -122.3321], {icon: startIcon}).addTo(map).bindPopup('<b>Seattle</b><br>Start');
+        L.marker([47.6325, -119.87905], {icon: chargeIcon}).addTo(map).bindPopup('<b>Charging Stop 1</b><br>~140 miles');
+        
+        L.marker([47.6588, -117.426], {icon: endIcon}).addTo(map).bindPopup('<b>Spokane</b><br>Destination');
+        
+        var route = [[47.6062,-122.3321],[47.6325,-119.87905],[47.6588,-117.426]];
+        L.polyline(route, {color: '#10B981', weight: 4, opacity: 0.8}).addTo(map);
+    </script>
 </body>
 </html>
