@@ -2,17 +2,15 @@ import json
 import os
 import math
 
-# Load all routes
 routes = []
 for f in ['data/routes.json', 'data/routes_expanded.json']:
     if os.path.exists(f):
         with open(f, 'r') as file:
             routes.extend(json.load(file))
 
-# EV constants
-EV_RANGE = 250  # miles per charge
-CHARGE_TIME = 30  # minutes per stop (fast charger)
-ELECTRICITY_COST_PER_MILE = 0.04  # ~$0.04/mile for EVs
+EV_RANGE = 250
+CHARGE_TIME = 30
+ELECTRICITY_COST_PER_MILE = 0.04
 
 template = '''<!DOCTYPE html>
 <html lang="en">
@@ -20,16 +18,12 @@ template = '''<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{from_city} to {to_city} EV Charging Stops - Electric Car Trip | HowLongDrive</title>
-    <meta name="description" content="Electric car trip from {from_city} to {to_city}: {miles} miles, {charge_stops} charging stops needed. Plan your EV road trip with Supercharger locations.">
+    <meta name="description" content="Electric car trip from {from_city} to {to_city}: {miles} miles, {charge_stops} charging stops needed.">
     <link rel="canonical" href="https://howlongdrive.com/ev/{slug}/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="theme-color" content="#10B981">
-    <meta property="og:title" content="{from_city} to {to_city} EV Trip - {charge_stops} Charging Stops">
-    <meta property="og:description" content="Plan your electric car road trip: {miles} miles, {total_time} total time including charging">
+    <meta property="og:title" content="{from_city} to {to_city} EV Trip">
     <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
-    <script type="application/ld+json">{{"@context":"https://schema.org","@type":"Trip","name":"{from_city} to {to_city} EV Trip","description":"Electric vehicle road trip with charging stops"}}</script>
     <style>
         :root {{ --primary: #10B981; --primary-dark: #059669; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -41,19 +35,17 @@ template = '''<!DOCTYPE html>
         .logo img {{ height: 100px; width: auto; }}
         nav {{ display: flex; align-items: center; gap: 1.5rem; }}
         nav a {{ color: var(--muted); text-decoration: none; font-size: 0.875rem; }}
-        nav a:hover {{ color: var(--primary); }}
         .ev-badge {{ background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }}
         .hamburger {{ display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }}
-        .hamburger svg {{ width: 24px; height: 24px; color: var(--text); }}
+        .hamburger svg {{ width: 24px; height: 24px; }}
+        .close-btn {{ display: none; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; }}
         @media (max-width: 768px) {{
-            .logo img {{ height: 60px; }}
-            .logo span {{ display: none; }}
-            nav {{ position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; justify-content: flex-start; padding: 5rem 2rem 2rem; box-shadow: -4px 0 20px rgba(0,0,0,0.1); transition: right 0.3s; z-index: 1000; }}
+            .logo img {{ height: 60px; }} .logo span {{ display: none; }}
+            nav {{ position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; }}
             nav.active {{ right: 0; }}
-            nav a {{ font-size: 1.1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); width: 100%; }}
             .hamburger {{ display: block; z-index: 1001; }}
-            .close-btn {{ display: none; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem; }}
-            .overlay {{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; }}
+            .close-btn {{ display: block; }}
+            .overlay {{ display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }}
             .overlay.active {{ display: block; }}
             .stats {{ grid-template-columns: 1fr 1fr !important; }}
             .grid {{ grid-template-columns: 1fr !important; }}
@@ -62,10 +54,10 @@ template = '''<!DOCTYPE html>
         .breadcrumb a {{ color: var(--primary); text-decoration: none; }}
         .hero {{ background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 2.5rem; border-radius: 1rem; margin-bottom: 1.5rem; color: white; }}
         h1 {{ font-size: 1.75rem; margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.75rem; }}
-        h1 svg {{ width: 32px; height: 32px; }}
+        h1 svg {{ width: 28px; height: 28px; }}
         .subtitle {{ opacity: 0.9; margin-bottom: 2rem; }}
         .stats {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }}
-        .stat {{ text-align: center; padding: 1.25rem 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; backdrop-filter: blur(10px); }}
+        .stat {{ text-align: center; padding: 1.25rem 0.75rem; background: rgba(255,255,255,0.15); border-radius: 0.75rem; }}
         .stat-value {{ font-size: 1.75rem; font-weight: 700; }}
         .stat-label {{ font-size: 0.8rem; opacity: 0.9; margin-top: 0.25rem; }}
         .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }}
@@ -74,58 +66,52 @@ template = '''<!DOCTYPE html>
         .card h3 svg {{ width: 20px; height: 20px; color: var(--primary); }}
         .row {{ display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.9375rem; }}
         .row:last-child {{ border: none; }}
-        .row span:first-child {{ color: var(--muted); }}
+        .row span:first-child {{ color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }}
+        .row span:first-child svg {{ width: 16px; height: 16px; }}
         .row span:last-child {{ font-weight: 500; }}
-        .charging-timeline {{ margin-top: 1.5rem; }}
+        .timeline {{ margin-top: 1.5rem; }}
         .timeline-item {{ display: flex; gap: 1rem; padding: 1rem 0; border-left: 3px solid var(--primary); padding-left: 1.5rem; margin-left: 0.5rem; position: relative; }}
         .timeline-item::before {{ content: ''; position: absolute; left: -7px; top: 1.25rem; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }}
         .timeline-item.start::before {{ background: #3B82F6; }}
         .timeline-item.end::before {{ background: #EF4444; }}
-        .timeline-item.charge::before {{ background: var(--primary); }}
-        .timeline-content h4 {{ font-weight: 600; margin-bottom: 0.25rem; }}
+        .timeline-content h4 {{ font-weight: 600; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem; }}
+        .timeline-content h4 svg {{ width: 16px; height: 16px; }}
         .timeline-content p {{ font-size: 0.875rem; color: var(--muted); }}
-        .map-container {{ background: var(--card); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-top: 1.5rem; }}
-        .map-placeholder {{ height: 300px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); display: flex; align-items: center; justify-content: center; color: var(--muted); }}
         .cta {{ display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.875rem 1.75rem; background: white; color: var(--primary); border-radius: 0.5rem; text-decoration: none; font-weight: 600; }}
-        .cta:hover {{ background: #f0fdf4; }}
         .gas-link {{ display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-left: 1rem; padding: 0.875rem 1.75rem; background: rgba(255,255,255,0.2); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }}
         footer {{ text-align: center; padding: 2.5rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
+        .green {{ color: #10B981; }}
     </style>
 </head>
 <body>
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-            </button>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
             <div class="overlay" onclick="toggleMenu()"></div>
             <nav id="nav">
-                <button class="close-btn" onclick="toggleMenu()" aria-label="Close">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-                </button>
+                <button class="close-btn" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
                 <a href="/">Home</a>
                 <a href="/routes/">Routes</a>
-                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+                <a href="/ev/" class="ev-badge">EV Trips</a>
             </nav>
         </div>
     </header>
     <div class="container">
-        <div class="breadcrumb"><a href="/">Home</a> → <a href="/ev/">EV Trips</a> → {from_city} to {to_city}</div>
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="/ev/">EV Trips</a> / {from_city} to {to_city}</div>
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> {from_city} to {to_city}</h1>
-            <p class="subtitle">Electric Vehicle Road Trip Planner</p>
+            <p class="subtitle">Electric Vehicle Road Trip</p>
             <div class="stats">
                 <div class="stat"><div class="stat-value">{miles}</div><div class="stat-label">Miles</div></div>
                 <div class="stat"><div class="stat-value">{charge_stops}</div><div class="stat-label">Charging Stops</div></div>
                 <div class="stat"><div class="stat-value">{total_time}</div><div class="stat-label">Total Time</div></div>
                 <div class="stat"><div class="stat-value">${ev_cost}</div><div class="stat-label">Est. Cost</div></div>
             </div>
-            <a href="/route/{slug}/" class="cta">⛽ View Gas Car Route</a>
-            <a href="/ev/{reverse_slug}/" class="gas-link">🔄 Return Trip</a>
+            <a href="/route/{slug}/" class="cta">View Gas Route</a>
+            <a href="/ev/{reverse_slug}/" class="gas-link">Return Trip</a>
         </div>
-        
         <div class="grid">
             <div class="card">
                 <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trip Details</h3>
@@ -137,30 +123,18 @@ template = '''<!DOCTYPE html>
             </div>
             <div class="card">
                 <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Cost Comparison</h3>
-                <div class="row"><span>⚡ EV Cost</span><span>${ev_cost}</span></div>
-                <div class="row"><span>⛽ Gas Cost</span><span>${gas_cost}</span></div>
-                <div class="row"><span>💰 You Save</span><span style="color:#10B981;font-weight:700">${savings}</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Cost</span><span>${ev_cost}</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V12a2 2 0 012-2h2a2 2 0 012 2v10M9 22V8a2 2 0 012-2h2a2 2 0 012 2v14M15 22V4a2 2 0 012-2h2a2 2 0 012 2v18"/></svg> Gas Cost</span><span>${gas_cost}</span></div>
+                <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> You Save</span><span class="green" style="font-weight:700">${savings}</span></div>
             </div>
         </div>
-        
-        <div class="card charging-timeline">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"/></svg> Suggested Charging Stops</h3>
+        <div class="card timeline">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Suggested Charging Stops</h3>
             {timeline_html}
         </div>
-        
-        <div class="map-container">
-            <div class="map-placeholder">
-                <span>🗺️ Interactive map coming soon</span>
-            </div>
-        </div>
     </div>
-    <footer><p>© 2026 <a href="/">HowLongDrive.com</a> · EV Trip Planner</p></footer>
-    <script>
-        function toggleMenu() {{
-            document.getElementById('nav').classList.toggle('active');
-            document.querySelector('.overlay').classList.toggle('active');
-        }}
-    </script>
+    <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
+    <script>function toggleMenu(){{document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}}</script>
 </body>
 </html>'''
 
@@ -175,39 +149,30 @@ for route in routes:
     highway = route['highway']
     
     slug = f"{from_city.lower().replace(' ', '-')}-to-{to_city.lower().replace(' ', '-')}"
-    
-    if slug in processed:
-        continue
+    if slug in processed: continue
     processed.add(slug)
     
     reverse_slug = f"{to_city.lower().replace(' ', '-')}-to-{from_city.lower().replace(' ', '-')}"
-    
-    # EV calculations
     charge_stops = max(0, math.ceil(miles / EV_RANGE) - 1)
     charge_time = charge_stops * CHARGE_TIME
     ev_cost = int(miles * ELECTRICITY_COST_PER_MILE)
-    gas_cost = int((miles / 30) * 3.5)  # 30mpg, $3.50/gal
+    gas_cost = int((miles / 30) * 3.5)
     savings = gas_cost - ev_cost
     
-    # Parse drive time
-    hours = 0
-    mins = 0
+    hours, mins = 0, 0
     if 'h' in time:
         parts = time.replace('min', '').split('h')
         hours = int(parts[0])
         mins = int(parts[1].strip()) if len(parts) > 1 and parts[1].strip() else 0
     
     total_mins = hours * 60 + mins + charge_time
-    total_hours = total_mins // 60
-    total_remaining_mins = total_mins % 60
-    total_time = f"{total_hours}h {total_remaining_mins}m"
+    total_time = f"{total_mins // 60}h {total_mins % 60}m"
     
-    # Generate timeline
     timeline_html = f'''
             <div class="timeline-item start">
                 <div class="timeline-content">
-                    <h4>🚗 Start: {from_city}</h4>
-                    <p>Begin your journey with a full charge</p>
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg> Start: {from_city}</h4>
+                    <p>Begin with a full charge</p>
                 </div>
             </div>'''
     
@@ -216,33 +181,30 @@ for route in routes:
         for i in range(charge_stops):
             stop_mile = int(miles_per_segment * (i + 1))
             timeline_html += f'''
-            <div class="timeline-item charge">
+            <div class="timeline-item">
                 <div class="timeline-content">
-                    <h4>⚡ Charging Stop {i + 1}</h4>
-                    <p>~{stop_mile} miles · Fast charge ~30 min</p>
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Charging Stop {i + 1}</h4>
+                    <p>~{stop_mile} miles - Fast charge ~30 min</p>
                 </div>
             </div>'''
     
     timeline_html += f'''
             <div class="timeline-item end">
                 <div class="timeline-content">
-                    <h4>🏁 Arrive: {to_city}</h4>
-                    <p>{miles} miles · {total_time} total</p>
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Arrive: {to_city}</h4>
+                    <p>{miles} miles - {total_time} total</p>
                 </div>
             </div>'''
     
     os.makedirs(f'ev/{slug}', exist_ok=True)
-    
     html = template.format(
         from_city=from_city, to_city=to_city, time=time, miles=miles,
-        highway=highway, slug=slug, reverse_slug=reverse_slug,
-        charge_stops=charge_stops, charge_time=charge_time,
-        ev_cost=ev_cost, gas_cost=gas_cost, savings=savings,
-        total_time=total_time, timeline_html=timeline_html
+        slug=slug, reverse_slug=reverse_slug, charge_stops=charge_stops,
+        charge_time=charge_time, ev_cost=ev_cost, gas_cost=gas_cost,
+        savings=savings, total_time=total_time, timeline_html=timeline_html
     )
-    
     with open(f'ev/{slug}/index.html', 'w') as f:
         f.write(html)
     count += 1
 
-print(f"✅ Created {count} EV route pages")
+print(f"✅ Created {count} EV route pages with SVG icons")
