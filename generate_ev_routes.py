@@ -260,7 +260,12 @@ for route in routes:
                 </div>
             </div>'''
             if wp in coords:
-                wp_lat, wp_lng = coords[wp]
+                wp_data = coords[wp]
+                if isinstance(wp_data, dict):
+                    wp_lat = wp_data.get('lat', 0)
+                    wp_lng = wp_data.get('lng', 0)
+                else:
+                    wp_lat, wp_lng = wp_data[0], wp_data[1]
                 waypoint_markers += f"L.marker([{wp_lat}, {wp_lng}], {{icon: chargeIcon}}).addTo(map).bindPopup('<b>{wp}</b><br>Charging Stop');\n        "
     elif charge_stops > 0:
         stops_desc = f"Plan for {charge_stops} charging stops along the route."
