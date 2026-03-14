@@ -20,92 +20,141 @@
         nav { display: flex; align-items: center; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .close-btn { display: none; }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
         .hero { background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 4rem 2rem; text-align: center; color: white; border-radius: 1rem; margin: 2rem 0; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+        .hero h1 svg { width: 40px; height: 40px; }
         .hero p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; }
-        .search-box { background: white; border-radius: 0.75rem; padding: 1.5rem; max-width: 500px; margin: 0 auto; }
+        .search-box { background: white; border-radius: 0.75rem; padding: 1.5rem; max-width: 550px; margin: 0 auto; }
         .search-row { display: flex; gap: 0.75rem; }
-        .search-input { flex: 1; padding: 0.875rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
-        .search-btn { background: var(--primary); color: white; border: none; padding: 0.875rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; }
-        .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 2rem 0; }
+        .input-wrapper { flex: 1; position: relative; }
+        .search-input { width: 100%; padding: 0.875rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .dropdown { position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid var(--border); border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 100; max-height: 200px; overflow-y: auto; }
+        .dropdown.active { display: block; }
+        .dropdown-item { padding: 0.75rem 1rem; cursor: pointer; }
+        .dropdown-item:hover { background: #f0fdf4; color: var(--primary); }
+        .search-btn { background: var(--primary); color: white; border: none; padding: 0.875rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+        .search-btn:hover { background: var(--primary-dark); }
+        h2 { margin: 2rem 0 1rem; font-size: 1.25rem; }
+        .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 1rem 0; }
         .route-card { background: var(--card); border-radius: 0.75rem; padding: 1.5rem; text-decoration: none; color: inherit; border: 1px solid var(--border); }
         .route-card:hover { border-color: var(--primary); }
         .route-title { font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .route-title svg { width: 16px; height: 16px; color: var(--primary); }
+        .badge { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
         .route-meta { color: var(--muted); font-size: 0.875rem; }
-        .badge { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
-        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } .hero h1 { font-size: 1.75rem; } .search-row { flex-direction: column; } }
+        @media (max-width: 640px) { .search-row { flex-direction: column; } .hero h1 { font-size: 1.75rem; } }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-            <nav>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav id="nav">
+                <button class="close-btn" style="display:none" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
                 <a href="/">Home</a>
                 <a href="/routes/">Routes</a>
-                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+                <a href="/ev/" class="ev-badge">EV Trips</a>
             </nav>
         </div>
     </header>
     
     <div class="container">
         <div class="hero">
-            <h1>⚡ EV Road Trip Planner</h1>
+            <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Road Trip Planner</h1>
             <p>Plan your electric car trip with charging stops</p>
             <div class="search-box">
                 <div class="search-row">
-                    <input type="text" class="search-input" placeholder="From city" id="from">
-                    <input type="text" class="search-input" placeholder="To city" id="to">
+                    <div class="input-wrapper">
+                        <input type="text" class="search-input" placeholder="From city" id="from" autocomplete="off">
+                        <div class="dropdown" id="from-dropdown"></div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" class="search-input" placeholder="To city" id="to" autocomplete="off">
+                        <div class="dropdown" id="to-dropdown"></div>
+                    </div>
                     <button class="search-btn" onclick="search()">Plan Trip</button>
                 </div>
             </div>
         </div>
         
-        <h2 style="margin-bottom:1rem">Popular EV Routes</h2>
+        <h2>Popular EV Routes</h2>
         <div class="routes-grid">
             <a href="/ev/los-angeles-to-las-vegas/" class="route-card">
-                <div class="route-title">⚡ LA → Las Vegas <span class="badge">1 stop</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> LA → Las Vegas <span class="badge">1 stop</span></div>
                 <div class="route-meta">270 miles · 4h 30m total · Save $25</div>
             </a>
             <a href="/ev/san-francisco-to-los-angeles/" class="route-card">
-                <div class="route-title">⚡ SF → Los Angeles <span class="badge">1 stop</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> SF → Los Angeles <span class="badge">1 stop</span></div>
                 <div class="route-meta">380 miles · 6h 30m total · Save $30</div>
             </a>
             <a href="/ev/new-york-to-boston/" class="route-card">
-                <div class="route-title">⚡ NYC → Boston <span class="badge">0 stops</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> NYC → Boston <span class="badge">0 stops</span></div>
                 <div class="route-meta">215 miles · 4h 15m total · Save $17</div>
             </a>
             <a href="/ev/seattle-to-portland/" class="route-card">
-                <div class="route-title">⚡ Seattle → Portland <span class="badge">0 stops</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Seattle → Portland <span class="badge">0 stops</span></div>
                 <div class="route-meta">175 miles · 2h 45m total · Save $14</div>
             </a>
             <a href="/ev/miami-to-orlando/" class="route-card">
-                <div class="route-title">⚡ Miami → Orlando <span class="badge">0 stops</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Miami → Orlando <span class="badge">0 stops</span></div>
                 <div class="route-meta">235 miles · 3h 30m total · Save $18</div>
             </a>
             <a href="/ev/chicago-to-detroit/" class="route-card">
-                <div class="route-title">⚡ Chicago → Detroit <span class="badge">1 stop</span></div>
+                <div class="route-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Chicago → Detroit <span class="badge">1 stop</span></div>
                 <div class="route-meta">280 miles · 5h total · Save $22</div>
-            </a>
-            <a href="/ev/new-york-to-miami/" class="route-card">
-                <div class="route-title">⚡ NYC → Miami <span class="badge">4 stops</span></div>
-                <div class="route-meta">1280 miles · 21h total · Save $101</div>
-            </a>
-            <a href="/ev/los-angeles-to-san-francisco/" class="route-card">
-                <div class="route-title">⚡ LA → San Francisco <span class="badge">1 stop</span></div>
-                <div class="route-meta">380 miles · 6h 30m total · Save $30</div>
             </a>
         </div>
     </div>
     
-    <footer><p>© 2026 <a href="/">HowLongDrive.com</a> · EV Trip Planner</p></footer>
+    <footer><p>© 2026 <a href="/" style="color:var(--primary);text-decoration:none">HowLongDrive.com</a></p></footer>
     
     <script>
+        const CITIES = ["New York","Los Angeles","Chicago","Houston","Phoenix","Philadelphia","San Antonio","San Diego","Dallas","San Jose","Austin","Jacksonville","San Francisco","Seattle","Denver","Washington DC","Boston","Nashville","Detroit","Portland","Las Vegas","Miami","Atlanta","Minneapolis","Orlando","Tampa","Salt Lake City","New Orleans","Cleveland","Kansas City","Columbus","Indianapolis","Charlotte","Raleigh","Memphis","Baltimore","Milwaukee","Albuquerque","Tucson","Fresno","Sacramento","Oklahoma City","El Paso","St Louis","Pittsburgh","Cincinnati","Spokane","Reno","Colorado Springs","Vancouver","Albany","Hartford","Providence","Little Rock"].sort();
+        
+        function setupAutocomplete(inputId, dropdownId) {
+            const input = document.getElementById(inputId);
+            const dropdown = document.getElementById(dropdownId);
+            
+            input.addEventListener('input', function() {
+                const val = this.value.toLowerCase();
+                dropdown.innerHTML = '';
+                if (val.length < 1) { dropdown.classList.remove('active'); return; }
+                const matches = CITIES.filter(c => c.toLowerCase().includes(val)).slice(0, 6);
+                if (matches.length === 0) { dropdown.classList.remove('active'); return; }
+                matches.forEach(city => {
+                    const div = document.createElement('div');
+                    div.className = 'dropdown-item';
+                    div.textContent = city;
+                    div.onclick = () => { input.value = city; dropdown.classList.remove('active'); };
+                    dropdown.appendChild(div);
+                });
+                dropdown.classList.add('active');
+            });
+            
+            document.addEventListener('click', e => {
+                if (!input.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('active');
+            });
+        }
+        
+        setupAutocomplete('from', 'from-dropdown');
+        setupAutocomplete('to', 'to-dropdown');
+        
         function search() {
             const from = document.getElementById('from').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
             const to = document.getElementById('to').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
             if (from && to) window.location.href = '/ev/' + from + '-to-' + to + '/';
+        }
+        
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
         }
     </script>
 </body>
