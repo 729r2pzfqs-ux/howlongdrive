@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Times from Denver | HowLongDrive</title>
+    <meta name="description" content="Find driving times from Denver, Colorado. Browse 96 routes with distances and drive times.">
+    <link rel="canonical" href="https://howlongdrive.com/cities/denver/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 80px; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        @media (max-width: 768px) {
+            .logo img { height: 50px; }
+            nav { display: none; }
+            .hamburger { display: block; }
+        }
+        .hero { text-align: center; padding: 3rem 1rem; background: white; border-radius: 1rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2rem; color: var(--text); }
+        .subtitle { color: var(--muted); margin-top: 0.5rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.875rem; color: var(--muted); }
+        .routes-grid { display: grid; gap: 0.75rem; }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: white; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; }
+        .route-meta { font-size: 0.875rem; color: var(--muted); margin-top: 0.25rem; }
+        .route-time { font-weight: 700; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive">HowLongDrive</a>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">⚡ EV</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>📍 Denver</h1>
+            <p class="subtitle">Colorado</p>
+            <div class="stats"><div><div class="stat-value">96</div><div class="stat-label">Destinations</div></div></div>
+        </div>
+        <h2 style="margin-bottom:1rem">Driving Times from Denver</h2>
+        <div class="routes-grid">
+            <a href="/route/denver-to-colorado-springs/" class="route-card">
+                <div><div class="route-title">Colorado Springs</div><div class="route-meta">70 miles</div></div>
+                <div class="route-time">1h 10min</div>
+            </a>
+            <a href="/route/denver-to-albuquerque/" class="route-card">
+                <div><div class="route-title">Albuquerque</div><div class="route-meta">450 miles</div></div>
+                <div class="route-time">6h 0min</div>
+            </a>
+            <a href="/route/denver-to-salt-lake-city/" class="route-card">
+                <div><div class="route-title">Salt Lake City</div><div class="route-meta">525 miles</div></div>
+                <div class="route-time">7h 30min</div>
+            </a>
+            <a href="/route/denver-to-new-york/" class="route-card">
+                <div><div class="route-title">New York</div><div class="route-meta">1780 miles</div></div>
+                <div class="route-time">26h 0min</div>
+            </a>
+            <a href="/route/denver-to-los-angeles/" class="route-card">
+                <div><div class="route-title">Los Angeles</div><div class="route-meta">1020 miles</div></div>
+                <div class="route-time">15h 0min</div>
+            </a>
+            <a href="/route/denver-to-chicago/" class="route-card">
+                <div><div class="route-title">Chicago</div><div class="route-meta">1000 miles</div></div>
+                <div class="route-time">14h 30min</div>
+            </a>
+            <a href="/route/denver-to-dallas/" class="route-card">
+                <div><div class="route-title">Dallas</div><div class="route-meta">780 miles</div></div>
+                <div class="route-time">11h 0min</div>
+            </a>
+            <a href="/route/denver-to-houston/" class="route-card">
+                <div><div class="route-title">Houston</div><div class="route-meta">1030 miles</div></div>
+                <div class="route-time">15h 0min</div>
+            </a>
+            <a href="/route/denver-to-phoenix/" class="route-card">
+                <div><div class="route-title">Phoenix</div><div class="route-meta">600 miles</div></div>
+                <div class="route-time">10h 0min</div>
+            </a>
+            <a href="/route/denver-to-seattle/" class="route-card">
+                <div><div class="route-title">Seattle</div><div class="route-meta">1315 miles</div></div>
+                <div class="route-time">21h 0min</div>
+            </a>
+            <a href="/route/denver-to-san-francisco/" class="route-card">
+                <div><div class="route-title">San Francisco</div><div class="route-meta">1235 miles</div></div>
+                <div class="route-time">18h 0min</div>
+            </a>
+            <a href="/route/denver-to-kansas-city/" class="route-card">
+                <div><div class="route-title">Kansas City</div><div class="route-meta">600 miles</div></div>
+                <div class="route-time">9h 0min</div>
+            </a>
+            <a href="/route/denver-to-atlanta/" class="route-card">
+                <div><div class="route-title">Atlanta</div><div class="route-meta">1420 miles</div></div>
+                <div class="route-time">21h 0min</div>
+            </a>
+            <a href="/route/denver-to-las-vegas/" class="route-card">
+                <div><div class="route-title">Las Vegas</div><div class="route-meta">750 miles</div></div>
+                <div class="route-time">10h 30min</div>
+            </a>
+            <a href="/route/denver-to-minneapolis/" class="route-card">
+                <div><div class="route-title">Minneapolis</div><div class="route-meta">920 miles</div></div>
+                <div class="route-time">13h 0min</div>
+            </a>
+            <a href="/route/denver-to-portland/" class="route-card">
+                <div><div class="route-title">Portland</div><div class="route-meta">1250 miles</div></div>
+                <div class="route-time">18h 0min</div>
+            </a>
+            <a href="/route/denver-to-aurora/" class="route-card">
+                <div><div class="route-title">Aurora</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">20 min</div>
+            </a>
+            <a href="/route/denver-to-boulder/" class="route-card">
+                <div><div class="route-title">Boulder</div><div class="route-meta">30 miles</div></div>
+                <div class="route-time">40 min</div>
+            </a>
+            <a href="/route/denver-to-lakewood/" class="route-card">
+                <div><div class="route-title">Lakewood</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/denver-to-arvada/" class="route-card">
+                <div><div class="route-title">Arvada</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">20 min</div>
+            </a>
+            <a href="/route/denver-to-westminster/" class="route-card">
+                <div><div class="route-title">Westminster</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">20 min</div>
+            </a>
+            <a href="/route/denver-to-thornton/" class="route-card">
+                <div><div class="route-title">Thornton</div><div class="route-meta">14 miles</div></div>
+                <div class="route-time">25 min</div>
+            </a>
+            <a href="/route/denver-to-fort-collins/" class="route-card">
+                <div><div class="route-title">Fort Collins</div><div class="route-meta">65 miles</div></div>
+                <div class="route-time">1h 10min</div>
+            </a>
+            <a href="/route/denver-to-rocky-mountain-np/" class="route-card">
+                <div><div class="route-title">Rocky Mountain NP</div><div class="route-meta">70 miles</div></div>
+                <div class="route-time">1h 30min</div>
+            </a>
+            <a href="/route/denver-to-aspen/" class="route-card">
+                <div><div class="route-title">Aspen</div><div class="route-meta">160 miles</div></div>
+                <div class="route-time">3h</div>
+            </a>
+            <a href="/route/denver-to-vail/" class="route-card">
+                <div><div class="route-title">Vail</div><div class="route-meta">100 miles</div></div>
+                <div class="route-time">1h 45min</div>
+            </a>
+            <a href="/route/denver-to-breckenridge/" class="route-card">
+                <div><div class="route-title">Breckenridge</div><div class="route-meta">80 miles</div></div>
+                <div class="route-time">1h 30min</div>
+            </a>
+            <a href="/route/denver-to-estes-park/" class="route-card">
+                <div><div class="route-title">Estes Park</div><div class="route-meta">65 miles</div></div>
+                <div class="route-time">1h 20min</div>
+            </a>
+            <a href="/route/denver-to-den/" class="route-card">
+                <div><div class="route-title">DEN</div><div class="route-meta">25 miles</div></div>
+                <div class="route-time">40 min</div>
+            </a>
+            <a href="/route/denver-to-albuquerque/" class="route-card">
+                <div><div class="route-title">Albuquerque</div><div class="route-meta">450 miles</div></div>
+                <div class="route-time">6h 30min</div>
+            </a>
+            <a href="/route/denver-to-santa-fe/" class="route-card">
+                <div><div class="route-title">Santa Fe</div><div class="route-meta">390 miles</div></div>
+                <div class="route-time">5h 30min</div>
+            </a>
+            <a href="/route/denver-to-wichita/" class="route-card">
+                <div><div class="route-title">Wichita</div><div class="route-meta">520 miles</div></div>
+                <div class="route-time">7h 30min</div>
+            </a>
+            <a href="/route/denver-to-omaha/" class="route-card">
+                <div><div class="route-title">Omaha</div><div class="route-meta">540 miles</div></div>
+                <div class="route-time">7h 30min</div>
+            </a>
+            <a href="/route/denver-to-rapid-city/" class="route-card">
+                <div><div class="route-title">Rapid City</div><div class="route-meta">390 miles</div></div>
+                <div class="route-time">5h 30min</div>
+            </a>
+            <a href="/route/denver-to-billings/" class="route-card">
+                <div><div class="route-title">Billings</div><div class="route-meta">550 miles</div></div>
+                <div class="route-time">8h</div>
+            </a>
+            <a href="/route/denver-to-philadelphia/" class="route-card">
+                <div><div class="route-title">Philadelphia</div><div class="route-meta">2047 miles</div></div>
+                <div class="route-time">34h 7min</div>
+            </a>
+            <a href="/route/denver-to-san-antonio/" class="route-card">
+                <div><div class="route-title">San Antonio</div><div class="route-meta">1042 miles</div></div>
+                <div class="route-time">17h 22min</div>
+            </a>
+            <a href="/route/denver-to-san-diego/" class="route-card">
+                <div><div class="route-title">San Diego</div><div class="route-meta">1082 miles</div></div>
+                <div class="route-time">18h 2min</div>
+            </a>
+            <a href="/route/denver-to-austin/" class="route-card">
+                <div><div class="route-title">Austin</div><div class="route-meta">1003 miles</div></div>
+                <div class="route-time">16h 42min</div>
+            </a>
+            <a href="/route/denver-to-boston/" class="route-card">
+                <div><div class="route-title">Boston</div><div class="route-meta">2295 miles</div></div>
+                <div class="route-time">38h 15min</div>
+            </a>
+            <a href="/route/denver-to-nashville/" class="route-card">
+                <div><div class="route-title">Nashville</div><div class="route-meta">1326 miles</div></div>
+                <div class="route-time">22h 6min</div>
+            </a>
+            <a href="/route/denver-to-detroit/" class="route-card">
+                <div><div class="route-title">Detroit</div><div class="route-meta">1500 miles</div></div>
+                <div class="route-time">25h</div>
+            </a>
+            <a href="/route/denver-to-miami/" class="route-card">
+                <div><div class="route-title">Miami</div><div class="route-meta">2242 miles</div></div>
+                <div class="route-time">37h 22min</div>
+            </a>
+            <a href="/route/denver-to-orlando/" class="route-card">
+                <div><div class="route-title">Orlando</div><div class="route-meta">2014 miles</div></div>
+                <div class="route-time">33h 34min</div>
+            </a>
+            <a href="/route/denver-to-tampa/" class="route-card">
+                <div><div class="route-title">Tampa</div><div class="route-meta">1978 miles</div></div>
+                <div class="route-time">32h 58min</div>
+            </a>
+            <a href="/route/denver-to-new-orleans/" class="route-card">
+                <div><div class="route-title">New Orleans</div><div class="route-meta">1404 miles</div></div>
+                <div class="route-time">23h 23min</div>
+            </a>
+            <a href="/route/denver-to-cleveland/" class="route-card">
+                <div><div class="route-title">Cleveland</div><div class="route-meta">1591 miles</div></div>
+                <div class="route-time">26h 30min</div>
+            </a>
+            <a href="/route/denver-to-washington-dc/" class="route-card">
+                <div><div class="route-title">Washington DC</div><div class="route-meta">1935 miles</div></div>
+                <div class="route-time">32h 15min</div>
+            </a>
+            <a href="/route/denver-to-baltimore/" class="route-card">
+                <div><div class="route-title">Baltimore</div><div class="route-meta">1958 miles</div></div>
+                <div class="route-time">32h 37min</div>
+            </a>
+            <a href="/route/denver-to-san-jose/" class="route-card">
+                <div><div class="route-title">San Jose</div><div class="route-meta">1204 miles</div></div>
+                <div class="route-time">20h 3min</div>
+            </a>
+            <a href="/route/denver-to-yellowstone/" class="route-card">
+                <div><div class="route-title">Yellowstone</div><div class="route-meta">540 miles</div></div>
+                <div class="route-time">9h 49min</div>
+            </a>
+            <a href="/route/denver-to-grand-teton/" class="route-card">
+                <div><div class="route-title">Grand Teton</div><div class="route-meta">506 miles</div></div>
+                <div class="route-time">9h 11min</div>
+            </a>
+            <a href="/route/denver-to-badlands/" class="route-card">
+                <div><div class="route-title">Badlands</div><div class="route-meta">394 miles</div></div>
+                <div class="route-time">7h 9min</div>
+            </a>
+            <a href="/route/denver-to-mesa-verde/" class="route-card">
+                <div><div class="route-title">Mesa Verde</div><div class="route-meta">319 miles</div></div>
+                <div class="route-time">5h 47min</div>
+            </a>
+            <a href="/route/denver-to-canyonlands/" class="route-card">
+                <div><div class="route-title">Canyonlands</div><div class="route-meta">349 miles</div></div>
+                <div class="route-time">6h 20min</div>
+            </a>
+            <a href="/route/denver-to-capitol-reef/" class="route-card">
+                <div><div class="route-title">Capitol Reef</div><div class="route-meta">433 miles</div></div>
+                <div class="route-time">7h 52min</div>
+            </a>
+            <a href="/route/denver-to-black-canyon/" class="route-card">
+                <div><div class="route-title">Black Canyon</div><div class="route-meta">209 miles</div></div>
+                <div class="route-time">3h 47min</div>
+            </a>
+            <a href="/route/denver-to-jackson-hole/" class="route-card">
+                <div><div class="route-title">Jackson Hole</div><div class="route-meta">493 miles</div></div>
+                <div class="route-time">8h 57min</div>
+            </a>
+            <a href="/route/denver-to-telluride/" class="route-card">
+                <div><div class="route-title">Telluride</div><div class="route-meta">245 miles</div></div>
+                <div class="route-time">4h 27min</div>
+            </a>
+            <a href="/route/denver-to-steamboat-springs/" class="route-card">
+                <div><div class="route-title">Steamboat Springs</div><div class="route-meta">137 miles</div></div>
+                <div class="route-time">2h 29min</div>
+            </a>
+            <a href="/route/denver-to-taos-ski-valley/" class="route-card">
+                <div><div class="route-title">Taos Ski Valley</div><div class="route-meta">273 miles</div></div>
+                <div class="route-time">4h 57min</div>
+            </a>
+            <a href="/route/denver-to-crested-butte/" class="route-card">
+                <div><div class="route-title">Crested Butte</div><div class="route-meta">153 miles</div></div>
+                <div class="route-time">2h 46min</div>
+            </a>
+            <a href="/route/denver-to-moab/" class="route-card">
+                <div><div class="route-title">Moab</div><div class="route-meta">321 miles</div></div>
+                <div class="route-time">5h 50min</div>
+            </a>
+            <a href="/route/denver-to-cheyenne/" class="route-card">
+                <div><div class="route-title">Cheyenne</div><div class="route-meta">116 miles</div></div>
+                <div class="route-time">2h 6min</div>
+            </a>
+            <a href="/route/denver-to-casper/" class="route-card">
+                <div><div class="route-title">Casper</div><div class="route-meta">272 miles</div></div>
+                <div class="route-time">4h 56min</div>
+            </a>
+            <a href="/route/denver-to-laramie/" class="route-card">
+                <div><div class="route-title">Laramie</div><div class="route-meta">135 miles</div></div>
+                <div class="route-time">2h 27min</div>
+            </a>
+            <a href="/route/denver-to-aurora/" class="route-card">
+                <div><div class="route-title">Aurora</div><div class="route-meta">9 miles</div></div>
+                <div class="route-time">19 min</div>
+            </a>
+            <a href="/route/denver-to-lakewood/" class="route-card">
+                <div><div class="route-title">Lakewood</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/denver-to-arvada/" class="route-card">
+                <div><div class="route-title">Arvada</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/denver-to-westminster/" class="route-card">
+                <div><div class="route-title">Westminster</div><div class="route-meta">13 miles</div></div>
+                <div class="route-time">27 min</div>
+            </a>
+            <a href="/route/denver-to-thornton/" class="route-card">
+                <div><div class="route-title">Thornton</div><div class="route-meta">7 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/denver-to-centennial/" class="route-card">
+                <div><div class="route-title">Centennial</div><div class="route-meta">9 miles</div></div>
+                <div class="route-time">19 min</div>
+            </a>
+            <a href="/route/denver-to-boulder/" class="route-card">
+                <div><div class="route-title">Boulder</div><div class="route-meta">9 miles</div></div>
+                <div class="route-time">19 min</div>
+            </a>
+            <a href="/route/denver-to-fort-collins/" class="route-card">
+                <div><div class="route-title">Fort Collins</div><div class="route-meta">14 miles</div></div>
+                <div class="route-time">30 min</div>
+            </a>
+            <a href="/route/denver-to-loveland/" class="route-card">
+                <div><div class="route-title">Loveland</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">17 min</div>
+            </a>
+            <a href="/route/denver-to-greeley/" class="route-card">
+                <div><div class="route-title">Greeley</div><div class="route-meta">10 miles</div></div>
+                <div class="route-time">21 min</div>
+            </a>
+            <a href="/route/denver-to-longmont/" class="route-card">
+                <div><div class="route-title">Longmont</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">38 min</div>
+            </a>
+            <a href="/route/denver-to-broomfield/" class="route-card">
+                <div><div class="route-title">Broomfield</div><div class="route-meta">25 miles</div></div>
+                <div class="route-time">53 min</div>
+            </a>
+            <a href="/route/denver-to-brighton/" class="route-card">
+                <div><div class="route-title">Brighton</div><div class="route-meta">25 miles</div></div>
+                <div class="route-time">53 min</div>
+            </a>
+            <a href="/route/denver-to-commerce-city/" class="route-card">
+                <div><div class="route-title">Commerce City</div><div class="route-meta">28 miles</div></div>
+                <div class="route-time">1h 0min</div>
+            </a>
+            <a href="/route/denver-to-northglenn/" class="route-card">
+                <div><div class="route-title">Northglenn</div><div class="route-meta">19 miles</div></div>
+                <div class="route-time">40 min</div>
+            </a>
+            <a href="/route/denver-to-federal-heights/" class="route-card">
+                <div><div class="route-title">Federal Heights</div><div class="route-meta">23 miles</div></div>
+                <div class="route-time">49 min</div>
+            </a>
+            <a href="/route/denver-to-wheat-ridge/" class="route-card">
+                <div><div class="route-title">Wheat Ridge</div><div class="route-meta">22 miles</div></div>
+                <div class="route-time">47 min</div>
+            </a>
+            <a href="/route/denver-to-edgewater/" class="route-card">
+                <div><div class="route-title">Edgewater</div><div class="route-meta">19 miles</div></div>
+                <div class="route-time">40 min</div>
+            </a>
+            <a href="/route/denver-to-golden/" class="route-card">
+                <div><div class="route-title">Golden</div><div class="route-meta">29 miles</div></div>
+                <div class="route-time">1h 2min</div>
+            </a>
+            <a href="/route/denver-to-morrison/" class="route-card">
+                <div><div class="route-title">Morrison</div><div class="route-meta">29 miles</div></div>
+                <div class="route-time">1h 2min</div>
+            </a>
+            <a href="/route/denver-to-evergreen/" class="route-card">
+                <div><div class="route-title">Evergreen</div><div class="route-meta">31 miles</div></div>
+                <div class="route-time">1h 6min</div>
+            </a>
+            <a href="/route/denver-to-conifer/" class="route-card">
+                <div><div class="route-title">Conifer</div><div class="route-meta">32 miles</div></div>
+                <div class="route-time">1h 8min</div>
+            </a>
+            <a href="/route/denver-to-bailey/" class="route-card">
+                <div><div class="route-title">Bailey</div><div class="route-meta">43 miles</div></div>
+                <div class="route-time">1h 32min</div>
+            </a>
+            <a href="/route/denver-to-parker/" class="route-card">
+                <div><div class="route-title">Parker</div><div class="route-meta">38 miles</div></div>
+                <div class="route-time">1h 21min</div>
+            </a>
+            <a href="/route/denver-to-castle-rock/" class="route-card">
+                <div><div class="route-title">Castle Rock</div><div class="route-meta">31 miles</div></div>
+                <div class="route-time">1h 6min</div>
+            </a>
+            <a href="/route/denver-to-lone-tree/" class="route-card">
+                <div><div class="route-title">Lone Tree</div><div class="route-meta">30 miles</div></div>
+                <div class="route-time">1h 4min</div>
+            </a>
+            <a href="/route/denver-to-highlands-ranch/" class="route-card">
+                <div><div class="route-title">Highlands Ranch</div><div class="route-meta">40 miles</div></div>
+                <div class="route-time">1h 25min</div>
+            </a>
+            <a href="/route/denver-to-littleton/" class="route-card">
+                <div><div class="route-title">Littleton</div><div class="route-meta">34 miles</div></div>
+                <div class="route-time">1h 12min</div>
+            </a>
+            <a href="/route/denver-to-englewood/" class="route-card">
+                <div><div class="route-title">Englewood</div><div class="route-meta">38 miles</div></div>
+                <div class="route-time">1h 21min</div>
+            </a>
+            <a href="/route/denver-to-cherry-creek/" class="route-card">
+                <div><div class="route-title">Cherry Creek</div><div class="route-meta">35 miles</div></div>
+                <div class="route-time">1h 15min</div>
+            </a></div>
+    </div>
+    <footer><p>© 2026 HowLongDrive.com</p></footer>
+</body>
+</html>
