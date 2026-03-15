@@ -3,329 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Cities - Driving Times | HowLongDrive</title>
-    <meta name="description" content="Browse driving times from 832 US cities. Find routes, distances, and travel times.">
+    <title>Cities - Driving Routes by City | HowLongDrive</title>
+    <meta name="description" content="Browse 346 cities. Find driving routes from any city.">
     <link rel="canonical" href="https://howlongdrive.com/cities/">
     <link rel="icon" href="/favicon.ico">
     <style>
-        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        :root { --primary: #4B6E93; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
         header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-        .logo img { height: 60px; }
+        .logo { font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 100px; }
         nav { display: flex; gap: 1.5rem; }
-        nav a { color: var(--muted); text-decoration: none; }
-        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
-        h1 { text-align: center; padding: 2rem; font-size: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; padding: 1rem 0 3rem; }
-        .card { background: var(--card); padding: 1.25rem; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .card h3 { color: var(--primary); margin-bottom: 0.25rem; }
-        .meta { color: var(--muted); font-size: 0.875rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        .ev-badge { background: var(--green); color: #fff; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
+        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { display: none; } }
+        h1 { font-size: 2rem; margin: 2rem 0 0.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        h1 .icon { width: 32px; height: 32px; color: var(--primary); }
+        .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
+        .stats { display: flex; gap: 2rem; margin: 1rem 0 2rem; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.8rem; color: var(--muted); }
+        .search-box { background: var(--card); padding: 1rem; border-radius: 0.75rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .search-input { width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .section { margin-bottom: 2rem; }
+        .section h2 { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .section h2 .icon { width: 18px; height: 18px; color: var(--primary); }
+        .cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; }
+        .city-card { background: var(--card); border-radius: 0.5rem; padding: 1rem; text-decoration: none; color: inherit; border: 1px solid var(--border); text-align: center; transition: all 0.15s; }
+        .city-card:hover { border-color: var(--primary); background: #f0f9ff; }
+        .city-name { font-weight: 600; font-size: 0.95rem; }
+        .city-meta { color: var(--muted); font-size: 0.75rem; margin-top: 0.25rem; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .hidden { display: none !important; }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-NXC7PNTC4G")</script>
 </head>
 <body>
     <header><div class="container header-inner">
-        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="">HowLongDrive</a>
-        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">⚡ EV</a></nav>
+        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
+        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
     </div></header>
     <div class="container">
-        <h1>📍 All Cities (289)</h1>
-        <div class="grid"><a href="/cities/denver/" class="card"><h3>Denver</h3><div class="meta">96 routes</div></a>
-<a href="/cities/new-york/" class="card"><h3>New York</h3><div class="meta">95 routes</div></a>
-<a href="/cities/boston/" class="card"><h3>Boston</h3><div class="meta">91 routes</div></a>
-<a href="/cities/phoenix/" class="card"><h3>Phoenix</h3><div class="meta">81 routes</div></a>
-<a href="/cities/san-francisco/" class="card"><h3>San Francisco</h3><div class="meta">80 routes</div></a>
-<a href="/cities/los-angeles/" class="card"><h3>Los Angeles</h3><div class="meta">79 routes</div></a>
-<a href="/cities/chicago/" class="card"><h3>Chicago</h3><div class="meta">77 routes</div></a>
-<a href="/cities/seattle/" class="card"><h3>Seattle</h3><div class="meta">77 routes</div></a>
-<a href="/cities/washington-dc/" class="card"><h3>Washington DC</h3><div class="meta">75 routes</div></a>
-<a href="/cities/atlanta/" class="card"><h3>Atlanta</h3><div class="meta">74 routes</div></a>
-<a href="/cities/dallas/" class="card"><h3>Dallas</h3><div class="meta">73 routes</div></a>
-<a href="/cities/philadelphia/" class="card"><h3>Philadelphia</h3><div class="meta">70 routes</div></a>
-<a href="/cities/miami/" class="card"><h3>Miami</h3><div class="meta">70 routes</div></a>
-<a href="/cities/houston/" class="card"><h3>Houston</h3><div class="meta">68 routes</div></a>
-<a href="/cities/minneapolis/" class="card"><h3>Minneapolis</h3><div class="meta">65 routes</div></a>
-<a href="/cities/san-antonio/" class="card"><h3>San Antonio</h3><div class="meta">62 routes</div></a>
-<a href="/cities/san-diego/" class="card"><h3>San Diego</h3><div class="meta">62 routes</div></a>
-<a href="/cities/san-jose/" class="card"><h3>San Jose</h3><div class="meta">60 routes</div></a>
-<a href="/cities/detroit/" class="card"><h3>Detroit</h3><div class="meta">60 routes</div></a>
-<a href="/cities/austin/" class="card"><h3>Austin</h3><div class="meta">59 routes</div></a>
-<a href="/cities/las-vegas/" class="card"><h3>Las Vegas</h3><div class="meta">45 routes</div></a>
-<a href="/cities/salt-lake-city/" class="card"><h3>Salt Lake City</h3><div class="meta">45 routes</div></a>
-<a href="/cities/nashville/" class="card"><h3>Nashville</h3><div class="meta">38 routes</div></a>
-<a href="/cities/orlando/" class="card"><h3>Orlando</h3><div class="meta">35 routes</div></a>
-<a href="/cities/baltimore/" class="card"><h3>Baltimore</h3><div class="meta">35 routes</div></a>
-<a href="/cities/new-orleans/" class="card"><h3>New Orleans</h3><div class="meta">34 routes</div></a>
-<a href="/cities/portland/" class="card"><h3>Portland</h3><div class="meta">33 routes</div></a>
-<a href="/cities/cleveland/" class="card"><h3>Cleveland</h3><div class="meta">30 routes</div></a>
-<a href="/cities/tampa/" class="card"><h3>Tampa</h3><div class="meta">29 routes</div></a>
-<a href="/cities/albuquerque/" class="card"><h3>Albuquerque</h3><div class="meta">17 routes</div></a>
-<a href="/cities/boise/" class="card"><h3>Boise</h3><div class="meta">11 routes</div></a>
-<a href="/cities/kansas-city/" class="card"><h3>Kansas City</h3><div class="meta">10 routes</div></a>
-<a href="/cities/memphis/" class="card"><h3>Memphis</h3><div class="meta">9 routes</div></a>
-<a href="/cities/el-paso/" class="card"><h3>El Paso</h3><div class="meta">9 routes</div></a>
-<a href="/cities/hartford/" class="card"><h3>Hartford</h3><div class="meta">8 routes</div></a>
-<a href="/cities/richmond/" class="card"><h3>Richmond</h3><div class="meta">8 routes</div></a>
-<a href="/cities/spokane/" class="card"><h3>Spokane</h3><div class="meta">7 routes</div></a>
-<a href="/cities/birmingham/" class="card"><h3>Birmingham</h3><div class="meta">7 routes</div></a>
-<a href="/cities/portland-me/" class="card"><h3>Portland ME</h3><div class="meta">7 routes</div></a>
-<a href="/cities/burlington-vt/" class="card"><h3>Burlington VT</h3><div class="meta">7 routes</div></a>
-<a href="/cities/pittsburgh/" class="card"><h3>Pittsburgh</h3><div class="meta">6 routes</div></a>
-<a href="/cities/arlington/" class="card"><h3>Arlington</h3><div class="meta">6 routes</div></a>
-<a href="/cities/omaha/" class="card"><h3>Omaha</h3><div class="meta">6 routes</div></a>
-<a href="/cities/charleston/" class="card"><h3>Charleston</h3><div class="meta">6 routes</div></a>
-<a href="/cities/norfolk/" class="card"><h3>Norfolk</h3><div class="meta">6 routes</div></a>
-<a href="/cities/knoxville/" class="card"><h3>Knoxville</h3><div class="meta">6 routes</div></a>
-<a href="/cities/louisville/" class="card"><h3>Louisville</h3><div class="meta">6 routes</div></a>
-<a href="/cities/new-haven/" class="card"><h3>New Haven</h3><div class="meta">6 routes</div></a>
-<a href="/cities/syracuse/" class="card"><h3>Syracuse</h3><div class="meta">6 routes</div></a>
-<a href="/cities/charlotte/" class="card"><h3>Charlotte</h3><div class="meta">5 routes</div></a>
-<a href="/cities/albany/" class="card"><h3>Albany</h3><div class="meta">5 routes</div></a>
-<a href="/cities/sacramento/" class="card"><h3>Sacramento</h3><div class="meta">5 routes</div></a>
-<a href="/cities/oklahoma-city/" class="card"><h3>Oklahoma City</h3><div class="meta">5 routes</div></a>
-<a href="/cities/tucson/" class="card"><h3>Tucson</h3><div class="meta">5 routes</div></a>
-<a href="/cities/reno/" class="card"><h3>Reno</h3><div class="meta">5 routes</div></a>
-<a href="/cities/providence/" class="card"><h3>Providence</h3><div class="meta">5 routes</div></a>
-<a href="/cities/little-rock/" class="card"><h3>Little Rock</h3><div class="meta">5 routes</div></a>
-<a href="/cities/great-smoky-mountains/" class="card"><h3>Great Smoky Mountains</h3><div class="meta">5 routes</div></a>
-<a href="/cities/lax/" class="card"><h3>LAX</h3><div class="meta">5 routes</div></a>
-<a href="/cities/santa-fe/" class="card"><h3>Santa Fe</h3><div class="meta">5 routes</div></a>
-<a href="/cities/des-moines/" class="card"><h3>Des Moines</h3><div class="meta">5 routes</div></a>
-<a href="/cities/pensacola/" class="card"><h3>Pensacola</h3><div class="meta">5 routes</div></a>
-<a href="/cities/savannah/" class="card"><h3>Savannah</h3><div class="meta">5 routes</div></a>
-<a href="/cities/billings/" class="card"><h3>Billings</h3><div class="meta">5 routes</div></a>
-<a href="/cities/cheyenne/" class="card"><h3>Cheyenne</h3><div class="meta">5 routes</div></a>
-<a href="/cities/montreal/" class="card"><h3>Montreal</h3><div class="meta">5 routes</div></a>
-<a href="/cities/wilmington-de/" class="card"><h3>Wilmington DE</h3><div class="meta">5 routes</div></a>
-<a href="/cities/buffalo/" class="card"><h3>Buffalo</h3><div class="meta">5 routes</div></a>
-<a href="/cities/harrisburg/" class="card"><h3>Harrisburg</h3><div class="meta">5 routes</div></a>
-<a href="/cities/jacksonville/" class="card"><h3>Jacksonville</h3><div class="meta">4 routes</div></a>
-<a href="/cities/columbus/" class="card"><h3>Columbus</h3><div class="meta">4 routes</div></a>
-<a href="/cities/cincinnati/" class="card"><h3>Cincinnati</h3><div class="meta">4 routes</div></a>
-<a href="/cities/aurora/" class="card"><h3>Aurora</h3><div class="meta">4 routes</div></a>
-<a href="/cities/fort-lauderdale/" class="card"><h3>Fort Lauderdale</h3><div class="meta">4 routes</div></a>
-<a href="/cities/scottsdale/" class="card"><h3>Scottsdale</h3><div class="meta">4 routes</div></a>
-<a href="/cities/palo-alto/" class="card"><h3>Palo Alto</h3><div class="meta">4 routes</div></a>
-<a href="/cities/death-valley/" class="card"><h3>Death Valley</h3><div class="meta">4 routes</div></a>
-<a href="/cities/jackson/" class="card"><h3>Jackson</h3><div class="meta">4 routes</div></a>
-<a href="/cities/mobile/" class="card"><h3>Mobile</h3><div class="meta">4 routes</div></a>
-<a href="/cities/tallahassee/" class="card"><h3>Tallahassee</h3><div class="meta">4 routes</div></a>
-<a href="/cities/myrtle-beach/" class="card"><h3>Myrtle Beach</h3><div class="meta">4 routes</div></a>
-<a href="/cities/chattanooga/" class="card"><h3>Chattanooga</h3><div class="meta">4 routes</div></a>
-<a href="/cities/lexington/" class="card"><h3>Lexington</h3><div class="meta">4 routes</div></a>
-<a href="/cities/madison/" class="card"><h3>Madison</h3><div class="meta">4 routes</div></a>
-<a href="/cities/rapid-city/" class="card"><h3>Rapid City</h3><div class="meta">4 routes</div></a>
-<a href="/cities/missoula/" class="card"><h3>Missoula</h3><div class="meta">4 routes</div></a>
-<a href="/cities/yellowstone/" class="card"><h3>Yellowstone</h3><div class="meta">4 routes</div></a>
-<a href="/cities/cape-cod/" class="card"><h3>Cape Cod</h3><div class="meta">4 routes</div></a>
-<a href="/cities/bar-harbor/" class="card"><h3>Bar Harbor</h3><div class="meta">4 routes</div></a>
-<a href="/cities/casper/" class="card"><h3>Casper</h3><div class="meta">4 routes</div></a>
-<a href="/cities/bangor/" class="card"><h3>Bangor</h3><div class="meta">4 routes</div></a>
-<a href="/cities/manchester-nh/" class="card"><h3>Manchester NH</h3><div class="meta">4 routes</div></a>
-<a href="/cities/charleston-wv/" class="card"><h3>Charleston WV</h3><div class="meta">4 routes</div></a>
-<a href="/cities/plymouth/" class="card"><h3>Plymouth</h3><div class="meta">4 routes</div></a>
-<a href="/cities/toronto/" class="card"><h3>Toronto</h3><div class="meta">4 routes</div></a>
-<a href="/cities/milwaukee/" class="card"><h3>Milwaukee</h3><div class="meta">3 routes</div></a>
-<a href="/cities/indianapolis/" class="card"><h3>Indianapolis</h3><div class="meta">3 routes</div></a>
-<a href="/cities/st-louis/" class="card"><h3>St Louis</h3><div class="meta">3 routes</div></a>
-<a href="/cities/raleigh/" class="card"><h3>Raleigh</h3><div class="meta">3 routes</div></a>
-<a href="/cities/santa-monica/" class="card"><h3>Santa Monica</h3><div class="meta">3 routes</div></a>
-<a href="/cities/long-beach/" class="card"><h3>Long Beach</h3><div class="meta">3 routes</div></a>
-<a href="/cities/anaheim/" class="card"><h3>Anaheim</h3><div class="meta">3 routes</div></a>
-<a href="/cities/pasadena/" class="card"><h3>Pasadena</h3><div class="meta">3 routes</div></a>
-<a href="/cities/glendale/" class="card"><h3>Glendale</h3><div class="meta">3 routes</div></a>
-<a href="/cities/fort-worth/" class="card"><h3>Fort Worth</h3><div class="meta">3 routes</div></a>
-<a href="/cities/miami-beach/" class="card"><h3>Miami Beach</h3><div class="meta">3 routes</div></a>
-<a href="/cities/tempe/" class="card"><h3>Tempe</h3><div class="meta">3 routes</div></a>
-<a href="/cities/oakland/" class="card"><h3>Oakland</h3><div class="meta">3 routes</div></a>
-<a href="/cities/fremont/" class="card"><h3>Fremont</h3><div class="meta">3 routes</div></a>
-<a href="/cities/san-mateo/" class="card"><h3>San Mateo</h3><div class="meta">3 routes</div></a>
-<a href="/cities/bellevue/" class="card"><h3>Bellevue</h3><div class="meta">3 routes</div></a>
-<a href="/cities/tacoma/" class="card"><h3>Tacoma</h3><div class="meta">3 routes</div></a>
-<a href="/cities/everett/" class="card"><h3>Everett</h3><div class="meta">3 routes</div></a>
-<a href="/cities/boulder/" class="card"><h3>Boulder</h3><div class="meta">3 routes</div></a>
-<a href="/cities/lakewood/" class="card"><h3>Lakewood</h3><div class="meta">3 routes</div></a>
-<a href="/cities/cambridge/" class="card"><h3>Cambridge</h3><div class="meta">3 routes</div></a>
-<a href="/cities/jfk/" class="card"><h3>JFK</h3><div class="meta">3 routes</div></a>
-<a href="/cities/dfw/" class="card"><h3>DFW</h3><div class="meta">3 routes</div></a>
-<a href="/cities/sfo/" class="card"><h3>SFO</h3><div class="meta">3 routes</div></a>
-<a href="/cities/mia/" class="card"><h3>MIA</h3><div class="meta">3 routes</div></a>
-<a href="/cities/sea/" class="card"><h3>SEA</h3><div class="meta">3 routes</div></a>
-<a href="/cities/phx/" class="card"><h3>PHX</h3><div class="meta">3 routes</div></a>
-<a href="/cities/mco/" class="card"><h3>MCO</h3><div class="meta">3 routes</div></a>
-<a href="/cities/manhattan/" class="card"><h3>Manhattan</h3><div class="meta">3 routes</div></a>
-<a href="/cities/tulsa/" class="card"><h3>Tulsa</h3><div class="meta">3 routes</div></a>
-<a href="/cities/wichita/" class="card"><h3>Wichita</h3><div class="meta">3 routes</div></a>
-<a href="/cities/virginia-beach/" class="card"><h3>Virginia Beach</h3><div class="meta">3 routes</div></a>
-<a href="/cities/green-bay/" class="card"><h3>Green Bay</h3><div class="meta">3 routes</div></a>
-<a href="/cities/sioux-falls/" class="card"><h3>Sioux Falls</h3><div class="meta">3 routes</div></a>
-<a href="/cities/glacier-national-park/" class="card"><h3>Glacier National Park</h3><div class="meta">3 routes</div></a>
-<a href="/cities/acadia/" class="card"><h3>Acadia</h3><div class="meta">3 routes</div></a>
-<a href="/cities/bryce-canyon/" class="card"><h3>Bryce Canyon</h3><div class="meta">3 routes</div></a>
-<a href="/cities/carlsbad-caverns/" class="card"><h3>Carlsbad Caverns</h3><div class="meta">3 routes</div></a>
-<a href="/cities/mammoth-cave/" class="card"><h3>Mammoth Cave</h3><div class="meta">3 routes</div></a>
-<a href="/cities/crater-lake/" class="card"><h3>Crater Lake</h3><div class="meta">3 routes</div></a>
-<a href="/cities/redwood/" class="card"><h3>Redwood</h3><div class="meta">3 routes</div></a>
-<a href="/cities/sequoia/" class="card"><h3>Sequoia</h3><div class="meta">3 routes</div></a>
-<a href="/cities/big-bend/" class="card"><h3>Big Bend</h3><div class="meta">3 routes</div></a>
-<a href="/cities/shenandoah/" class="card"><h3>Shenandoah</h3><div class="meta">3 routes</div></a>
-<a href="/cities/grand-teton/" class="card"><h3>Grand Teton</h3><div class="meta">3 routes</div></a>
-<a href="/cities/badlands/" class="card"><h3>Badlands</h3><div class="meta">3 routes</div></a>
-<a href="/cities/mesa-verde/" class="card"><h3>Mesa Verde</h3><div class="meta">3 routes</div></a>
-<a href="/cities/petrified-forest/" class="card"><h3>Petrified Forest</h3><div class="meta">3 routes</div></a>
-<a href="/cities/flagstaff/" class="card"><h3>Flagstaff</h3><div class="meta">3 routes</div></a>
-<a href="/cities/canyonlands/" class="card"><h3>Canyonlands</h3><div class="meta">3 routes</div></a>
-<a href="/cities/capitol-reef/" class="card"><h3>Capitol Reef</h3><div class="meta">3 routes</div></a>
-<a href="/cities/black-canyon/" class="card"><h3>Black Canyon</h3><div class="meta">3 routes</div></a>
-<a href="/cities/hot-springs/" class="card"><h3>Hot Springs</h3><div class="meta">3 routes</div></a>
-<a href="/cities/jackson-hole/" class="card"><h3>Jackson Hole</h3><div class="meta">3 routes</div></a>
-<a href="/cities/telluride/" class="card"><h3>Telluride</h3><div class="meta">3 routes</div></a>
-<a href="/cities/big-sky/" class="card"><h3>Big Sky</h3><div class="meta">3 routes</div></a>
-<a href="/cities/sun-valley/" class="card"><h3>Sun Valley</h3><div class="meta">3 routes</div></a>
-<a href="/cities/mammoth-lakes/" class="card"><h3>Mammoth Lakes</h3><div class="meta">3 routes</div></a>
-<a href="/cities/taos-ski-valley/" class="card"><h3>Taos Ski Valley</h3><div class="meta">3 routes</div></a>
-<a href="/cities/whitefish/" class="card"><h3>Whitefish</h3><div class="meta">3 routes</div></a>
-<a href="/cities/stowe/" class="card"><h3>Stowe</h3><div class="meta">3 routes</div></a>
-<a href="/cities/marthas-vineyard/" class="card"><h3>Marthas Vineyard</h3><div class="meta">3 routes</div></a>
-<a href="/cities/outer-banks/" class="card"><h3>Outer Banks</h3><div class="meta">3 routes</div></a>
-<a href="/cities/hilton-head/" class="card"><h3>Hilton Head</h3><div class="meta">3 routes</div></a>
-<a href="/cities/moab/" class="card"><h3>Moab</h3><div class="meta">3 routes</div></a>
-<a href="/cities/monument-valley/" class="card"><h3>Monument Valley</h3><div class="meta">3 routes</div></a>
-<a href="/cities/antelope-canyon/" class="card"><h3>Antelope Canyon</h3><div class="meta">3 routes</div></a>
-<a href="/cities/white-sands/" class="card"><h3>White Sands</h3><div class="meta">3 routes</div></a>
-<a href="/cities/horseshoe-bend/" class="card"><h3>Horseshoe Bend</h3><div class="meta">3 routes</div></a>
-<a href="/cities/augusta/" class="card"><h3>Augusta</h3><div class="meta">3 routes</div></a>
-<a href="/cities/rutland/" class="card"><h3>Rutland</h3><div class="meta">3 routes</div></a>
-<a href="/cities/concord-nh/" class="card"><h3>Concord NH</h3><div class="meta">3 routes</div></a>
-<a href="/cities/huntington-wv/" class="card"><h3>Huntington WV</h3><div class="meta">3 routes</div></a>
-<a href="/cities/newport/" class="card"><h3>Newport</h3><div class="meta">3 routes</div></a>
-<a href="/cities/bridgeport/" class="card"><h3>Bridgeport</h3><div class="meta">3 routes</div></a>
-<a href="/cities/springfield-ma/" class="card"><h3>Springfield MA</h3><div class="meta">3 routes</div></a>
-<a href="/cities/dover/" class="card"><h3>Dover</h3><div class="meta">3 routes</div></a>
-<a href="/cities/rehoboth-beach/" class="card"><h3>Rehoboth Beach</h3><div class="meta">3 routes</div></a>
-<a href="/cities/rochester-ny/" class="card"><h3>Rochester NY</h3><div class="meta">3 routes</div></a>
-<a href="/cities/binghamton/" class="card"><h3>Binghamton</h3><div class="meta">3 routes</div></a>
-<a href="/cities/scranton/" class="card"><h3>Scranton</h3><div class="meta">3 routes</div></a>
-<a href="/cities/saratoga-springs/" class="card"><h3>Saratoga Springs</h3><div class="meta">3 routes</div></a>
-<a href="/cities/lake-placid/" class="card"><h3>Lake Placid</h3><div class="meta">3 routes</div></a>
-<a href="/cities/state-college/" class="card"><h3>State College</h3><div class="meta">3 routes</div></a>
-<a href="/cities/erie-pa/" class="card"><h3>Erie PA</h3><div class="meta">3 routes</div></a>
-<a href="/cities/gettysburg/" class="card"><h3>Gettysburg</h3><div class="meta">3 routes</div></a>
-<a href="/cities/burbank/" class="card"><h3>Burbank</h3><div class="meta">2 routes</div></a>
-<a href="/cities/irvine/" class="card"><h3>Irvine</h3><div class="meta">2 routes</div></a>
-<a href="/cities/ontario/" class="card"><h3>Ontario</h3><div class="meta">2 routes</div></a>
-<a href="/cities/newark/" class="card"><h3>Newark</h3><div class="meta">2 routes</div></a>
-<a href="/cities/jersey-city/" class="card"><h3>Jersey City</h3><div class="meta">2 routes</div></a>
-<a href="/cities/stamford/" class="card"><h3>Stamford</h3><div class="meta">2 routes</div></a>
-<a href="/cities/white-plains/" class="card"><h3>White Plains</h3><div class="meta">2 routes</div></a>
-<a href="/cities/yonkers/" class="card"><h3>Yonkers</h3><div class="meta">2 routes</div></a>
-<a href="/cities/hoboken/" class="card"><h3>Hoboken</h3><div class="meta">2 routes</div></a>
-<a href="/cities/new-rochelle/" class="card"><h3>New Rochelle</h3><div class="meta">2 routes</div></a>
-<a href="/cities/naperville/" class="card"><h3>Naperville</h3><div class="meta">2 routes</div></a>
-<a href="/cities/evanston/" class="card"><h3>Evanston</h3><div class="meta">2 routes</div></a>
-<a href="/cities/schaumburg/" class="card"><h3>Schaumburg</h3><div class="meta">2 routes</div></a>
-<a href="/cities/oak-park/" class="card"><h3>Oak Park</h3><div class="meta">2 routes</div></a>
-<a href="/cities/joliet/" class="card"><h3>Joliet</h3><div class="meta">2 routes</div></a>
-<a href="/cities/waukegan/" class="card"><h3>Waukegan</h3><div class="meta">2 routes</div></a>
-<a href="/cities/plano/" class="card"><h3>Plano</h3><div class="meta">2 routes</div></a>
-<a href="/cities/irving/" class="card"><h3>Irving</h3><div class="meta">2 routes</div></a>
-<a href="/cities/frisco/" class="card"><h3>Frisco</h3><div class="meta">2 routes</div></a>
-<a href="/cities/mckinney/" class="card"><h3>McKinney</h3><div class="meta">2 routes</div></a>
-<a href="/cities/denton/" class="card"><h3>Denton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/galveston/" class="card"><h3>Galveston</h3><div class="meta">2 routes</div></a>
-<a href="/cities/the-woodlands/" class="card"><h3>The Woodlands</h3><div class="meta">2 routes</div></a>
-<a href="/cities/sugar-land/" class="card"><h3>Sugar Land</h3><div class="meta">2 routes</div></a>
-<a href="/cities/katy/" class="card"><h3>Katy</h3><div class="meta">2 routes</div></a>
-<a href="/cities/pearland/" class="card"><h3>Pearland</h3><div class="meta">2 routes</div></a>
-<a href="/cities/baytown/" class="card"><h3>Baytown</h3><div class="meta">2 routes</div></a>
-<a href="/cities/alexandria/" class="card"><h3>Alexandria</h3><div class="meta">2 routes</div></a>
-<a href="/cities/bethesda/" class="card"><h3>Bethesda</h3><div class="meta">2 routes</div></a>
-<a href="/cities/silver-spring/" class="card"><h3>Silver Spring</h3><div class="meta">2 routes</div></a>
-<a href="/cities/rockville/" class="card"><h3>Rockville</h3><div class="meta">2 routes</div></a>
-<a href="/cities/tysons/" class="card"><h3>Tysons</h3><div class="meta">2 routes</div></a>
-<a href="/cities/reston/" class="card"><h3>Reston</h3><div class="meta">2 routes</div></a>
-<a href="/cities/west-palm-beach/" class="card"><h3>West Palm Beach</h3><div class="meta">2 routes</div></a>
-<a href="/cities/boca-raton/" class="card"><h3>Boca Raton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/hollywood/" class="card"><h3>Hollywood</h3><div class="meta">2 routes</div></a>
-<a href="/cities/coral-gables/" class="card"><h3>Coral Gables</h3><div class="meta">2 routes</div></a>
-<a href="/cities/hialeah/" class="card"><h3>Hialeah</h3><div class="meta">2 routes</div></a>
-<a href="/cities/camden/" class="card"><h3>Camden</h3><div class="meta">2 routes</div></a>
-<a href="/cities/wilmington/" class="card"><h3>Wilmington</h3><div class="meta">2 routes</div></a>
-<a href="/cities/trenton/" class="card"><h3>Trenton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/king-of-prussia/" class="card"><h3>King of Prussia</h3><div class="meta">2 routes</div></a>
-<a href="/cities/cherry-hill/" class="card"><h3>Cherry Hill</h3><div class="meta">2 routes</div></a>
-<a href="/cities/marietta/" class="card"><h3>Marietta</h3><div class="meta">2 routes</div></a>
-<a href="/cities/decatur/" class="card"><h3>Decatur</h3><div class="meta">2 routes</div></a>
-<a href="/cities/sandy-springs/" class="card"><h3>Sandy Springs</h3><div class="meta">2 routes</div></a>
-<a href="/cities/alpharetta/" class="card"><h3>Alpharetta</h3><div class="meta">2 routes</div></a>
-<a href="/cities/roswell/" class="card"><h3>Roswell</h3><div class="meta">2 routes</div></a>
-<a href="/cities/kennesaw/" class="card"><h3>Kennesaw</h3><div class="meta">2 routes</div></a>
-<a href="/cities/mesa/" class="card"><h3>Mesa</h3><div class="meta">2 routes</div></a>
-<a href="/cities/chandler/" class="card"><h3>Chandler</h3><div class="meta">2 routes</div></a>
-<a href="/cities/gilbert/" class="card"><h3>Gilbert</h3><div class="meta">2 routes</div></a>
-<a href="/cities/berkeley/" class="card"><h3>Berkeley</h3><div class="meta">2 routes</div></a>
-<a href="/cities/daly-city/" class="card"><h3>Daly City</h3><div class="meta">2 routes</div></a>
-<a href="/cities/walnut-creek/" class="card"><h3>Walnut Creek</h3><div class="meta">2 routes</div></a>
-<a href="/cities/redmond/" class="card"><h3>Redmond</h3><div class="meta">2 routes</div></a>
-<a href="/cities/kirkland/" class="card"><h3>Kirkland</h3><div class="meta">2 routes</div></a>
-<a href="/cities/renton/" class="card"><h3>Renton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/kent/" class="card"><h3>Kent</h3><div class="meta">2 routes</div></a>
-<a href="/cities/arvada/" class="card"><h3>Arvada</h3><div class="meta">2 routes</div></a>
-<a href="/cities/westminster/" class="card"><h3>Westminster</h3><div class="meta">2 routes</div></a>
-<a href="/cities/thornton/" class="card"><h3>Thornton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/fort-collins/" class="card"><h3>Fort Collins</h3><div class="meta">2 routes</div></a>
-<a href="/cities/quincy/" class="card"><h3>Quincy</h3><div class="meta">2 routes</div></a>
-<a href="/cities/somerville/" class="card"><h3>Somerville</h3><div class="meta">2 routes</div></a>
-<a href="/cities/newton/" class="card"><h3>Newton</h3><div class="meta">2 routes</div></a>
-<a href="/cities/brookline/" class="card"><h3>Brookline</h3><div class="meta">2 routes</div></a>
-<a href="/cities/grand-canyon/" class="card"><h3>Grand Canyon</h3><div class="meta">2 routes</div></a>
-<a href="/cities/lake-tahoe/" class="card"><h3>Lake Tahoe</h3><div class="meta">2 routes</div></a>
-<a href="/cities/disney-world/" class="card"><h3>Disney World</h3><div class="meta">2 routes</div></a>
-<a href="/cities/universal-orlando/" class="card"><h3>Universal Orlando</h3><div class="meta">2 routes</div></a>
-<a href="/cities/gatlinburg/" class="card"><h3>Gatlinburg</h3><div class="meta">2 routes</div></a>
-<a href="/cities/ord/" class="card"><h3>ORD</h3><div class="meta">2 routes</div></a>
-<a href="/cities/atl/" class="card"><h3>ATL</h3><div class="meta">2 routes</div></a>
-<a href="/cities/oak/" class="card"><h3>OAK</h3><div class="meta">2 routes</div></a>
-<a href="/cities/fll/" class="card"><h3>FLL</h3><div class="meta">2 routes</div></a>
-<a href="/cities/den/" class="card"><h3>DEN</h3><div class="meta">2 routes</div></a>
-<a href="/cities/bos/" class="card"><h3>BOS</h3><div class="meta">2 routes</div></a>
-<a href="/cities/las/" class="card"><h3>LAS</h3><div class="meta">2 routes</div></a>
-<a href="/cities/bwi/" class="card"><h3>BWI</h3><div class="meta">2 routes</div></a>
-<a href="/cities/grand-rapids/" class="card"><h3>Grand Rapids</h3><div class="meta">2 routes</div></a>
-<a href="/cities/duluth/" class="card"><h3>Duluth</h3><div class="meta">2 routes</div></a>
-<a href="/cities/honolulu/" class="card"><h3>Honolulu</h3><div class="meta">2 routes</div></a>
-<a href="/cities/steamboat-springs/" class="card"><h3>Steamboat Springs</h3><div class="meta">2 routes</div></a>
-<a href="/cities/crested-butte/" class="card"><h3>Crested Butte</h3><div class="meta">2 routes</div></a>
-<a href="/cities/burlington/" class="card"><h3>Burlington</h3><div class="meta">2 routes</div></a>
-<a href="/cities/killington/" class="card"><h3>Killington</h3><div class="meta">2 routes</div></a>
-<a href="/cities/nantucket/" class="card"><h3>Nantucket</h3><div class="meta">2 routes</div></a>
-<a href="/cities/laramie/" class="card"><h3>Laramie</h3><div class="meta">2 routes</div></a>
-<a href="/cities/montpelier/" class="card"><h3>Montpelier</h3><div class="meta">2 routes</div></a>
-<a href="/cities/portsmouth-nh/" class="card"><h3>Portsmouth NH</h3><div class="meta">2 routes</div></a>
-<a href="/cities/nashua/" class="card"><h3>Nashua</h3><div class="meta">2 routes</div></a>
-<a href="/cities/morgantown/" class="card"><h3>Morgantown</h3><div class="meta">2 routes</div></a>
-<a href="/cities/stamford-ct/" class="card"><h3>Stamford CT</h3><div class="meta">2 routes</div></a>
-<a href="/cities/ithaca/" class="card"><h3>Ithaca</h3><div class="meta">2 routes</div></a>
-<a href="/cities/niagara-falls-ca/" class="card"><h3>Niagara Falls CA</h3><div class="meta">2 routes</div></a>
-<a href="/cities/woodbridge/" class="card"><h3>Woodbridge</h3><div class="meta">2 routes</div></a>
-<a href="/cities/englewood/" class="card"><h3>Englewood</h3><div class="meta">2 routes</div></a>
-<a href="/cities/elgin/" class="card"><h3>Elgin</h3><div class="meta">2 routes</div></a>
-<a href="/cities/san-marcos/" class="card"><h3>San Marcos</h3><div class="meta">2 routes</div></a>
-<a href="/cities/sunnyvale/" class="card"><h3>Sunnyvale</h3><div class="meta">2 routes</div></a>
-<a href="/cities/santa-clara/" class="card"><h3>Santa Clara</h3><div class="meta">2 routes</div></a>
-<a href="/cities/mountain-view/" class="card"><h3>Mountain View</h3><div class="meta">2 routes</div></a>
-<a href="/cities/hayward/" class="card"><h3>Hayward</h3><div class="meta">2 routes</div></a>
-<a href="/cities/redwood-city/" class="card"><h3>Redwood City</h3><div class="meta">2 routes</div></a>
-<a href="/cities/menlo-park/" class="card"><h3>Menlo Park</h3><div class="meta">2 routes</div></a>
-<a href="/cities/evergreen/" class="card"><h3>Evergreen</h3><div class="meta">2 routes</div></a>
-<a href="/cities/college-park/" class="card"><h3>College Park</h3><div class="meta">2 routes</div></a>
-</div>
+        <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg> Browse by City</h1>
+        <p class="subtitle">Select a city to see all driving routes</p>
+        <div class="stats">
+            <div><div class="stat-value">346</div><div class="stat-label">Cities</div></div>
+            <div><div class="stat-value">1918</div><div class="stat-label">Routes</div></div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search cities..." id="search" oninput="filter()">
+        </div>
+        <div id="sections">
+            <div class="section"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg> West Coast</h2><div class="cities-grid"><a href="/city/albuquerque/" class="city-card"><div class="city-name">Albuquerque</div><div class="city-meta">13 routes</div></a><a href="/city/anchorage/" class="city-card"><div class="city-name">Anchorage</div><div class="city-meta">1 routes</div></a><a href="/city/boise/" class="city-card"><div class="city-name">Boise</div><div class="city-meta">11 routes</div></a><a href="/city/fresno/" class="city-card"><div class="city-name">Fresno</div><div class="city-meta">1 routes</div></a><a href="/city/honolulu/" class="city-card"><div class="city-name">Honolulu</div><div class="city-meta">2 routes</div></a><a href="/city/las-vegas/" class="city-card"><div class="city-name">Las Vegas</div><div class="city-meta">44 routes</div></a><a href="/city/los-angeles/" class="city-card"><div class="city-name">Los Angeles</div><div class="city-meta">49 routes</div></a><a href="/city/oakland/" class="city-card"><div class="city-name">Oakland</div><div class="city-meta">2 routes</div></a><a href="/city/phoenix/" class="city-card"><div class="city-name">Phoenix</div><div class="city-meta">48 routes</div></a><a href="/city/portland/" class="city-card"><div class="city-name">Portland</div><div class="city-meta">33 routes</div></a><a href="/city/reno/" class="city-card"><div class="city-name">Reno</div><div class="city-meta">4 routes</div></a><a href="/city/sacramento/" class="city-card"><div class="city-name">Sacramento</div><div class="city-meta">5 routes</div></a><a href="/city/san-diego/" class="city-card"><div class="city-name">San Diego</div><div class="city-meta">32 routes</div></a><a href="/city/san-francisco/" class="city-card"><div class="city-name">San Francisco</div><div class="city-meta">49 routes</div></a><a href="/city/seattle/" class="city-card"><div class="city-name">Seattle</div><div class="city-meta">46 routes</div></a><a href="/city/tucson/" class="city-card"><div class="city-name">Tucson</div><div class="city-meta">3 routes</div></a></div></div><div class="section"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg> Mountain</h2><div class="cities-grid"><a href="/city/aspen/" class="city-card"><div class="city-name">Aspen</div><div class="city-meta">1 routes</div></a><a href="/city/billings/" class="city-card"><div class="city-name">Billings</div><div class="city-meta">5 routes</div></a><a href="/city/boulder/" class="city-card"><div class="city-name">Boulder</div><div class="city-meta">2 routes</div></a><a href="/city/casper/" class="city-card"><div class="city-name">Casper</div><div class="city-meta">4 routes</div></a><a href="/city/cheyenne/" class="city-card"><div class="city-name">Cheyenne</div><div class="city-meta">5 routes</div></a><a href="/city/colorado-springs/" class="city-card"><div class="city-name">Colorado Springs</div><div class="city-meta">1 routes</div></a><a href="/city/denver/" class="city-card"><div class="city-name">Denver</div><div class="city-meta">65 routes</div></a><a href="/city/jackson-hole/" class="city-card"><div class="city-name">Jackson Hole</div><div class="city-meta">3 routes</div></a><a href="/city/missoula/" class="city-card"><div class="city-name">Missoula</div><div class="city-meta">4 routes</div></a><a href="/city/salt-lake-city/" class="city-card"><div class="city-name">Salt Lake City</div><div class="city-meta">45 routes</div></a><a href="/city/vail/" class="city-card"><div class="city-name">Vail</div><div class="city-meta">1 routes</div></a><a href="/city/yellowstone/" class="city-card"><div class="city-name">Yellowstone</div><div class="city-meta">4 routes</div></a></div></div><div class="section"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 1a3 3 0 006 0V7m0 1a3 3 0 006 0V7H3l2-4h14l2 4M5 21V10.87M19 21V10.87"/></svg> Midwest</h2><div class="cities-grid"><a href="/city/chicago/" class="city-card"><div class="city-name">Chicago</div><div class="city-meta">47 routes</div></a><a href="/city/cincinnati/" class="city-card"><div class="city-name">Cincinnati</div><div class="city-meta">4 routes</div></a><a href="/city/cleveland/" class="city-card"><div class="city-name">Cleveland</div><div class="city-meta">30 routes</div></a><a href="/city/columbus/" class="city-card"><div class="city-name">Columbus</div><div class="city-meta">4 routes</div></a><a href="/city/des-moines/" class="city-card"><div class="city-name">Des Moines</div><div class="city-meta">4 routes</div></a><a href="/city/detroit/" class="city-card"><div class="city-name">Detroit</div><div class="city-meta">30 routes</div></a><a href="/city/grand-rapids/" class="city-card"><div class="city-name">Grand Rapids</div><div class="city-meta">2 routes</div></a><a href="/city/indianapolis/" class="city-card"><div class="city-name">Indianapolis</div><div class="city-meta">3 routes</div></a><a href="/city/kansas-city/" class="city-card"><div class="city-name">Kansas City</div><div class="city-meta">10 routes</div></a><a href="/city/madison/" class="city-card"><div class="city-name">Madison</div><div class="city-meta">4 routes</div></a><a href="/city/milwaukee/" class="city-card"><div class="city-name">Milwaukee</div><div class="city-meta">3 routes</div></a><a href="/city/minneapolis/" class="city-card"><div class="city-name">Minneapolis</div><div class="city-meta">35 routes</div></a><a href="/city/omaha/" class="city-card"><div class="city-name">Omaha</div><div class="city-meta">5 routes</div></a><a href="/city/st-louis/" class="city-card"><div class="city-name">St Louis</div><div class="city-meta">3 routes</div></a></div></div><div class="section"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M17 18a5 5 0 00-10 0"/><path d="M12 9V2M4.22 10.22l1.42 1.42M1 18h2M21 18h2M18.36 11.64l1.42-1.42"/></svg> South</h2><div class="cities-grid"><a href="/city/atlanta/" class="city-card"><div class="city-name">Atlanta</div><div class="city-meta">44 routes</div></a><a href="/city/austin/" class="city-card"><div class="city-name">Austin</div><div class="city-meta">29 routes</div></a><a href="/city/birmingham/" class="city-card"><div class="city-name">Birmingham</div><div class="city-meta">5 routes</div></a><a href="/city/charlotte/" class="city-card"><div class="city-name">Charlotte</div><div class="city-meta">5 routes</div></a><a href="/city/dallas/" class="city-card"><div class="city-name">Dallas</div><div class="city-meta">43 routes</div></a><a href="/city/houston/" class="city-card"><div class="city-name">Houston</div><div class="city-meta">38 routes</div></a><a href="/city/jacksonville/" class="city-card"><div class="city-name">Jacksonville</div><div class="city-meta">4 routes</div></a><a href="/city/louisville/" class="city-card"><div class="city-name">Louisville</div><div class="city-meta">5 routes</div></a><a href="/city/memphis/" class="city-card"><div class="city-name">Memphis</div><div class="city-meta">8 routes</div></a><a href="/city/miami/" class="city-card"><div class="city-name">Miami</div><div class="city-meta">40 routes</div></a><a href="/city/nashville/" class="city-card"><div class="city-name">Nashville</div><div class="city-meta">37 routes</div></a><a href="/city/new-orleans/" class="city-card"><div class="city-name">New Orleans</div><div class="city-meta">34 routes</div></a><a href="/city/orlando/" class="city-card"><div class="city-name">Orlando</div><div class="city-meta">35 routes</div></a><a href="/city/raleigh/" class="city-card"><div class="city-name">Raleigh</div><div class="city-meta">3 routes</div></a><a href="/city/san-antonio/" class="city-card"><div class="city-name">San Antonio</div><div class="city-meta">30 routes</div></a><a href="/city/tampa/" class="city-card"><div class="city-name">Tampa</div><div class="city-meta">29 routes</div></a></div></div><div class="section"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9h1M9 13h1M9 17h1M14 13h1M14 17h1"/></svg> Northeast</h2><div class="cities-grid"><a href="/city/albany/" class="city-card"><div class="city-name">Albany</div><div class="city-meta">5 routes</div></a><a href="/city/baltimore/" class="city-card"><div class="city-name">Baltimore</div><div class="city-meta">35 routes</div></a><a href="/city/boston/" class="city-card"><div class="city-name">Boston</div><div class="city-meta">60 routes</div></a><a href="/city/buffalo/" class="city-card"><div class="city-name">Buffalo</div><div class="city-meta">5 routes</div></a><a href="/city/burlington-vt/" class="city-card"><div class="city-name">Burlington VT</div><div class="city-meta">6 routes</div></a><a href="/city/hartford/" class="city-card"><div class="city-name">Hartford</div><div class="city-meta">5 routes</div></a><a href="/city/manchester-nh/" class="city-card"><div class="city-name">Manchester NH</div><div class="city-meta">4 routes</div></a><a href="/city/montreal/" class="city-card"><div class="city-name">Montreal</div><div class="city-meta">4 routes</div></a><a href="/city/new-york/" class="city-card"><div class="city-name">New York</div><div class="city-meta">64 routes</div></a><a href="/city/philadelphia/" class="city-card"><div class="city-name">Philadelphia</div><div class="city-meta">40 routes</div></a><a href="/city/pittsburgh/" class="city-card"><div class="city-name">Pittsburgh</div><div class="city-meta">6 routes</div></a><a href="/city/portland-me/" class="city-card"><div class="city-name">Portland ME</div><div class="city-meta">7 routes</div></a><a href="/city/providence/" class="city-card"><div class="city-name">Providence</div><div class="city-meta">5 routes</div></a><a href="/city/rochester-ny/" class="city-card"><div class="city-name">Rochester NY</div><div class="city-meta">3 routes</div></a><a href="/city/syracuse/" class="city-card"><div class="city-name">Syracuse</div><div class="city-meta">6 routes</div></a><a href="/city/toronto/" class="city-card"><div class="city-name">Toronto</div><div class="city-meta">4 routes</div></a><a href="/city/washington-dc/" class="city-card"><div class="city-name">Washington DC</div><div class="city-meta">45 routes</div></a></div></div>
+        </div>
+        <div id="results" class="hidden"><h2>Search Results</h2><div class="cities-grid" id="results-grid"></div></div>
     </div>
-    <footer><p>© 2026 HowLongDrive.com</p></footer>
+    <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
+    <script>
+        const C=[["ATL", 2], ["Acadia", 3], ["Albany", 5], ["Albuquerque", 13], ["Alexandria", 1], ["Alpharetta", 1], ["Anaheim", 2], ["Anchorage", 1], ["Antelope Canyon", 3], ["Arches National Park", 1], ["Arlington", 3], ["Arvada", 1], ["Aspen", 1], ["Atlanta", 44], ["Atlantic City", 1], ["Augusta", 3], ["Aurora", 2], ["Austin", 29], ["BOS", 2], ["BWI", 2], ["Badlands", 3], ["Baltimore", 35], ["Bangor", 4], ["Bar Harbor", 4], ["Baytown", 1], ["Bellevue", 2], ["Berkeley", 1], ["Bethesda", 1], ["Big Bear Lake", 1], ["Big Bend", 3], ["Big Sky", 3], ["Billings", 5], ["Binghamton", 3], ["Birmingham", 5], ["Black Canyon", 3], ["Boca Raton", 1], ["Boise", 11], ["Boston", 60], ["Boulder", 2], ["Breckenridge", 1], ["Bridgeport", 3], ["Brookline", 1], ["Brooklyn", 1], ["Bryce Canyon", 3], ["Buffalo", 5], ["Burbank", 1], ["Burlington", 1], ["Burlington VT", 6], ["Cambridge", 2], ["Camden", 1], ["Canyonlands", 3], ["Cape Cod", 4], ["Capitol Reef", 3], ["Carlsbad Caverns", 3], ["Carmel", 1], ["Casper", 4], ["Chandler", 1], ["Charleston", 4], ["Charleston WV", 4], ["Charlotte", 5], ["Chattanooga", 3], ["Cherry Hill", 1], ["Cheyenne", 5], ["Chicago", 47], ["Cincinnati", 4], ["Clearwater Beach", 1], ["Cleveland", 30], ["Colorado Springs", 1], ["Columbus", 4], ["Concord NH", 3], ["Coral Gables", 1], ["Crater Lake", 3], ["Crested Butte", 2], ["DCA", 1], ["DEN", 2], ["DFW", 3], ["Dallas", 43], ["Daly City", 1], ["Daytona Beach", 1], ["Death Valley", 3], ["Decatur", 1], ["Denton", 1], ["Denver", 65], ["Des Moines", 4], ["Detroit", 30], ["Disney World", 2], ["Disneyland", 1], ["Dollywood", 1], ["Dover", 3], ["Downtown Atlanta", 1], ["Downtown Chicago", 1], ["Duluth", 1], ["EWR", 1], ["El Paso", 6], ["Erie PA", 3], ["Estes Park", 1], ["Evanston", 1], ["Everett", 1], ["Everglades", 1], ["FLL", 2], ["Fairbanks", 1], ["Fargo", 1], ["Flagstaff", 3], ["Fort Collins", 1], ["Fort Lauderdale", 3], ["Fort Worth", 2], ["Fremont", 1], ["Fresno", 1], ["Frisco", 1], ["Galveston", 1], ["Gatlinburg", 2], ["Gettysburg", 3], ["Gilbert", 1], ["Glacier National Park", 3], ["Glendale", 2], ["Grand Canyon", 2], ["Grand Rapids", 2], ["Grand Teton", 3], ["Great Smoky Mountains", 4], ["Green Bay", 3], ["HOU", 1], ["Hamptons", 1], ["Harrisburg", 5], ["Hartford", 5], ["Hialeah", 1], ["Hilton Head", 3], ["Hoboken", 1], ["Hollywood", 2], ["Honolulu", 2], ["Hoover Dam", 1], ["Horseshoe Bend", 3], ["Hot Springs", 3], ["Houston", 38], ["Huntington WV", 3], ["IAD", 1], ["IAH", 1], ["Indianapolis", 3], ["Irvine", 1], ["Irving", 1], ["Ithaca", 2], ["JFK", 3], ["Jackson", 3], ["Jackson Hole", 3], ["Jacksonville", 4], ["Jersey City", 1], ["Joliet", 1], ["Joshua Tree", 1], ["Kansas City", 10], ["Katy", 1], ["Kennedy Space Center", 1], ["Kennesaw", 1], ["Kent", 1], ["Key West", 1], ["Killington", 2], ["King of Prussia", 1], ["Kirkland", 1], ["Knoxville", 5], ["LAS", 2], ["LAX", 5], ["LGA", 1], ["Lake Geneva", 1], ["Lake Placid", 3], ["Lake Tahoe", 2], ["Lakewood", 1], ["Laramie", 2], ["Las Vegas", 44], ["Las Vegas Strip", 1], ["Leavenworth", 1], ["Legoland", 1], ["Lexington", 2], ["Little Rock", 4], ["Long Beach", 2], ["Long Island City", 1], ["Los Angeles", 49], ["Louisville", 5], ["Lowell", 1], ["MCO", 3], ["MDW", 1], ["MIA", 3], ["Madison", 4], ["Malibu", 1], ["Mammoth Cave", 3], ["Mammoth Lakes", 3], ["Manchester NH", 4], ["Manhattan", 3], ["Marietta", 1], ["Marthas Vineyard", 3], ["McKinney", 1], ["Memphis", 8], ["Mesa", 1], ["Mesa Verde", 3], ["Miami", 40], ["Miami Beach", 2], ["Milwaukee", 3], ["Minneapolis", 35], ["Missoula", 4], ["Moab", 3], ["Mobile", 3], ["Monterey", 1], ["Montpelier", 2], ["Montreal", 4], ["Monument Valley", 3], ["Morgantown", 2], ["Mount Rainier", 1], ["Mount Rushmore", 1], ["Muir Woods", 1], ["Myrtle Beach", 3], ["Nantucket", 2], ["Napa Valley", 1], ["Naperville", 1], ["Nashua", 2], ["Nashville", 37], ["New Haven", 5], ["New Orleans", 34], ["New Rochelle", 1], ["New York", 64], ["Newark", 1], ["Newport", 3], ["Newton", 1], ["Niagara Falls", 1], ["Niagara Falls CA", 2], ["Norfolk", 4], ["OAK", 2], ["ORD", 2], ["Oak Park", 1], ["Oakland", 2], ["Oklahoma City", 5], ["Olympic National Park", 1], ["Omaha", 5], ["Ontario", 1], ["Orlando", 35], ["Outer Banks", 3], ["PHX", 3], ["Palm Springs", 1], ["Palo Alto", 2], ["Park City", 1], ["Pasadena", 2], ["Pearl Harbor", 1], ["Pearland", 1], ["Pensacola", 3], ["Peoria", 1], ["Petrified Forest", 3], ["Philadelphia", 40], ["Phoenix", 48], ["Pittsburgh", 6], ["Plano", 1], ["Plymouth", 3], ["Portland", 33], ["Portland ME", 7], ["Portsmouth NH", 2], ["Providence", 5], ["Quincy", 1], ["Raleigh", 3], ["Rapid City", 4], ["Redmond", 1], ["Redwood", 3], ["Rehoboth Beach", 3], ["Reno", 4], ["Renton", 1], ["Reston", 1], ["Richmond", 6], ["Rochester NY", 3], ["Rockville", 1], ["Rocky Mountain NP", 1], ["Roswell", 1], ["Rutland", 3], ["SEA", 3], ["SFO", 3], ["Sacramento", 5], ["Salt Lake City", 45], ["San Antonio", 30], ["San Diego", 32], ["San Diego Zoo", 1], ["San Francisco", 49], ["San Jose", 30], ["San Mateo", 1], ["Sandy Springs", 1], ["Santa Barbara", 1], ["Santa Fe", 4], ["Santa Monica", 2], ["Saratoga Springs", 3], ["Savannah", 4], ["Schaumburg", 1], ["Scottsdale", 2], ["Scranton", 3], ["Seattle", 46], ["Sedona", 1], ["Sequoia", 3], ["Shenandoah", 3], ["Silver Spring", 1], ["Sioux Falls", 3], ["Snoqualmie Falls", 1], ["Somerville", 1], ["South Beach", 1], ["Spokane", 6], ["Springfield MA", 3], ["St Louis", 3], ["Stamford", 1], ["Stamford CT", 2], ["State College", 3], ["Statue of Liberty", 1], ["Steamboat Springs", 2], ["Stowe", 3], ["Sugar Land", 1], ["Sun Valley", 3], ["Sundance", 1], ["Syracuse", 6], ["Tacoma", 2], ["Tallahassee", 3], ["Tampa", 29], ["Taos", 1], ["Taos Ski Valley", 3], ["Telluride", 3], ["Tempe", 2], ["The Woodlands", 1], ["Thornton", 1], ["Tijuana", 1], ["Times Square", 1], ["Toronto", 4], ["Trenton", 1], ["Tucson", 3], ["Tulsa", 3], ["Tysons", 1], ["Universal Orlando", 2], ["Universal Studios", 1], ["Vail", 1], ["Vancouver", 1], ["Virginia Beach", 2], ["Waikiki", 1], ["Walnut Creek", 1], ["Washington DC", 45], ["Waukegan", 1], ["West Palm Beach", 1], ["Westminster", 1], ["White Plains", 1], ["White Sands", 3], ["Whitefish", 3], ["Wichita", 3], ["Wilmington", 2], ["Wilmington DE", 4], ["Wisconsin Dells", 1], ["Worcester", 1], ["Yellowstone", 4], ["Yonkers", 1], ["Yosemite", 1], ["Zion National Park", 1]];
+        function filter(){const q=document.getElementById('search').value.toLowerCase();document.getElementById('sections').classList.toggle('hidden',q.length>0);document.getElementById('results').classList.toggle('hidden',q.length<1);if(q.length<1)return;const m=C.filter(c=>c[0].toLowerCase().includes(q)).slice(0,30);document.getElementById('results-grid').innerHTML=m.map(c=>`<a href="/city/${c[0].toLowerCase().replace(/ /g,'-')}/" class="city-card"><div class="city-name">${c[0]}</div><div class="city-meta">${c[1]} routes</div></a>`).join('');}
+    </script>
 </body>
 </html>
