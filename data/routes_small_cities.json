@@ -1282,5 +1282,61 @@
     "to": "Honolulu",
     "miles": 5,
     "time": "15 min"
+  },
+  {
+    "from": "Pearl Harbor",
+    "to": "Waikiki",
+    "time": "0h 25min",
+    "miles": 12,
+    "minutes": 25
+  },
+  {
+    "from": "Pearl Harbor",
+    "to": "Diamond Head",
+    "time": "0h 35min",
+    "miles": 15,
+    "minutes": 35
+  },
+  {
+    "from": "Pearl Harbor",
+    "to": "North Shore",
+    "time": "0h 50min",
+    "miles": 28,
+    "minutes": 50
+  },
+  {
+    "from": "Pearl Harbor",
+    "to": "Kailua",
+    "time": "0h 40min",
+    "miles": 20,
+    "minutes": 40
+  },
+  {
+    "from": "Waikiki",
+    "to": "Pearl Harbor",
+    "time": "0h 25min",
+    "miles": 12,
+    "minutes": 25
+  },
+  {
+    "from": "Diamond Head",
+    "to": "Pearl Harbor",
+    "time": "0h 35min",
+    "miles": 15,
+    "minutes": 35
+  },
+  {
+    "from": "North Shore",
+    "to": "Pearl Harbor",
+    "time": "0h 50min",
+    "miles": 28,
+    "minutes": 50
+  },
+  {
+    "from": "Kailua",
+    "to": "Pearl Harbor",
+    "time": "0h 40min",
+    "miles": 20,
+    "minutes": 40
   }
 ]
