@@ -98,6 +98,13 @@ template = '''<!DOCTYPE html>
         footer {{ text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }}
         footer a {{ color: var(--primary); text-decoration: none; }}
         .green {{ color: #10B981; }}
+        .related-section {{ background: var(--card); padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; text-align: center; }}
+        .related-group {{ margin-bottom: 1.25rem; }}
+        .related-group:last-child {{ margin-bottom: 0; }}
+        .related-group h4 {{ font-size: 0.9rem; color: var(--muted); margin-bottom: 0.75rem; font-weight: 600; }}
+        .related-links {{ display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }}
+        .related-links a {{ background: var(--bg); padding: 0.5rem 1rem; border-radius: 2rem; text-decoration: none; color: var(--primary); font-size: 0.85rem; }}
+        .related-links a:hover {{ background: #e2e8f0; }}
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -169,6 +176,22 @@ template = '''<!DOCTYPE html>
             <div class="faq-item">
                 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where can I charge along the route?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
                 <div class="faq-a">{charger_answer}</div>
+            </div>
+        </div>
+        
+        <div class="related-section">
+            <div class="related-group">
+                <h4>Explore Cities</h4>
+                <div class="related-links">
+                    <a href="/cities/{from_slug}/">All routes from {from_city}</a>
+                    <a href="/cities/{to_slug}/">All routes from {to_city}</a>
+                </div>
+            </div>
+            <div class="related-group">
+                <h4>Gas Route</h4>
+                <div class="related-links">
+                    <a href="/route/{slug}/">View gas route: {from_city} to {to_city}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -293,6 +316,9 @@ for route in routes:
             </div>'''
     
     os.makedirs(f'ev/{slug}', exist_ok=True)
+    from_slug = from_city.lower().replace(' ', '-').replace("'", "").replace(".", "")
+    to_slug = to_city.lower().replace(' ', '-').replace("'", "").replace(".", "")
+    
     html = template.format(
         from_city=from_city, to_city=to_city, time=time, miles=miles,
         slug=slug, reverse_slug=reverse_slug, charge_stops=charge_stops,
@@ -301,7 +327,7 @@ for route in routes:
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
         center_lat=center_lat, center_lng=center_lng, zoom=zoom,
         waypoint_markers=waypoint_markers, stops_desc=stops_desc,
-        charger_answer=charger_answer
+        charger_answer=charger_answer, from_slug=from_slug, to_slug=to_slug
     )
     with open(f'ev/{slug}/index.html', 'w') as f:
         f.write(html)
