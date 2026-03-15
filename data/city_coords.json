@@ -1594,5 +1594,993 @@
   "Edina": {
     "lat": 44.8897,
     "lng": -93.3499
+  },
+  "Clifton": {
+    "lat": 38.7801,
+    "lng": -77.3869
+  },
+  "Passaic": {
+    "lat": 40.8568,
+    "lng": -74.1285
+  },
+  "Union City": {
+    "lat": 40.7795,
+    "lng": -74.0246
+  },
+  "Bayonne": {
+    "lat": 40.6687,
+    "lng": -74.1143
+  },
+  "East Orange": {
+    "lat": 40.7673,
+    "lng": -74.2049
+  },
+  "Bloomfield": {
+    "lat": 40.8068,
+    "lng": -74.1855
+  },
+  "Glen Ridge": {
+    "lat": 40.8054,
+    "lng": -74.2037
+  },
+  "Maplewood": {
+    "lat": 40.7312,
+    "lng": -74.2715
+  },
+  "Millburn": {
+    "lat": 40.726,
+    "lng": -74.3043
+  },
+  "Summit": {
+    "lat": 40.7154,
+    "lng": -74.3646
+  },
+  "West Orange": {
+    "lat": 40.7987,
+    "lng": -74.239
+  },
+  "South Orange": {
+    "lat": 40.7487,
+    "lng": -74.2609
+  },
+  "Livingston": {
+    "lat": 40.7879,
+    "lng": -74.3298
+  },
+  "Short Hills": {
+    "lat": 40.7476,
+    "lng": -74.3226
+  },
+  "Chatham": {
+    "lat": 40.7409,
+    "lng": -74.3815
+  },
+  "Parsippany": {
+    "lat": 40.8579,
+    "lng": -74.426
+  },
+  "Wayne": {
+    "lat": 40.044,
+    "lng": -75.3879
+  },
+  "Englewood": {
+    "lat": 40.8929,
+    "lng": -73.9726
+  },
+  "Teaneck": {
+    "lat": 40.8976,
+    "lng": -74.016
+  },
+  "Ridgewood": {
+    "lat": 40.9793,
+    "lng": -74.1166
+  },
+  "Fair Lawn": {
+    "lat": 40.9404,
+    "lng": -74.1318
+  },
+  "Garfield": {
+    "lat": 40.8815,
+    "lng": -74.1135
+  },
+  "Lodi": {
+    "lat": 40.8823,
+    "lng": -74.0832
+  },
+  "Nutley": {
+    "lat": 40.8223,
+    "lng": -74.1596
+  },
+  "Belleville": {
+    "lat": 40.7937,
+    "lng": -74.1504
+  },
+  "Kearny": {
+    "lat": 40.7684,
+    "lng": -74.1455
+  },
+  "North Bergen": {
+    "lat": 40.8043,
+    "lng": -74.0121
+  },
+  "West New York": {
+    "lat": 40.7879,
+    "lng": -74.0143
+  },
+  "Secaucus": {
+    "lat": 40.7895,
+    "lng": -74.0565
+  },
+  "Weehawken": {
+    "lat": 40.7696,
+    "lng": -74.021
+  },
+  "Dearborn Heights": {
+    "lat": 42.337,
+    "lng": -83.2733
+  },
+  "Plymouth MI": {
+    "lat": 42.3714,
+    "lng": -83.4702
+  },
+  "Clarkston": {
+    "lat": 42.7356,
+    "lng": -83.4188
+  },
+  "Troy": {
+    "lat": 42.6056,
+    "lng": -83.1499
+  },
+  "Ferndale": {
+    "lat": 42.4606,
+    "lng": -83.1346
+  },
+  "Berkley": {
+    "lat": 42.5031,
+    "lng": -83.1835
+  },
+  "Bloomfield Hills": {
+    "lat": 42.5839,
+    "lng": -83.2455
+  },
+  "Burlingame": {
+    "lat": 37.5841,
+    "lng": -122.366
+  },
+  "Mountain View": {
+    "lat": 37.3861,
+    "lng": -122.0839
+  },
+  "Carlsbad": {
+    "lat": 33.1581,
+    "lng": -117.3506
+  },
+  "Newark CA": {
+    "lat": 37.5296,
+    "lng": -122.0402
+  },
+  "Concord": {
+    "lat": 37.978,
+    "lng": -122.0311
+  },
+  "El Monte": {
+    "lat": 34.0686,
+    "lng": -118.0276
+  },
+  "Manhattan Beach": {
+    "lat": 33.8847,
+    "lng": -118.4109
+  },
+  "Hermosa Beach": {
+    "lat": 33.8622,
+    "lng": -118.3995
+  },
+  "El Segundo": {
+    "lat": 33.9192,
+    "lng": -118.4165
+  },
+  "Marina del Rey": {
+    "lat": 33.9802,
+    "lng": -118.4517
+  },
+  "Venice": {
+    "lat": 33.985,
+    "lng": -118.4695
+  },
+  "Rancho Palos Verdes": {
+    "lat": 33.7444,
+    "lng": -118.387
+  },
+  "Palos Verdes Estates": {
+    "lat": 33.7866,
+    "lng": -118.3906
+  },
+  "Rolling Hills": {
+    "lat": 33.7553,
+    "lng": -118.3579
+  },
+  "San Pedro": {
+    "lat": 33.7361,
+    "lng": -118.2922
+  },
+  "Lomita": {
+    "lat": 33.7922,
+    "lng": -118.3151
+  },
+  "Carson": {
+    "lat": 33.8314,
+    "lng": -118.262
+  },
+  "Gardena": {
+    "lat": 33.8883,
+    "lng": -118.309
+  },
+  "Hawthorne": {
+    "lat": 33.9164,
+    "lng": -118.3526
+  },
+  "Lawndale": {
+    "lat": 33.8872,
+    "lng": -118.3526
+  },
+  "Westchester": {
+    "lat": 41.8509,
+    "lng": -87.8823
+  },
+  "Playa Vista": {
+    "lat": 33.9742,
+    "lng": -118.4175
+  },
+  "Playa del Rey": {
+    "lat": 33.9564,
+    "lng": -118.4426
+  },
+  "Ladera Heights": {
+    "lat": 33.9956,
+    "lng": -118.3765
+  },
+  "Baldwin Hills": {
+    "lat": 34.0086,
+    "lng": -118.364
+  },
+  "Crenshaw": {
+    "lat": 33.9881,
+    "lng": -118.3298
+  },
+  "Leimert Park": {
+    "lat": 34.0081,
+    "lng": -118.324
+  },
+  "View Park": {
+    "lat": 33.9942,
+    "lng": -118.3479
+  },
+  "Windsor Hills": {
+    "lat": 33.9958,
+    "lng": -118.354
+  },
+  "Kyle": {
+    "lat": 29.9891,
+    "lng": -97.8772
+  },
+  "Farmers Branch": {
+    "lat": 32.9268,
+    "lng": -96.8961
+  },
+  "Rockwall": {
+    "lat": 32.9312,
+    "lng": -96.4597
+  },
+  "Rowlett": {
+    "lat": 32.9029,
+    "lng": -96.5639
+  },
+  "Fair Oaks Ranch": {
+    "lat": 29.7458,
+    "lng": -98.6428
+  },
+  "Coppell": {
+    "lat": 32.9546,
+    "lng": -97.015
+  },
+  "Flower Mound": {
+    "lat": 33.0146,
+    "lng": -97.0969
+  },
+  "Highland Village": {
+    "lat": 33.0918,
+    "lng": -97.0467
+  },
+  "Lewisville": {
+    "lat": 33.0462,
+    "lng": -96.9942
+  },
+  "The Colony": {
+    "lat": 33.0901,
+    "lng": -96.8917
+  },
+  "Little Elm": {
+    "lat": 33.1626,
+    "lng": -96.9376
+  },
+  "Allen": {
+    "lat": 33.1032,
+    "lng": -96.6706
+  },
+  "Wylie": {
+    "lat": 33.0151,
+    "lng": -96.5389
+  },
+  "Murphy": {
+    "lat": 33.0151,
+    "lng": -96.6128
+  },
+  "Sachse": {
+    "lat": 32.9762,
+    "lng": -96.5953
+  },
+  "Garland": {
+    "lat": 32.9126,
+    "lng": -96.6389
+  },
+  "Mesquite": {
+    "lat": 32.7668,
+    "lng": -96.5992
+  },
+  "Sunnyvale": {
+    "lat": 32.7968,
+    "lng": -96.5606
+  },
+  "Forney": {
+    "lat": 32.7479,
+    "lng": -96.4719
+  },
+  "Terrell": {
+    "lat": 32.736,
+    "lng": -96.2753
+  },
+  "Kaufman": {
+    "lat": 32.589,
+    "lng": -96.3089
+  },
+  "Cutler Bay": {
+    "lat": 25.5808,
+    "lng": -80.3467
+  },
+  "Kendall": {
+    "lat": 25.6795,
+    "lng": -80.3534
+  },
+  "Pinecrest": {
+    "lat": 25.667,
+    "lng": -80.3078
+  },
+  "Palmetto Bay": {
+    "lat": 25.6215,
+    "lng": -80.3248
+  },
+  "Homestead": {
+    "lat": 25.4687,
+    "lng": -80.4776
+  },
+  "Florida City": {
+    "lat": 25.4479,
+    "lng": -80.479
+  },
+  "Key Largo": {
+    "lat": 25.0865,
+    "lng": -80.4473
+  },
+  "Islamorada": {
+    "lat": 24.9243,
+    "lng": -80.6279
+  },
+  "Marathon": {
+    "lat": 24.7136,
+    "lng": -81.0903
+  },
+  "South Miami": {
+    "lat": 25.7076,
+    "lng": -80.2934
+  },
+  "Coconut Grove": {
+    "lat": 25.727,
+    "lng": -80.241
+  },
+  "Brickell": {
+    "lat": 25.7617,
+    "lng": -80.1918
+  },
+  "Downtown Miami": {
+    "lat": 25.7751,
+    "lng": -80.1947
+  },
+  "Wynwood": {
+    "lat": 25.8003,
+    "lng": -80.1991
+  },
+  "Design District": {
+    "lat": 25.8119,
+    "lng": -80.1928
+  },
+  "Little Havana": {
+    "lat": 25.7653,
+    "lng": -80.2197
+  },
+  "Little Haiti": {
+    "lat": 25.8303,
+    "lng": -80.1942
+  },
+  "North Miami": {
+    "lat": 25.8901,
+    "lng": -80.1867
+  },
+  "North Miami Beach": {
+    "lat": 25.9331,
+    "lng": -80.1625
+  },
+  "Sunny Isles Beach": {
+    "lat": 25.9506,
+    "lng": -80.1226
+  },
+  "Bal Harbour": {
+    "lat": 25.8918,
+    "lng": -80.1267
+  },
+  "Surfside": {
+    "lat": 25.8784,
+    "lng": -80.1256
+  },
+  "Fisher Island": {
+    "lat": 25.7647,
+    "lng": -80.1434
+  },
+  "Star Island": {
+    "lat": 25.7792,
+    "lng": -80.1506
+  },
+  "Glenview": {
+    "lat": 42.0698,
+    "lng": -87.7878
+  },
+  "Tinley Park": {
+    "lat": 41.5731,
+    "lng": -87.7845
+  },
+  "Evergreen Park": {
+    "lat": 41.7206,
+    "lng": -87.7017
+  },
+  "River Forest": {
+    "lat": 41.8978,
+    "lng": -87.814
+  },
+  "Forest Park": {
+    "lat": 41.8795,
+    "lng": -87.8134
+  },
+  "Riverside": {
+    "lat": 41.8348,
+    "lng": -87.8231
+  },
+  "La Grange": {
+    "lat": 41.8048,
+    "lng": -87.8692
+  },
+  "Western Springs": {
+    "lat": 41.8092,
+    "lng": -87.9006
+  },
+  "Hinsdale": {
+    "lat": 41.8006,
+    "lng": -87.937
+  },
+  "Clarendon Hills": {
+    "lat": 41.7975,
+    "lng": -87.9545
+  },
+  "Westmont": {
+    "lat": 41.7948,
+    "lng": -87.9756
+  },
+  "Lisle": {
+    "lat": 41.8011,
+    "lng": -88.0748
+  },
+  "Glen Ellyn": {
+    "lat": 41.8775,
+    "lng": -88.067
+  },
+  "Lombard": {
+    "lat": 41.88,
+    "lng": -88.0078
+  },
+  "Villa Park": {
+    "lat": 41.8895,
+    "lng": -87.9789
+  },
+  "Addison": {
+    "lat": 41.9317,
+    "lng": -88.0087
+  },
+  "Wood Dale": {
+    "lat": 41.9631,
+    "lng": -87.979
+  },
+  "Bensenville": {
+    "lat": 41.9556,
+    "lng": -87.9401
+  },
+  "Elk Grove Village": {
+    "lat": 42.0039,
+    "lng": -87.9701
+  },
+  "Mount Prospect": {
+    "lat": 42.0664,
+    "lng": -87.9373
+  },
+  "Buffalo Grove": {
+    "lat": 42.1514,
+    "lng": -87.9601
+  },
+  "Lincolnshire": {
+    "lat": 42.1906,
+    "lng": -87.909
+  },
+  "Vernon Hills": {
+    "lat": 42.2197,
+    "lng": -87.9601
+  },
+  "Libertyville": {
+    "lat": 42.2831,
+    "lng": -87.9531
+  },
+  "Lake Forest": {
+    "lat": 42.2586,
+    "lng": -87.8406
+  },
+  "Highland Park": {
+    "lat": 42.1817,
+    "lng": -87.8006
+  },
+  "Deerfield": {
+    "lat": 42.1711,
+    "lng": -87.8445
+  },
+  "Northbrook": {
+    "lat": 42.1275,
+    "lng": -87.829
+  },
+  "Wilmette": {
+    "lat": 42.0722,
+    "lng": -87.7228
+  },
+  "Winnetka": {
+    "lat": 42.1061,
+    "lng": -87.7356
+  },
+  "Kenilworth": {
+    "lat": 42.0856,
+    "lng": -87.7156
+  },
+  "Glencoe": {
+    "lat": 42.135,
+    "lng": -87.7584
+  },
+  "Northfield": {
+    "lat": 42.0978,
+    "lng": -87.7806
+  },
+  "Morton Grove": {
+    "lat": 42.0406,
+    "lng": -87.7823
+  },
+  "Niles": {
+    "lat": 42.0189,
+    "lng": -87.8028
+  },
+  "Park Ridge": {
+    "lat": 42.0111,
+    "lng": -87.8406
+  },
+  "Rosemont": {
+    "lat": 41.9953,
+    "lng": -87.8712
+  },
+  "Schiller Park": {
+    "lat": 41.9556,
+    "lng": -87.8712
+  },
+  "Franklin Park": {
+    "lat": 41.9317,
+    "lng": -87.8784
+  },
+  "River Grove": {
+    "lat": 41.9256,
+    "lng": -87.8379
+  },
+  "Melrose Park": {
+    "lat": 41.9006,
+    "lng": -87.8567
+  },
+  "Maywood": {
+    "lat": 41.8792,
+    "lng": -87.8434
+  },
+  "Bellwood": {
+    "lat": 41.8814,
+    "lng": -87.8823
+  },
+  "Broadview": {
+    "lat": 41.8584,
+    "lng": -87.8534
+  },
+  "Hillside": {
+    "lat": 41.8778,
+    "lng": -87.9028
+  },
+  "Stone Park": {
+    "lat": 41.9056,
+    "lng": -87.8823
+  },
+  "Northlake": {
+    "lat": 41.917,
+    "lng": -87.8962
+  },
+  "Annandale": {
+    "lat": 38.8304,
+    "lng": -77.1961
+  },
+  "Burke": {
+    "lat": 38.7934,
+    "lng": -77.2717
+  },
+  "Fairfax Station": {
+    "lat": 38.7473,
+    "lng": -77.3186
+  },
+  "Centreville": {
+    "lat": 38.8401,
+    "lng": -77.4289
+  },
+  "Chantilly": {
+    "lat": 38.8943,
+    "lng": -77.4311
+  },
+  "Herndon": {
+    "lat": 38.9696,
+    "lng": -77.3861
+  },
+  "Great Falls": {
+    "lat": 38.9982,
+    "lng": -77.2883
+  },
+  "McLean": {
+    "lat": 38.9339,
+    "lng": -77.1773
+  },
+  "Vienna": {
+    "lat": 38.9012,
+    "lng": -77.2653
+  },
+  "Oakton": {
+    "lat": 38.8879,
+    "lng": -77.3011
+  },
+  "Tysons Corner": {
+    "lat": 38.9187,
+    "lng": -77.2311
+  },
+  "Falls Church": {
+    "lat": 38.8829,
+    "lng": -77.1711
+  },
+  "Bailey's Crossroads": {
+    "lat": 38.8501,
+    "lng": -77.1297
+  },
+  "Seven Corners": {
+    "lat": 38.8662,
+    "lng": -77.1553
+  },
+  "Moon Valley": {
+    "lat": 33.6248,
+    "lng": -112.0579
+  },
+  "Surprise": {
+    "lat": 33.6292,
+    "lng": -112.3679
+  },
+  "Encanto": {
+    "lat": 33.4773,
+    "lng": -112.0804
+  },
+  "Paradise Valley": {
+    "lat": 33.5312,
+    "lng": -111.9426
+  },
+  "Arcadia": {
+    "lat": 33.5084,
+    "lng": -111.9629
+  },
+  "Biltmore": {
+    "lat": 33.5143,
+    "lng": -112.0218
+  },
+  "Camelback East": {
+    "lat": 33.5084,
+    "lng": -111.9801
+  },
+  "North Scottsdale": {
+    "lat": 33.6418,
+    "lng": -111.8987
+  },
+  "Gainey Ranch": {
+    "lat": 33.5662,
+    "lng": -111.9176
+  },
+  "McCormick Ranch": {
+    "lat": 33.5498,
+    "lng": -111.9098
+  },
+  "Old Town Scottsdale": {
+    "lat": 33.4948,
+    "lng": -111.926
+  },
+  "Lynn": {
+    "lat": 42.4668,
+    "lng": -70.9495
+  },
+  "Swampscott": {
+    "lat": 42.4718,
+    "lng": -70.9176
+  },
+  "Marblehead": {
+    "lat": 42.5001,
+    "lng": -70.8579
+  },
+  "Salem": {
+    "lat": 42.5195,
+    "lng": -70.8967
+  },
+  "Beverly": {
+    "lat": 42.5584,
+    "lng": -70.88
+  },
+  "Danvers": {
+    "lat": 42.5751,
+    "lng": -70.9301
+  },
+  "Peabody": {
+    "lat": 42.5279,
+    "lng": -70.9287
+  },
+  "Lynnfield": {
+    "lat": 42.5318,
+    "lng": -71.0479
+  },
+  "Wakefield": {
+    "lat": 42.5065,
+    "lng": -71.0729
+  },
+  "Melrose": {
+    "lat": 42.4584,
+    "lng": -71.0601
+  },
+  "Malden": {
+    "lat": 42.4251,
+    "lng": -71.0662
+  },
+  "Medford": {
+    "lat": 42.4184,
+    "lng": -71.1062
+  },
+  "Chelsea": {
+    "lat": 42.3918,
+    "lng": -71.0328
+  },
+  "Revere": {
+    "lat": 42.4084,
+    "lng": -71.012
+  },
+  "Winthrop": {
+    "lat": 42.3751,
+    "lng": -70.9829
+  },
+  "East Boston": {
+    "lat": 42.3751,
+    "lng": -71.0162
+  },
+  "Lynnwood": {
+    "lat": 47.8209,
+    "lng": -122.3151
+  },
+  "Mukilteo": {
+    "lat": 47.9445,
+    "lng": -122.3046
+  },
+  "Edmonds": {
+    "lat": 47.8107,
+    "lng": -122.3774
+  },
+  "Mountlake Terrace": {
+    "lat": 47.7879,
+    "lng": -122.3087
+  },
+  "Shoreline": {
+    "lat": 47.7556,
+    "lng": -122.3451
+  },
+  "Lake Forest Park": {
+    "lat": 47.7568,
+    "lng": -122.2812
+  },
+  "Kenmore": {
+    "lat": 47.7576,
+    "lng": -122.244
+  },
+  "Bothell": {
+    "lat": 47.7601,
+    "lng": -122.2054
+  },
+  "Woodinville": {
+    "lat": 47.7543,
+    "lng": -122.1635
+  },
+  "Mercer Island": {
+    "lat": 47.5707,
+    "lng": -122.2221
+  },
+  "Newcastle": {
+    "lat": 47.5301,
+    "lng": -122.164
+  },
+  "Tukwila": {
+    "lat": 47.474,
+    "lng": -122.261
+  },
+  "SeaTac": {
+    "lat": 47.449,
+    "lng": -122.2926
+  },
+  "Burien": {
+    "lat": 47.4701,
+    "lng": -122.3468
+  },
+  "White Center": {
+    "lat": 47.5068,
+    "lng": -122.3526
+  },
+  "West Seattle": {
+    "lat": 47.5518,
+    "lng": -122.3876
+  },
+  "Bristol PA": {
+    "lat": 40.1007,
+    "lng": -74.8518
+  },
+  "Jenkintown": {
+    "lat": 40.0957,
+    "lng": -75.1251
+  },
+  "Abington": {
+    "lat": 40.1084,
+    "lng": -75.1168
+  },
+  "Glenside": {
+    "lat": 40.1018,
+    "lng": -75.1523
+  },
+  "Wyncote": {
+    "lat": 40.089,
+    "lng": -75.1473
+  },
+  "Elkins Park": {
+    "lat": 40.0729,
+    "lng": -75.1251
+  },
+  "Cheltenham": {
+    "lat": 40.0579,
+    "lng": -75.1057
+  },
+  "Melrose Park PA": {
+    "lat": 40.059,
+    "lng": -75.1312
+  },
+  "Ardmore": {
+    "lat": 40.0065,
+    "lng": -75.2879
+  },
+  "Bryn Mawr": {
+    "lat": 40.019,
+    "lng": -75.3168
+  },
+  "Haverford": {
+    "lat": 40.0107,
+    "lng": -75.3029
+  },
+  "Wynnewood": {
+    "lat": 40.0084,
+    "lng": -75.2712
+  },
+  "Narberth": {
+    "lat": 40.0084,
+    "lng": -75.2601
+  },
+  "Bala Cynwyd": {
+    "lat": 40.0057,
+    "lng": -75.2276
+  },
+  "Merion": {
+    "lat": 40.0018,
+    "lng": -75.2459
+  },
+  "Gladwyne": {
+    "lat": 40.0457,
+    "lng": -75.2712
+  },
+  "Villanova": {
+    "lat": 40.039,
+    "lng": -75.3451
+  },
+  "Radnor": {
+    "lat": 40.039,
+    "lng": -75.3612
+  },
+  "Devon": {
+    "lat": 40.0512,
+    "lng": -75.4212
+  },
+  "Berwyn": {
+    "lat": 40.0468,
+    "lng": -75.439
+  },
+  "Paoli": {
+    "lat": 40.0429,
+    "lng": -75.4762
+  },
+  "Malvern": {
+    "lat": 40.0362,
+    "lng": -75.5137
+  },
+  "Exton": {
+    "lat": 40.029,
+    "lng": -75.6212
+  },
+  "Downingtown": {
+    "lat": 40.0062,
+    "lng": -75.7029
+  },
+  "West Chester": {
+    "lat": 39.9607,
+    "lng": -75.6057
+  },
+  "Media": {
+    "lat": 39.9168,
+    "lng": -75.3876
+  },
+  "Springfield PA": {
+    "lat": 39.9307,
+    "lng": -75.3201
+  },
+  "Swarthmore": {
+    "lat": 39.9018,
+    "lng": -75.3501
+  },
+  "Wallingford": {
+    "lat": 39.8918,
+    "lng": -75.3712
+  },
+  "Newtown Square": {
+    "lat": 39.989,
+    "lng": -75.4212
+  },
+  "University Park": {
+    "lat": 32.8501,
+    "lng": -96.8
+  },
+  "Pine Lake": {
+    "lat": 33.7451,
+    "lng": -84.2751
   }
 }
