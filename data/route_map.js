@@ -1308,6 +1308,9 @@ const ROUTE_MAP = {
     "West Bloomfield",
     "Westland"
   ],
+  "Diamond Head": [
+    "Pearl Harbor"
+  ],
   "Disney World": [
     "MCO",
     "Orlando"
@@ -1925,6 +1928,9 @@ const ROUTE_MAP = {
   ],
   "Jupiter": [
     "Miami"
+  ],
+  "Kailua": [
+    "Pearl Harbor"
   ],
   "Kansas City": [
     "Chicago",
@@ -2940,6 +2946,9 @@ const ROUTE_MAP = {
   "North Scottsdale": [
     "Phoenix"
   ],
+  "North Shore": [
+    "Pearl Harbor"
+  ],
   "Northglenn": [
     "Denver"
   ],
@@ -3116,7 +3125,11 @@ const ROUTE_MAP = {
     "Atlanta"
   ],
   "Pearl Harbor": [
-    "Honolulu"
+    "Diamond Head",
+    "Honolulu",
+    "Kailua",
+    "North Shore",
+    "Waikiki"
   ],
   "Pearland": [
     "Houston"
@@ -4377,7 +4390,8 @@ const ROUTE_MAP = {
     "San Antonio"
   ],
   "Waikiki": [
-    "Honolulu"
+    "Honolulu",
+    "Pearl Harbor"
   ],
   "Wakefield": [
     "Boston"
