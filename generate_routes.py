@@ -10,6 +10,18 @@ for f in ['data/routes.json', 'data/routes_expanded.json', 'data/routes_commute.
 with open('data/city_coords.json', 'r') as f:
     coords = json.load(f)
 
+
+# Build route lookups for Related Routes
+from collections import defaultdict
+routes_from = defaultdict(list)
+routes_to = defaultdict(list)
+for r in routes:
+    routes_from[r['from']].append(r)
+    routes_to[r['to']].append(r)
+
+def format_slug(city):
+    return city.lower().replace(' ', '-').replace("'", "")
+
 template = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,6 +164,7 @@ template = '''<!DOCTYPE html>
             </div>
         </div>
     </div>
+    {related_html}
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
@@ -225,13 +238,43 @@ for route in routes:
     zoom = 5 if miles > 800 else (6 if miles > 400 else 7)
     
     os.makedirs(f'route/{slug}', exist_ok=True)
+    
+    # Generate Related Routes HTML
+    related_html = '<div class="related-section">'
+    
+    # More from same origin
+    other_from = [x for x in routes_from[from_city] if x['to'] != to_city][:4]
+    if other_from:
+        related_html += f'<div class="related-group"><h4>More from {from_city}</h4><div class="related-links">'
+        for x in other_from:
+            s = f"{format_slug(from_city)}-to-{format_slug(x['to'])}"
+            related_html += f'<a href="/route/{s}/">{x["to"]} ({x["time"]})</a>'
+        related_html += '</div></div>'
+    
+    # Routes to same destination
+    other_to = [x for x in routes_to[to_city] if x['from'] != from_city][:4]
+    if other_to:
+        related_html += f'<div class="related-group"><h4>Routes to {to_city}</h4><div class="related-links">'
+        for x in other_to:
+            s = f"{format_slug(x['from'])}-to-{format_slug(to_city)}"
+            related_html += f'<a href="/route/{s}/">From {x["from"]} ({x["time"]})</a>'
+        related_html += '</div></div>'
+    
+    # City hub links
+    related_html += f'''<div class="related-group"><h4>Explore Cities</h4><div class="related-links">
+        <a href="/city/{format_slug(from_city)}/">All routes from {from_city}</a>
+        <a href="/city/{format_slug(to_city)}/">All routes from {to_city}</a>
+    </div></div>'''
+    related_html += '</div>'
+    
     html = template.format(
         from_city=from_city, to_city=to_city, time=time, miles=miles,
         slug=slug, reverse_slug=reverse_slug, km=km, gallons=gallons,
         gas_cost=gas_cost, tolls=tolls, highway=highway, best_time=best_time,
         toll_answer=toll_answer,
         from_lat=from_lat, from_lng=from_lng, to_lat=to_lat, to_lng=to_lng,
-        center_lat=center_lat, center_lng=center_lng, zoom=zoom
+        center_lat=center_lat, center_lng=center_lng, zoom=zoom,
+        related_html=related_html
     )
     with open(f'route/{slug}/index.html', 'w') as f:
         f.write(html)
