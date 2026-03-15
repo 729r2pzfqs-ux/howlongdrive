@@ -622,5 +622,75 @@
     "to": "San Diego",
     "miles": 20,
     "time": "30 min"
+  },
+  {
+    "from": "Monterey",
+    "to": "Santa Barbara",
+    "time": "3h 30min",
+    "miles": 230,
+    "minutes": 210
+  },
+  {
+    "from": "Santa Barbara",
+    "to": "Monterey",
+    "time": "3h 30min",
+    "miles": 230,
+    "minutes": 210
+  },
+  {
+    "from": "St Louis",
+    "to": "Oklahoma City",
+    "time": "7h 30min",
+    "miles": 500,
+    "minutes": 450
+  },
+  {
+    "from": "Oklahoma City",
+    "to": "St Louis",
+    "time": "7h 30min",
+    "miles": 500,
+    "minutes": 450
+  },
+  {
+    "from": "Oklahoma City",
+    "to": "Albuquerque",
+    "time": "8h 30min",
+    "miles": 540,
+    "minutes": 510
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Oklahoma City",
+    "time": "8h 30min",
+    "miles": 540,
+    "minutes": 510
+  },
+  {
+    "from": "Albuquerque",
+    "to": "Los Angeles",
+    "time": "11h 0min",
+    "miles": 800,
+    "minutes": 660
+  },
+  {
+    "from": "Los Angeles",
+    "to": "Albuquerque",
+    "time": "11h 0min",
+    "miles": 800,
+    "minutes": 660
+  },
+  {
+    "from": "Jacksonville",
+    "to": "Miami",
+    "time": "5h 30min",
+    "miles": 350,
+    "minutes": 330
+  },
+  {
+    "from": "Miami",
+    "to": "Jacksonville",
+    "time": "5h 30min",
+    "miles": 350,
+    "minutes": 330
   }
 ]
