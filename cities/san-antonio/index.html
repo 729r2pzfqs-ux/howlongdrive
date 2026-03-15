@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Times from San Antonio | HowLongDrive</title>
+    <meta name="description" content="Find driving times from San Antonio, Texas. Browse 62 routes with distances and drive times.">
+    <link rel="canonical" href="https://howlongdrive.com/cities/san-antonio/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 80px; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        @media (max-width: 768px) {
+            .logo img { height: 50px; }
+            nav { display: none; }
+            .hamburger { display: block; }
+        }
+        .hero { text-align: center; padding: 3rem 1rem; background: white; border-radius: 1rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2rem; color: var(--text); }
+        .subtitle { color: var(--muted); margin-top: 0.5rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.875rem; color: var(--muted); }
+        .routes-grid { display: grid; gap: 0.75rem; }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: white; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; }
+        .route-meta { font-size: 0.875rem; color: var(--muted); margin-top: 0.25rem; }
+        .route-time { font-weight: 700; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive">HowLongDrive</a>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">⚡ EV</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>📍 San Antonio</h1>
+            <p class="subtitle">Texas</p>
+            <div class="stats"><div><div class="stat-value">62</div><div class="stat-label">Destinations</div></div></div>
+        </div>
+        <h2 style="margin-bottom:1rem">Driving Times from San Antonio</h2>
+        <div class="routes-grid">
+            <a href="/route/san-antonio-to-austin/" class="route-card">
+                <div><div class="route-title">Austin</div><div class="route-meta">80 miles</div></div>
+                <div class="route-time">1h 15min</div>
+            </a>
+            <a href="/route/san-antonio-to-houston/" class="route-card">
+                <div><div class="route-title">Houston</div><div class="route-meta">200 miles</div></div>
+                <div class="route-time">2h 45min</div>
+            </a>
+            <a href="/route/san-antonio-to-dallas/" class="route-card">
+                <div><div class="route-title">Dallas</div><div class="route-meta">275 miles</div></div>
+                <div class="route-time">4h 15min</div>
+            </a>
+            <a href="/route/san-antonio-to-el-paso/" class="route-card">
+                <div><div class="route-title">El Paso</div><div class="route-meta">550 miles</div></div>
+                <div class="route-time">8h 0min</div>
+            </a>
+            <a href="/route/san-antonio-to-new-orleans/" class="route-card">
+                <div><div class="route-title">New Orleans</div><div class="route-meta">545 miles</div></div>
+                <div class="route-time">8h 0min</div>
+            </a>
+            <a href="/route/san-antonio-to-austin/" class="route-card">
+                <div><div class="route-title">Austin</div><div class="route-meta">80 miles</div></div>
+                <div class="route-time">1h 15min</div>
+            </a>
+            <a href="/route/san-antonio-to-phoenix/" class="route-card">
+                <div><div class="route-title">Phoenix</div><div class="route-meta">850 miles</div></div>
+                <div class="route-time">12h 0min</div>
+            </a>
+            <a href="/route/san-antonio-to-el-paso/" class="route-card">
+                <div><div class="route-title">El Paso</div><div class="route-meta">550 miles</div></div>
+                <div class="route-time">8h</div>
+            </a>
+            <a href="/route/san-antonio-to-new-york/" class="route-card">
+                <div><div class="route-title">New York</div><div class="route-meta">2055 miles</div></div>
+                <div class="route-time">34h 15min</div>
+            </a>
+            <a href="/route/san-antonio-to-los-angeles/" class="route-card">
+                <div><div class="route-title">Los Angeles</div><div class="route-meta">1562 miles</div></div>
+                <div class="route-time">26h 2min</div>
+            </a>
+            <a href="/route/san-antonio-to-chicago/" class="route-card">
+                <div><div class="route-title">Chicago</div><div class="route-meta">1368 miles</div></div>
+                <div class="route-time">22h 48min</div>
+            </a>
+            <a href="/route/san-antonio-to-philadelphia/" class="route-card">
+                <div><div class="route-title">Philadelphia</div><div class="route-meta">1956 miles</div></div>
+                <div class="route-time">32h 36min</div>
+            </a>
+            <a href="/route/san-antonio-to-san-diego/" class="route-card">
+                <div><div class="route-title">San Diego</div><div class="route-meta">1464 miles</div></div>
+                <div class="route-time">24h 23min</div>
+            </a>
+            <a href="/route/san-antonio-to-san-francisco/" class="route-card">
+                <div><div class="route-title">San Francisco</div><div class="route-meta">1933 miles</div></div>
+                <div class="route-time">32h 13min</div>
+            </a>
+            <a href="/route/san-antonio-to-seattle/" class="route-card">
+                <div><div class="route-title">Seattle</div><div class="route-meta">2321 miles</div></div>
+                <div class="route-time">38h 40min</div>
+            </a>
+            <a href="/route/san-antonio-to-denver/" class="route-card">
+                <div><div class="route-title">Denver</div><div class="route-meta">1042 miles</div></div>
+                <div class="route-time">17h 22min</div>
+            </a>
+            <a href="/route/san-antonio-to-boston/" class="route-card">
+                <div><div class="route-title">Boston</div><div class="route-meta">2294 miles</div></div>
+                <div class="route-time">38h 14min</div>
+            </a>
+            <a href="/route/san-antonio-to-nashville/" class="route-card">
+                <div><div class="route-title">Nashville</div><div class="route-meta">1070 miles</div></div>
+                <div class="route-time">17h 49min</div>
+            </a>
+            <a href="/route/san-antonio-to-detroit/" class="route-card">
+                <div><div class="route-title">Detroit</div><div class="route-meta">1609 miles</div></div>
+                <div class="route-time">26h 48min</div>
+            </a>
+            <a href="/route/san-antonio-to-portland/" class="route-card">
+                <div><div class="route-title">Portland</div><div class="route-meta">2234 miles</div></div>
+                <div class="route-time">37h 14min</div>
+            </a>
+            <a href="/route/san-antonio-to-las-vegas/" class="route-card">
+                <div><div class="route-title">Las Vegas</div><div class="route-meta">1392 miles</div></div>
+                <div class="route-time">23h 11min</div>
+            </a>
+            <a href="/route/san-antonio-to-miami/" class="route-card">
+                <div><div class="route-title">Miami</div><div class="route-meta">1491 miles</div></div>
+                <div class="route-time">24h 51min</div>
+            </a>
+            <a href="/route/san-antonio-to-atlanta/" class="route-card">
+                <div><div class="route-title">Atlanta</div><div class="route-meta">1145 miles</div></div>
+                <div class="route-time">19h 4min</div>
+            </a>
+            <a href="/route/san-antonio-to-minneapolis/" class="route-card">
+                <div><div class="route-title">Minneapolis</div><div class="route-meta">1445 miles</div></div>
+                <div class="route-time">24h 4min</div>
+            </a>
+            <a href="/route/san-antonio-to-orlando/" class="route-card">
+                <div><div class="route-title">Orlando</div><div class="route-meta">1345 miles</div></div>
+                <div class="route-time">22h 25min</div>
+            </a>
+            <a href="/route/san-antonio-to-tampa/" class="route-card">
+                <div><div class="route-title">Tampa</div><div class="route-meta">1269 miles</div></div>
+                <div class="route-time">21h 8min</div>
+            </a>
+            <a href="/route/san-antonio-to-cleveland/" class="route-card">
+                <div><div class="route-title">Cleveland</div><div class="route-meta">1633 miles</div></div>
+                <div class="route-time">27h 12min</div>
+            </a>
+            <a href="/route/san-antonio-to-washington-dc/" class="route-card">
+                <div><div class="route-title">Washington DC</div><div class="route-meta">1801 miles</div></div>
+                <div class="route-time">30h</div>
+            </a>
+            <a href="/route/san-antonio-to-baltimore/" class="route-card">
+                <div><div class="route-title">Baltimore</div><div class="route-meta">1841 miles</div></div>
+                <div class="route-time">30h 41min</div>
+            </a>
+            <a href="/route/san-antonio-to-salt-lake-city/" class="route-card">
+                <div><div class="route-title">Salt Lake City</div><div class="route-meta">1413 miles</div></div>
+                <div class="route-time">23h 33min</div>
+            </a>
+            <a href="/route/san-antonio-to-san-jose/" class="route-card">
+                <div><div class="route-title">San Jose</div><div class="route-meta">1886 miles</div></div>
+                <div class="route-time">31h 26min</div>
+            </a>
+            <a href="/route/san-antonio-to-big-bend/" class="route-card">
+                <div><div class="route-title">Big Bend</div><div class="route-meta">358 miles</div></div>
+                <div class="route-time">6h 30min</div>
+            </a>
+            <a href="/route/san-antonio-to-new-braunfels/" class="route-card">
+                <div><div class="route-title">New Braunfels</div><div class="route-meta">10 miles</div></div>
+                <div class="route-time">21 min</div>
+            </a>
+            <a href="/route/san-antonio-to-san-marcos/" class="route-card">
+                <div><div class="route-title">San Marcos</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">25 min</div>
+            </a>
+            <a href="/route/san-antonio-to-seguin/" class="route-card">
+                <div><div class="route-title">Seguin</div><div class="route-meta">13 miles</div></div>
+                <div class="route-time">27 min</div>
+            </a>
+            <a href="/route/san-antonio-to-schertz/" class="route-card">
+                <div><div class="route-title">Schertz</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">25 min</div>
+            </a>
+            <a href="/route/san-antonio-to-cibolo/" class="route-card">
+                <div><div class="route-title">Cibolo</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/san-antonio-to-universal-city/" class="route-card">
+                <div><div class="route-title">Universal City</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">17 min</div>
+            </a>
+            <a href="/route/san-antonio-to-live-oak/" class="route-card">
+                <div><div class="route-title">Live Oak</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">17 min</div>
+            </a>
+            <a href="/route/san-antonio-to-selma/" class="route-card">
+                <div><div class="route-title">Selma</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/san-antonio-to-converse/" class="route-card">
+                <div><div class="route-title">Converse</div><div class="route-meta">10 miles</div></div>
+                <div class="route-time">21 min</div>
+            </a>
+            <a href="/route/san-antonio-to-kirby/" class="route-card">
+                <div><div class="route-title">Kirby</div><div class="route-meta">5 miles</div></div>
+                <div class="route-time">10 min</div>
+            </a>
+            <a href="/route/san-antonio-to-windcrest/" class="route-card">
+                <div><div class="route-title">Windcrest</div><div class="route-meta">24 miles</div></div>
+                <div class="route-time">51 min</div>
+            </a>
+            <a href="/route/san-antonio-to-alamo-heights/" class="route-card">
+                <div><div class="route-title">Alamo Heights</div><div class="route-meta">23 miles</div></div>
+                <div class="route-time">49 min</div>
+            </a>
+            <a href="/route/san-antonio-to-terrell-hills/" class="route-card">
+                <div><div class="route-title">Terrell Hills</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">38 min</div>
+            </a>
+            <a href="/route/san-antonio-to-olmos-park/" class="route-card">
+                <div><div class="route-title">Olmos Park</div><div class="route-meta">24 miles</div></div>
+                <div class="route-time">51 min</div>
+            </a>
+            <a href="/route/san-antonio-to-shavano-park/" class="route-card">
+                <div><div class="route-title">Shavano Park</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">38 min</div>
+            </a>
+            <a href="/route/san-antonio-to-castle-hills/" class="route-card">
+                <div><div class="route-title">Castle Hills</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">32 min</div>
+            </a>
+            <a href="/route/san-antonio-to-hill-country-village/" class="route-card">
+                <div><div class="route-title">Hill Country Village</div><div class="route-meta">16 miles</div></div>
+                <div class="route-time">34 min</div>
+            </a>
+            <a href="/route/san-antonio-to-leon-valley/" class="route-card">
+                <div><div class="route-title">Leon Valley</div><div class="route-meta">26 miles</div></div>
+                <div class="route-time">55 min</div>
+            </a>
+            <a href="/route/san-antonio-to-balcones-heights/" class="route-card">
+                <div><div class="route-title">Balcones Heights</div><div class="route-meta">25 miles</div></div>
+                <div class="route-time">53 min</div>
+            </a>
+            <a href="/route/san-antonio-to-helotes/" class="route-card">
+                <div><div class="route-title">Helotes</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">32 min</div>
+            </a>
+            <a href="/route/san-antonio-to-boerne/" class="route-card">
+                <div><div class="route-title">Boerne</div><div class="route-meta">37 miles</div></div>
+                <div class="route-time">1h 19min</div>
+            </a>
+            <a href="/route/san-antonio-to-bulverde/" class="route-card">
+                <div><div class="route-title">Bulverde</div><div class="route-meta">32 miles</div></div>
+                <div class="route-time">1h 8min</div>
+            </a>
+            <a href="/route/san-antonio-to-spring-branch/" class="route-card">
+                <div><div class="route-title">Spring Branch</div><div class="route-meta">31 miles</div></div>
+                <div class="route-time">1h 6min</div>
+            </a>
+            <a href="/route/san-antonio-to-garden-ridge/" class="route-card">
+                <div><div class="route-title">Garden Ridge</div><div class="route-meta">40 miles</div></div>
+                <div class="route-time">1h 25min</div>
+            </a>
+            <a href="/route/san-antonio-to-fair-oaks-ranch/" class="route-card">
+                <div><div class="route-title">Fair Oaks Ranch</div><div class="route-meta">32 miles</div></div>
+                <div class="route-time">1h 8min</div>
+            </a>
+            <a href="/route/san-antonio-to-hollywood-park/" class="route-card">
+                <div><div class="route-title">Hollywood Park</div><div class="route-meta">46 miles</div></div>
+                <div class="route-time">1h 38min</div>
+            </a>
+            <a href="/route/san-antonio-to-grey-forest/" class="route-card">
+                <div><div class="route-title">Grey Forest</div><div class="route-meta">37 miles</div></div>
+                <div class="route-time">1h 19min</div>
+            </a>
+            <a href="/route/san-antonio-to-von-ormy/" class="route-card">
+                <div><div class="route-title">Von Ormy</div><div class="route-meta">38 miles</div></div>
+                <div class="route-time">1h 21min</div>
+            </a>
+            <a href="/route/san-antonio-to-somerset/" class="route-card">
+                <div><div class="route-title">Somerset</div><div class="route-meta">45 miles</div></div>
+                <div class="route-time">1h 36min</div>
+            </a>
+            <a href="/route/san-antonio-to-lytle/" class="route-card">
+                <div><div class="route-title">Lytle</div><div class="route-meta">36 miles</div></div>
+                <div class="route-time">1h 17min</div>
+            </a></div>
+    </div>
+    <footer><p>© 2026 HowLongDrive.com</p></footer>
+</body>
+</html>

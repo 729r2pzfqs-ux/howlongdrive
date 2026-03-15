@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Times from New York | HowLongDrive</title>
+    <meta name="description" content="Find driving times from New York, New York. Browse 95 routes with distances and drive times.">
+    <link rel="canonical" href="https://howlongdrive.com/cities/new-york/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 80px; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        @media (max-width: 768px) {
+            .logo img { height: 50px; }
+            nav { display: none; }
+            .hamburger { display: block; }
+        }
+        .hero { text-align: center; padding: 3rem 1rem; background: white; border-radius: 1rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2rem; color: var(--text); }
+        .subtitle { color: var(--muted); margin-top: 0.5rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.875rem; color: var(--muted); }
+        .routes-grid { display: grid; gap: 0.75rem; }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: white; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; }
+        .route-meta { font-size: 0.875rem; color: var(--muted); margin-top: 0.25rem; }
+        .route-time { font-weight: 700; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive">HowLongDrive</a>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">⚡ EV</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>📍 New York</h1>
+            <p class="subtitle">New York</p>
+            <div class="stats"><div><div class="stat-value">95</div><div class="stat-label">Destinations</div></div></div>
+        </div>
+        <h2 style="margin-bottom:1rem">Driving Times from New York</h2>
+        <div class="routes-grid">
+            <a href="/route/new-york-to-philadelphia/" class="route-card">
+                <div><div class="route-title">Philadelphia</div><div class="route-meta">95 miles</div></div>
+                <div class="route-time">1h 45min</div>
+            </a>
+            <a href="/route/new-york-to-washington-dc/" class="route-card">
+                <div><div class="route-title">Washington DC</div><div class="route-meta">225 miles</div></div>
+                <div class="route-time">4h 0min</div>
+            </a>
+            <a href="/route/new-york-to-baltimore/" class="route-card">
+                <div><div class="route-title">Baltimore</div><div class="route-meta">190 miles</div></div>
+                <div class="route-time">3h 15min</div>
+            </a>
+            <a href="/route/new-york-to-hartford/" class="route-card">
+                <div><div class="route-title">Hartford</div><div class="route-meta">115 miles</div></div>
+                <div class="route-time">2h 0min</div>
+            </a>
+            <a href="/route/new-york-to-albany/" class="route-card">
+                <div><div class="route-title">Albany</div><div class="route-meta">150 miles</div></div>
+                <div class="route-time">2h 30min</div>
+            </a>
+            <a href="/route/new-york-to-miami/" class="route-card">
+                <div><div class="route-title">Miami</div><div class="route-meta">1280 miles</div></div>
+                <div class="route-time">19h 0min</div>
+            </a>
+            <a href="/route/new-york-to-chicago/" class="route-card">
+                <div><div class="route-title">Chicago</div><div class="route-meta">790 miles</div></div>
+                <div class="route-time">12h 0min</div>
+            </a>
+            <a href="/route/new-york-to-los-angeles/" class="route-card">
+                <div><div class="route-title">Los Angeles</div><div class="route-meta">2775 miles</div></div>
+                <div class="route-time">41h 0min</div>
+            </a>
+            <a href="/route/new-york-to-atlanta/" class="route-card">
+                <div><div class="route-title">Atlanta</div><div class="route-meta">870 miles</div></div>
+                <div class="route-time">13h 0min</div>
+            </a>
+            <a href="/route/new-york-to-dallas/" class="route-card">
+                <div><div class="route-title">Dallas</div><div class="route-meta">1550 miles</div></div>
+                <div class="route-time">24h 0min</div>
+            </a>
+            <a href="/route/new-york-to-denver/" class="route-card">
+                <div><div class="route-title">Denver</div><div class="route-meta">1780 miles</div></div>
+                <div class="route-time">26h 0min</div>
+            </a>
+            <a href="/route/new-york-to-seattle/" class="route-card">
+                <div><div class="route-title">Seattle</div><div class="route-meta">2850 miles</div></div>
+                <div class="route-time">45h 0min</div>
+            </a>
+            <a href="/route/new-york-to-san-francisco/" class="route-card">
+                <div><div class="route-title">San Francisco</div><div class="route-meta">2900 miles</div></div>
+                <div class="route-time">43h 0min</div>
+            </a>
+            <a href="/route/new-york-to-houston/" class="route-card">
+                <div><div class="route-title">Houston</div><div class="route-meta">1630 miles</div></div>
+                <div class="route-time">25h 0min</div>
+            </a>
+            <a href="/route/new-york-to-phoenix/" class="route-card">
+                <div><div class="route-title">Phoenix</div><div class="route-meta">2400 miles</div></div>
+                <div class="route-time">35h 0min</div>
+            </a>
+            <a href="/route/new-york-to-detroit/" class="route-card">
+                <div><div class="route-title">Detroit</div><div class="route-meta">615 miles</div></div>
+                <div class="route-time">10h 0min</div>
+            </a>
+            <a href="/route/new-york-to-minneapolis/" class="route-card">
+                <div><div class="route-title">Minneapolis</div><div class="route-meta">1200 miles</div></div>
+                <div class="route-time">18h 0min</div>
+            </a>
+            <a href="/route/new-york-to-cleveland/" class="route-card">
+                <div><div class="route-title">Cleveland</div><div class="route-meta">460 miles</div></div>
+                <div class="route-time">7h 30min</div>
+            </a>
+            <a href="/route/new-york-to-orlando/" class="route-card">
+                <div><div class="route-title">Orlando</div><div class="route-meta">1080 miles</div></div>
+                <div class="route-time">16h 0min</div>
+            </a>
+            <a href="/route/new-york-to-new-orleans/" class="route-card">
+                <div><div class="route-title">New Orleans</div><div class="route-meta">1310 miles</div></div>
+                <div class="route-time">20h 0min</div>
+            </a>
+            <a href="/route/new-york-to-boston/" class="route-card">
+                <div><div class="route-title">Boston</div><div class="route-meta">215 miles</div></div>
+                <div class="route-time">4h 15min</div>
+            </a>
+            <a href="/route/new-york-to-newark/" class="route-card">
+                <div><div class="route-title">Newark</div><div class="route-meta">12 miles</div></div>
+                <div class="route-time">25 min</div>
+            </a>
+            <a href="/route/new-york-to-jersey-city/" class="route-card">
+                <div><div class="route-title">Jersey City</div><div class="route-meta">7 miles</div></div>
+                <div class="route-time">20 min</div>
+            </a>
+            <a href="/route/new-york-to-stamford/" class="route-card">
+                <div><div class="route-title">Stamford</div><div class="route-meta">35 miles</div></div>
+                <div class="route-time">50 min</div>
+            </a>
+            <a href="/route/new-york-to-white-plains/" class="route-card">
+                <div><div class="route-title">White Plains</div><div class="route-meta">28 miles</div></div>
+                <div class="route-time">45 min</div>
+            </a>
+            <a href="/route/new-york-to-yonkers/" class="route-card">
+                <div><div class="route-title">Yonkers</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">35 min</div>
+            </a>
+            <a href="/route/new-york-to-hoboken/" class="route-card">
+                <div><div class="route-title">Hoboken</div><div class="route-meta">5 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/new-york-to-new-rochelle/" class="route-card">
+                <div><div class="route-title">New Rochelle</div><div class="route-meta">20 miles</div></div>
+                <div class="route-time">35 min</div>
+            </a>
+            <a href="/route/new-york-to-long-island-city/" class="route-card">
+                <div><div class="route-title">Long Island City</div><div class="route-meta">4 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/new-york-to-niagara-falls/" class="route-card">
+                <div><div class="route-title">Niagara Falls</div><div class="route-meta">400 miles</div></div>
+                <div class="route-time">6h 30min</div>
+            </a>
+            <a href="/route/new-york-to-hamptons/" class="route-card">
+                <div><div class="route-title">Hamptons</div><div class="route-meta">100 miles</div></div>
+                <div class="route-time">2h</div>
+            </a>
+            <a href="/route/new-york-to-atlantic-city/" class="route-card">
+                <div><div class="route-title">Atlantic City</div><div class="route-meta">130 miles</div></div>
+                <div class="route-time">2h 15min</div>
+            </a>
+            <a href="/route/new-york-to-statue-of-liberty/" class="route-card">
+                <div><div class="route-title">Statue of Liberty</div><div class="route-meta">5 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/new-york-to-san-antonio/" class="route-card">
+                <div><div class="route-title">San Antonio</div><div class="route-meta">2055 miles</div></div>
+                <div class="route-time">34h 15min</div>
+            </a>
+            <a href="/route/new-york-to-san-diego/" class="route-card">
+                <div><div class="route-title">San Diego</div><div class="route-meta">3156 miles</div></div>
+                <div class="route-time">52h 36min</div>
+            </a>
+            <a href="/route/new-york-to-austin/" class="route-card">
+                <div><div class="route-title">Austin</div><div class="route-meta">1964 miles</div></div>
+                <div class="route-time">32h 44min</div>
+            </a>
+            <a href="/route/new-york-to-nashville/" class="route-card">
+                <div><div class="route-title">Nashville</div><div class="route-meta">986 miles</div></div>
+                <div class="route-time">16h 26min</div>
+            </a>
+            <a href="/route/new-york-to-portland/" class="route-card">
+                <div><div class="route-title">Portland</div><div class="route-meta">3171 miles</div></div>
+                <div class="route-time">52h 51min</div>
+            </a>
+            <a href="/route/new-york-to-las-vegas/" class="route-card">
+                <div><div class="route-title">Las Vegas</div><div class="route-meta">2895 miles</div></div>
+                <div class="route-time">48h 15min</div>
+            </a>
+            <a href="/route/new-york-to-tampa/" class="route-card">
+                <div><div class="route-title">Tampa</div><div class="route-meta">1305 miles</div></div>
+                <div class="route-time">21h 45min</div>
+            </a>
+            <a href="/route/new-york-to-salt-lake-city/" class="route-card">
+                <div><div class="route-title">Salt Lake City</div><div class="route-meta">2558 miles</div></div>
+                <div class="route-time">42h 37min</div>
+            </a>
+            <a href="/route/new-york-to-san-jose/" class="route-card">
+                <div><div class="route-title">San Jose</div><div class="route-meta">3313 miles</div></div>
+                <div class="route-time">55h 13min</div>
+            </a>
+            <a href="/route/new-york-to-acadia/" class="route-card">
+                <div><div class="route-title">Acadia</div><div class="route-meta">480 miles</div></div>
+                <div class="route-time">8h 43min</div>
+            </a>
+            <a href="/route/new-york-to-stowe/" class="route-card">
+                <div><div class="route-title">Stowe</div><div class="route-meta">334 miles</div></div>
+                <div class="route-time">6h 4min</div>
+            </a>
+            <a href="/route/new-york-to-killington/" class="route-card">
+                <div><div class="route-title">Killington</div><div class="route-meta">261 miles</div></div>
+                <div class="route-time">4h 44min</div>
+            </a>
+            <a href="/route/new-york-to-cape-cod/" class="route-card">
+                <div><div class="route-title">Cape Cod</div><div class="route-meta">254 miles</div></div>
+                <div class="route-time">4h 37min</div>
+            </a>
+            <a href="/route/new-york-to-marthas-vineyard/" class="route-card">
+                <div><div class="route-title">Marthas Vineyard</div><div class="route-meta">226 miles</div></div>
+                <div class="route-time">4h 6min</div>
+            </a>
+            <a href="/route/new-york-to-nantucket/" class="route-card">
+                <div><div class="route-title">Nantucket</div><div class="route-meta">259 miles</div></div>
+                <div class="route-time">4h 42min</div>
+            </a>
+            <a href="/route/new-york-to-bar-harbor/" class="route-card">
+                <div><div class="route-title">Bar Harbor</div><div class="route-meta">486 miles</div></div>
+                <div class="route-time">8h 50min</div>
+            </a>
+            <a href="/route/new-york-to-burlington-vt/" class="route-card">
+                <div><div class="route-title">Burlington VT</div><div class="route-meta">315 miles</div></div>
+                <div class="route-time">5h 43min</div>
+            </a>
+            <a href="/route/new-york-to-newport/" class="route-card">
+                <div><div class="route-title">Newport</div><div class="route-meta">180 miles</div></div>
+                <div class="route-time">3h 16min</div>
+            </a>
+            <a href="/route/new-york-to-new-haven/" class="route-card">
+                <div><div class="route-title">New Haven</div><div class="route-meta">83 miles</div></div>
+                <div class="route-time">1h 30min</div>
+            </a>
+            <a href="/route/new-york-to-hartford/" class="route-card">
+                <div><div class="route-title">Hartford</div><div class="route-meta">120 miles</div></div>
+                <div class="route-time">2h 10min</div>
+            </a>
+            <a href="/route/new-york-to-stamford-ct/" class="route-card">
+                <div><div class="route-title">Stamford CT</div><div class="route-meta">40 miles</div></div>
+                <div class="route-time">0h 43min</div>
+            </a>
+            <a href="/route/new-york-to-bridgeport/" class="route-card">
+                <div><div class="route-title">Bridgeport</div><div class="route-meta">64 miles</div></div>
+                <div class="route-time">1h 9min</div>
+            </a>
+            <a href="/route/new-york-to-springfield-ma/" class="route-card">
+                <div><div class="route-title">Springfield MA</div><div class="route-meta">144 miles</div></div>
+                <div class="route-time">2h 37min</div>
+            </a>
+            <a href="/route/new-york-to-wilmington-de/" class="route-card">
+                <div><div class="route-title">Wilmington DE</div><div class="route-meta">126 miles</div></div>
+                <div class="route-time">2h 17min</div>
+            </a>
+            <a href="/route/new-york-to-syracuse/" class="route-card">
+                <div><div class="route-title">Syracuse</div><div class="route-meta">234 miles</div></div>
+                <div class="route-time">4h 15min</div>
+            </a>
+            <a href="/route/new-york-to-rochester-ny/" class="route-card">
+                <div><div class="route-title">Rochester NY</div><div class="route-meta">300 miles</div></div>
+                <div class="route-time">5h 27min</div>
+            </a>
+            <a href="/route/new-york-to-ithaca/" class="route-card">
+                <div><div class="route-title">Ithaca</div><div class="route-meta">211 miles</div></div>
+                <div class="route-time">3h 50min</div>
+            </a>
+            <a href="/route/new-york-to-binghamton/" class="route-card">
+                <div><div class="route-title">Binghamton</div><div class="route-meta">165 miles</div></div>
+                <div class="route-time">3h</div>
+            </a>
+            <a href="/route/new-york-to-saratoga-springs/" class="route-card">
+                <div><div class="route-title">Saratoga Springs</div><div class="route-meta">197 miles</div></div>
+                <div class="route-time">3h 34min</div>
+            </a>
+            <a href="/route/new-york-to-scranton/" class="route-card">
+                <div><div class="route-title">Scranton</div><div class="route-meta">118 miles</div></div>
+                <div class="route-time">2h 8min</div>
+            </a>
+            <a href="/route/new-york-to-montreal/" class="route-card">
+                <div><div class="route-title">Montreal</div><div class="route-meta">397 miles</div></div>
+                <div class="route-time">7h 13min</div>
+            </a>
+            <a href="/route/new-york-to-toronto/" class="route-card">
+                <div><div class="route-title">Toronto</div><div class="route-meta">410 miles</div></div>
+                <div class="route-time">7h 27min</div>
+            </a>
+            <a href="/route/new-york-to-newark/" class="route-card">
+                <div><div class="route-title">Newark</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/new-york-to-jersey-city/" class="route-card">
+                <div><div class="route-title">Jersey City</div><div class="route-meta">5 miles</div></div>
+                <div class="route-time">10 min</div>
+            </a>
+            <a href="/route/new-york-to-stamford/" class="route-card">
+                <div><div class="route-title">Stamford</div><div class="route-meta">9 miles</div></div>
+                <div class="route-time">19 min</div>
+            </a>
+            <a href="/route/new-york-to-white-plains/" class="route-card">
+                <div><div class="route-title">White Plains</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">17 min</div>
+            </a>
+            <a href="/route/new-york-to-yonkers/" class="route-card">
+                <div><div class="route-title">Yonkers</div><div class="route-meta">8 miles</div></div>
+                <div class="route-time">17 min</div>
+            </a>
+            <a href="/route/new-york-to-hoboken/" class="route-card">
+                <div><div class="route-title">Hoboken</div><div class="route-meta">7 miles</div></div>
+                <div class="route-time">15 min</div>
+            </a>
+            <a href="/route/new-york-to-new-rochelle/" class="route-card">
+                <div><div class="route-title">New Rochelle</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/new-york-to-hackensack/" class="route-card">
+                <div><div class="route-title">Hackensack</div><div class="route-meta">13 miles</div></div>
+                <div class="route-time">27 min</div>
+            </a>
+            <a href="/route/new-york-to-paramus/" class="route-card">
+                <div><div class="route-title">Paramus</div><div class="route-meta">6 miles</div></div>
+                <div class="route-time">12 min</div>
+            </a>
+            <a href="/route/new-york-to-edison/" class="route-card">
+                <div><div class="route-title">Edison</div><div class="route-meta">14 miles</div></div>
+                <div class="route-time">30 min</div>
+            </a>
+            <a href="/route/new-york-to-woodbridge/" class="route-card">
+                <div><div class="route-title">Woodbridge</div><div class="route-meta">21 miles</div></div>
+                <div class="route-time">45 min</div>
+            </a>
+            <a href="/route/new-york-to-elizabeth/" class="route-card">
+                <div><div class="route-title">Elizabeth</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">32 min</div>
+            </a>
+            <a href="/route/new-york-to-paterson/" class="route-card">
+                <div><div class="route-title">Paterson</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">32 min</div>
+            </a>
+            <a href="/route/new-york-to-clifton/" class="route-card">
+                <div><div class="route-title">Clifton</div><div class="route-meta">16 miles</div></div>
+                <div class="route-time">34 min</div>
+            </a>
+            <a href="/route/new-york-to-passaic/" class="route-card">
+                <div><div class="route-title">Passaic</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">38 min</div>
+            </a>
+            <a href="/route/new-york-to-union-city/" class="route-card">
+                <div><div class="route-title">Union City</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">38 min</div>
+            </a>
+            <a href="/route/new-york-to-bayonne/" class="route-card">
+                <div><div class="route-title">Bayonne</div><div class="route-meta">23 miles</div></div>
+                <div class="route-time">49 min</div>
+            </a>
+            <a href="/route/new-york-to-east-orange/" class="route-card">
+                <div><div class="route-title">East Orange</div><div class="route-meta">24 miles</div></div>
+                <div class="route-time">51 min</div>
+            </a>
+            <a href="/route/new-york-to-bloomfield/" class="route-card">
+                <div><div class="route-title">Bloomfield</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">32 min</div>
+            </a>
+            <a href="/route/new-york-to-montclair/" class="route-card">
+                <div><div class="route-title">Montclair</div><div class="route-meta">23 miles</div></div>
+                <div class="route-time">49 min</div>
+            </a>
+            <a href="/route/new-york-to-glen-ridge/" class="route-card">
+                <div><div class="route-title">Glen Ridge</div><div class="route-meta">36 miles</div></div>
+                <div class="route-time">1h 17min</div>
+            </a>
+            <a href="/route/new-york-to-maplewood/" class="route-card">
+                <div><div class="route-title">Maplewood</div><div class="route-meta">47 miles</div></div>
+                <div class="route-time">1h 40min</div>
+            </a>
+            <a href="/route/new-york-to-millburn/" class="route-card">
+                <div><div class="route-title">Millburn</div><div class="route-meta">43 miles</div></div>
+                <div class="route-time">1h 32min</div>
+            </a>
+            <a href="/route/new-york-to-summit/" class="route-card">
+                <div><div class="route-title">Summit</div><div class="route-meta">37 miles</div></div>
+                <div class="route-time">1h 19min</div>
+            </a>
+            <a href="/route/new-york-to-morristown/" class="route-card">
+                <div><div class="route-title">Morristown</div><div class="route-meta">44 miles</div></div>
+                <div class="route-time">1h 34min</div>
+            </a>
+            <a href="/route/new-york-to-parsippany/" class="route-card">
+                <div><div class="route-title">Parsippany</div><div class="route-meta">48 miles</div></div>
+                <div class="route-time">1h 42min</div>
+            </a>
+            <a href="/route/new-york-to-wayne/" class="route-card">
+                <div><div class="route-title">Wayne</div><div class="route-meta">38 miles</div></div>
+                <div class="route-time">1h 21min</div>
+            </a>
+            <a href="/route/new-york-to-fort-lee/" class="route-card">
+                <div><div class="route-title">Fort Lee</div><div class="route-meta">30 miles</div></div>
+                <div class="route-time">1h 4min</div>
+            </a>
+            <a href="/route/new-york-to-teaneck/" class="route-card">
+                <div><div class="route-title">Teaneck</div><div class="route-meta">35 miles</div></div>
+                <div class="route-time">1h 15min</div>
+            </a>
+            <a href="/route/new-york-to-englewood/" class="route-card">
+                <div><div class="route-title">Englewood</div><div class="route-meta">43 miles</div></div>
+                <div class="route-time">1h 32min</div>
+            </a></div>
+    </div>
+    <footer><p>© 2026 HowLongDrive.com</p></footer>
+</body>
+</html>

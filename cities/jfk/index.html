@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Times from JFK | HowLongDrive</title>
+    <meta name="description" content="Find driving times from JFK, USA. Browse 3 routes with distances and drive times.">
+    <link rel="canonical" href="https://howlongdrive.com/cities/jfk/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 80px; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+        nav a:hover { color: var(--primary); }
+        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        @media (max-width: 768px) {
+            .logo img { height: 50px; }
+            nav { display: none; }
+            .hamburger { display: block; }
+        }
+        .hero { text-align: center; padding: 3rem 1rem; background: white; border-radius: 1rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2rem; color: var(--text); }
+        .subtitle { color: var(--muted); margin-top: 0.5rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.875rem; color: var(--muted); }
+        .routes-grid { display: grid; gap: 0.75rem; }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: white; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; }
+        .route-meta { font-size: 0.875rem; color: var(--muted); margin-top: 0.25rem; }
+        .route-time { font-weight: 700; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive">HowLongDrive</a>
+            <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">⚡ EV</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>📍 JFK</h1>
+            <p class="subtitle">USA</p>
+            <div class="stats"><div><div class="stat-value">3</div><div class="stat-label">Destinations</div></div></div>
+        </div>
+        <h2 style="margin-bottom:1rem">Driving Times from JFK</h2>
+        <div class="routes-grid">
+            <a href="/route/jfk-to-manhattan/" class="route-card">
+                <div><div class="route-title">Manhattan</div><div class="route-meta">15 miles</div></div>
+                <div class="route-time">40 min</div>
+            </a>
+            <a href="/route/jfk-to-times-square/" class="route-card">
+                <div><div class="route-title">Times Square</div><div class="route-meta">18 miles</div></div>
+                <div class="route-time">50 min</div>
+            </a>
+            <a href="/route/jfk-to-brooklyn/" class="route-card">
+                <div><div class="route-title">Brooklyn</div><div class="route-meta">10 miles</div></div>
+                <div class="route-time">25 min</div>
+            </a></div>
+    </div>
+    <footer><p>© 2026 HowLongDrive.com</p></footer>
+</body>
+</html>
