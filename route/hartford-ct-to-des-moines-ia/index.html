@@ -76,6 +76,12 @@
         .faq-item.open .faq-a { display: block; }
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
+    
+        .related-section { background: var(--card); padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; }
+        .related-section h3 { margin-bottom: 1rem; font-size: 1rem; }
+        .related-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .related-links a { background: var(--bg); padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; color: var(--primary); font-size: 0.875rem; }
+        .related-links a:hover { background: var(--border); }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -131,6 +137,14 @@
             <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long is the drive from Hartford, CT to Des Moines, IA?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">The drive takes approximately <strong>25 hours and 29 minutes</strong> covering 1402 miles.</div></div>
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much gas will I need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">At 30 MPG, you'll use about 46 gallons of gas, costing approximately $163 at $3.50/gallon.</div></div>
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the best time to leave?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">Early morning (6-8 AM) is ideal to avoid rush hour traffic in both cities.</div></div>
+        </div>
+    
+        <div class="related-section">
+            <h3>Explore Cities</h3>
+            <div class="related-links">
+                <a href="/cities/hartford-ct/">All routes from Hartford Ct</a>
+                <a href="/cities/des-moines-ia/">All routes from Des Moines Ia</a>
+            </div>
         </div>
     </main>
     <footer><p>© 2026 HowLongDrive | <a href="/about/">About</a></p></footer>
