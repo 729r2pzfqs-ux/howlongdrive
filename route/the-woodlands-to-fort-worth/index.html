@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([31.46065, -96.39605], 7);
+        const map = L.map('map').setView([31.46065, -96.39605], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([30.1658, -95.4613]).addTo(map).bindPopup('The Woodlands');
         L.marker([32.7555, -97.3308]).addTo(map).bindPopup('Fort Worth');

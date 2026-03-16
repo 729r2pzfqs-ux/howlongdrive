@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([36.05555, -119.40289999999999], 8);
+        const map = L.map('map').setView([36.05555, -119.40289999999999], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([35.3733, -119.0187]).addTo(map).bindPopup('Bakersfield');
         L.marker([36.7378, -119.7871]).addTo(map).bindPopup('Fresno');

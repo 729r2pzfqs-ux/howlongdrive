@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([29.78425, -96.2704], 7);
+        const map = L.map('map').setView([29.78425, -96.2704], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([29.3013, -94.7977]).addTo(map).bindPopup('Galveston');
         L.marker([30.2672, -97.7431]).addTo(map).bindPopup('Austin');

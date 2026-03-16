@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([41.944100000000006, -96.5445], 4);
+        const map = L.map('map').setView([41.944100000000006, -96.5445], 3);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([40.2732, -76.8867]).addTo(map).bindPopup('Harrisburg');
         L.marker([43.615, -116.2023]).addTo(map).bindPopup('Boise');

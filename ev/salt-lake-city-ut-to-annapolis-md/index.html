@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([39.869600000000005, -94.1916], 4);
+        const map = L.map('map').setView([39.869600000000005, -94.1916], 3);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([40.7608, -111.891]).addTo(map).bindPopup('Salt Lake City');
         L.marker([38.9784, -76.4922]).addTo(map).bindPopup('Annapolis');

@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([42.8073, -107.53710000000001], 4);
+        const map = L.map('map').setView([42.8073, -107.53710000000001], 3);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([38.5767, -92.1735]).addTo(map).bindPopup('Jefferson City');
         L.marker([47.0379, -122.9007]).addTo(map).bindPopup('Olympia');

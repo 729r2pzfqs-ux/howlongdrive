@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([31.390099999999997, -96.03434999999999], 7);
+        const map = L.map('map').setView([31.390099999999997, -96.03434999999999], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([29.7604, -95.3698]).addTo(map).bindPopup('Houston');
         L.marker([33.0198, -96.6989]).addTo(map).bindPopup('Plano');

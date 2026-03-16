@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([35.5874, -119.9003], 7);
+        const map = L.map('map').setView([35.5874, -119.9003], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([33.8366, -117.9143]).addTo(map).bindPopup('Anaheim');
         L.marker([37.3382, -121.8863]).addTo(map).bindPopup('San Jose');

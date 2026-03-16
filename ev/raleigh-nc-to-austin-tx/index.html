@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([33.0234, -88.19065], 5);
+        const map = L.map('map').setView([33.0234, -88.19065], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([35.7796, -78.6382]).addTo(map).bindPopup('Raleigh');
         L.marker([30.2672, -97.7431]).addTo(map).bindPopup('Austin');

@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([25.338749999999997, -80.95865], 8);
+        const map = L.map('map').setView([25.338749999999997, -80.95865], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([24.5551, -81.78]).addTo(map).bindPopup('Key West');
         L.marker([26.1224, -80.1373]).addTo(map).bindPopup('Fort Lauderdale');

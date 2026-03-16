@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([33.195949999999996, -99.40205], 7);
+        const map = L.map('map').setView([33.195949999999996, -99.40205], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([33.5779, -101.8552]).addTo(map).bindPopup('Lubbock');
         L.marker([32.814, -96.9489]).addTo(map).bindPopup('Irving');

@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([36.8232, -77.90915], 5);
+        const map = L.map('map').setView([36.8232, -77.90915], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([43.2081, -71.5376]).addTo(map).bindPopup('Concord');
         L.marker([30.4383, -84.2807]).addTo(map).bindPopup('Tallahassee');

@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([39.7538, -95.5742], 5);
+        const map = L.map('map').setView([39.7538, -95.5742], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([39.7392, -104.9903]).addTo(map).bindPopup('Denver');
         L.marker([39.7684, -86.1581]).addTo(map).bindPopup('Indianapolis');

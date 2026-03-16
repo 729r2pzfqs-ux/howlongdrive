@@ -137,7 +137,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([40.2826, -85.0586], 5);
+        const map = L.map('map').setView([40.2826, -85.0586], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([41.5868, -93.625]).addTo(map).bindPopup('Des Moines');
         L.marker([38.9784, -76.4922]).addTo(map).bindPopup('Annapolis');

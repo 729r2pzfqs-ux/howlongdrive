@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([28.350250000000003, -80.8923], 7);
+        const map = L.map('map').setView([28.350250000000003, -80.8923], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([26.3683, -80.1289]).addTo(map).bindPopup('Boca Raton');
         L.marker([30.3322, -81.6557]).addTo(map).bindPopup('Jacksonville');

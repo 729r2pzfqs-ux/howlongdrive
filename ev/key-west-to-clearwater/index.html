@@ -96,7 +96,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); }
-        const map = L.map('map').setView([26.2605, -82.29005000000001], 7);
+        const map = L.map('map').setView([26.2605, -82.29005000000001], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([24.5551, -81.78]).addTo(map);
         L.marker([27.9659, -82.8001]).addTo(map);

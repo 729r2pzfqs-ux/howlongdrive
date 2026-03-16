@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([31.1876, -96.48285], 7);
+        const map = L.map('map').setView([31.1876, -96.48285], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([32.7555, -97.3308]).addTo(map).bindPopup('Fort Worth');
         L.marker([29.6197, -95.6349]).addTo(map).bindPopup('Sugar Land');

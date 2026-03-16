@@ -137,7 +137,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([41.330200000000005, -75.70605], 6);
+        const map = L.map('map').setView([41.330200000000005, -75.70605], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([38.3498, -81.6326]).addTo(map).bindPopup('Charleston');
         L.marker([44.3106, -69.7795]).addTo(map).bindPopup('Augusta');

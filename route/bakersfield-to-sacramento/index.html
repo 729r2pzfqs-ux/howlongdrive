@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([36.977450000000005, -120.25655], 7);
+        const map = L.map('map').setView([36.977450000000005, -120.25655], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([35.3733, -119.0187]).addTo(map).bindPopup('Bakersfield');
         L.marker([38.5816, -121.4944]).addTo(map).bindPopup('Sacramento');
