@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driving Routes & Road Trips | HowLongDrive</title>
-    <meta name="description" content="Find driving times for 8420+ routes across the USA. Calculate drive time, gas costs, and plan road trips.">
+    <meta name="description" content="Find driving times for 8,400+ routes across the USA. Calculate drive time, gas costs, and plan road trips.">
     <link rel="canonical" href="https://howlongdrive.com/routes/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="theme-color" content="#4B6E93">
     <style>
         :root { --primary: #4B6E93; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,18 +19,29 @@
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--green); color: #fff; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
         @media (max-width: 768px) { .logo img { height: 144px; } nav { display: none; } }
-        h1 { font-size: 2rem; margin: 2rem 0 0.5rem; }
+        h1 { font-size: 2rem; margin: 2rem 0 0.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        h1 svg { width: 32px; height: 32px; color: var(--primary); }
         .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
         .stats { display: flex; gap: 2rem; margin: 1rem 0 2rem; flex-wrap: wrap; }
         .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
         .stat-label { font-size: 0.8rem; color: var(--muted); }
-        .search-box { background: var(--card); padding: 1rem; border-radius: 0.75rem; margin-bottom: 2rem; }
+        .search-box { background: var(--card); padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .search-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .input-wrapper { flex: 1; min-width: 200px; position: relative; }
         .search-input { width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-size: 1rem; }
         .search-input:focus { outline: none; border-color: var(--primary); }
+        .dropdown { position: absolute; top: 100%; left: 0; right: 0; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 100; max-height: 250px; overflow-y: auto; }
+        .dropdown.active { display: block; }
+        .dropdown-item { padding: 0.75rem 1rem; cursor: pointer; border-bottom: 1px solid var(--border); }
+        .dropdown-item:last-child { border-bottom: none; }
+        .dropdown-item:hover { background: var(--bg); color: var(--primary); }
+        .search-btn { background: var(--primary); color: white; border: none; padding: 0.875rem 1.5rem; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 1rem; }
+        .search-btn:hover { background: #3d5a7a; }
         .section { margin-bottom: 2.5rem; }
-        .section h2 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text); }
+        .section h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .section h2 svg { width: 20px; height: 20px; color: var(--primary); }
         .routes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem; }
-        .route-card { background: var(--card); border-radius: 0.5rem; padding: 1rem; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: border-color 0.15s; }
+        .route-card { background: var(--card); border-radius: 0.5rem; padding: 1rem; text-decoration: none; color: inherit; border: 1px solid var(--border); }
         .route-card:hover { border-color: var(--primary); }
         .route-title { font-weight: 600; font-size: 0.95rem; }
         .route-meta { color: var(--muted); font-size: 0.8rem; margin-top: 0.25rem; }
@@ -45,99 +55,90 @@
         <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
     </div></header>
     <main class="container">
-        <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:32px;height:32px;vertical-align:middle;color:#4B6E93"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Driving Routes</h1>
-        <p class="subtitle">Find driving times and distances for 8,420+ routes across the USA</p>
+        <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Driving Routes</h1>
+        <p class="subtitle">Find driving times and distances for 8,400+ routes across the USA</p>
         <div class="stats">
             <div class="stat"><div class="stat-value">8,420</div><div class="stat-label">Routes</div></div>
             <div class="stat"><div class="stat-value">8,420</div><div class="stat-label">EV Routes</div></div>
             <div class="stat"><div class="stat-value">918</div><div class="stat-label">Cities</div></div>
         </div>
         <div class="search-box">
-            <input type="text" class="search-input" placeholder="Search routes (e.g., New York to Los Angeles)..." id="search">
+            <div class="search-row">
+                <div class="input-wrapper">
+                    <input type="text" class="search-input" placeholder="From (e.g., New York)" id="from" autocomplete="off">
+                    <div class="dropdown" id="from-dropdown"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="search-input" placeholder="To (e.g., Los Angeles)" id="to" autocomplete="off">
+                    <div class="dropdown" id="to-dropdown"></div>
+                </div>
+            </div>
+            <button class="search-btn" onclick="search()">Get Driving Time</button>
         </div>
         <div class="section">
-            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;vertical-align:middle;color:#4B6E93"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Popular Routes</h2>
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Popular Routes</h2>
             <div class="routes-grid">
-                <a href="/route/new-york-to-los-angeles/" class="route-card">
-                    <div class="route-title">New York → Los Angeles</div>
-                    <div class="route-meta">40h • 2,775 mi</div>
-                </a>
-                <a href="/route/los-angeles-to-las-vegas/" class="route-card">
-                    <div class="route-title">Los Angeles → Las Vegas</div>
-                    <div class="route-meta">4h • 270 mi</div>
-                </a>
-                <a href="/route/new-york-to-boston/" class="route-card">
-                    <div class="route-title">New York → Boston</div>
-                    <div class="route-meta">4h • 215 mi</div>
-                </a>
-                <a href="/route/chicago-to-new-york/" class="route-card">
-                    <div class="route-title">Chicago → New York</div>
-                    <div class="route-meta">12h • 790 mi</div>
-                </a>
-                <a href="/route/miami-to-orlando/" class="route-card">
-                    <div class="route-title">Miami → Orlando</div>
-                    <div class="route-meta">3h 30m • 235 mi</div>
-                </a>
-                <a href="/route/san-francisco-to-los-angeles/" class="route-card">
-                    <div class="route-title">San Francisco → Los Angeles</div>
-                    <div class="route-meta">6h • 380 mi</div>
-                </a>
-                <a href="/route/dallas-to-houston/" class="route-card">
-                    <div class="route-title">Dallas → Houston</div>
-                    <div class="route-meta">3h 30m • 240 mi</div>
-                </a>
-                <a href="/route/seattle-to-portland/" class="route-card">
-                    <div class="route-title">Seattle → Portland</div>
-                    <div class="route-meta">3h • 175 mi</div>
-                </a>
-                <a href="/route/denver-co-to-las-vegas/" class="route-card">
-                    <div class="route-title">Denver → Las Vegas</div>
-                    <div class="route-meta">10h • 750 mi</div>
-                </a>
-                <a href="/route/atlanta-to-miami/" class="route-card">
-                    <div class="route-title">Atlanta → Miami</div>
-                    <div class="route-meta">10h • 660 mi</div>
-                </a>
-                <a href="/route/boston-to-washington-dc/" class="route-card">
-                    <div class="route-title">Boston → Washington DC</div>
-                    <div class="route-meta">7h 30m • 440 mi</div>
-                </a>
-                <a href="/route/phoenix-to-los-angeles/" class="route-card">
-                    <div class="route-title">Phoenix → Los Angeles</div>
-                    <div class="route-meta">5h 30m • 370 mi</div>
-                </a>
+                <a href="/route/new-york-to-los-angeles/" class="route-card"><div class="route-title">New York → Los Angeles</div><div class="route-meta">40h • 2,775 mi</div></a>
+                <a href="/route/los-angeles-to-las-vegas/" class="route-card"><div class="route-title">Los Angeles → Las Vegas</div><div class="route-meta">4h • 270 mi</div></a>
+                <a href="/route/new-york-to-boston/" class="route-card"><div class="route-title">New York → Boston</div><div class="route-meta">4h • 215 mi</div></a>
+                <a href="/route/chicago-to-new-york/" class="route-card"><div class="route-title">Chicago → New York</div><div class="route-meta">12h • 790 mi</div></a>
+                <a href="/route/miami-to-orlando/" class="route-card"><div class="route-title">Miami → Orlando</div><div class="route-meta">3h 30m • 235 mi</div></a>
+                <a href="/route/san-francisco-to-los-angeles/" class="route-card"><div class="route-title">San Francisco → Los Angeles</div><div class="route-meta">6h • 380 mi</div></a>
             </div>
         </div>
         <div class="section">
-            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;vertical-align:middle;color:#4B6E93"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg> National Parks</h2>
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg> National Parks</h2>
             <div class="routes-grid">
-                <a href="/route/los-angeles-to-grand-canyon/" class="route-card">
-                    <div class="route-title">Los Angeles → Grand Canyon</div>
-                    <div class="route-meta">7h • 450 mi</div>
-                </a>
-                <a href="/route/denver-to-yellowstone/" class="route-card">
-                    <div class="route-title">Denver → Yellowstone</div>
-                    <div class="route-meta">8h • 525 mi</div>
-                </a>
-                <a href="/route/san-francisco-to-yosemite/" class="route-card">
-                    <div class="route-title">San Francisco → Yosemite</div>
-                    <div class="route-meta">3h • 170 mi</div>
-                </a>
-                <a href="/route/seattle-to-glacier/" class="route-card">
-                    <div class="route-title">Seattle → Glacier NP</div>
-                    <div class="route-meta">9h • 550 mi</div>
-                </a>
-                <a href="/route/las-vegas-to-zion/" class="route-card">
-                    <div class="route-title">Las Vegas → Zion NP</div>
-                    <div class="route-meta">2h 30m • 160 mi</div>
-                </a>
-                <a href="/route/boston-to-acadia/" class="route-card">
-                    <div class="route-title">Boston → Acadia NP</div>
-                    <div class="route-meta">4h 30m • 280 mi</div>
-                </a>
+                <a href="/route/los-angeles-to-grand-canyon/" class="route-card"><div class="route-title">Los Angeles → Grand Canyon</div><div class="route-meta">7h • 450 mi</div></a>
+                <a href="/route/denver-to-yellowstone/" class="route-card"><div class="route-title">Denver → Yellowstone</div><div class="route-meta">8h • 525 mi</div></a>
+                <a href="/route/san-francisco-to-yosemite/" class="route-card"><div class="route-title">San Francisco → Yosemite</div><div class="route-meta">3h • 170 mi</div></a>
+                <a href="/route/las-vegas-to-zion/" class="route-card"><div class="route-title">Las Vegas → Zion NP</div><div class="route-meta">2h 30m • 160 mi</div></a>
             </div>
         </div>
     </main>
     <footer>© 2026 <a href="/">HowLongDrive.com</a></footer>
+    <script>
+        const CITIES = ['Abington', 'Acadia', 'Addison', 'Ahwatukee', 'Alamo Heights', 'Albany', 'Albany Ny', 'Albuquerque', 'Alexandria', 'Allen', 'Almaden Valley', 'Alpharetta', 'Alum Rock', 'Alviso', 'Amarillo', 'Ambler', 'Ames', 'Anaheim', 'Anchorage', 'Anderson Mill', 'Ann Arbor', 'Annandale', 'Annapolis', 'Annapolis Md', 'Anoka', 'Antelope Canyon', 'Anthem', 'Apple Valley', 'Arcadia', 'Arcadia Phoenix', 'Arches', 'Arches National Park', 'Ardmore', 'Arlington', 'Arlington Heights', 'Arvada', 'Aspen', 'Atherton', 'Atl', 'Atlanta', 'Atlanta Ga', 'Atlantic City', 'Auburn', 'Augusta', 'Augusta Me', 'Aurora', 'Austin', 'Austin Tx', 'Austin Ut', 'Aventura', 'Avery Ranch', 'Avondale', 'Avondale Estates', 'Badlands', 'Bakersfield', 'Balcones Heights', 'Baltimore', 'Bangor', 'Bar Harbor', 'Bastrop', 'Baton Rouge La', 'Bayonne', 'Baytown', 'Bedford', 'Bee Cave', 'Bellaire', 'Bellevue', 'Belmont', 'Bensalem', 'Berkeley', 'Berkeley Ca', 'Berryessa', 'Berwyn', 'Bethesda', 'Beverly', 'Beverly Hills', 'Big Bear Lake', 'Big Bend', 'Big Sky', 'Billings', 'Binghamton', 'Birmingham', 'Bismarck Nd', 'Black Canyon', 'Black Diamond', 'Blaine', 'Bloomfield', 'Bloomfield Hills', 'Bloomington', 'Bloomington In', 'Blossom Valley', 'Blue Bell', 'Boca Raton', 'Boerne', 'Boise', 'Boise Id', 'Bos', 'Boston', 'Boston Ma', 'Bothell', 'Boulder', 'Bowie', 'Boynton Beach', 'Branson', 'Breckenridge', 'Brickell', 'Bridgeport', 'Brighton', 'Bristol Pa', 'Brookhaven', 'Brookline', 'Brooklyn', 'Brooklyn Center', 'Brooklyn Park', 'Broomfield', 'Brushy Creek', 'Bryce Canyon', 'Bryn Mawr', 'Buckeye', 'Buda', 'Buffalo', 'Buffalo Grove', 'Bulverde', 'Burbank', 'Burien', 'Burke', 'Burlingame', 'Burlington', 'Burlington Vt', 'Burnsville', 'Bwi', 'Cambrian Park', 'Cambridge', 'Camden', 'Campbell', 'Canton', 'Canyonlands', 'Cape Cod', 'Cape Coral', 'Capitol Reef', 'Carefree', 'Carlsbad', 'Carlsbad Caverns', 'Carmel', 'Carrollton', 'Carson City Nv', 'Casper', 'Castle Hills', 'Castle Rock', 'Cave Creek', 'Cedar Park', 'Celina', 'Centennial', 'Centreville', 'Chamblee', 'Chandler', 'Chanhassen', 'Channelview', 'Chantilly', 'Chapel Hill', 'Charleston', 'Charleston Sc', 'Charleston Wv', 'Charlotte', 'Chattanooga', 'Chelsea', 'Cheltenham', 'Cherry Creek', 'Cherry Hill', 'Chester', 'Chevy Chase', 'Cheyenne', 'Cheyenne Wy', 'Chicago', 'Chula Vista', 'Cibolo', 'Cicero', 'Cincinnati', 'Clairemont', 'Clarkston', 'Clear Lake', 'Clearwater', 'Clearwater Beach', 'Cleveland', 'Clifton', 'Coconut Grove', 'College Park', 'College Station', 'College Station Tx', 'Collegeville', 'Colorado Springs', 'Columbia Heights', 'Columbia Sc', 'Columbus', 'Columbus Oh', 'Columbus Osu', 'Commerce City', 'Concord', 'Concord Nh', 'Conifer', 'Conroe', 'Conshohocken', 'Converse', 'Coon Rapids', 'Coppell', 'Coral Gables', 'Coronado', 'Corpus Christi', 'Corte Madera', 'Costa Mesa', 'Covington', 'Crater Lake', 'Crested Butte', 'Crystal', 'Culver City', 'Cupertino', 'Cutler Bay', 'Cypress', 'Dallas', 'Daly City', 'Daytona Beach', 'Dca', 'Dearborn', 'Dearborn Heights', 'Death Valley', 'Decatur', 'Deer Park', 'Deerfield Beach', 'Del Mar', 'Delray Beach', 'Den', 'Denton', 'Denver', 'Denver Co', 'Des Moines', 'Des Moines Ia', 'Des Plaines', 'Desert Ridge', 'Detroit', 'Dfw', 'Diamond Head', 'Disney World', 'Disneyland', 'Dollywood', 'Doral', 'Doraville', 'Dover', 'Dover De', 'Downers Grove', 'Downey', 'Downtown Atlanta', 'Downtown Chicago', 'Doylestown', 'Dripping Springs', 'Duluth', 'Dunwoody', 'Eagan', 'East Austin', 'East Foothills', 'East Orange', 'East Point', 'Eden Prairie', 'Edgewater', 'Edina', 'Edison', 'Edmonds', 'El Cajon', 'El Monte', 'El Paso', 'Elgin', 'Elizabeth', 'Elkins Park', 'Elmhurst', 'Encanto', 'Encinitas', 'Energy Corridor', 'Englewood', 'Erie Pa', 'Escondido', 'Estes Park', 'Eugene', 'Evanston', 'Everett', 'Everglades', 'Evergreen', 'Ewr', 'Fair Oaks Ranch', 'Fairbanks', 'Fairfax', 'Falls Church', 'Fargo', 'Farmers Branch', 'Farmington Hills', 'Federal Heights', 'Federal Way', 'Ferndale', 'Flagstaff', 'Fll', 'Flower Mound', 'Forest Park', 'Fort Collins', 'Fort Lauderdale', 'Fort Lee', 'Fort Myers', 'Fort Worth', 'Foster City', 'Fountain Hills', 'Frankfort Ky', 'Frederick', 'Fremont', 'Fresno', 'Fridley', 'Friendswood', 'Frisco', 'Fullerton', 'Gainesville', 'Gainesville Fl', 'Gaithersburg', 'Galleria', 'Galveston', 'Garden City', 'Garden Grove', 'Garden Ridge', 'Garland', 'Gatlinburg', 'Georgetown', 'Germantown', 'Gettysburg', 'Gilbert', 'Gilroy', 'Glacier', 'Glacier National Park', 'Glen Ridge', 'Glendale', 'Glendale Az', 'Glenside', 'Glenview', 'Gloucester', 'Golden', 'Golden Valley', 'Goodyear', 'Grand Canyon', 'Grand Prairie', 'Grand Rapids', 'Grand Teton', 'Grapevine', 'Great Smoky', 'Great Smoky Mountains', 'Greeley', 'Green Bay', 'Grey Forest', 'Grosse Pointe', 'Grosse Pointe Park', 'Grosse Pointe Woods', 'Hackensack', 'Hamptons', 'Hapeville', 'Harper Woods', 'Harrisburg', 'Harrisburg Pa', 'Hartford', 'Hartford Ct', 'Haverford', 'Hayward', 'Hazel Park', 'Heights', 'Helena Mt', 'Helotes', 'Hermosa Beach', 'Herndon', 'Hialeah', 'Highland Park', 'Highlands Ranch', 'Hill Country Village', 'Hillcrest', 'Hilton Head', 'Hoboken', 'Hoffman Estates', 'Hollywood', 'Hollywood Fl', 'Hollywood Park', 'Homestead', 'Honolulu', 'Hoover Dam', 'Hopkins', 'Horseshoe Bend', 'Hot Springs', 'Hou', 'Houston', 'Humble', 'Huntington Beach', 'Huntington Wv', 'Hutto', 'Hyattsville', 'Iad', 'Iah', 'Imperial Beach', 'Indianapolis', 'Indianapolis In', 'Inglewood', 'Irvine', 'Irving', 'Issaquah', 'Ithaca', 'Jackson', 'Jackson Hole', 'Jackson Ms', 'Jacksonville', 'Jefferson City Mo', 'Jenkintown', 'Jersey City', 'Jfk', 'Johns Creek', 'Joliet', 'Jonesboro', 'Jonestown', 'Joshua Tree', 'Juneau Ak', 'Jupiter', 'Kailua', 'Kansas City', 'Katy', 'Kendall', 'Kenmore', 'Kennedy Space Center', 'Kennesaw', 'Kensington', 'Kent', 'Key Biscayne', 'Key West', 'Kierland', 'Killington', 'King Of Prussia', 'Kingwood', 'Kirby', 'Kirkland', 'Kissimmee', 'Knoxville', 'Kyle', 'La Jolla', 'La Mesa', 'La Porte', 'Lago Vista', 'Lake City', 'Lake Forest Park', 'Lake Geneva', 'Lake Placid', 'Lake Tahoe', 'Lakeville', 'Lakeway', 'Lakewood', 'Lansdale', 'Lansing Mi', 'Laramie', 'Laredo', 'Larkspur', 'Las', 'Las Vegas', 'Las Vegas Strip', 'Laurel', 'Laveen', 'Lawrenceville', 'Lax', 'League City', 'Leander', 'Leavenworth', 'Legoland', 'Leon Valley', 'Levittown Pa', 'Lewisville', 'Lexington', 'Lga', 'Lincoln Ne', 'Little Elm', 'Little Havana', 'Little Rock', 'Little Rock Ar', 'Littleton', 'Live Oak', 'Livonia', 'Lombard', 'Lone Tree', 'Long Beach', 'Long Island City', 'Longmont', 'Lorton', 'Los Altos', 'Los Angeles', 'Los Gatos', 'Louisville', 'Loveland', 'Lowell', 'Lubbock', 'Lynn', 'Lynnwood', 'Lytle', 'Madison', 'Madison Heights', 'Madison Wi', 'Malden', 'Malibu', 'Mammoth Cave', 'Mammoth Lakes', 'Manassas', 'Manchester Nh', 'Manhattan', 'Manhattan Beach', 'Manor', 'Maple Grove', 'Maple Valley', 'Maplewood', 'Marblehead', 'Marietta', 'Marthas Vineyard', 'Maryvale', 'Mcallen', 'Mckinney', 'Mclean', 'Mco', 'Mdw', 'Medford', 'Media', 'Melrose', 'Memorial', 'Memphis', 'Menlo Park', 'Mercer Island', 'Mesa', 'Mesa Verde', 'Mesquite', 'Mia', 'Miami', 'Miami Beach', 'Miami Lakes', 'Midtown Houston', 'Mill Valley', 'Millbrae', 'Millburn', 'Milpitas', 'Milwaukee', 'Minneapolis', 'Minnetonka', 'Mira Mesa', 'Mission Valley', 'Missoula', 'Missouri City', 'Moab', 'Mobile', 'Montclair', 'Monterey', 'Montgomery Al', 'Montpelier', 'Montpelier Vt', 'Montreal', 'Montrose', 'Monument Valley', 'Moon Valley', 'Morgan Hill', 'Morgantown', 'Morrison', 'Morristown', 'Morrow', 'Morton Grove', 'Mount Prospect', 'Mount Rainier', 'Mount Rushmore', 'Mountain View', 'Mountlake Terrace', 'Mueller', 'Muir Woods', 'Mukilteo', 'Murphy', 'Myrtle Beach', 'Nahant', 'Nantucket', 'Napa Valley', 'Naperville', 'Naples', 'Nashua', 'Nashville', 'Nashville Tn', 'National City', 'New Braunfels', 'New Haven', 'New Hope', 'New Orleans', 'New Rochelle', 'New York', 'Newark', 'Newark Ca', 'Newcastle', 'Newnan', 'Newport', 'Newport Beach', 'Newton', 'Newtown Pa', 'Niagara Falls', 'Niagara Falls Ca', 'Niles', 'Norfolk', 'Normal Heights', 'Norman', 'Norristown', 'North Bend', 'North Miami', 'North Miami Beach', 'North Park', 'North Scottsdale', 'North Shore', 'Northglenn', 'Northville', 'Novato', 'Novi', 'Oak', 'Oak Lawn', 'Oak Park', 'Oak Park Mi', 'Oakland', 'Ocean Beach', 'Oceanside', 'Oklahoma City', 'Oklahoma City Ok', 'Old Town Scottsdale', 'Olmos Park', 'Olympia Wa', 'Olympic National Park', 'Omaha', 'Ontario', 'Orange', 'Ord', 'Orland Park', 'Orlando', 'Outer Banks', 'Pacific Beach', 'Palatine', 'Palm Beach Gardens', 'Palm Springs', 'Palmetto Bay', 'Palo Alto', 'Paradise Valley', 'Paramus', 'Park City', 'Park Ridge', 'Parker', 'Parsippany', 'Pasadena', 'Pasadena Tx', 'Passaic', 'Paterson', 'Peabody', 'Peachtree City', 'Pearl Harbor', 'Pearland', 'Pensacola', 'Peoria', 'Peoria Az', 'Petrified Forest', 'Pflugerville', 'Philadelphia', 'Phoenix', 'Phoenix Az', 'Phx', 'Pierre Sd', 'Pine Lake', 'Pinecrest', 'Pittsburgh', 'Plano', 'Plymouth', 'Plymouth Mi', 'Point Loma', 'Point Venture', 'Pomona', 'Pompano Beach', 'Portland', 'Portland Me', 'Portola Valley', 'Portsmouth Nh', 'Potomac', 'Poway', 'Princeton', 'Prior Lake', 'Prosper', 'Providence', 'Providence Ri', 'Queen Creek', 'Quincy', 'Radnor', 'Raleigh', 'Raleigh Nc', 'Rancho Santa Fe', 'Rapid City', 'Reading', 'Redford', 'Redmond', 'Redondo Beach', 'Redwood', 'Redwood City', 'Rehoboth Beach', 'Reno', 'Renton', 'Reston', 'Revere', 'Richardson', 'Richfield', 'Richmond', 'Richmond Va', 'Riverside', 'Robbinsdale', 'Rochester Ny', 'Rockville', 'Rockwall', 'Rocky Mountain', 'Rocky Mountain Np', 'Rollingwood', 'Rose Garden', 'Rosenberg', 'Roseville', 'Roswell', 'Round Rock', 'Rowlett', 'Royal Oak', 'Rutland', 'Sacramento', 'Sacramento Ca', 'Saint Paul Mn', 'Salem', 'Salem Or', 'Salt Lake City', 'Salt Lake City Ut', 'Sammamish', 'San Antonio', 'San Bruno', 'San Carlos', 'San Diego', 'San Diego Zoo', 'San Francisco', 'San Jose', 'San Marcos', 'San Marcos Ca', 'San Mateo', 'San Rafael', 'San Tan Valley', 'Sandy Springs', 'Santa Ana', 'Santa Barbara', 'Santa Clara', 'Santa Fe', 'Santa Fe Nm', 'Santa Monica', 'Santee', 'Sarasota', 'Saratoga', 'Saratoga Springs', 'Sausalito', 'Savannah', 'Schaumburg', 'Schertz', 'Scottsdale', 'Scranton', 'Scripps Ranch', 'Sea', 'Seatac', 'Seattle', 'Sedona', 'Seguin', 'Selma', 'Sequoia', 'Sfo', 'Shakopee', 'Shavano Park', 'Shenandoah', 'Shoreline', 'Silver Creek', 'Silver Spring', 'Sioux Falls', 'Skokie', 'Smyrna', 'Snellville', 'Snoqualmie', 'Snoqualmie Falls', 'Solana Beach', 'Somerset', 'Somerville', 'South Beach', 'South San Francisco', 'South Scottsdale', 'Southfield', 'Southlake', 'Spokane', 'Spring', 'Spring Branch', 'Springfield', 'Springfield Il', 'Springfield Ma', 'St Clair Shores', 'St Louis', 'St Louis Park', 'St Paul', 'St Petersburg', 'Stamford', 'Stamford Ct', 'State College', 'Statue Of Liberty', 'Steamboat Springs', 'Sterling Heights', 'Stockton', 'Stone Mountain', 'Stoneham', 'Stowe', 'Sugar Land', 'Summit', 'Sun Valley', 'Sundance', 'Sunny Isles Beach', 'Sunnyslope', 'Sunnyvale', 'Sunset Valley', 'Surprise', 'Suwanee', 'Swampscott', 'Sweetwater', 'Syracuse', 'Tacoma', 'Takoma Park', 'Tallahassee', 'Tallahassee Fl', 'Tampa', 'Taos', 'Taos Ski Valley', 'Taylor', 'Teaneck', 'Telluride', 'Tempe', 'Terrell Hills', 'Texas City', 'The Colony', 'The Woodlands', 'Thornton', 'Tiburon', 'Tijuana', 'Times Square', 'Tinley Park', 'Topeka Ks', 'Toronto', 'Torrance', 'Trenton', 'Trenton Nj', 'Troy', 'Tucker', 'Tucson', 'Tukwila', 'Tulsa', 'Tysons', 'Union City', 'Union City Ca', 'Universal City', 'Universal Orlando', 'Universal Studios', 'University Heights', 'University Park', 'Vail', 'Vancouver', 'Vienna', 'Villanova', 'Virginia Beach', 'Vista', 'Volente', 'Von Ormy', 'Waco', 'Waikiki', 'Wakefield', 'Walnut Creek', 'Waltham', 'Warren', 'Washington Dc', 'Waukegan', 'Wayne', 'Wayne Pa', 'Wayzata', 'Wells Branch', 'West Bloomfield', 'West Chester', 'West Covina', 'West Hollywood', 'West Lake Hills', 'West Palm Beach', 'West University Place', 'Westland', 'Westminster', 'Wheat Ridge', 'Wheaton', 'White Plains', 'White Sands', 'Whitefish', 'Whittier', 'Wichita', 'Willow Glen', 'Wilmette', 'Wilmington', 'Wilmington De', 'Wimberley', 'Winchester', 'Windcrest', 'Winnetka', 'Wisconsin Dells', 'Woburn', 'Woodbridge', 'Woodbury', 'Woodinville', 'Woodside', 'Worcester', 'Wylie', 'Wynwood', 'Yellowstone', 'Yonkers', 'Yosemite', 'Zion', 'Zion National Park'];
+        
+        function setupAutocomplete(inputId, dropdownId) {
+            const input = document.getElementById(inputId);
+            const dropdown = document.getElementById(dropdownId);
+            
+            input.addEventListener('input', function() {
+                const val = this.value.toLowerCase();
+                dropdown.innerHTML = '';
+                if (val.length < 1) { dropdown.classList.remove('active'); return; }
+                
+                const matches = CITIES.filter(c => c.toLowerCase().includes(val)).slice(0, 8);
+                if (matches.length === 0) { dropdown.classList.remove('active'); return; }
+                
+                matches.forEach(city => {
+                    const div = document.createElement('div');
+                    div.className = 'dropdown-item';
+                    div.textContent = city;
+                    div.onclick = () => { input.value = city; dropdown.classList.remove('active'); };
+                    dropdown.appendChild(div);
+                });
+                dropdown.classList.add('active');
+            });
+            
+            document.addEventListener('click', e => {
+                if (!input.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('active');
+            });
+        }
+        
+        setupAutocomplete('from', 'from-dropdown');
+        setupAutocomplete('to', 'to-dropdown');
+        
+        function search() {
+            const from = document.getElementById('from').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            const to = document.getElementById('to').value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            if (from && to) window.location.href = '/route/' + from + '-to-' + to + '/';
+        }
+        
+        document.getElementById('to').addEventListener('keydown', e => {
+            if (e.key === 'Enter') search();
+        });
+    </script>
 </body>
 </html>
