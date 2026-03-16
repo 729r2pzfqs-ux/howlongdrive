@@ -13,16 +13,16 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
-        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.25rem 0; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
-        .logo img { height: 100px; width: auto; }
+        .logo img { height: 180px; width: auto; }
         nav { display: flex; align-items: center; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
         .close-btn { display: none; }
-        @media (max-width: 768px) { .logo img { height: 60px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
+        @media (max-width: 768px) { .logo img { height: 144px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
         .content { background: var(--card); border-radius: 1rem; padding: 2.5rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
         h1 { font-size: 2rem; margin-bottom: 1.5rem; }
         h2 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--text); display: flex; align-items: center; gap: 0.5rem; }
@@ -57,7 +57,7 @@
             
             <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10V6a2 2 0 00-2-2H8a2 2 0 00-2 2v4l-2.5 1.1C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> What We Offer</h2>
             <ul>
-                <li><strong>Driving Times</strong> - Accurate drive times between 300+ city pairs</li>
+                <li><strong>Driving Times</strong> - Accurate drive times between 8,400+ routes</li>
                 <li><strong>Distance Calculator</strong> - Miles and kilometers for every route</li>
                 <li><strong>Gas Cost Estimates</strong> - Based on current fuel prices and fuel efficiency</li>
                 <li><strong>Toll Estimates</strong> - Approximate toll costs for major routes</li>
