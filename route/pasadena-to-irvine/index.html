@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([33.9162, -117.9855], 8);
+        const map = L.map('map').setView([33.9162, -117.9855], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([34.1478, -118.1445]).addTo(map).bindPopup('Pasadena');
         L.marker([33.6846, -117.8265]).addTo(map).bindPopup('Irvine');

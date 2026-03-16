@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([42.88435, -109.86015], 5);
+        const map = L.map('map').setView([42.88435, -109.86015], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([44.9429, -123.0351]).addTo(map).bindPopup('Salem');
         L.marker([40.8258, -96.6852]).addTo(map).bindPopup('Lincoln');

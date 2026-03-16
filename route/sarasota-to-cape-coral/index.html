@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([26.94965, -82.2401], 8);
+        const map = L.map('map').setView([26.94965, -82.2401], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([27.3364, -82.5307]).addTo(map).bindPopup('Sarasota');
         L.marker([26.5629, -81.9495]).addTo(map).bindPopup('Cape Coral');

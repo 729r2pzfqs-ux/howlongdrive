@@ -137,7 +137,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([39.8891, -83.64795000000001], 4);
+        const map = L.map('map').setView([39.8891, -83.64795000000001], 3);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([44.3106, -69.7795]).addTo(map).bindPopup('Augusta');
         L.marker([35.4676, -97.5164]).addTo(map).bindPopup('Oklahoma City');

@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([27.026850000000003, -80.7997], 7);
+        const map = L.map('map').setView([27.026850000000003, -80.7997], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([25.7617, -80.1918]).addTo(map).bindPopup('Miami');
         L.marker([28.292, -81.4076]).addTo(map).bindPopup('Kissimmee');

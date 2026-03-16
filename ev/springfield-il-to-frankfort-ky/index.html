@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([38.991299999999995, -87.26169999999999], 7);
+        const map = L.map('map').setView([38.991299999999995, -87.26169999999999], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([39.7817, -89.6501]).addTo(map).bindPopup('Springfield');
         L.marker([38.2009, -84.8733]).addTo(map).bindPopup('Frankfort');

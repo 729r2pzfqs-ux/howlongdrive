@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([37.88105, -121.781], 8);
+        const map = L.map('map').setView([37.88105, -121.781], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([37.8044, -122.2712]).addTo(map).bindPopup('Oakland');
         L.marker([37.9577, -121.2908]).addTo(map).bindPopup('Stockton');

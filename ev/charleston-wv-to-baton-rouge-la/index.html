@@ -112,7 +112,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([34.40065, -86.40985], 5);
+        const map = L.map('map').setView([34.40065, -86.40985], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([38.3498, -81.6326]).addTo(map).bindPopup('Charleston');
         L.marker([30.4515, -91.1871]).addTo(map).bindPopup('Baton Rouge');

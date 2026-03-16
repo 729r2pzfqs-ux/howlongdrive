@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([27.25675, -82.20335], 8);
+        const map = L.map('map').setView([27.25675, -82.20335], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([27.9506, -82.4572]).addTo(map).bindPopup('Tampa');
         L.marker([26.5629, -81.9495]).addTo(map).bindPopup('Cape Coral');

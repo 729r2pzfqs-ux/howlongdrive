@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([30.288649999999997, -97.0967], 7);
+        const map = L.map('map').setView([30.288649999999997, -97.0967], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([32.7767, -96.797]).addTo(map).bindPopup('Dallas');
         L.marker([27.8006, -97.3964]).addTo(map).bindPopup('Corpus Christi');

@@ -125,7 +125,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([29.488300000000002, -82.82995], 7);
+        const map = L.map('map').setView([29.488300000000002, -82.82995], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([28.5383, -81.3792]).addTo(map).bindPopup('Orlando');
         L.marker([30.4383, -84.2807]).addTo(map).bindPopup('Tallahassee');

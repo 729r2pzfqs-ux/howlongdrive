@@ -137,7 +137,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([38.349450000000004, -76.4802], 7);
+        const map = L.map('map').setView([38.349450000000004, -76.4802], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
         L.marker([39.1582, -75.5244]).addTo(map).bindPopup('Dover');
         L.marker([37.5407, -77.436]).addTo(map).bindPopup('Richmond');
