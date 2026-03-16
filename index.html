@@ -82,6 +82,10 @@
         .route-title { font-weight: 600; margin-bottom: 0.5rem; }
         .route-meta { color: var(--muted); font-size: 0.875rem; }
         footer { background: var(--card); border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.875rem; margin-top: 4rem; }
+    
+        .stats-bar { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .stats-bar .stat { color: white; font-size: 0.9rem; }
+        .stats-bar .stat-num { font-weight: 700; font-size: 1.1rem; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -126,6 +130,11 @@
                     </div>
                     <button class="search-btn" onclick="search()">Get Driving Time</button>
                 </div>
+            <div class="stats-bar">
+                <div class="stat"><span class="stat-num">8,420</span> Routes</div>
+                <div class="stat"><span class="stat-num">8,420</span> EV Routes</div>
+                <div class="stat"><span class="stat-num">918</span> Cities</div>
+            </div>
             </div>
         </section>
 
