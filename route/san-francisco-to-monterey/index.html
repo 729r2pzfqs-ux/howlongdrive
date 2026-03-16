@@ -85,7 +85,10 @@
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     
-        .hero a.cta, .hero a.ev-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-right: 0.75rem; margin-top: 1rem; }
+        .hero a.cta, .hero a.ev-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 0.5rem; margin-top: 1rem; vertical-align: middle; }
+        .hero .maps-btn { background: #EFA24F; color: white; }
+        .hero .reverse-btn { background: var(--primary); color: white; }
+        .hero .ev-link { background: var(--green); color: white; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -115,8 +118,8 @@
                 <div class="stat"><div class="stat-value">$14</div><div class="stat-label">Gas Cost</div></div>
                 <div class="stat"><div class="stat-value">$3</div><div class="stat-label">Tolls</div></div>
             </div>
-            <a href="https://www.google.com/maps/dir/San Francisco/Monterey" target="_blank" class="cta">📍 Open in Google Maps</a>
-            <a href="/route/monterey-to-san-francisco/" class="cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 110 8h-1"/></svg> Reverse</a>
+            <a href="https://www.google.com/maps/dir/San Francisco/Monterey" target="_blank" class="cta maps-btn">📍 Open in Google Maps</a>
+            <a href="/route/monterey-to-san-francisco/" class="cta reverse-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 110 8h-1"/></svg> Reverse</a>
             <a href="/ev/san-francisco-to-monterey/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trip</a>
         </div>
         <div class="grid">
