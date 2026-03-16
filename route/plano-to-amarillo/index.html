@@ -60,6 +60,17 @@
         .ev-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.6rem 1.25rem; background: var(--green); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
+    
+        .faq { margin-top: 1.5rem; }
+        .faq h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .faq h2 svg { width: 20px; height: 20px; color: var(--primary); }
+        .faq-item { background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .faq-q { font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .faq-q:hover { background: #f8fafc; }
+        .faq-q svg { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }
+        .faq-item.open .faq-a { display: block; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -88,13 +99,13 @@
         </div>
         <div class="grid">
             <div class="card">
-                <h3>🗺️ Route Details</h3>
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Route Details</h3>
                 <div class="row"><span>Distance</span><span>429 miles</span></div>
                 <div class="row"><span>Drive Time</span><span>7h 47min</span></div>
                 <div class="row"><span>Avg Speed</span><span>55 mph</span></div>
             </div>
             <div class="card">
-                <h3>💰 Cost Breakdown</h3>
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Cost Breakdown</h3>
                 <div class="row"><span>Gas (30 MPG)</span><span>$50</span></div>
                 <div class="row"><span>Tolls (est.)</span><span>$0-20</span></div>
                 <div class="row"><span>Total</span><span>$65-$100</span></div>
@@ -103,6 +114,12 @@
         <div id="map"></div>
         <a href="https://www.google.com/maps/dir/Plano/Amarillo" target="_blank" class="cta">📍 Open in Google Maps</a>
         <a href="/ev/plano-to-amarillo/" class="ev-link">⚡ View EV Route</a>
+    
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg> FAQ</h2>
+            <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long is the drive from Plano to Amarillo?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">The drive takes approximately <strong>7 hours and 47 minutes</strong> covering 429 miles.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much gas will I need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">At 30 MPG, you'll use about 14 gallons of gas, costing approximately $50 at $3.50/gallon.</div></div>
+        </div>
     </main>
     <footer><p>© 2026 HowLongDrive | <a href="/about/">About</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

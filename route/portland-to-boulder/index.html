@@ -45,6 +45,17 @@
         .cta { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.25rem; background: #EFA24F; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
         .ev-link { margin-left: 0.75rem; background: var(--green); }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
+    
+        .faq { margin-top: 1.5rem; }
+        .faq h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .faq h2 svg { width: 20px; height: 20px; color: var(--primary); }
+        .faq-item { background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .faq-q { font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .faq-q:hover { background: #f8fafc; }
+        .faq-q svg { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }
+        .faq-item.open .faq-a { display: block; }
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
@@ -64,20 +75,27 @@
             </div>
         </div>
         <div class="grid">
-            <div class="card"><h3>🗺️ Route Details</h3>
+            <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Route Details</h3>
                 <div class="row"><span>Distance</span><span>1246 mi</span></div>
                 <div class="row"><span>Drive Time</span><span>22h 39min</span></div>
                 <div class="row"><span>Avg Speed</span><span>55 mph</span></div>
             </div>
-            <div class="card"><h3>💰 Cost</h3>
+            <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Cost Breakdown</h3>
                 <div class="row"><span>Gas (30 MPG)</span><span>$145</span></div>
                 <div class="row"><span>Tolls (est.)</span><span>$0-20</span></div>
                 <div class="row"><span>Total</span><span>$160-$195</span></div>
             </div>
         </div>
         <div id="map"></div>
-        <a href="https://www.google.com/maps/dir/Portland/Boulder" target="_blank" class="cta">📍 Google Maps</a>
+        <a href="https://www.google.com/maps/dir/Portland/Boulder" target="_blank" class="cta">📍 Open in Google Maps</a>
         <a href="/ev/portland-to-boulder/" class="cta ev-link">⚡ EV Route</a>
+    
+        <div class="faq">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg> FAQ</h2>
+            <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long is the drive from Portland to Boulder?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">The drive takes approximately <strong>22 hours and 39 minutes</strong> covering 1246 miles.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much gas will I need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">At 30 MPG, you'll use about 41 gallons of gas, costing approximately $145 at $3.50/gallon.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the best time to leave?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a">Early morning (6-8 AM) is ideal to avoid rush hour traffic.</div></div>
+        </div>
     </main>
     <footer>© 2026 HowLongDrive</footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
