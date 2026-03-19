@@ -200,8 +200,10 @@
         function toggleMenu(){document.getElementById('nav').classList.toggle('active');}
         const map=L.map('map').setView([41.95445,-90.63085000000001],6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OSM'}).addTo(map);
-        L.marker([41.8781,-87.6298]).addTo(map);
-        L.marker([42.0308,-93.6319]).addTo(map);
+        var startIcon = L.divIcon({className:'',html:'<div style="background:#4B6E93;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
+        var endIcon = L.divIcon({className:'',html:'<div style="background:#EFA24F;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
+        L.marker([41.8781,-87.6298], {icon: startIcon}).addTo(map).bindPopup('<b>Chicago</b><br>Start');
+        L.marker([42.0308,-93.6319], {icon: endIcon}).addTo(map).bindPopup('<b>Ames</b><br>Destination');
         L.polyline([[41.8781,-87.6298],[42.0308,-93.6319]],{color:'#4B6E93',weight:3}).addTo(map);
     </script>
 </body>
