@@ -85,7 +85,8 @@
         footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
         footer a { color: var(--primary); text-decoration: none; }
     
-        .hero a.cta, .hero a.ev-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 0.5rem; margin-top: 1rem; vertical-align: middle; }
+        .hero .btn-row { display: flex; gap: 0.5rem; margin-top: 1rem; }
+        .hero a.cta, .hero a.ev-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.6rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; flex: 1; }
         .hero .maps-btn { background: #EFA24F; color: white; }
         .hero .reverse-btn { background: var(--primary); color: white; }
         .hero .ev-link { background: var(--green); color: white; }
@@ -111,9 +112,9 @@
                 <div class="stat"><div class="stat-value">$6</div><div class="stat-label">Gas Cost</div></div>
                 <div class="stat"><div class="stat-value">$1</div><div class="stat-label">Tolls</div></div>
             </div>
-            <a href="https://www.google.com/maps/dir/Portsmouth Nh/Portland Me" target="_blank" class="cta maps-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Open in Google Maps</a>
+            <div class="btn-row"><a href="https://www.google.com/maps/dir/Portsmouth Nh/Portland Me" target="_blank" class="cta maps-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Open in Google Maps</a>
             <a href="/route/portland-me-to-portsmouth-nh/" class="cta reverse-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 110 8h-1"/></svg> Reverse</a>
-            <a href="/ev/portsmouth-nh-to-portland-me/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trip</a>
+            <a href="/ev/portsmouth-nh-to-portland-me/" class="ev-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trip</a></div>
         </div>
         
         <div class="card" style="margin-top:1.5rem;margin-bottom:0">
