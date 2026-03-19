@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cities - Driving Routes | HowLongDrive</title>
-    <meta name="description" content="Find driving routes from 918 US cities.">
+    <meta name="description" content="Find driving times and distances between 918 US cities. Plan road trips with accurate drive times, gas costs, and route details. Updated 2026.">
     <link rel="canonical" href="https://howlongdrive.com/cities/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
@@ -52,9 +52,12 @@
         <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
     </div></header>
     <main class="container">
-        <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg> Cities</h1>
-        <p class="subtitle">Find driving routes from 918 US cities</p>
-        <div class="stat">918 Cities</div>
+        <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg> US Cities — Driving Times & Distances</h1>
+        <p class="subtitle">Find driving times, distances, and fuel costs between 918 US cities. Plan your road trip with accurate route data.</p>
+        <div class="stat">918 Cities · 8,400+ Routes</div>
+        <div style="max-width:700px;margin:0 auto 2rem;padding:1.5rem;background:var(--card);border-radius:0.75rem;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+            <p style="color:var(--muted);font-size:0.9rem;line-height:1.7">Browse driving routes from any major US city. Each city page shows drive times, distances, gas costs, and route details to hundreds of destinations. Whether you're planning a weekend getaway or a cross-country road trip, find the exact travel time and cost before you go.</p>
+        </div>
         <div class="search-box">
             <input type="text" class="search-input" placeholder="Search cities..." id="search" autocomplete="off">
             <div class="dropdown" id="dropdown"></div>
@@ -800,6 +803,22 @@
                 <a href="/cities/zion-national-park/" class="city-card" data-city="zion-national-park"><span class="city-name">Zion National Park</span></a>
             </div>
         </div>
+    </main>
+    <section style="margin-top:2rem;padding:1.5rem;background:var(--card);border-radius:0.75rem;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+        <h2 style="font-size:1.1rem;margin-bottom:1rem;color:var(--text)">Popular Driving Searches</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+            <a href="/route/los-angeles-to-las-vegas/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">LA to Las Vegas</a>
+            <a href="/route/new-york-to-boston/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">New York to Boston</a>
+            <a href="/route/houston-to-dallas/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Houston to Dallas</a>
+            <a href="/route/chicago-to-new-york/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Chicago to New York</a>
+            <a href="/route/san-francisco-to-los-angeles/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">SF to LA</a>
+            <a href="/route/miami-to-orlando/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Miami to Orlando</a>
+            <a href="/route/denver-to-las-vegas/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Denver to Las Vegas</a>
+            <a href="/route/seattle-to-portland/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Seattle to Portland</a>
+            <a href="/route/atlanta-to-nashville/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Atlanta to Nashville</a>
+            <a href="/route/dallas-to-austin/" style="padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem">Dallas to Austin</a>
+        </div>
+    </section>
     </main>
     <footer>© 2026 <a href="/">HowLongDrive.com</a></footer>
     <script>
