@@ -1,106 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driving Times from Round Rock, 19 driving routes available — 50 Routes (2026) | HowLongDrive</title>
-    <meta name="description" content="Driving times from Round Rock, 19 driving routes available. 50 routes with distances, drive times, and gas costs. Popular: Amarillo, Arlington, Austin. Plan your road trip today.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-NXC7PNTC4G")</script>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Times from Round Rock, 19 driving routes available — 19 Routes (2026) | HowLongDrive</title>
+    <meta name="description" content="Driving times from Round Rock, 19 driving routes available. 19 routes with distances and gas costs. Popular: Amarillo, Arlington, Austin.">
     <link rel="canonical" href="https://howlongdrive.com/cities/round-rock/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="theme-color" content="#4B6E93">
     <style>
-        :root { --primary: #4B6E93; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.25rem 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: var(--primary); text-decoration: none; }
-        .logo img { height: 180px; }
-        nav { display: flex; gap: 1.5rem; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 80px; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
-        .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
-        @media (max-width: 768px) { .logo img { height: 144px; } nav { display: none; } }
-        .hero { background: linear-gradient(135deg, #4B6E93, #3a5775); padding: 2rem; border-radius: 1rem; margin: 1rem 0; color: white; }
-        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-        .subtitle { opacity: 0.9; }
-        .routes { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
-        .route-card { background: var(--card); padding: 1rem 1.25rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: transform 0.2s; }
-        .route-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .route-dest { font-weight: 600; }
-        .route-info { color: var(--muted); font-size: 0.875rem; }
-        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
+        .ev-badge { background: var(--accent); color: white !important; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; }
+        @media (max-width: 768px) { .logo img { height: 50px; } nav { display: none; } .hamburger { display: block; } }
+        .hero { text-align: center; padding: 3rem 1rem; background: white; border-radius: 1rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2rem; }
+        .subtitle { color: var(--muted); margin-top: 0.5rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.875rem; color: var(--muted); }
+        .routes-grid { display: grid; gap: 0.75rem; }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: white; border-radius: 0.5rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .route-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .route-title { font-weight: 600; }
+        .route-meta { font-size: 0.875rem; color: var(--muted); margin-top: 0.25rem; }
+        .route-time { font-weight: 700; color: var(--primary); white-space: nowrap; }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
     </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script><script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Driving Times from Round Rock, 19 driving routes available",
-        "description": "19 driving routes from Routes from Round Rock with distances, times, and costs",
-        "url": "https://howlongdrive.com/cities/round-rock/",
-        "isPartOf": {"@type": "WebSite", "name": "HowLongDrive", "url": "https://howlongdrive.com"}
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {"@type": "Question", "name": "How far is Round Rock from Amarillo?", "acceptedAnswer": {"@type": "Answer", "text": "Check our Round Rock to Amarillo route page for exact driving distance and time."}},
-            {"@type": "Question", "name": "What cities are within 3 hours of Round Rock?", "acceptedAnswer": {"@type": "Answer", "text": "Browse our Round Rock driving routes to see all cities reachable in under 3 hours."}},
-            {"@type": "Question", "name": "How many routes from Routes from Round Rock?", "acceptedAnswer": {"@type": "Answer", "text": "Round Rock has 19 driving routes in our database covering destinations across the US."}}
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How far is Round Rock from Amarillo?","acceptedAnswer":{"@type":"Answer","text":"Check our route page for exact distance and time."}},{"@type":"Question","name":"What cities are within 3 hours of Round Rock?","acceptedAnswer":{"@type":"Answer","text":"Browse the short drives section above."}},{"@type":"Question","name":"How many routes from Round Rock?","acceptedAnswer":{"@type":"Answer","text":"Round Rock has 19 routes."}}]}</script>
 </head>
 <body>
     <header><div class="container header-inner">
         <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-        <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
+        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV</a><a href="/about/">About</a></nav>
     </div></header>
     <main class="container">
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;vertical-align:middle;margin-right:8px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Round Rock</h1>
             <p class="subtitle">19 driving routes available</p>
+            <div class="stats"><div><div class="stat-value">19</div><div class="stat-label">Destinations</div></div></div>
         </div>
-        <div class="routes">
-            <a href="/route/round-rock-to-amarillo/" class="route-card"><span class="route-dest">Amarillo</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-arlington/" class="route-card"><span class="route-dest">Arlington</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-austin/" class="route-card"><span class="route-dest">Austin</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-college-station/" class="route-card"><span class="route-dest">College Station</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-corpus-christi/" class="route-card"><span class="route-dest">Corpus Christi</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-dallas/" class="route-card"><span class="route-dest">Dallas</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-el-paso/" class="route-card"><span class="route-dest">El Paso</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-fort-worth/" class="route-card"><span class="route-dest">Fort Worth</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-galveston/" class="route-card"><span class="route-dest">Galveston</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-houston/" class="route-card"><span class="route-dest">Houston</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-irving/" class="route-card"><span class="route-dest">Irving</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-laredo/" class="route-card"><span class="route-dest">Laredo</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-lubbock/" class="route-card"><span class="route-dest">Lubbock</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-mcallen/" class="route-card"><span class="route-dest">Mcallen</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-plano/" class="route-card"><span class="route-dest">Plano</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-san-antonio/" class="route-card"><span class="route-dest">San Antonio</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-sugar-land/" class="route-card"><span class="route-dest">Sugar Land</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-the-woodlands/" class="route-card"><span class="route-dest">The Woodlands</span><span class="route-info">View route →</span></a>
-            <a href="/route/round-rock-to-waco/" class="route-card"><span class="route-dest">Waco</span><span class="route-info">View route →</span></a>
+        <div style="padding:1.25rem;background:var(--card);border-radius:0.75rem;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
+            <p style="color:var(--muted);font-size:0.9rem;line-height:1.7">Round Rock is a gateway to great road trips in 19 driving routes available. Browse 19 routes with drive times, distances, and gas costs.</p>
         </div>
-    </main>
-    
+        <h2 style="margin-bottom:0.5rem">Driving Times from Round Rock</h2>
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem">19 destinations</p>
+        <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:middle;margin-right:4px"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10V6a2 2 0 00-2-2H8a2 2 0 00-2 2v4l-2.5 1.1C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Short Drives — 4</h3>
+        <div class="routes-grid"><a href="/route/round-rock-to-austin/" class="route-card"><div><div class="route-title">Austin</div><div class=route-meta>11 miles</div></div><div class="route-time">23 min</div></a>
+            <a href="/route/round-rock-to-college-station/" class="route-card"><div><div class="route-title">College Station</div><div class=route-meta>104 miles</div></div><div class="route-time">1h 53m</div></a>
+            <a href="/route/round-rock-to-san-antonio/" class="route-card"><div><div class="route-title">San Antonio</div><div class=route-meta>116 miles</div></div><div class="route-time">2h 6m</div></a>
+            <a href="/route/round-rock-to-waco/" class="route-card"><div><div class="route-title">Waco</div><div class=route-meta>102 miles</div></div><div class="route-time">1h 51m</div></a></div>
+        <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:middle;margin-right:4px"><path d="M4 19L9 2h6l5 17"/><path d="M12 2v17"/></svg> Medium Trips — 13</h3>
+        <div class="routes-grid"><a href="/route/round-rock-to-arlington/" class="route-card"><div><div class="route-title">Arlington</div><div class=route-meta>204 miles</div></div><div class="route-time">3h 42m</div></a>
+            <a href="/route/round-rock-to-corpus-christi/" class="route-card"><div><div class="route-title">Corpus Christi</div><div class=route-meta>244 miles</div></div><div class="route-time">4h 26m</div></a>
+            <a href="/route/round-rock-to-dallas/" class="route-card"><div><div class="route-title">Dallas</div><div class=route-meta>214 miles</div></div><div class="route-time">3h 53m</div></a>
+            <a href="/route/round-rock-to-fort-worth/" class="route-card"><div><div class="route-title">Fort Worth</div><div class=route-meta>203 miles</div></div><div class="route-time">3h 41m</div></a>
+            <a href="/route/round-rock-to-galveston/" class="route-card"><div><div class="route-title">Galveston</div><div class=route-meta>249 miles</div></div><div class="route-time">4h 31m</div></a>
+            <a href="/route/round-rock-to-houston/" class="route-card"><div><div class="route-title">Houston</div><div class=route-meta>191 miles</div></div><div class="route-time">3h 28m</div></a>
+            <a href="/route/round-rock-to-irving/" class="route-card"><div><div class="route-title">Irving</div><div class=route-meta>214 miles</div></div><div class="route-time">3h 53m</div></a>
+            <a href="/route/round-rock-to-laredo/" class="route-card"><div><div class="route-title">Laredo</div><div class=route-meta>302 miles</div></div><div class="route-time">5h 29m</div></a>
+            <a href="/route/round-rock-to-lubbock/" class="route-card"><div><div class="route-title">Lubbock</div><div class=route-meta>420 miles</div></div><div class="route-time">7h 38m</div></a>
+            <a href="/route/round-rock-to-mcallen/" class="route-card"><div><div class="route-title">Mcallen</div><div class=route-meta>389 miles</div></div><div class="route-time">7h 4m</div></a>
+            <a href="/route/round-rock-to-plano/" class="route-card"><div><div class="route-title">Plano</div><div class=route-meta>237 miles</div></div><div class="route-time">4h 18m</div></a>
+            <a href="/route/round-rock-to-sugar-land/" class="route-card"><div><div class="route-title">Sugar Land</div><div class=route-meta>177 miles</div></div><div class="route-time">3h 13m</div></a>
+            <a href="/route/round-rock-to-the-woodlands/" class="route-card"><div><div class="route-title">The Woodlands</div><div class=route-meta>174 miles</div></div><div class="route-time">3h 9m</div></a></div>
+        <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg> Long Distance — 2</h3>
+        <div class="routes-grid"><a href="/route/round-rock-to-amarillo/" class="route-card"><div><div class="route-title">Amarillo</div><div class=route-meta>526 miles</div></div><div class="route-time">9h 33m</div></a>
+            <a href="/route/round-rock-to-el-paso/" class="route-card"><div><div class="route-title">El Paso</div><div class=route-meta>686 miles</div></div><div class="route-time">12h 28m</div></a></div>
     <div style="margin-top:2rem;margin-bottom:2rem">
         <h2 style="font-size:1.1rem;margin-bottom:1rem">Frequently Asked Questions</h2>
-        <div style="background:var(--card);border-radius:0.5rem;margin-bottom:0.75rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-            <div style="font-weight:600;margin-bottom:0.5rem">How far is Round Rock from Amarillo?</div>
-            <div style="color:var(--muted);font-size:0.875rem">Check the route above for exact driving distance and time from Round Rock to Amarillo. Drive times vary based on traffic and route chosen.</div>
-        </div>
-        <div style="background:var(--card);border-radius:0.5rem;margin-bottom:0.75rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-            <div style="font-weight:600;margin-bottom:0.5rem">What cities are within 3 hours of Round Rock?</div>
-            <div style="color:var(--muted);font-size:0.875rem">Browse the short drives section above to see all cities reachable from Round Rock, 19 driving routes available in under 3 hours. Great for day trips and weekend getaways.</div>
-        </div>
-        <div style="background:var(--card);border-radius:0.5rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-            <div style="font-weight:600;margin-bottom:0.5rem">How many driving routes are available from Round Rock?</div>
-            <div style="color:var(--muted);font-size:0.875rem">Round Rock has 19 driving routes in our database, covering destinations across the US. Each route includes drive time, distance, gas cost, and the best times to travel.</div>
-        </div>
+        <div style="background:var(--card);border-radius:0.5rem;margin-bottom:0.75rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="font-weight:600;margin-bottom:0.5rem">How far is Round Rock from Amarillo?</div><div style="color:var(--muted);font-size:0.875rem">Check the route above for exact distance and time.</div></div>
+        <div style="background:var(--card);border-radius:0.5rem;margin-bottom:0.75rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="font-weight:600;margin-bottom:0.5rem">What cities are within 3 hours of Round Rock?</div><div style="color:var(--muted);font-size:0.875rem">Browse the short drives section above.</div></div>
+        <div style="background:var(--card);border-radius:0.5rem;padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="font-weight:600;margin-bottom:0.5rem">How many routes from Round Rock?</div><div style="color:var(--muted);font-size:0.875rem">Round Rock has 19 routes in our database.</div></div>
     </div>
-    <footer>© 2026 HowLongDrive</footer>
+    </main>
+    <footer>© 2026 <a href="/">HowLongDrive.com</a></footer>
 </body>
 </html>
