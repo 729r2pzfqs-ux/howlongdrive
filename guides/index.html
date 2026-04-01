@@ -41,8 +41,8 @@
         @media (max-width: 768px) {
             .logo img { height: 120px; }
             .logo span { display: none; }
-            nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; justify-content: flex-start; padding: 5rem 2rem 2rem; box-shadow: -4px 0 20px rgba(0,0,0,0.1); transition: right 0.3s; z-index: 1000; }
-            nav.active { right: 0; }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; justify-content: flex-start; padding: 5rem 2rem 2rem; box-shadow: -4px 0 20px rgba(0,0,0,0.1); transition: right 0.3s; z-index: 1000; display: none; }
+            .nav-links.active { right: 0; display: flex; }
             nav a { font-size: 1.1rem; padding: 0.25rem 0; border-bottom: 1px solid var(--border); width: 100%; }
             .hamburger { display: block; z-index: 1001; }
             .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem; }
@@ -226,7 +226,7 @@
     <footer><p>© 2026 <a href="/">HowLongDrive.com</a></p></footer>
     <script>
         function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("active");
+            document.querySelector('.nav-links').classList.toggle('active');
             document.querySelector(".overlay").classList.toggle("active");
         }
     </script>
