@@ -531,9 +531,9 @@
     </script>
     <script>
         function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("active");
+            document.querySelector('.nav-links').classList.toggle('active');
             document.querySelector(".overlay").classList.toggle("active");
-            document.body.style.overflow = document.getElementById("nav-links").classList.contains("active") ? "hidden" : "";
+            document.body.style.overflow = document.querySelector('.nav-links').classList.contains('active') ? "hidden" : "";
         }
     </script>
 
