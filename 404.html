@@ -8,6 +8,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        [data-theme="dark"] {
+            --primary: #60A5FA;
+            --primary-dark: #3B82F6;
+            --accent: #10B981;
+            --accent-dark: #059669;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #334155;
+            --road: #64748b;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
         header { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 0; }
@@ -24,9 +37,20 @@
         .btn-outline { border: 1px solid var(--border); color: var(--text); }
         .btn-outline:hover { border-color: var(--primary); }
         footer { border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    </style>
+    
+        .theme-toggle { background: none; border: none; cursor: pointer; padding: 0.5rem; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+        .theme-toggle:hover { opacity: 0.7; }
+        </style>
 </head>
-<body>
+<body><script>
+        (function(){
+            var saved=localStorage.getItem('theme');
+            var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme=saved||(prefersDark?'dark':'light');
+            document.documentElement.setAttribute('data-theme',theme);
+        })();
+    </script>
+    
     <header>
         <div class="container">
             <a href="/" class="logo">
@@ -49,5 +73,18 @@
     <footer>
         <div class="container">© 2026 HowLongDrive.com</div>
     </footer>
+<script>
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+        var current=document.documentElement.getAttribute('data-theme');
+        btn.innerHTML=current==='dark'?'☀️':'🌙';
+        btn.addEventListener('click',function(){
+            var curr=document.documentElement.getAttribute('data-theme');
+            var next=curr==='dark'?'light':'dark';
+            document.documentElement.setAttribute('data-theme',next);
+            localStorage.setItem('theme',next);
+            btn.innerHTML=next==='dark'?'☀️':'🌙';
+        });
+    });
+</script>
 </body>
 </html>
