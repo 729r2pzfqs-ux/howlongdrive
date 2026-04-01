@@ -10,6 +10,19 @@
     <meta name="theme-color" content="#10B981">
     <style>
         :root { --primary: #10B981; --primary-dark: #059669; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        [data-theme="dark"] {
+            --primary: #60A5FA;
+            --primary-dark: #3B82F6;
+            --accent: #10B981;
+            --accent-dark: #059669;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #334155;
+            --road: #64748b;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
@@ -48,9 +61,20 @@
         .route-meta { color: var(--muted); font-size: 0.875rem; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
         @media (max-width: 640px) { .search-row { flex-direction: column; } .hero h1 { font-size: 1.75rem; } }
-    </style>
+    
+        .theme-toggle { background: none; border: none; cursor: pointer; padding: 0.5rem; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+        .theme-toggle:hover { opacity: 0.7; }
+        </style>
 </head>
-<body>
+<body><script>
+        (function(){
+            var saved=localStorage.getItem('theme');
+            var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme=saved||(prefersDark?'dark':'light');
+            document.documentElement.setAttribute('data-theme',theme);
+        })();
+    </script>
+    
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
@@ -4967,5 +4991,18 @@
             }
         }
     </style>
+<script>
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+        var current=document.documentElement.getAttribute('data-theme');
+        btn.innerHTML=current==='dark'?'☀️':'🌙';
+        btn.addEventListener('click',function(){
+            var curr=document.documentElement.getAttribute('data-theme');
+            var next=curr==='dark'?'light':'dark';
+            document.documentElement.setAttribute('data-theme',next);
+            localStorage.setItem('theme',next);
+            btn.innerHTML=next==='dark'?'☀️':'🌙';
+        });
+    });
+</script>
 </body>
 </html>
