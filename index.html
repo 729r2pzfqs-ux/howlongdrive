@@ -88,7 +88,7 @@
         .dropdown-item:last-child { border-bottom: none; }
         .dropdown-item:hover, .dropdown-item.selected { background: var(--bg); color: var(--primary); }
         .search-btn { background: var(--primary); color: white; border: none; padding: 1rem 2rem; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; }
-        .search-btn:hover { background: #3d5a7a; }
+        .search-btn:hover { background: var(--primary-dark); }
         .popular { padding: 4rem 0; }
         .popular h2 { text-align: center; margin-bottom: 2rem; }
         .popular-routes h2 { text-align: center; margin-bottom: 2rem; }
@@ -105,6 +105,22 @@
     
         .theme-toggle { background: none; border: none; cursor: pointer; padding: 0.5rem; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
         .theme-toggle:hover { opacity: 0.7; }
+        
+        .ev-badge { background: var(--accent); color: white; }
+        .featured-guide { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+        .featured-guide-title { color: white; }
+        .featured-guide-meta { color: rgba(255,255,255,0.9); }
+        
+        /* Dark mode overrides for featured guide */
+        [data-theme="dark"] .featured-guide {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        [data-theme="dark"] .featured-guide-title {
+            color: white;
+        }
+        [data-theme="dark"] .featured-guide-meta {
+            color: rgba(255,255,255,0.9);
+        }
         </style>
 </head>
 <body><script>
@@ -133,7 +149,7 @@
                 <a href="/">Home</a>
                 <a href="/routes/">Routes</a>
                 <a href="/cities/">Cities</a><a href="/guides/">Guides</a>
-                <a href="/ev/" style="background:#10B981;color:white;padding:0.25rem 0.75rem;border-radius:1rem;font-size:0.75rem;font-weight:600">⚡ EV Trips</a>
+                <a href="/ev/" class="ev-badge" style="padding:0.25rem 0.75rem;border-radius:1rem;font-size:0.75rem;font-weight:600">⚡ EV Trips</a>
                 <a href="/about/">About</a>
             </nav>
         </div>
@@ -202,9 +218,9 @@
                 <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;"><path d="M3 7V17a2 2 0 002 2h14a2 2 0 002-2V7"/><path d="M21 10H3"/><path d="M12 14v3"/><circle cx="12" cy="7" r="3"/></svg>Road Trip Guides</h2>
                 <p style="color: var(--muted); margin-bottom: 1.5rem;">Plan your next American adventure</p>
                 <div class="routes-grid">
-                    <a href="/guides/" class="route-card" style="background: linear-gradient(135deg, #4B6E93 0%, #3a5775 100%); color: white;">
-                        <div class="route-title" style="color: white;">Coast to Coast: NY → LA</div>
-                        <div class="route-meta" style="color: rgba(255,255,255,0.9);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>2,775 miles · The ultimate road trip</div>
+                    <a href="/guides/" class="route-card" class="route-card featured-guide" style="color: white;">
+                        <div class="route-title featured-guide-title">Coast to Coast: NY → LA</div>
+                        <div class="route-meta featured-guide-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>2,775 miles · The ultimate road trip</div>
                     </a>
                     <a href="/route/san-francisco-to-los-angeles/" class="route-card">
                         <div class="route-title">Pacific Coast Highway</div>
