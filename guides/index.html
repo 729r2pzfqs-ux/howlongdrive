@@ -9,6 +9,19 @@
     <link rel="icon" href="/favicon.ico">
     <style>
         :root { --primary: #4B6E93; --accent: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        [data-theme="dark"] {
+            --primary: #60A5FA;
+            --primary-dark: #3B82F6;
+            --accent: #10B981;
+            --accent-dark: #059669;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #334155;
+            --road: #64748b;
+        }
+        
         /* Header */
         header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.25rem 0; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
@@ -50,7 +63,10 @@
         .guide-routes a { background: var(--bg); padding: 0.5rem 1rem; border-radius: 2rem; text-decoration: none; color: var(--primary); font-size: 0.85rem; }
         .guide-routes a:hover { background: #e2e8f0; }
         footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
-    </style>
+    
+        .theme-toggle { background: none; border: none; cursor: pointer; padding: 0.5rem; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+        .theme-toggle:hover { opacity: 0.7; }
+        </style>
     <meta property="og:title" content="US Road Trip Guides - Cross-Country Driving | HowLongDrive" />
     <meta property="og:description" content="Road trip guides, driving tips and travel planning resources." />
     <meta property="og:url" content="https://howlongdrive.com/guides/" />
@@ -63,7 +79,15 @@
     <meta name="twitter:title" content="US Road Trip Guides - Cross-Country Driving | HowLongDrive" />
     <meta name="twitter:description" content="Road trip guides, driving tips and travel planning resources." />
     </head>
-<body>
+<body><script>
+        (function(){
+            var saved=localStorage.getItem('theme');
+            var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme=saved||(prefersDark?'dark':'light');
+            document.documentElement.setAttribute('data-theme',theme);
+        })();
+    </script>
+    
         <header>
         <div class="container header-inner">
             <a href="/" class="logo">
@@ -179,5 +203,18 @@
             document.querySelector(".overlay").classList.toggle("active");
         }
     </script>
+<script>
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+        var current=document.documentElement.getAttribute('data-theme');
+        btn.innerHTML=current==='dark'?'☀️':'🌙';
+        btn.addEventListener('click',function(){
+            var curr=document.documentElement.getAttribute('data-theme');
+            var next=curr==='dark'?'light':'dark';
+            document.documentElement.setAttribute('data-theme',next);
+            localStorage.setItem('theme',next);
+            btn.innerHTML=next==='dark'?'☀️':'🌙';
+        });
+    });
+</script>
 </body>
 </html>
