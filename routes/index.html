@@ -9,6 +9,19 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
         :root { --primary: #4B6E93; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        [data-theme="dark"] {
+            --primary: #60A5FA;
+            --primary-dark: #3B82F6;
+            --accent: #10B981;
+            --accent-dark: #059669;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #334155;
+            --road: #64748b;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
@@ -53,7 +66,10 @@
             nav a { font-size: 1.1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); width: 100%; }
             .hamburger { display: block !important; z-index: 1001; }
         }
-    </style>
+    
+        .theme-toggle { background: none; border: none; cursor: pointer; padding: 0.5rem; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+        .theme-toggle:hover { opacity: 0.7; }
+        </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-NXC7PNTC4G")</script>
     <meta property="og:title" content="Driving Routes & Road Trips | HowLongDrive" />
     <meta property="og:description" content="Browse thousands of driving routes with times, distances and directions between popular destinations." />
@@ -67,10 +83,20 @@
     <meta name="twitter:title" content="Driving Routes & Road Trips | HowLongDrive" />
     <meta name="twitter:description" content="Browse thousands of driving routes with times, distances and directions between popular destinations." />
     </head>
-<body>
+<body><script>
+        (function(){
+            var saved=localStorage.getItem('theme');
+            var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme=saved||(prefersDark?'dark':'light');
+            document.documentElement.setAttribute('data-theme',theme);
+        })();
+    </script>
+    
     <header><div class="container header-inner">
         <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
+        <nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
         <button class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')" style="display:none;background:none;border:none;cursor:pointer;padding:0.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div></header>
     <main class="container">
@@ -322,5 +348,18 @@
             }
         }
     </style>
+<script>
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+        var current=document.documentElement.getAttribute('data-theme');
+        btn.innerHTML=current==='dark'?'☀️':'🌙';
+        btn.addEventListener('click',function(){
+            var curr=document.documentElement.getAttribute('data-theme');
+            var next=curr==='dark'?'light':'dark';
+            document.documentElement.setAttribute('data-theme',next);
+            localStorage.setItem('theme',next);
+            btn.innerHTML=next==='dark'?'☀️':'🌙';
+        });
+    });
+</script>
 </body>
 </html>
