@@ -142,17 +142,17 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             </button>
             <div class="overlay" onclick="toggleMenu()"></div>
-            <nav id="nav">
-                <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-                <button class="close-btn" style="display:none" onclick="toggleMenu()" aria-label="Close">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-                </button>
+                    <nav id="nav">
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/routes/">Routes</a>
-                <a href="/cities/">Cities</a><a href="/guides/">Guides</a>
+                <a href="/cities/">Cities</a>
+                <a href="/guides/">Guides</a>
                 <a href="/ev/" class="ev-badge" style="padding:0.25rem 0.75rem;border-radius:1rem;font-size:0.75rem;font-weight:600">⚡ EV Trips</a>
                 <a href="/about/">About</a>
-            </nav>
+            </div>
+        </nav>
         </div>
     </header>
 
@@ -256,9 +256,9 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById('nav').classList.toggle('active');
+            document.getElementById('nav-links').classList.toggle('active');
             document.querySelector('.overlay').classList.toggle('active');
-            document.body.style.overflow = document.getElementById('nav').classList.contains('active') ? 'hidden' : '';
+            document.body.style.overflow = document.getElementById('nav-links').classList.contains('active') ? 'hidden' : '';
         }
 
         const CITIES = ["ATL", "Albany", "Albuquerque", "Alexandria", "Alpharetta", "Anaheim", "Anchorage", "Arches National Park", "Arlington", "Arvada", "Aspen", "Atlanta", "Atlantic City", "Aurora", "Austin", "BOS", "BWI", "Baltimore", "Baytown", "Bellevue", "Berkeley", "Bethesda", "Big Bear Lake", "Billings", "Birmingham", "Boca Raton", "Boise", "Boston", "Boulder", "Breckenridge", "Brookline", "Brooklyn", "Burbank", "Cambridge", "Camden", "Carmel", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Cherry Hill", "Chicago", "Cincinnati", "Clearwater Beach", "Cleveland", "Colorado Springs", "Columbus", "Coral Gables", "DCA", "DEN", "DFW", "Dallas", "Daly City", "Daytona Beach", "Death Valley", "Decatur", "Denton", "Denver", "Des Moines", "Detroit", "Disney World", "Disneyland", "Dollywood", "Downtown Atlanta", "Downtown Chicago", "Duluth", "EWR", "El Paso", "Estes Park", "Evanston", "Everett", "Everglades", "FLL", "Fairbanks", "Fargo", "Fort Collins", "Fort Lauderdale", "Fort Worth", "Fremont", "Fresno", "Frisco", "Galveston", "Gatlinburg", "Gilbert", "Glendale", "Grand Canyon", "Grand Rapids", "Great Smoky Mountains", "Green Bay", "HOU", "Hamptons", "Hartford", "Hialeah", "Hoboken", "Hollywood", "Honolulu", "Hoover Dam", "Houston", "IAD", "IAH", "Indianapolis", "Irvine", "Irving", "JFK", "Jackson", "Jacksonville", "Jersey City", "Joliet", "Joshua Tree", "Kansas City", "Katy", "Kennedy Space Center", "Kennesaw", "Kent", "Key West", "King of Prussia", "Kirkland", "Knoxville", "LAS", "LAX", "LGA", "Lake Geneva", "Lake Tahoe", "Lakewood", "Las Vegas", "Las Vegas Strip", "Leavenworth", "Legoland", "Lexington", "Little Rock", "Long Beach", "Long Island City", "Los Angeles", "Louisville", "Lowell", "MCO", "MDW", "MIA", "Madison", "Malibu", "Manhattan", "Marietta", "McKinney", "Memphis", "Mesa", "Miami", "Miami Beach", "Milwaukee", "Minneapolis", "Missoula", "Mobile", "Monterey", "Mount Rainier", "Mount Rushmore", "Muir Woods", "Myrtle Beach", "Napa Valley", "Naperville", "Nashville", "New Orleans", "New Rochelle", "New York", "Newark", "Newton", "Niagara Falls", "Norfolk", "OAK", "ORD", "Oak Park", "Oakland", "Oklahoma City", "Olympic National Park", "Omaha", "Ontario", "Orlando", "PHX", "Palm Springs", "Palo Alto", "Park City", "Pasadena", "Pearl Harbor", "Pearland", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Portland", "Providence", "Quincy", "Raleigh", "Rapid City", "Redmond", "Reno", "Renton", "Reston", "Richmond", "Rockville", "Rocky Mountain NP", "Roswell", "SEA", "SFO", "Sacramento", "Salt Lake City", "San Antonio", "San Diego", "San Diego Zoo", "San Francisco", "San Jose", "San Mateo", "Sandy Springs", "Santa Barbara", "Santa Fe", "Santa Monica", "Savannah", "Schaumburg", "Scottsdale", "Seattle", "Sedona", "Silver Spring", "Sioux Falls", "Snoqualmie Falls", "Somerville", "South Beach", "Spokane", "St Louis", "Stamford", "Statue of Liberty", "Sugar Land", "Sundance", "Tacoma", "Tallahassee", "Tampa", "Taos", "Tempe", "The Woodlands", "Thornton", "Tijuana", "Times Square", "Trenton", "Tucson", "Tulsa", "Tysons", "Universal Orlando", "Universal Studios", "Vail", "Vancouver", "Virginia Beach", "Waikiki", "Walnut Creek", "Washington DC", "Waukegan", "West Palm Beach", "Westminster", "White Plains", "Wichita", "Wilmington", "Wisconsin Dells", "Worcester", "Yonkers", "Yosemite", "Zion National Park"];
