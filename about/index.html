@@ -35,7 +35,7 @@
         .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
         .close-btn { display: none; }
-        @media (max-width: 768px) { .logo img { height: 144px; } .logo span { display: none; } nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; } nav.active { right: 0; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
+        @media (max-width: 768px) { .logo img { height: 144px; } .logo span { display: none; } .nav-links { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; display: none; } .nav-links.active { right: 0; display: flex; } .hamburger { display: block; z-index: 1001; } .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; } .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; } .overlay.active { display: block; } }
         .content { background: var(--card); border-radius: 1rem; padding: 2.5rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
         h1 { font-size: 2rem; margin-bottom: 1.5rem; }
         h2 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--text); display: flex; align-items: center; gap: 0.5rem; }
@@ -141,7 +141,7 @@
     </div>
     
     <footer><p>© 2026 <a href="/" style="color:var(--primary);text-decoration:none">HowLongDrive.com</a></p></footer>
-    <script>function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
+    <script>function toggleMenu(){document.querySelector('.nav-links').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}</script>
 <script>
     document.querySelectorAll('.theme-toggle').forEach(function(btn){
         var current=document.documentElement.getAttribute('data-theme');
