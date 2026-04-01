@@ -31,7 +31,7 @@
         nav { display: flex; gap: 1.5rem; }
         nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
         .ev-badge { background: var(--green); color: #fff; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
-        @media (max-width: 768px) { .logo img { height: 144px; } nav { display: none; } }
+        @media (max-width: 768px) { .logo img { height: 144px; } .nav-links { display: none; } }
         h1 { font-size: 2rem; margin: 2rem 0 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
         h1 svg { width: 32px; height: 32px; color: var(--primary); }
         .subtitle { color: var(--muted); margin-bottom: 1.5rem; text-align: center; }
@@ -62,7 +62,7 @@
     
         @media (max-width: 768px) {
             nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
-            nav.active { right: 0; display: flex; }
+            .nav-links.active { display: flex; display: flex; }
             nav a { font-size: 1.1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); width: 100%; }
             .hamburger { display: block !important; z-index: 1001; }
         }
@@ -181,9 +181,17 @@
     
     <header><div class="container header-inner">
         <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-        <nav>
-        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-        <a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
+                <nav id="nav">
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/routes/">Routes</a>
+                <a href="/cities/">Cities</a>
+                <a href="/guides/">Guides</a>
+                <a href="/ev/" class="ev-badge">⚡ EV Trips</a>
+                <a href="/about/">About</a>
+            </div>
+        </nav>
         <button class="hamburger" onclick="toggleMenu()" style="display:none;background:none;border:none;cursor:pointer;padding:0.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
             <div class="overlay" onclick="toggleMenu()"></div>
     </div></header>
@@ -521,9 +529,9 @@
     </script>
     <script>
         function toggleMenu() {
-            document.getElementById("nav").classList.toggle("active");
+            document.getElementById("nav-links").classList.toggle("active");
             document.querySelector(".overlay").classList.toggle("active");
-            document.body.style.overflow = document.getElementById("nav").classList.contains("active") ? "hidden" : "";
+            document.body.style.overflow = document.getElementById("nav-links").classList.contains("active") ? "hidden" : "";
         }
     </script>
 
