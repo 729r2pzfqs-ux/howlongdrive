@@ -16,6 +16,26 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#4B6E93">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "How Long Drive",
+        "url": "https://howlongdrive.com",
+        "description": "Find driving times and distances between any two cities. Plan your road trip with accurate drive time estimates, gas costs, and route information.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://howlongdrive.com/route/{from}-to-{to}/"
+            },
+            "query-input": [
+                "required name=from",
+                "required name=to"
+            ]
+        }
+    }
+    </script>
     <meta property="og:title" content="How Long Drive - Driving Times Between Cities">
     <meta property="og:description" content="Find driving times and distances between any two cities. Plan your road trip easily.">
     <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
