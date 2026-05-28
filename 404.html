@@ -6,56 +6,15 @@
     <meta name="robots" content="noindex">
     <title>Page Not Found | HowLongDrive.com</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <style>
-        :root { --primary: #4B6E93; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
-        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-        .logo { font-weight: 700; font-size: 1.3rem; color: var(--primary); text-decoration: none; }
-        main { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem 1rem; }
-        .code { font-size: 7rem; font-weight: 800; color: var(--border); line-height: 1; }
-        h1 { font-size: 1.75rem; margin: 1rem 0 0.5rem; }
-        p { color: var(--muted); max-width: 420px; margin: 0 auto 2rem; }
-        .buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-        .buttons a { padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: var(--primary); opacity: 0.9; }
-        .btn-outline { border: 1px solid var(--border); color: var(--text); }
-        .btn-outline:hover { border-color: var(--primary); }
-        footer { border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
-        .theme-toggle:hover { opacity: 0.7; }
-        
-        .ev-badge { background: var(--accent); color: white; }
-        .featured-guide { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
-        .featured-guide-title { color: white; }
-        .featured-guide-meta { color: rgba(255,255,255,0.9); }
-        
-        /* Dark mode overrides for featured guide */
-        
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-.hamburger svg { width: 24px; height: 24px; color: var(--text, #1e293b); }
-.overlay { display: none; }
-@media (max-width: 768px) {
-    .logo img { height: 100px !important; }
-    nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card, #fff); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
-    nav.active { right: 0; display: flex; }
-    nav a { font-size: 1.1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border, #e2e8f0); width: 100%; }
-    .hamburger { display: block; z-index: 1001; }
-    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
-    .overlay.active { display: block; }
-}
-</style>
+    <style>:root{--primary:#4B6E93;--accent:#EFA24F;--bg:#f8fafc;--card:#fff;--text:#1e293b;--muted:#64748b;--border:#e2e8f0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}header{background:var(--card);border-bottom:1px solid var(--border);padding:1rem 0}.container{max-width:900px;margin:0 auto;padding:0 1rem}.logo{font-weight:700;font-size:1.3rem;color:var(--primary);text-decoration:none}main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem 1rem}.code{font-size:7rem;font-weight:800;color:var(--border);line-height:1}h1{font-size:1.75rem;margin:1rem 0 0.5rem}p{color:var(--muted);max-width:420px;margin:0 auto 2rem}.buttons{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}.buttons a{padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.95rem}.btn-primary{background:var(--primary);color:white}.btn-primary:hover{background:var(--primary);opacity:0.9}.btn-outline{border:1px solid var(--border);color:var(--text)}.btn-outline:hover{border-color:var(--primary)}footer{border-top:1px solid var(--border);padding:1.5rem 0;text-align:center;color:var(--muted);font-size:0.85rem}.theme-toggle:hover{opacity:0.7}.ev-badge{background:var(--accent);color:white}.featured-guide{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%)}.featured-guide-title{color:white}.featured-guide-meta{color:rgba(255,255,255,0.9)}</style>
 </head>
 <body>
     
     <header>
-        <div class="container header-inner">
-            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-            <div class="overlay" onclick="toggleMenu()"></div>
-            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/assets/logo-header.png" alt="HowLongDrive">
+            </a>
         </div>
     </header>
     <main>
@@ -74,10 +33,5 @@
         <div class="container">© 2026 HowLongDrive.com</div>
     </footer>
 
-<script>
-function toggleMenu() {
-    document.getElementById('nav').classList.toggle('active');
-    document.querySelector('.overlay').classList.toggle('active');
-}
-</script></body>
+</body>
 </html>

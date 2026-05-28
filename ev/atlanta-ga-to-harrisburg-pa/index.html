@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EV Drive: Atlanta, GA to Harrisburg, PA | 14h 26min, 2 Charging Stops (2026)</title>
+    <title>EV: Atlanta, GA to Harrisburg, - Charging Stops | HLD</title>
     <meta name="description" content="EV drive from Atlanta Ga to Harrisburg Pa: 14h 26m, 794 miles. Charging cost ~$15 (save $78 vs gas). Charging stops, traffic estimates, and route details.">
     <link rel="canonical" href="https://howlongdrive.com/ev/atlanta-ga-to-harrisburg-pa/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -12,63 +12,13 @@
     <meta property="og:description" content="EV drive time: 14h 26min, 2 charging stops">
     <meta property="og:image" content="https://howlongdrive.com/assets/og-image.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <style>
-        :root { --primary: #10B981; --primary-dark: #059669; --accent: #EFA24F; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.25rem 0; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; font-size: 1.5rem; color: #4B6E93; text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
-        .logo img { height: 180px; width: auto; }
-        nav { display: flex; align-items: center; gap: 1.5rem; }
-        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
-        nav a:hover { color: var(--primary); }
-        .ev-badge { background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        @media (max-width: 768px) {
-            .logo img { height: 144px; } .logo span { display: none; }
-            nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; }
-            nav.active { right: 0; }
-            nav a { font-size: 1.1rem; padding: 0.25rem 0; border-bottom: 1px solid var(--border); width: 100%; }
-            .hamburger { display: block; z-index: 1001; }
-            .close-btn { display: block; position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-            .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
-            .overlay.active { display: block; }
-            .stats { grid-template-columns: 1fr 1fr !important; }
-            .grid { grid-template-columns: 1fr !important; }
-        }
-        .breadcrumb { font-size: 0.875rem; color: var(--muted); padding: 1rem 0; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .hero { background: linear-gradient(135deg, #10B981 0%, #059669 100%); padding: 2rem; border-radius: 1rem; margin-bottom: 1.5rem; color: white; }
-        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-        .subtitle { opacity: 0.9; margin-bottom: 1.5rem; font-size: 0.9rem; }
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
-        .stat { text-align: center; padding: 1rem 0.5rem; background: rgba(255,255,255,0.15); border-radius: 0.5rem; }
-        .stat-value { font-size: 1.5rem; font-weight: 700; }
-        .stat-label { font-size: 0.75rem; opacity: 0.9; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-        .card { background: var(--card); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .card h3 { margin-bottom: 1rem; font-size: 0.9rem; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
-        .row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
-        .row:last-child { border: none; }
-        .row span:first-child { color: var(--muted); }
-        .row span:last-child { font-weight: 500; }
-        #map { height: 300px; border-radius: 0.75rem; margin-top: 1.5rem; }
-        .cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; padding: 0.6rem 1.25rem; background: var(--accent); color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
-        .gas-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.75rem; padding: 0.6rem 1.25rem; background: #4B6E93; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
-        footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.875rem; margin-top: 2rem; }
-        footer a { color: var(--primary); text-decoration: none; }
-    
-        .related-section a { background: var(--bg); padding: 0.5rem 0.875rem; border-radius: 0.5rem; text-decoration: none; color: var(--text); font-size: 0.85rem; border: 1px solid var(--border); }
-        .related-section a:hover { border-color: var(--primary); color: var(--primary); }
-    </style>
+    <style>:root{--primary:#10B981;--primary-dark:#059669;--accent:#EFA24F;--bg:#f8fafc;--card:#fff;--text:#1e293b;--muted:#64748b;--border:#e2e8f0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 1rem}header{background:var(--card);border-bottom:1px solid var(--border);padding:0.25rem 0}.header-inner{display:flex;justify-content:space-between;align-items:center}.logo{font-weight:700;font-size:1.5rem;color:#4B6E93;text-decoration:none;display:flex;align-items:center;gap:0.75rem}.logo img{height:180px;width:auto}nav{display:flex;align-items:center;gap:1.5rem}nav a{color:var(--muted);text-decoration:none;font-size:0.875rem}nav a:hover{color:var(--primary)}.ev-badge{background:var(--primary);color:white;padding:0.25rem 0.75rem;border-radius:1rem;font-size:0.75rem;font-weight:600}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}@media (max-width:768px){.logo img{height:144px}.logo span{display:none}nav{position:fixed;top:0;right:-100%;width:250px;height:100vh;background:var(--card);flex-direction:column;padding:5rem 2rem;transition:right 0.3s;z-index:1000}nav.active{right:0}nav a{font-size:1.1rem;padding:0.25rem 0;border-bottom:1px solid var(--border);width:100%}.hamburger{display:block;z-index:1001}.close-btn{display:block;position:absolute;top:1rem;right:1rem;background:none;border:none;cursor:pointer;padding:0.5rem}.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999}.overlay.active{display:block}.stats{grid-template-columns:1fr 1fr !important}.grid{grid-template-columns:1fr !important}}.breadcrumb{font-size:0.875rem;color:var(--muted);padding:1rem 0}.breadcrumb a{color:var(--primary);text-decoration:none}.hero{background:linear-gradient(135deg,#10B981 0%,#059669 100%);padding:2rem;border-radius:1rem;margin-bottom:1.5rem;color:white}h1{font-size:1.5rem;margin-bottom:0.5rem;font-weight:600;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}.subtitle{opacity:0.9;margin-bottom:1.5rem;font-size:0.9rem}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem}.stat{text-align:center;padding:1rem 0.5rem;background:rgba(255,255,255,0.15);border-radius:0.5rem}.stat-value{font-size:1.5rem;font-weight:700}.stat-label{font-size:0.75rem;opacity:0.9}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}.card{background:var(--card);padding:1.5rem;border-radius:0.75rem;box-shadow:0 1px 3px rgba(0,0,0,0.08)}.card h3{margin-bottom:1rem;font-size:0.9rem;color:var(--text);font-weight:600;display:flex;align-items:center;gap:0.5rem}.row{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.875rem}.row:last-child{border:none}.row span:first-child{color:var(--muted)}.row span:last-child{font-weight:500}#map{height:300px;border-radius:0.75rem;margin-top:1.5rem}.cta{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;padding:0.6rem 1.25rem;background:var(--accent);color:white;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.85rem}.gas-link{display:inline-flex;align-items:center;gap:0.4rem;margin-left:0.75rem;padding:0.6rem 1.25rem;background:#4B6E93;color:white;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.85rem}footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:0.875rem;margin-top:2rem}footer a{color:var(--primary);text-decoration:none}.related-section a{background:var(--bg);padding:0.5rem 0.875rem;border-radius:0.5rem;text-decoration:none;color:var(--text);font-size:0.85rem;border:1px solid var(--border)}.related-section a:hover{border-color:var(--primary);color:var(--primary)}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
             <div class="overlay" onclick="toggleMenu()"></div>
             <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
         </div>
@@ -173,13 +123,6 @@
     </main>
     <footer><p>© 2026 HowLongDrive | <a href="/about/">About</a></p></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        function toggleMenu() { document.getElementById('nav').classList.toggle('active'); document.querySelector('.overlay').classList.toggle('active'); }
-        const map = L.map('map').setView([37.0111, -80.63735], 5);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
-        L.marker([33.749, -84.388]).addTo(map).bindPopup('Atlanta');
-        L.marker([40.2732, -76.8867]).addTo(map).bindPopup('Harrisburg');
-        L.polyline([[33.749, -84.388], [40.2732, -76.8867]], {color: '#10B981', weight: 3}).addTo(map);
-    </script>
+    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');document.querySelector('.overlay').classList.toggle('active');}const map = L.map('map').setView([37.0111,-80.63735],5);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: '© OpenStreetMap'}).addTo(map);L.marker([33.749,-84.388]).addTo(map).bindPopup('Atlanta');L.marker([40.2732,-76.8867]).addTo(map).bindPopup('Harrisburg');L.polyline([[33.749,-84.388],[40.2732,-76.8867]],{color: '#10B981',weight: 3}).addTo(map);</script>
 </body>
 </html>

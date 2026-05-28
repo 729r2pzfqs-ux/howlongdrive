@@ -3,82 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Long to Drive from Jacksonville to Yosemite National Park? 52h 18min (2026)</title>
+    <title>Jacksonville to Yosemite National Park - Drive Time | HLD</title>
     <meta name="description" content="Drive from Jacksonville to Yosemite: 52h 18m, 2877 miles via highway. Gas cost ~$335. Best times to travel, traffic tips, and route details. Updated 2026.">
     <link rel="canonical" href="https://howlongdrive.com/route/jacksonville-to-yosemite/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="theme-color" content="#4B6E93">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <style>
-        :root { --primary: #4B6E93; --green: #10B981; --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-        header { background: var(--card); border-bottom: 1px solid var(--border); padding: 0.25rem 0; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: var(--primary); text-decoration: none; display: flex; align-items: center; }
-        .logo img { height: 180px; }
-        nav { display: flex; gap: 1.5rem; }
-        nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
-        .ev-badge { background: var(--green); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; }
-        @media (max-width: 768px) {
-            .logo img { height: 144px; }
-            nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; }
-            nav.active { right: 0; }
-            .hamburger { display: block; z-index: 1001; }
-            .stats { grid-template-columns: 1fr 1fr !important; }
-            .grid { grid-template-columns: 1fr !important; }
-        }
-        .hero { background: linear-gradient(135deg, #4B6E93, #3a5775); padding: 2rem; border-radius: 1rem; margin: 1rem 0; color: white; }
-        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem; }
-        .stat { text-align: center; padding: 1rem; background: rgba(255,255,255,0.15); border-radius: 0.5rem; }
-        .stat-value { font-size: 1.5rem; font-weight: 700; }
-        .stat-label { font-size: 0.75rem; opacity: 0.9; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-        .card { background: var(--card); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .card h3 { margin-bottom: 1rem; font-size: 0.9rem; }
-        .row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
-        .row:last-child { border: none; }
-        #map { height: 300px; border-radius: 0.75rem; margin-top: 1rem; }
-        .cta { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.25rem; background: #EFA24F; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
-        .ev-link { margin-left: 0.75rem; background: var(--green); }
-        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.875rem; }
-    
-        .faq { margin-top: 1.5rem; }
-        .faq h2 { font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-        .faq h2 svg { width: 20px; height: 20px; color: var(--primary); }
-        .faq-item { background: var(--card); border-radius: 0.5rem; margin-bottom: 0.75rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .faq-q { font-weight: 600; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
-        .faq-q:hover { background: #f8fafc; }
-        .faq-q svg { width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s; }
-        .faq-item.open .faq-q svg { transform: rotate(180deg); }
-        .faq-a { padding: 0 1.25rem 1rem; font-size: 0.875rem; color: var(--muted); display: none; }
-        .faq-item.open .faq-a { display: block; }
-    
-        .related-section { background: var(--card); padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; }
-        .related-section h3 { margin-bottom: 1rem; font-size: 1rem; }
-        .related-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-        .related-links a { background: var(--bg); padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; color: var(--primary); font-size: 0.875rem; }
-        .related-links a:hover { background: var(--border); }
-    
-        .btn-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
-        
-        .hero .maps-btn { background: #EFA24F; color: white; }
-        
-        
-    </style>
+    <style>:root{--primary:#4B6E93;--green:#10B981;--bg:#f8fafc;--card:#fff;--text:#1e293b;--muted:#64748b;--border:#e2e8f0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 1rem}header{background:var(--card);border-bottom:1px solid var(--border);padding:0.25rem 0}.header-inner{display:flex;justify-content:space-between;align-items:center}.logo{color:var(--primary);text-decoration:none;display:flex;align-items:center}.logo img{height:180px}nav{display:flex;gap:1.5rem}nav a{color:var(--muted);text-decoration:none;font-size:0.875rem}.ev-badge{background:var(--green);color:white;padding:0.25rem 0.75rem;border-radius:1rem;font-size:0.75rem}.hamburger{display:none;background:none;border:none;cursor:pointer}@media (max-width:768px){.logo img{height:144px}nav{position:fixed;top:0;right:-100%;width:250px;height:100vh;background:var(--card);flex-direction:column;padding:5rem 2rem;transition:right 0.3s;z-index:1000}nav.active{right:0}.hamburger{display:block;z-index:1001}.stats{grid-template-columns:1fr 1fr !important}.grid{grid-template-columns:1fr !important}}.hero{background:linear-gradient(135deg,#4B6E93,#3a5775);padding:2rem;border-radius:1rem;margin:1rem 0;color:white}h1{font-size:1.5rem;margin-bottom:0.5rem}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-top:1rem}.stat{text-align:center;padding:1rem;background:rgba(255,255,255,0.15);border-radius:0.5rem}.stat-value{font-size:1.5rem;font-weight:700}.stat-label{font-size:0.75rem;opacity:0.9}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.card{background:var(--card);padding:1.5rem;border-radius:0.75rem;box-shadow:0 1px 3px rgba(0,0,0,0.08)}.card h3{margin-bottom:1rem;font-size:0.9rem}.row{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.875rem}.row:last-child{border:none}#map{height:300px;border-radius:0.75rem;margin-top:1rem}.cta{display:inline-block;margin-top:1rem;padding:0.6rem 1.25rem;background:#EFA24F;color:white;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.85rem}.ev-link{margin-left:0.75rem;background:var(--green)}footer{text-align:center;padding:2rem;color:var(--muted);font-size:0.875rem}.faq{margin-top:1.5rem}.faq h2{font-size:1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}.faq h2 svg{width:20px;height:20px;color:var(--primary)}.faq-item{background:var(--card);border-radius:0.5rem;margin-bottom:0.75rem;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.05)}.faq-q{font-weight:600;padding:1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:0.9rem}.faq-q:hover{background:#f8fafc}.faq-q svg{width:16px;height:16px;color:var(--muted);transition:transform 0.2s}.faq-item.open .faq-q svg{transform:rotate(180deg)}.faq-a{padding:0 1.25rem 1rem;font-size:0.875rem;color:var(--muted);display:none}.faq-item.open .faq-a{display:block}.related-section{background:var(--card);padding:1.5rem;border-radius:1rem;margin:1.5rem 0}.related-section h3{margin-bottom:1rem;font-size:1rem}.related-links{display:flex;flex-wrap:wrap;gap:0.75rem}.related-links a{background:var(--bg);padding:0.5rem 1rem;border-radius:0.5rem;text-decoration:none;color:var(--primary);font-size:0.875rem}.related-links a:hover{background:var(--border)}.btn-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem}.hero .maps-btn{background:#EFA24F;color:white}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXC7PNTC4G"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NXC7PNTC4G");</script></head>
 <body>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-            <div class="overlay" onclick="toggleMenu()"></div>
-            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
-        </div>
-    </header>
+    <header><div class="container header-inner">
+        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
+        <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+        <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
+    </div></header>
     <main class="container">
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Jacksonville to Yosemite National Park</h1>
@@ -205,15 +143,6 @@
     </main>
     <footer>© 2026 HowLongDrive</footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        function toggleMenu(){document.getElementById('nav').classList.toggle('active');}
-        const map=L.map('map').setView([34.09865,-100.59700000000001],3);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OSM'}).addTo(map);
-        var startIcon = L.divIcon({className:'',html:'<div style="background:#4B6E93;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
-        var endIcon = L.divIcon({className:'',html:'<div style="background:#EFA24F;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});
-        L.marker([30.3322,-81.6557], {icon: startIcon}).addTo(map).bindPopup('<b>Jacksonville</b><br>Start');
-        L.marker([37.8651,-119.5383], {icon: endIcon}).addTo(map).bindPopup('<b>Yosemite</b><br>Destination');
-        L.polyline([[30.3322,-81.6557],[37.8651,-119.5383]],{color:'#4B6E93',weight:3}).addTo(map);
-    </script>
+    <script>function toggleMenu(){document.getElementById('nav').classList.toggle('active');}const map=L.map('map').setView([34.09865,-100.59700000000001],3);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OSM'}).addTo(map);var startIcon = L.divIcon({className:'',html:'<div style="background:#4B6E93;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});var endIcon = L.divIcon({className:'',html:'<div style="background:#EFA24F;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[24,24],iconAnchor:[12,12]});L.marker([30.3322,-81.6557],{icon: startIcon}).addTo(map).bindPopup('<b>Jacksonville</b><br>Start');L.marker([37.8651,-119.5383],{icon: endIcon}).addTo(map).bindPopup('<b>Yosemite</b><br>Destination');L.polyline([[30.3322,-81.6557],[37.8651,-119.5383]],{color:'#4B6E93',weight:3}).addTo(map);</script>
 </body>
 </html>
