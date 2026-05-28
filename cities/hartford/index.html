@@ -67,7 +67,9 @@
     <header>
         <div class="container header-inner">
             <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV Trips</a><a href="/about/">About</a></nav>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
         </div>
     </header>
     <div class="container">
@@ -111,5 +113,10 @@
 </div>
 <div style="border-top:1px solid #334155;padding-top:1rem;text-align:center">© 2026 <a href="/" style="color:#94a3b8;text-decoration:none">HowLongDrive.com</a> · Driving times and distances for trip planning</div>
 </div></footer>
-</body>
+<script>
+function toggleMenu() {
+    document.getElementById('nav').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+}
+</script></body>
 </html>

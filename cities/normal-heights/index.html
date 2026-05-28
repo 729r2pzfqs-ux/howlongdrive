@@ -48,12 +48,14 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How far is Normal Heights from San Diego?","acceptedAnswer":{"@type":"Answer","text":"Check our route page for exact distance and time."}},{"@type":"Question","name":"What cities are within 3 hours of Normal Heights?","acceptedAnswer":{"@type":"Answer","text":"There are 2 cities within 3 hours, including San Diego, Normal Heights."}},{"@type":"Question","name":"How many routes from Normal Heights?","acceptedAnswer":{"@type":"Answer","text":"Normal Heights has 1 routes."}}]}</script>
 </head>
 <body>
-    <header><div class="container header-inner">
-        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
-        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge">⚡ EV</a><a href="/about/">About</a></nav>
-        <button class="hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
             <div class="overlay" onclick="toggleMenu()"></div>
-    </div></header>
+            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
+        </div>
+    </header>
     <main class="container">
         <div class="hero">
             <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;vertical-align:middle;margin-right:8px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Normal Heights</h1>

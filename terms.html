@@ -25,15 +25,30 @@
         h2{font-size:1.25rem;margin:2rem 0 .75rem;color:var(--text)}
         p{margin-bottom:1rem;color:#334155}
         @media(max-width:768px){.logo img{height:60px}nav{display:none}}
-    </style>
+    
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger svg { width: 24px; height: 24px; color: var(--text, #1e293b); }
+.overlay { display: none; }
+@media (max-width: 768px) {
+    .logo img { height: 100px !important; }
+    nav { position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background: var(--card, #fff); flex-direction: column; padding: 5rem 2rem; transition: right 0.3s; z-index: 1000; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
+    nav.active { right: 0; display: flex; }
+    nav a { font-size: 1.1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border, #e2e8f0); width: 100%; }
+    .hamburger { display: block; z-index: 1001; }
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999; }
+    .overlay.active { display: block; }
+}
+</style>
 </head>
 <body>
 <header>
-    <div class="header-inner">
-        <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"><span>HowLongDrive</span></a>
-        <nav><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/ev/" class="ev-badge">EV Trips</a></nav>
-    </div>
-</header>
+        <div class="container header-inner">
+            <a href="/" class="logo"><img src="/assets/logo-header.png" alt="HowLongDrive"></a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <nav id="nav"><a href="/">Home</a><a href="/routes/">Routes</a><a href="/cities/">Cities</a><a href="/guides/">Guides</a><a href="/ev/" class="ev-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> EV Trips</a><a href="/about/">About</a></nav>
+        </div>
+    </header>
 <div class="container content">
 <h1>Terms of Use</h1>
 <p><strong>Last updated:</strong> May 28, 2026</p>
@@ -86,5 +101,10 @@
 </div>
 <div style="border-top:1px solid #334155;padding-top:1rem;text-align:center">© 2026 <a href="/" style="color:#94a3b8;text-decoration:none">HowLongDrive.com</a> · Driving times and distances for trip planning</div>
 </div></footer>
-</body>
+<script>
+function toggleMenu() {
+    document.getElementById('nav').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+}
+</script></body>
 </html>
