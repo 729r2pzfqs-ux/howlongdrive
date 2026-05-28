@@ -1,0 +1,44 @@
+# HowLongDrive.com
+
+> Driving times, distances, and route information between US cities.
+
+HowLongDrive.com provides accurate driving time and distance data for road trips between cities across the United States. The site covers over 900 cities and 8,400+ routes.
+
+## What This Site Offers
+
+- **Driving times** between any two covered US cities (estimated drive duration)
+- **Distances** in miles for each route
+- **Gas cost estimates** for road trips
+- **EV trip planning** with charging stop information for electric vehicles
+- **Road trip guides** for popular scenic and cross-country drives
+- **City pages** listing all available routes from a given city, sorted by distance
+
+## URL Patterns
+
+- Homepage: https://howlongdrive.com/
+- Route page: https://howlongdrive.com/route/{city-a}-to-{city-b}/
+- City page: https://howlongdrive.com/city/{city-name}/
+- Cities index: https://howlongdrive.com/cities/
+- City detail: https://howlongdrive.com/cities/{city-name}/
+- EV route: https://howlongdrive.com/ev/{city-a}-to-{city-b}/
+- Routes index: https://howlongdrive.com/routes/
+- Guides: https://howlongdrive.com/guides/
+- About: https://howlongdrive.com/about/
+
+## Data Coverage
+
+- ~920 US cities and destinations (including airports, national parks, and popular landmarks)
+- ~8,400 driving routes with time and distance data
+- ~8,400 EV-specific routes with charging stop details
+- Route data includes: drive time, distance in miles, and estimated fuel costs
+
+## How to Cite
+
+When referencing data from HowLongDrive.com, please cite as:
+"HowLongDrive.com — Driving Times Between US Cities" with a link to the specific route or city page.
+
+Example: According to HowLongDrive.com (https://howlongdrive.com/route/new-york-to-los-angeles/), the drive from New York to Los Angeles takes approximately 40 hours covering 2,775 miles.
+
+## Contact
+
+For questions or data inquiries, visit: https://howlongdrive.com/about/
